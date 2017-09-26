@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Stack Overflow まとめ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Stack Overflow まとめ">
+<meta property="og:url" content="https://somatome.github.io/somatome/index.html">
+<meta property="og:site_name" content="Stack Overflow まとめ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stack Overflow まとめ">
+  
+    <link rel="alternative" href="/atom.xml" title="Stack Overflow まとめ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/somatome/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/somatome/" id="logo">Stack Overflow まとめ</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/somatome/">Home</a>
+        
+          <a class="main-nav-link" href="/somatome/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://somatome.github.io/somatome"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-accessing-the-index-in-python-for-loops" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/25/accessing-the-index-in-python-for-loops/" class="article-date">
+  <time datetime="2017-09-25T14:24:08.000Z" itemprop="datePublished">2017-09-25</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/somatome/2017/09/25/accessing-the-index-in-python-for-loops/">Python forループのインデックスへのアクセス方法 [Python]</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/25/accessing-the-index-in-python-for-loops/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/25/accessing-the-index-in-python-for-loops/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/25/accessing-the-index-in-python-for-loops/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/25/accessing-the-index-in-python-for-loops/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>例えばこんなリストがあったとき、このリストのインデックスにアクセスするにはどうしたらいいの？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ints = [<span class="number">8</span>, <span class="number">23</span>, <span class="number">45</span>, <span class="number">12</span>, <span class="number">78</span>]</div></pre></td></tr></table></figure>
+<p>これをforループで使う時、どうやってこのループインデックス（この場合１から５）にアクセスしたらいいの？</p>
+<p><div style="text-align: right"> By  <a href="/users/51816/joan-venge">Joan Venge</a> | 質問日時： Feb 6 ‘09 at 22:47 </div><br></p>
+        
+          <p class="article-more-link">
+            <a href="/somatome/2017/09/25/accessing-the-index-in-python-for-loops/#more">Read More</a>
+          </p>
+        
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://somatome.github.io/somatome/2017/09/25/accessing-the-index-in-python-for-loops/" data-id="cj80xdqqo0004bsw6xzck2tea" class="article-share-link">Share</a>
+      
+      
+        <a href="https://somatome.github.io/somatome/2017/09/25/accessing-the-index-in-python-for-loops/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/list/">list</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/loops/">loops</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/python/">python</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-append-vs-extend" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/25/append-vs-extend/" class="article-date">
+  <time datetime="2017-09-25T14:23:42.000Z" itemprop="datePublished">2017-09-25</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/somatome/2017/09/25/append-vs-extend/">append vs. extend [Python]</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/25/append-vs-extend/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/25/append-vs-extend/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/25/append-vs-extend/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/25/append-vs-extend/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>リストメソッドの <code>append()</code>と <code>extend()</code>の違いって何？</p>
+<p><div style="text-align: right"> By  <a href="/users/15055/claudiu">Claudiu</a> | 質問日時： Oct 31 ‘08 at 5:55 </div><br></p>
+        
+          <p class="article-more-link">
+            <a href="/somatome/2017/09/25/append-vs-extend/#more">Read More</a>
+          </p>
+        
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://somatome.github.io/somatome/2017/09/25/append-vs-extend/" data-id="cj80xdqq80000bsw6imqivkuf" class="article-share-link">Share</a>
+      
+      
+        <a href="https://somatome.github.io/somatome/2017/09/25/append-vs-extend/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/append/">append</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/data-structures/">data-structures</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/extend/">extend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/list/">list</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/python/">python</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-best-way-to-check-if-a-list-is-empty" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/" class="article-date">
+  <time datetime="2017-09-25T14:23:37.000Z" itemprop="datePublished">2017-09-25</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/">リストが空であるかどうかをチェックする最良の方法って？ [Python]</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">例えばこんなのがあった時、</div><div class="line">a = []</div><div class="line"></div><div class="line">どうやってこの変数がカラだってチェックすればいいの？</div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="/users/4872/ray-vega">Ray Vega</a> | 質問日時： Sep 10 ‘08 at 6:20 </div><br></p>
+        
+          <p class="article-more-link">
+            <a href="/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/#more">Read More</a>
+          </p>
+        
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://somatome.github.io/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/" data-id="cj80xdqqg0001bsw6hlyx839x" class="article-share-link">Share</a>
+      
+      
+        <a href="https://somatome.github.io/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/list/">list</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/python/">python</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-calling-an-external-command-in-python" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/25/calling-an-external-command-in-python/" class="article-date">
+  <time datetime="2017-09-25T14:23:15.000Z" itemprop="datePublished">2017-09-25</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/somatome/2017/09/25/calling-an-external-command-in-python/">Pythonで外部コマンドを呼び出す [Python]</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>Pythonスクリプトから外部コマンド(UNIXシェルとかWindowsのコマンドプロンプトで入力したみたいに)ってどうやって呼び出せるの？</p>
+<p><div style="text-align: right"> By  <a href="/users/17085/freshwower">freshWoWer</a> | 質問日時： Sep 18 ‘08 at 1:35 </div><br></p>
+        
+          <p class="article-more-link">
+            <a href="/somatome/2017/09/25/calling-an-external-command-in-python/#more">Read More</a>
+          </p>
+        
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/" data-id="cj80xdqqm0003bsw62lg72aiw" class="article-share-link">Share</a>
+      
+      
+        <a href="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/command/">command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/external/">external</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/subprocess/">subprocess</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-how-do-i-check-if-an-element-is-hidden-in-jquery" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" class="article-date">
+  <time datetime="2017-09-25T05:10:14.000Z" itemprop="datePublished">2017-09-25</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/">jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>.hide()</code>、 <code>.show()</code>、 <code>.toggle()</code>関数を使えば要素の可視性を切り替えることができるけど、要素が表示されているか隠れているかはどうやってテストすればいいの？</p>
+<p><div style="text-align: right"> By  <a href="/users/21709/philip-morton">Philip Morton</a> | 質問日時： Oct 7 ‘08 at 13:03 </div><br></p>
+        
+          <p class="article-more-link">
+            <a href="/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/#more">Read More</a>
+          </p>
+        
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://somatome.github.io/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" data-id="cj80xdqqv0005bsw65gkbffmu" class="article-share-link">Share</a>
+      
+      
+        <a href="https://somatome.github.io/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/dom/">dom</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/visibility/">visibility</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-how-to-check-whether-a-string-contains-a-substring-in-javascript" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" class="article-date">
+  <time datetime="2017-09-24T23:46:44.000Z" itemprop="datePublished">2017-09-25</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/">JavaScriptである文字列に別な文字列（substring）が含まれているかどうかをチェックする方法って？</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>String.contains()</code>メソッドだと思ったんだけど、ちょっと違うみたい。これをチェックするいい方法ってあるかな？</p>
+        
+          <p class="article-more-link">
+            <a href="/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/#more">Read More</a>
+          </p>
+        
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" data-id="cj80xdqr00008bsw6khdysbwx" class="article-share-link">Share</a>
+      
+      
+        <a href="https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/contains/">contains</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/string/">string</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/string-matching/">string-matching</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/substring/">substring</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-how-do-i-delete-a-git-branch-both-locally-and-remotely" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/" class="article-date">
+  <time datetime="2017-09-24T23:05:54.000Z" itemprop="datePublished">2017-09-25</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/">ローカルとリモートの両方でGitブランチを削除するには？</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>ローカルと、Github上のフォークした自分のリモートプロジェクトのブランチを削除したいんだけど。</p>
+<p>リモートのブランチを削除するためにこれまで試みた方法（失敗した）：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">$ git branch -d remotes/origin/bugfix</div><div class="line">error: branch <span class="string">'remotes/origin/bugfix'</span> not found.</div><div class="line"></div><div class="line">$ git branch -d origin/bugfix</div><div class="line">error: branch <span class="string">'origin/bugfix'</span> not found.</div><div class="line"></div><div class="line">$ git branch -rd origin/bugfix</div><div class="line">Deleted remote branch origin/bugfix (was 2a14ef7).</div><div class="line"></div><div class="line">$ git push</div><div class="line">Everything up-to-date</div><div class="line"></div><div class="line">$ git pull</div><div class="line">From github.com:gituser/gitproject</div><div class="line">* [new branch] bugfix -&amp;gt; origin/bugfix</div><div class="line">Already up-to-date.</div></pre></td></tr></table></figure>
+<p><code>remotes/origin/bugfix</code>ブランチをローカルとリモート両方で削除するにはほか何をしたらいいの？</p>
+<p><div style="text-align: right"> By  <a href="/users/95592/matthew-rankin">Matthew Rankin</a> | 質問日時： Jan 5 ‘10 at 1:12 </div><br></p>
+        
+          <p class="article-more-link">
+            <a href="/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/#more">Read More</a>
+          </p>
+        
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://somatome.github.io/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/" data-id="cj80xdqqy0007bsw6nkx2y2rt" class="article-share-link">Share</a>
+      
+      
+        <a href="https://somatome.github.io/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/git-branch/">git-branch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/git-remote/">git-remote</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-how-to-undo-the-last-commits-in-git" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/24/how-to-undo-the-last-commits-in-git/" class="article-date">
+  <time datetime="2017-09-24T22:42:48.000Z" itemprop="datePublished">2017-09-24</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/somatome/2017/09/24/how-to-undo-the-last-commits-in-git/">Gitの最後のコミットを元に戻す方法ってどうやるの？</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/24/how-to-undo-the-last-commits-in-git/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/24/how-to-undo-the-last-commits-in-git/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/24/how-to-undo-the-last-commits-in-git/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/24/how-to-undo-the-last-commits-in-git/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>間違ったファイルを<a href="https://git-scm.com" target="_blank" rel="external">Git</a>にコミットしたんだけど、まだサーバーへはプッシュしていないんだ。</p>
+<p>このコミットを元に戻すにはどうすればいいですか？</p>
+        
+          <p class="article-more-link">
+            <a href="/somatome/2017/09/24/how-to-undo-the-last-commits-in-git/#more">Read More</a>
+          </p>
+        
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://somatome.github.io/somatome/2017/09/24/how-to-undo-the-last-commits-in-git/" data-id="cj80xdqr6000absw6ihs5kqzy" class="article-share-link">Share</a>
+      
+      
+        <a href="https://somatome.github.io/somatome/2017/09/24/how-to-undo-the-last-commits-in-git/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/git-commit/">git-commit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/git-rebase/">git-rebase</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/git-reset/">git-reset</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/git-revert/">git-revert</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-how-to-redirect-to-another-webpage" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/24/how-to-redirect-to-another-webpage/" class="article-date">
+  <time datetime="2017-09-24T22:18:43.000Z" itemprop="datePublished">2017-09-24</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/somatome/2017/09/24/how-to-redirect-to-another-webpage/">他のウェブページにリダイレクトする方法ってどうやるの？</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>jQueryか純粋なJavaScriptを使って、あるページから別のページにユーザーをリダイレクトする方法ってどうやるの？</p>
+<p><div style="text-align: right"> By  <a href="/users/44984/venkatachalam">venkatachalam</a> | 質問日時： Feb 2 ‘09 at 12:54 </div><br></p>
+        
+          <p class="article-more-link">
+            <a href="/somatome/2017/09/24/how-to-redirect-to-another-webpage/#more">Read More</a>
+          </p>
+        
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/" data-id="cj80xdqr8000bbsw66xxtqgc8" class="article-share-link">Share</a>
+      
+      
+        <a href="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/redirect/">redirect</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-about" class="widget-title">About</h3>
+    <div class="widget">
+      
+        <p> John Doe </p>
+      
+      
+        <p> <a href="http://twitter.com/">@</a> </p>
+      
+      </p>
+      
+        <p>  </p>
+      
+      
+        <p>  </p>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-tag" class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/append/">append</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/contains/">contains</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/data-structures/">data-structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/dom/">dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/extend/">extend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/external/">external</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-branch/">git-branch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-commit/">git-commit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-rebase/">git-rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-remote/">git-remote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-reset/">git-reset</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-revert/">git-revert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/javascript/">javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/jquery/">jquery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/list/">list</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/loops/">loops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/redirect/">redirect</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string/">string</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string-matching/">string-matching</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/subprocess/">subprocess</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/substring/">substring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/visibility/">visibility</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-tagcloud" class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/somatome/tags/append/" style="font-size: 10px;">append</a> <a href="/somatome/tags/command/" style="font-size: 10px;">command</a> <a href="/somatome/tags/contains/" style="font-size: 10px;">contains</a> <a href="/somatome/tags/data-structures/" style="font-size: 10px;">data-structures</a> <a href="/somatome/tags/dom/" style="font-size: 10px;">dom</a> <a href="/somatome/tags/extend/" style="font-size: 10px;">extend</a> <a href="/somatome/tags/external/" style="font-size: 10px;">external</a> <a href="/somatome/tags/git/" style="font-size: 13.33px;">git</a> <a href="/somatome/tags/git-branch/" style="font-size: 10px;">git-branch</a> <a href="/somatome/tags/git-commit/" style="font-size: 10px;">git-commit</a> <a href="/somatome/tags/git-rebase/" style="font-size: 10px;">git-rebase</a> <a href="/somatome/tags/git-remote/" style="font-size: 10px;">git-remote</a> <a href="/somatome/tags/git-reset/" style="font-size: 10px;">git-reset</a> <a href="/somatome/tags/git-revert/" style="font-size: 10px;">git-revert</a> <a href="/somatome/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/somatome/tags/jquery/" style="font-size: 13.33px;">jquery</a> <a href="/somatome/tags/list/" style="font-size: 16.67px;">list</a> <a href="/somatome/tags/loops/" style="font-size: 10px;">loops</a> <a href="/somatome/tags/python/" style="font-size: 20px;">python</a> <a href="/somatome/tags/redirect/" style="font-size: 10px;">redirect</a> <a href="/somatome/tags/shell/" style="font-size: 10px;">shell</a> <a href="/somatome/tags/string/" style="font-size: 10px;">string</a> <a href="/somatome/tags/string-matching/" style="font-size: 10px;">string-matching</a> <a href="/somatome/tags/subprocess/" style="font-size: 10px;">subprocess</a> <a href="/somatome/tags/substring/" style="font-size: 10px;">substring</a> <a href="/somatome/tags/visibility/" style="font-size: 10px;">visibility</a>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-archive" class="widget-title" data-skip-mobile-nav="true">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/somatome/archives/2017/09/">September 2017</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-recent-posts" class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/somatome/2017/09/25/accessing-the-index-in-python-for-loops/">Python forループのインデックスへのアクセス方法 [Python]</a>
+          </li>
+        
+          <li>
+            <a href="/somatome/2017/09/25/append-vs-extend/">append vs. extend [Python]</a>
+          </li>
+        
+          <li>
+            <a href="/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/">リストが空であるかどうかをチェックする最良の方法って？ [Python]</a>
+          </li>
+        
+          <li>
+            <a href="/somatome/2017/09/25/calling-an-external-command-in-python/">Pythonで外部コマンドを呼び出す [Python]</a>
+          </li>
+        
+          <li>
+            <a href="/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/">jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      Copyrights &copy; 2017 John Doe All Rights Reserved. <br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
+      Themed by <a href="https://github.com/kwhrtsk/hexo-theme-ingenuous">Ingenuous</a> (based on <a href="https://github.com/hexojs/hexo-theme-landscape">Landscape</a>).
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/somatome/" class="mobile-nav-link">Home</a>
+  
+    <a href="/somatome/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+
+    
+<script>
+  var disqus_shortname = 'somatome';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/somatome/fancybox/jquery.fancybox.css">
+  <script src="/somatome/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script src="/somatome/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>

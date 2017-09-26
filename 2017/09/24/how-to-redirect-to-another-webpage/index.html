@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>他のウェブページにリダイレクトする方法ってどうやるの？ | Stack Overflow まとめ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="description" content="質問：jQueryか純粋なJavaScriptを使って、あるページから別のページにユーザーをリダイレクトする方法ってどうやるの？  By  venkatachalam | 質問日時： Feb 2 ‘09 at 12:54">
+<meta name="keywords" content="javascript,jquery,redirect">
+<meta property="og:type" content="article">
+<meta property="og:title" content="他のウェブページにリダイレクトする方法ってどうやるの？">
+<meta property="og:url" content="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/index.html">
+<meta property="og:site_name" content="Stack Overflow まとめ">
+<meta property="og:description" content="質問：jQueryか純粋なJavaScriptを使って、あるページから別のページにユーザーをリダイレクトする方法ってどうやるの？  By  venkatachalam | 質問日時： Feb 2 ‘09 at 12:54">
+<meta property="og:updated_time" content="2017-09-24T22:37:46.547Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="他のウェブページにリダイレクトする方法ってどうやるの？">
+<meta name="twitter:description" content="質問：jQueryか純粋なJavaScriptを使って、あるページから別のページにユーザーをリダイレクトする方法ってどうやるの？  By  venkatachalam | 質問日時： Feb 2 ‘09 at 12:54">
+  
+    <link rel="alternative" href="/atom.xml" title="Stack Overflow まとめ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/somatome/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/somatome/" id="logo">Stack Overflow まとめ</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/somatome/">Home</a>
+        
+          <a class="main-nav-link" href="/somatome/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://somatome.github.io/somatome"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-how-to-redirect-to-another-webpage" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/24/how-to-redirect-to-another-webpage/" class="article-date">
+  <time datetime="2017-09-24T22:18:43.000Z" itemprop="datePublished">2017-09-24</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      他のウェブページにリダイレクトする方法ってどうやるの？
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>jQueryか純粋なJavaScriptを使って、あるページから別のページにユーザーをリダイレクトする方法ってどうやるの？</p>
+<p><div style="text-align: right"> By  <a href="/users/44984/venkatachalam">venkatachalam</a> | 質問日時： Feb 2 ‘09 at 12:54 </div><br></p>
+<a id="more"></a>
+<hr>
+<hr>
+<h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><h2 id="汝、リダイレクトするためだけにjQueryを使うべからず"><a href="#汝、リダイレクトするためだけにjQueryを使うべからず" class="headerlink" title="汝、リダイレクトするためだけにjQueryを使うべからず"></a>汝、リダイレクトするためだけにjQueryを使うべからず</h2><p>jQueryは必要ないよ。<a href="https://developer.mozilla.org/en-
+US/docs/Web/API/Location/replace" target="_blank" rel="external"><strong> <code>window.location.replace(...)</code> </strong></a>は、HTTPリダイレクトをよくシミュレートできるから。</p>
+<p><code>window.location.replace(...)</code>は <code>window.location.href</code>を使うよりも優れてる、というのは<code>replace()</code>は元のページをセッション履歴に残さないから、ユーザーが終わりのないバック・ボタンの失敗に悩まされることはないよ。</p>
+<blockquote>
+<p>もしリンクをクリックするのをシミュレートしたい場合は、<strong> <code>location.href</code> </strong>を使う<br>HTTPリダイレクトをシミュレートする場合は、<strong> <code>location.replace</code></strong>を使う</p>
+</blockquote>
+<p><strong>例えば：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// HTTPリダイレクトと同様の動作</span></div><div class="line"><span class="built_in">window</span>.location.replace(<span class="string">"http://stackoverflow.com"</span>);</div><div class="line"></div><div class="line"><span class="comment">//リンクをクリックすると同様の動作</span></div><div class="line"><span class="built_in">window</span>.location.href = <span class="string">"http://stackoverflow.com"</span>;</div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="/users/8985/ryan-mcgeary">Ryan McGeary</a> | 回答日時： Feb 3 ‘09 at 4:24 </div><br></p>
+<hr>
+<hr>
+<h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><blockquote>
+<p><strong>警告：</strong>この回答は単に解決策の１つとして提供されているに過だけ。これはjQueryが必要なので、明らかに最善の解決策っていうわけじゃない。代わりに、純粋なJavaScriptでやったほうがいいと思う。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(location).attr(<span class="string">'href'</span>, <span class="string">'http://stackoverflow.com'</span>)</div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="/users/61337/boris-gu%c3%a9ry">Boris Guéry</a> | 回答日時： Oct 28 ‘09 at 16:35 </div><br></p>
+<hr>
+<hr>
+<h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><blockquote>
+<p><strong>ページをリダイレクトするための標準的な “素の” JavaScriptでの方法：</strong></p>
+<p><strong> `window.location.href = ‘newPage.html’; </strong></p>
+</blockquote>
+<hr>
+<p><strong>リダイレクト時にHTTP<em>REFERERを</em>失っている_場合は、以下を参考に</strong></p>
+<hr>
+<p>このセクションは <code>HTTP_REFERER</code>を安全なものの1つとして使用する人のためのもの(あんまりいい保護手段じゃないけど)。<a href="http://en.wikipedia.org/wiki/Internet_Explorer_8" target="_blank" rel="external">Internet Explorer 8</a>またはそれ以前のを使用している場合、JavaScriptのページリダイレクションがどうあっても、これらの変数が失われる(location.hrefなど)。</p>
+<blockquote>
+<p>以下では、HTTP_REFERERを失わないようにIE8より以前での実装をやってみる。それ以外の場合は、ほとんどの場合<code>window.location.href</code>でいけるはず。</p>
+</blockquote>
+<p><code>HTTP_REFERER</code>(URLの貼り付け、セッションなど)に対するテストはリクエストがちゃんとしてるか判断するのに手助けに成るはず。<em>(<strong>注：</strong>これらのリファラを回避する/偽装する方法ももちろん存在する)</em></p>
+<hr>
+<p>簡単なクロスブラウザテストソリューション(Internet Explorer 9以降および他のすべてのブラウザでは<code>window.location.href</code>を)</p>
+<p><strong>使用法： <code>redirect(&#39;anotherpage.aspx&#39;);</code> </strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">redirect</span> (<span class="params">url</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> ua        = navigator.userAgent.toLowerCase(),</div><div class="line">        isIE      = ua.indexOf(<span class="string">'msie'</span>) !== <span class="number">-1</span>,</div><div class="line">        version   = <span class="built_in">parseInt</span>(ua.substr(<span class="number">4</span>, <span class="number">2</span>), <span class="number">10</span>);</div><div class="line"></div><div class="line">    <span class="comment">// Internet Explorer 8以下</span></div><div class="line">    <span class="keyword">if</span> (isIE &amp;amp;&amp;amp; version &amp;lt; <span class="number">9</span>) &#123;</div><div class="line">        <span class="keyword">var</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">        link.href = url;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(link);</div><div class="line">        link.click();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//他のすべてのブラウザは標準のwindow.location.hrefを使用可(Internet Explorer 8以下のようにHTTP_REFERERを失うことはない)</span></div><div class="line">    <span class="keyword">else</span> &#123; </div><div class="line">        <span class="built_in">window</span>.location.href = url; </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="/users/1492009/mark-pieszak">Mark Pieszak</a> | 回答日時： Jul 27 ‘12 at 14:41 </div><br></p>
+<hr>
+<hr>
+<h2 id="回答4"><a href="#回答4" class="headerlink" title="回答4:"></a>回答4:</h2><p>これ使いな：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// window.location</span></div><div class="line"><span class="built_in">window</span>.location.replace(<span class="string">'http://www.example.com'</span>)</div><div class="line"><span class="built_in">window</span>.location.assign(<span class="string">'http://www.example.com'</span>)</div><div class="line"><span class="built_in">window</span>.location.href = <span class="string">'http://www.example.com'</span></div><div class="line"><span class="built_in">document</span>.location.href = <span class="string">'/path'</span></div><div class="line"></div><div class="line"><span class="comment">// window.history</span></div><div class="line"><span class="built_in">window</span>.history.back()</div><div class="line"><span class="built_in">window</span>.history.go(<span class="number">-1</span>)</div><div class="line"></div><div class="line"><span class="comment">// window.navigate; ONLY for old versions of Internet Explorer</span></div><div class="line"><span class="built_in">window</span>.navigate(<span class="string">'top.jsp'</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// たぶんあんまりよくない</span></div><div class="line">self.location = <span class="string">'http://www.example.com'</span>;</div><div class="line">top.location = <span class="string">'http://www.example.com'</span>;</div><div class="line"></div><div class="line"><span class="comment">// jQuery</span></div><div class="line">$(location).attr(<span class="string">'href'</span>,<span class="string">'http://www.example.com'</span>)</div><div class="line">$(<span class="built_in">window</span>).attr(<span class="string">'location'</span>,<span class="string">'http://www.example.com'</span>)</div><div class="line">$(location).prop(<span class="string">'href'</span>, <span class="string">'http://www.example.com'</span>)</div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="/users/3196723/govind-singh">Govind Singh</a> | 回答日時： Jan 28 ‘14 at 4:28 </div><br></p>
+<hr>
+<hr>
+<h2 id="回答5"><a href="#回答5" class="headerlink" title="回答5:"></a>回答5:</h2><p>これならどのブラウザでも動作するよ：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.location.href = <span class="string">'your_url'</span>;</div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="/users/484764/fred">Fred</a> | 回答日時： Oct 22 ‘10 at 23:45 </div><br></p>
+<hr>
+<hr>
+<p>Source: <a href="https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage" target="_blank" rel="external">How to redirect to another webpage?</a></p>
+
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/" data-id="cj80xdqr8000bbsw66xxtqgc8" class="article-share-link">Share</a>
+      
+      
+        <a href="https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/redirect/">redirect</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/somatome/2017/09/24/how-to-undo-the-last-commits-in-git/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer Post</strong>
+      <div class="article-nav-title">
+        
+          Gitの最後のコミットを元に戻す方法ってどうやるの？
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+  
+</article>
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+      <hr>
+      <h3><strong>こちらの記事もどうぞ</strong></h3>
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" title="jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？" rel="bookmark">jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" title="JavaScriptである文字列に別な文字列（substring）が含まれているかどうかをチェックする方法って？" rel="bookmark">JavaScriptである文字列に別な文字列（substring）が含まれているかどうかをチェックする方法って？</a></h3></div></li></ul>
+
+</section>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-about" class="widget-title">About</h3>
+    <div class="widget">
+      
+        <p> John Doe </p>
+      
+      
+        <p> <a href="http://twitter.com/">@</a> </p>
+      
+      </p>
+      
+        <p>  </p>
+      
+      
+        <p>  </p>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-tag" class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/append/">append</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/contains/">contains</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/data-structures/">data-structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/dom/">dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/extend/">extend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/external/">external</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-branch/">git-branch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-commit/">git-commit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-rebase/">git-rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-remote/">git-remote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-reset/">git-reset</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-revert/">git-revert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/javascript/">javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/jquery/">jquery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/list/">list</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/loops/">loops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/redirect/">redirect</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string/">string</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string-matching/">string-matching</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/subprocess/">subprocess</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/substring/">substring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/visibility/">visibility</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-tagcloud" class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/somatome/tags/append/" style="font-size: 10px;">append</a> <a href="/somatome/tags/command/" style="font-size: 10px;">command</a> <a href="/somatome/tags/contains/" style="font-size: 10px;">contains</a> <a href="/somatome/tags/data-structures/" style="font-size: 10px;">data-structures</a> <a href="/somatome/tags/dom/" style="font-size: 10px;">dom</a> <a href="/somatome/tags/extend/" style="font-size: 10px;">extend</a> <a href="/somatome/tags/external/" style="font-size: 10px;">external</a> <a href="/somatome/tags/git/" style="font-size: 13.33px;">git</a> <a href="/somatome/tags/git-branch/" style="font-size: 10px;">git-branch</a> <a href="/somatome/tags/git-commit/" style="font-size: 10px;">git-commit</a> <a href="/somatome/tags/git-rebase/" style="font-size: 10px;">git-rebase</a> <a href="/somatome/tags/git-remote/" style="font-size: 10px;">git-remote</a> <a href="/somatome/tags/git-reset/" style="font-size: 10px;">git-reset</a> <a href="/somatome/tags/git-revert/" style="font-size: 10px;">git-revert</a> <a href="/somatome/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/somatome/tags/jquery/" style="font-size: 13.33px;">jquery</a> <a href="/somatome/tags/list/" style="font-size: 16.67px;">list</a> <a href="/somatome/tags/loops/" style="font-size: 10px;">loops</a> <a href="/somatome/tags/python/" style="font-size: 20px;">python</a> <a href="/somatome/tags/redirect/" style="font-size: 10px;">redirect</a> <a href="/somatome/tags/shell/" style="font-size: 10px;">shell</a> <a href="/somatome/tags/string/" style="font-size: 10px;">string</a> <a href="/somatome/tags/string-matching/" style="font-size: 10px;">string-matching</a> <a href="/somatome/tags/subprocess/" style="font-size: 10px;">subprocess</a> <a href="/somatome/tags/substring/" style="font-size: 10px;">substring</a> <a href="/somatome/tags/visibility/" style="font-size: 10px;">visibility</a>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-archive" class="widget-title" data-skip-mobile-nav="true">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/somatome/archives/2017/09/">September 2017</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-recent-posts" class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/somatome/2017/09/25/accessing-the-index-in-python-for-loops/">Python forループのインデックスへのアクセス方法 [Python]</a>
+          </li>
+        
+          <li>
+            <a href="/somatome/2017/09/25/append-vs-extend/">append vs. extend [Python]</a>
+          </li>
+        
+          <li>
+            <a href="/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/">リストが空であるかどうかをチェックする最良の方法って？ [Python]</a>
+          </li>
+        
+          <li>
+            <a href="/somatome/2017/09/25/calling-an-external-command-in-python/">Pythonで外部コマンドを呼び出す [Python]</a>
+          </li>
+        
+          <li>
+            <a href="/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/">jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      Copyrights &copy; 2017 John Doe All Rights Reserved. <br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
+      Themed by <a href="https://github.com/kwhrtsk/hexo-theme-ingenuous">Ingenuous</a> (based on <a href="https://github.com/hexojs/hexo-theme-landscape">Landscape</a>).
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/somatome/" class="mobile-nav-link">Home</a>
+  
+    <a href="/somatome/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+
+    
+<script>
+  var disqus_shortname = 'somatome';
+  
+  var disqus_url = 'https://somatome.github.io/somatome/2017/09/24/how-to-redirect-to-another-webpage/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/somatome/fancybox/jquery.fancybox.css">
+  <script src="/somatome/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script src="/somatome/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
