@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8">
   
-  
-  <title>JavaScriptである文字列に別な文字列（substring）が含まれているかどうかをチェックする方法って？ | Stack Overflow まとめ</title>
+  <title>javascriptである文字列に別な文字列（substring）が含まれているかどうかをチェックする方法って？ | Stack Overflow まとめ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="javascriptstringsubstringcontainsstring-matching" />
+  
+  
+  
   
   <meta name="description" content="質問：String.contains()メソッドだと思ったんだけど、ちょっと違うみたい。これをチェックするいい方法ってあるかな？">
 <meta name="keywords" content="javascript,string,substring,contains,string-matching">
@@ -19,96 +23,129 @@
 <meta name="twitter:title" content="JavaScriptである文字列に別な文字列（substring）が含まれているかどうかをチェックする方法って？">
 <meta name="twitter:description" content="質問：String.contains()メソッドだと思ったんだけど、ちょっと違うみたい。これをチェックするいい方法ってあるかな？">
   
-    <link rel="alternative" href="/atom.xml" title="Stack Overflow まとめ" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Stack Overflow まとめ" type="application/atom+xml">
   
+  <link rel="icon" href="/somatome/css/images/favicon.ico">
   
-    <link rel="icon" href="/favicon.png">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
   <link rel="stylesheet" href="/somatome/css/style.css">
+
+  <script src="/somatome/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/somatome/css/bootstrap.css" >
+  <link rel="stylesheet" href="/somatome/css/hiero.css" >
+  <link rel="stylesheet" href="/somatome/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/somatome/css/vdonate.css" >
   
 
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/somatome/" id="logo">Stack Overflow まとめ</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/somatome/">Home</a>
-        
-          <a class="main-nav-link" href="/somatome/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        
-          <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-        
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://somatome.github.io/somatome"></form>
+<script>
+var themeMenus = {};
+
+  themeMenus["/somatome/"] = "Home"; 
+
+  themeMenus["/somatome/archives"] = "Archives"; 
+
+  themeMenus["/somatome/categories"] = "Categories"; 
+
+  themeMenus["/somatome/tags"] = "Tags"; 
+
+  themeMenus["/somatome/about"] = "About"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/somatome/" title="Stack Overflow まとめ" rel="home"> Stack Overflow まとめ </a>
+            
+          </h1>
+
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/somatome/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/somatome/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/somatome/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/somatome/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/somatome/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
       </div>
-    </div>
   </div>
 </header>
 
-      <div class="outer">
-        <section id="main"><article id="post-how-to-check-whether-a-string-contains-a-substring-in-javascript" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" class="article-date">
-  <time datetime="2017-09-24T23:46:44.000Z" itemprop="datePublished">2017-09-25</time>
-</a>
 
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-how-to-check-whether-a-string-contains-a-substring-in-javascript" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-
-  </div>
-  <div class="article-inner">
-    
-
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
+    <h1 class="thumb" class="article-title" itemprop="name">
       JavaScriptである文字列に別な文字列（substring）が含まれているかどうかをチェックする方法って？
     </h1>
   
 
-
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="article-meta">
       
-        <div class="article-sharing">
-  <ul>
-    <li>
-      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-    </li>
-    <li>
-      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" >Tweet</a>
-    </li>
-    <li>
-      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/"></div>
-    </li>
-  </ul>
-</div>
+	Posted on <a href="/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" class="article-date">
+	  <time datetime="2017-09-24T23:46:44.000Z" itemprop="datePublished">September 25, 2017</time>
+	</a>
 
       
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
       
-        
         <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>String.contains()</code>メソッドだと思ったんだけど、ちょっと違うみたい。これをチェックするいい方法ってあるかな？</p>
 <a id="more"></a>
 <hr>
@@ -164,19 +201,53 @@
 <p>Source: <a href="https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript" target="_blank" rel="external">How to check whether a string contains a substring in JavaScript?</a></p>
 
       
-
     </div>
-    <footer class="article-footer">
-      
-        <a data-url="https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" data-id="cj80xdqr00008bsw6khdysbwx" class="article-share-link">Share</a>
+    <footer class="entry-meta entry-footer">
       
       
-        <a href="https://somatome.github.io/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
+  <span class="ico-tags"></span>
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/contains/">contains</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/string/">string</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/string-matching/">string-matching</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/substring/">substring</a></li></ul>
 
+      
+        <div id="donation_div"></div>
 
+<script src="/somatome/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: 'Donate', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png',
+  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
+});
+</script>
+      
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
     </footer>
   </div>
   
@@ -184,7 +255,7 @@
 <nav id="article-nav">
   
     <a href="/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer Post</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？
@@ -194,145 +265,69 @@
   
   
     <a href="/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older Post</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">ローカルとリモートの両方でGitブランチを削除するには？</div>
     </a>
   
 </nav>
 
-
   
 </article>
 
+<!-- Table of Contents -->
 
-
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-
-      <hr>
-      <h3><strong>こちらの記事もどうぞ</strong></h3>
-      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" title="jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？" rel="bookmark">jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/24/how-to-redirect-to-another-webpage/" title="他のウェブページにリダイレクトする方法ってどうやるの？" rel="bookmark">他のウェブページにリダイレクトする方法ってどうやるの？</a></h3></div></li></ul>
-
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#質問："><span class="nav-number">1.</span> <span class="nav-text">質問：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回答1"><span class="nav-number">2.</span> <span class="nav-text">回答1:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回答2"><span class="nav-number">3.</span> <span class="nav-text">回答2:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回答3"><span class="nav-number">4.</span> <span class="nav-text">回答3:</span></a></li></ol>
+    
+    </div>
+  </aside>
 </section>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 id="widget-title-about" class="widget-title">About</h3>
-    <div class="widget">
-      
-        <p> John Doe </p>
-      
-      
-        <p> <a href="http://twitter.com/">@</a> </p>
-      
-      </p>
-      
-        <p>  </p>
-      
-      
-        <p>  </p>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 id="widget-title-tag" class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/append/">append</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/contains/">contains</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/data-structures/">data-structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/dom/">dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/extend/">extend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/external/">external</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-branch/">git-branch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-commit/">git-commit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-rebase/">git-rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-remote/">git-remote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-reset/">git-reset</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-revert/">git-revert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/javascript/">javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/jquery/">jquery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/list/">list</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/loops/">loops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/redirect/">redirect</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string/">string</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string-matching/">string-matching</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/subprocess/">subprocess</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/substring/">substring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/visibility/">visibility</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 id="widget-title-tagcloud" class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/somatome/tags/append/" style="font-size: 10px;">append</a> <a href="/somatome/tags/command/" style="font-size: 10px;">command</a> <a href="/somatome/tags/contains/" style="font-size: 10px;">contains</a> <a href="/somatome/tags/data-structures/" style="font-size: 10px;">data-structures</a> <a href="/somatome/tags/dom/" style="font-size: 10px;">dom</a> <a href="/somatome/tags/extend/" style="font-size: 10px;">extend</a> <a href="/somatome/tags/external/" style="font-size: 10px;">external</a> <a href="/somatome/tags/git/" style="font-size: 13.33px;">git</a> <a href="/somatome/tags/git-branch/" style="font-size: 10px;">git-branch</a> <a href="/somatome/tags/git-commit/" style="font-size: 10px;">git-commit</a> <a href="/somatome/tags/git-rebase/" style="font-size: 10px;">git-rebase</a> <a href="/somatome/tags/git-remote/" style="font-size: 10px;">git-remote</a> <a href="/somatome/tags/git-reset/" style="font-size: 10px;">git-reset</a> <a href="/somatome/tags/git-revert/" style="font-size: 10px;">git-revert</a> <a href="/somatome/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/somatome/tags/jquery/" style="font-size: 13.33px;">jquery</a> <a href="/somatome/tags/list/" style="font-size: 16.67px;">list</a> <a href="/somatome/tags/loops/" style="font-size: 10px;">loops</a> <a href="/somatome/tags/python/" style="font-size: 20px;">python</a> <a href="/somatome/tags/redirect/" style="font-size: 10px;">redirect</a> <a href="/somatome/tags/shell/" style="font-size: 10px;">shell</a> <a href="/somatome/tags/string/" style="font-size: 10px;">string</a> <a href="/somatome/tags/string-matching/" style="font-size: 10px;">string-matching</a> <a href="/somatome/tags/subprocess/" style="font-size: 10px;">subprocess</a> <a href="/somatome/tags/substring/" style="font-size: 10px;">substring</a> <a href="/somatome/tags/visibility/" style="font-size: 10px;">visibility</a>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 id="widget-title-archive" class="widget-title" data-skip-mobile-nav="true">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/somatome/archives/2017/09/">September 2017</a><span class="archive-list-count">9</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 id="widget-title-recent-posts" class="widget-title">Recents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/somatome/2017/09/25/accessing-the-index-in-python-for-loops/">Python forループのインデックスへのアクセス方法 [Python]</a>
-          </li>
-        
-          <li>
-            <a href="/somatome/2017/09/25/append-vs-extend/">append vs. extend [Python]</a>
-          </li>
-        
-          <li>
-            <a href="/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/">リストが空であるかどうかをチェックする最良の方法って？ [Python]</a>
-          </li>
-        
-          <li>
-            <a href="/somatome/2017/09/25/calling-an-external-command-in-python/">Pythonで外部コマンドを呼び出す [Python]</a>
-          </li>
-        
-          <li>
-            <a href="/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/">jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-
-  
-</aside>
-
         
       </div>
-      <footer id="footer">
+      <footer id="footer" class="site-footer">
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      Copyrights &copy; 2017 John Doe All Rights Reserved. <br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
-      Themed by <a href="https://github.com/kwhrtsk/hexo-theme-ingenuous">Ingenuous</a> (based on <a href="https://github.com/hexojs/hexo-theme-landscape">Landscape</a>).
-    </div>
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 Stack Overflow まとめ All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
   </div>
 </footer>
 
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
     </div>
-    <nav id="mobile-nav">
+    <!-- <nav id="mobile-nav">
   
     <a href="/somatome/" class="mobile-nav-link">Home</a>
   
     <a href="/somatome/archives" class="mobile-nav-link">Archives</a>
   
-</nav>
-
+    <a href="/somatome/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/somatome/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/somatome/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
     
 <script>
   var disqus_shortname = 'somatome';
@@ -349,27 +344,69 @@
 </script>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
   <link rel="stylesheet" href="/somatome/fancybox/jquery.fancybox.css">
   <script src="/somatome/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script src="/somatome/js/scripts.js"></script>
+<script src="/somatome/js/bootstrap.js"></script>
+<script src="/somatome/js/main.js"></script>
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-<script src="/somatome/js/script.js"></script>
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
 
 
   </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>
