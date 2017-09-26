@@ -123,7 +123,7 @@ body,
   height: 100%;
 }
 body {
-  background: #eee;
+  background: #fff;
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
@@ -179,7 +179,7 @@ body {
   -ms-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   z-index: 1;
-  background: #eee;
+  background: #fff;
 }
 .mobile-nav-on #wrap {
   left: 280px;
@@ -571,6 +571,7 @@ a.article-title:hover {
 .article-entry {
   color: #555;
   padding: 0 20px;
+  margin: 20px;
 }
 .article-entry:before,
 .article-entry:after {
@@ -646,9 +647,16 @@ a.article-title:hover {
 }
 .article-entry blockquote {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.4em;
-  margin: 1.6em 20px;
-  text-align: center;
+  font-size: 1em;
+  margin: 1.6em 0px;
+  text-align: left;
+  margin-bottom: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #fff8dc;
+  border-left: 2px solid #ffeb8e;
 }
 .article-entry blockquote footer {
   font-size: 14px;
@@ -701,7 +709,7 @@ a.article-title:hover {
   line-height: 1em;
   padding: 6px 15px;
   border-radius: 15px;
-  background: #eee;
+  background: #fff;
   color: #999;
   text-shadow: 0 1px #fff;
   text-decoration: none;
@@ -868,7 +876,7 @@ a.article-title:hover {
   line-height: 36px;
 }
 .article-share-links {
-  background: #eee;
+  background: #fff;
 }
 .article-share-links:before,
 .article-share-links:after {
@@ -1142,14 +1150,14 @@ a.article-title:hover {
 }
 .article-entry pre,
 .article-entry .highlight {
-  background: #2d2d2d;
-  margin: 0 -20px;
+  background: #eff0f1;
+  margin: 0px;
   padding: 15px 20px;
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
   overflow: auto;
-  color: #ccc;
+  color: #000;
   line-height: 22.400000000000002px;
 }
 @media screen and (max-width: 479px) {
@@ -1169,7 +1177,7 @@ a.article-title:hover {
   font-family: "Inconsolata", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  background: #eee;
+  background: #eff0f1;
   text-shadow: 0 1px #fff;
   padding: 0 0.3em;
 }
@@ -1226,7 +1234,7 @@ a.article-title:hover {
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
-  background: #2d2d2d;
+  background: #eff0f1;
   padding: 15px 20px 15px 0;
 }
 .article-entry .gist .gist-file {
@@ -1252,7 +1260,7 @@ a.article-title:hover {
   border: none;
 }
 .article-entry .gist .gist-file .gist-meta {
-  background: #2d2d2d;
+  background: #eff0f1;
   color: #999;
   font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-shadow: 0 0;

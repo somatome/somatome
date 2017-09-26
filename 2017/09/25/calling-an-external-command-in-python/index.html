@@ -11,7 +11,7 @@
 <meta name="keywords" content="python,shell,command,subprocess,external">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pythonで外部コマンドを呼び出す [Python]">
-<meta property="og:url" content="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/index.html">
+<meta property="og:url" content="http://localhost:4000/2017/09/25/calling-an-external-command-in-python/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
 <meta property="og:description" content="質問：Pythonスクリプトから外部コマンド(UNIXシェルとかWindowsのコマンドプロンプトで入力したみたいに)ってどうやって呼び出せるの？  By  freshWoWer | 質問日時： Sep 18 ‘08 at 1:35">
 <meta property="og:updated_time" content="2017-09-25T15:41:11.000Z">
@@ -25,7 +25,7 @@
     <link rel="icon" href="/favicon.png">
   
   <link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/somatome/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   
 
 </head>
@@ -37,7 +37,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/somatome/" id="logo">Stack Overflow まとめ</a>
+        <a href="/" id="logo">Stack Overflow まとめ</a>
       </h1>
       
     </div>
@@ -45,9 +45,9 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/somatome/">Home</a>
+          <a class="main-nav-link" href="/">Home</a>
         
-          <a class="main-nav-link" href="/somatome/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">Archives</a>
         
       </nav>
       <nav id="sub-nav">
@@ -59,7 +59,7 @@
         
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://somatome.github.io/somatome"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://localhost:4000"></form>
       </div>
     </div>
   </div>
@@ -68,7 +68,7 @@
       <div class="outer">
         <section id="main"><article id="post-calling-an-external-command-in-python" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/somatome/2017/09/25/calling-an-external-command-in-python/" class="article-date">
+    <a href="/2017/09/25/calling-an-external-command-in-python/" class="article-date">
   <time datetime="2017-09-25T14:23:15.000Z" itemprop="datePublished">2017-09-25</time>
 </a>
 
@@ -95,13 +95,13 @@
         <div class="article-sharing">
   <ul>
     <li>
-      <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+      <a href="http://b.hatena.ne.jp/entry/http://localhost:4000/2017/09/25/calling-an-external-command-in-python/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
     </li>
     <li>
-      <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/" data-via="{{ theme.twitter }}" data-counturl="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/" >Tweet</a>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4000/2017/09/25/calling-an-external-command-in-python/" data-via="{{ theme.twitter }}" data-counturl="http://localhost:4000/2017/09/25/calling-an-external-command-in-python/" >Tweet</a>
     </li>
     <li>
-      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/"></div>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="http://localhost:4000/2017/09/25/calling-an-external-command-in-python/"></div>
     </li>
   </ul>
 </div>
@@ -139,16 +139,17 @@
 <p>Source: <a href="https://stackoverflow.com/questions/89228/calling-an-external-command-in-python" target="_blank" rel="external">Calling an external command in Python</a></p>
 
       
+
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/" data-id="cj80xdqqm0003bsw62lg72aiw" class="article-share-link">Share</a>
+        <a data-url="http://localhost:4000/2017/09/25/calling-an-external-command-in-python/" data-id="cj81fvojr0004fkw6qzenwb2u" class="article-share-link">Share</a>
       
       
-        <a href="https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://localhost:4000/2017/09/25/calling-an-external-command-in-python/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/command/">command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/external/">external</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/subprocess/">subprocess</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/command/">command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/external/">external</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/subprocess/">subprocess</a></li></ul>
 
 
     </footer>
@@ -157,7 +158,7 @@
     
 <nav id="article-nav">
   
-    <a href="/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/09/25/best-way-to-check-if-a-list-is-empty/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer Post</strong>
       <div class="article-nav-title">
         
@@ -167,7 +168,7 @@
     </a>
   
   
-    <a href="/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older Post</strong>
       <div class="article-nav-title">jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？</div>
     </a>
@@ -184,7 +185,10 @@
   <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
-      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/25/append-vs-extend/" title="append vs. extend [Python]" rel="bookmark">append vs. extend [Python]</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/25/best-way-to-check-if-a-list-is-empty/" title="リストが空であるかどうかをチェックする最良の方法って？ [Python]" rel="bookmark">リストが空であるかどうかをチェックする最良の方法って？ [Python]</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/25/accessing-the-index-in-python-for-loops/" title="Python forループのインデックスへのアクセス方法 [Python]" rel="bookmark">Python forループのインデックスへのアクセス方法 [Python]</a></h3></div></li></ul>
+
+      <hr>
+      <h3><strong>こちらの記事もどうぞ</strong></h3>
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/25/accessing-the-index-in-python-for-loops/" title="Python forループのインデックスへのアクセス方法 [Python]" rel="bookmark">Python forループのインデックスへのアクセス方法 [Python]</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/25/append-vs-extend/" title="append vs. extend [Python]" rel="bookmark">append vs. extend [Python]</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/25/best-way-to-check-if-a-list-is-empty/" title="リストが空であるかどうかをチェックする最良の方法って？ [Python]" rel="bookmark">リストが空であるかどうかをチェックする最良の方法って？ [Python]</a></h3></div></li></ul>
 
 </section>
 
@@ -222,7 +226,7 @@
   <div class="widget-wrap">
     <h3 id="widget-title-tag" class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/append/">append</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/contains/">contains</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/data-structures/">data-structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/dom/">dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/extend/">extend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/external/">external</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-branch/">git-branch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-commit/">git-commit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-rebase/">git-rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-remote/">git-remote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-reset/">git-reset</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-revert/">git-revert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/javascript/">javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/jquery/">jquery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/list/">list</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/loops/">loops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/redirect/">redirect</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string/">string</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string-matching/">string-matching</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/subprocess/">subprocess</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/substring/">substring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/visibility/">visibility</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/append/">append</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contains/">contains</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data-structures/">data-structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dom/">dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/extend/">extend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/external/">external</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-branch/">git-branch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-commit/">git-commit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-rebase/">git-rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-remote/">git-remote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-reset/">git-reset</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-revert/">git-revert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/list/">list</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/loops/">loops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redirect/">redirect</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/">string</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string-matching/">string-matching</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/subprocess/">subprocess</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/substring/">substring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/visibility/">visibility</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -232,7 +236,7 @@
   <div class="widget-wrap">
     <h3 id="widget-title-tagcloud" class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/somatome/tags/append/" style="font-size: 10px;">append</a> <a href="/somatome/tags/command/" style="font-size: 10px;">command</a> <a href="/somatome/tags/contains/" style="font-size: 10px;">contains</a> <a href="/somatome/tags/data-structures/" style="font-size: 10px;">data-structures</a> <a href="/somatome/tags/dom/" style="font-size: 10px;">dom</a> <a href="/somatome/tags/extend/" style="font-size: 10px;">extend</a> <a href="/somatome/tags/external/" style="font-size: 10px;">external</a> <a href="/somatome/tags/git/" style="font-size: 13.33px;">git</a> <a href="/somatome/tags/git-branch/" style="font-size: 10px;">git-branch</a> <a href="/somatome/tags/git-commit/" style="font-size: 10px;">git-commit</a> <a href="/somatome/tags/git-rebase/" style="font-size: 10px;">git-rebase</a> <a href="/somatome/tags/git-remote/" style="font-size: 10px;">git-remote</a> <a href="/somatome/tags/git-reset/" style="font-size: 10px;">git-reset</a> <a href="/somatome/tags/git-revert/" style="font-size: 10px;">git-revert</a> <a href="/somatome/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/somatome/tags/jquery/" style="font-size: 13.33px;">jquery</a> <a href="/somatome/tags/list/" style="font-size: 16.67px;">list</a> <a href="/somatome/tags/loops/" style="font-size: 10px;">loops</a> <a href="/somatome/tags/python/" style="font-size: 20px;">python</a> <a href="/somatome/tags/redirect/" style="font-size: 10px;">redirect</a> <a href="/somatome/tags/shell/" style="font-size: 10px;">shell</a> <a href="/somatome/tags/string/" style="font-size: 10px;">string</a> <a href="/somatome/tags/string-matching/" style="font-size: 10px;">string-matching</a> <a href="/somatome/tags/subprocess/" style="font-size: 10px;">subprocess</a> <a href="/somatome/tags/substring/" style="font-size: 10px;">substring</a> <a href="/somatome/tags/visibility/" style="font-size: 10px;">visibility</a>
+      <a href="/tags/append/" style="font-size: 10px;">append</a> <a href="/tags/command/" style="font-size: 10px;">command</a> <a href="/tags/contains/" style="font-size: 10px;">contains</a> <a href="/tags/data-structures/" style="font-size: 10px;">data-structures</a> <a href="/tags/dom/" style="font-size: 10px;">dom</a> <a href="/tags/extend/" style="font-size: 10px;">extend</a> <a href="/tags/external/" style="font-size: 10px;">external</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/git-branch/" style="font-size: 10px;">git-branch</a> <a href="/tags/git-commit/" style="font-size: 10px;">git-commit</a> <a href="/tags/git-rebase/" style="font-size: 10px;">git-rebase</a> <a href="/tags/git-remote/" style="font-size: 10px;">git-remote</a> <a href="/tags/git-reset/" style="font-size: 10px;">git-reset</a> <a href="/tags/git-revert/" style="font-size: 10px;">git-revert</a> <a href="/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/tags/jquery/" style="font-size: 13.33px;">jquery</a> <a href="/tags/list/" style="font-size: 16.67px;">list</a> <a href="/tags/loops/" style="font-size: 10px;">loops</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/redirect/" style="font-size: 10px;">redirect</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/string-matching/" style="font-size: 10px;">string-matching</a> <a href="/tags/subprocess/" style="font-size: 10px;">subprocess</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/visibility/" style="font-size: 10px;">visibility</a>
     </div>
   </div>
 
@@ -242,7 +246,7 @@
   <div class="widget-wrap">
     <h3 id="widget-title-archive" class="widget-title" data-skip-mobile-nav="true">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/somatome/archives/2017/09/">September 2017</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -255,23 +259,23 @@
       <ul>
         
           <li>
-            <a href="/somatome/2017/09/25/accessing-the-index-in-python-for-loops/">Python forループのインデックスへのアクセス方法 [Python]</a>
+            <a href="/2017/09/25/accessing-the-index-in-python-for-loops/">Python forループのインデックスへのアクセス方法 [Python]</a>
           </li>
         
           <li>
-            <a href="/somatome/2017/09/25/append-vs-extend/">append vs. extend [Python]</a>
+            <a href="/2017/09/25/append-vs-extend/">append vs. extend [Python]</a>
           </li>
         
           <li>
-            <a href="/somatome/2017/09/25/best-way-to-check-if-a-list-is-empty/">リストが空であるかどうかをチェックする最良の方法って？ [Python]</a>
+            <a href="/2017/09/25/best-way-to-check-if-a-list-is-empty/">リストが空であるかどうかをチェックする最良の方法って？ [Python]</a>
           </li>
         
           <li>
-            <a href="/somatome/2017/09/25/calling-an-external-command-in-python/">Pythonで外部コマンドを呼び出す [Python]</a>
+            <a href="/2017/09/25/calling-an-external-command-in-python/">Pythonで外部コマンドを呼び出す [Python]</a>
           </li>
         
           <li>
-            <a href="/somatome/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/">jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？</a>
+            <a href="/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/">jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？</a>
           </li>
         
       </ul>
@@ -298,9 +302,9 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/somatome/" class="mobile-nav-link">Home</a>
+    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/somatome/archives" class="mobile-nav-link">Archives</a>
+    <a href="/archives" class="mobile-nav-link">Archives</a>
   
 </nav>
 
@@ -308,7 +312,7 @@
 <script>
   var disqus_shortname = 'somatome';
   
-  var disqus_url = 'https://somatome.github.io/somatome/2017/09/25/calling-an-external-command-in-python/';
+  var disqus_url = 'http://localhost:4000/2017/09/25/calling-an-external-command-in-python/';
   
   (function(){
     var dsq = document.createElement('script');
@@ -323,8 +327,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/somatome/fancybox/jquery.fancybox.css">
-  <script src="/somatome/fancybox/jquery.fancybox.pack.js"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 <div id="fb-root"></div>
@@ -338,7 +342,7 @@
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-<script src="/somatome/js/script.js"></script>
+<script src="/js/script.js"></script>
 
 
   </div>
