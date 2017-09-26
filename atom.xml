@@ -3,10 +3,10 @@
   <title>Stack Overflow まとめ</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/somatome/atom.xml" rel="self"/>
   
   <link href="http://localhost:4000/"/>
-  <updated>2017-09-25T18:43:37.422Z</updated>
+  <updated>2017-09-26T10:56:29.115Z</updated>
   <id>http://localhost:4000/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ローカルGitブランチの名前を変更するにはどうすればいい？ [Git]</title>
+    <link href="http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/"/>
+    <id>http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/</id>
+    <published>2017-09-26T10:40:46.000Z</published>
+    <updated>2017-09-26T10:56:29.115Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><em><a href="https://stackoverflow.com/questions/1526794/rename-master-branch-for-both-local-and-remote-git-repositories?answertab=votes#tab-top" target="_blank" rel="external">ローカルとリモートの両方のGitリポジトリのMaster branchの名前を変更する</a></em>に書いてあるように、リモートブランチの名前は変更したくないんだけど。</p><p>リモートブランチにプッシュされていないローカルブランチの名前を変更するにはどうしたらいいの？</p><p><div style="text-align: right"> By  <a href="/users/338204/forrest">Forrest</a> | 質問日時： Jul 6 ‘11 at 3:20 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>あるブランチを指定してそのブランチの名前を変更する場合は、次のようにやればいいよ。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -m &lt;oldname&gt; &lt;newname&gt;</div></pre></td></tr></table></figure><p>今使ってるブランチの名前を変更するには、次のように</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -m &lt;newname&gt;</div></pre></td></tr></table></figure><p>これを覚えておくには、 <code>-m</code>は”move”(または<code>mv</code>)、つまりファイル名の変更だ、って覚えておくといいかも。</p><p><div style="text-align: right"> By  <a href="/users/394487/siride">siride</a> | 回答日時： Jul 6 ‘11 at 3:21 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -m old_branch_name new_branch_name</div></pre></td></tr></table></figure><p>このコマンドで名前を変えられるけど、この名前を変更したブランチを使う時は注意。なぜなら、これはまだ古い上流ブランチを参照してるから（もしそれが存在するのであれば）。</p><p>ローカルブランチを(例えば)<code>new_branch_name</code>に名前を変更した後、変更をマスターにプッシュしたい場合は：</p><p><code>git push origin new_branch_name：master</code>(この変更はマスターブランチに行くけど、君のローカルブランチ名は<code>new_branch_name</code>だよ)</p><p>詳細については、「<a href="http://madhan-tech-updates.blogspot.in/2013/01/how-to-rename-your-local-branch-name-in.html" target="_blank" rel="external">ローカルGitブランチ名の名前を変更する方法</a>」を参照。</p><p><div style="text-align: right"> By  <a href="/users/1996609/madhan-ayyasamy">Madhan Ayyasamy</a> | 回答日時： Jan 21 ‘13 at 9:49 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>ブランチの名前を変更する手順は次のとおり。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. 名前を変更する必要があるブランチに移動</div><div class="line">2. git branch -m &lt;new_name&gt;</div><div class="line">3. git push origin :&lt;old_name&gt;</div><div class="line">4. git push origin &lt;new_name&gt;:refs/heads/&lt;new_name&gt;</div></pre></td></tr></table></figure><p><strong> 追記(2017/01/12)：</strong>コマンド <code>git status</code>を実行して、新しく作成したブランチが、古いものじゃなくそれ自身（新しいもの）を指していることを確認すること。まだ古いブランチへの参照してる場合は、以下のように上流でのを設定を解除する必要があるよ。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch --<span class="built_in">unset</span>-upstream</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/1719752/milind-anantwar">Milind Anantwar</a> | 回答日時： Apr 15 ‘15 at 12:50 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/6591213/how-do-i-rename-a-local-git-branch" target="_blank" rel="external">How do I rename a local Git branch?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1526794/rename-master-branch-for-both-local-and-remote-git-repositories?answertab=votes#tab-top&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ローカルとリモートの両方のGitリポジトリのMaster branchの名前を変更する&lt;/a&gt;&lt;/em&gt;に書いてあるように、リモートブランチの名前は変更したくないんだけど。&lt;/p&gt;
+&lt;p&gt;リモートブランチにプッシュされていないローカルブランチの名前を変更するにはどうしたらいいの？&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/338204/forrest&quot;&gt;Forrest&lt;/a&gt; | 質問日時： Jul 6 ‘11 at 3:20 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://localhost:4000/tags/git/"/>
+    
+      <category term="git-branch" scheme="http://localhost:4000/tags/git-branch/"/>
+    
+  </entry>
   
   <entry>
     <title>Python forループのインデックスへのアクセス方法 [Python]</title>

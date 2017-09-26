@@ -4,15 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>Tag: git-remote | Stack Overflow まとめ</title>
+  <title>ローカルGitブランチの名前を変更するにはどうすればいい？ [Git] | Stack Overflow まとめ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Stack Overflow まとめ">
-<meta property="og:url" content="http://localhost:4000/tags/git-remote/index.html">
+  <meta name="description" content="質問：ローカルとリモートの両方のGitリポジトリのMaster branchの名前を変更するに書いてあるように、リモートブランチの名前は変更したくないんだけど。 リモートブランチにプッシュされていないローカルブランチの名前を変更するにはどうしたらいいの？  By  Forrest | 質問日時： Jul 6 ‘11 at 3:20">
+<meta name="keywords" content="git,git-branch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ローカルGitブランチの名前を変更するにはどうすればいい？ [Git]">
+<meta property="og:url" content="http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
+<meta property="og:description" content="質問：ローカルとリモートの両方のGitリポジトリのMaster branchの名前を変更するに書いてあるように、リモートブランチの名前は変更したくないんだけど。 リモートブランチにプッシュされていないローカルブランチの名前を変更するにはどうしたらいいの？  By  Forrest | 質問日時： Jul 6 ‘11 at 3:20">
+<meta property="og:updated_time" content="2017-09-26T10:56:29.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stack Overflow まとめ">
+<meta name="twitter:title" content="ローカルGitブランチの名前を変更するにはどうすればいい？ [Git]">
+<meta name="twitter:description" content="質問：ローカルとリモートの両方のGitリポジトリのMaster branchの名前を変更するに書いてあるように、リモートブランチの名前は変更したくないんだけど。 リモートブランチにプッシュされていないローカルブランチの名前を変更するにはどうしたらいいの？  By  Forrest | 質問日時： Jul 6 ‘11 at 3:20">
   
     <link rel="alternative" href="/atom.xml" title="Stack Overflow まとめ" type="application/atom+xml">
   
@@ -61,43 +66,124 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/somatome/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/" class="archive-article-date">
-  <time datetime="2017-09-24T23:05:54.000Z" itemprop="datePublished">Sep 25</time>
+        <section id="main"><article id="post-how-do-i-rename-a-local-git-branch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/somatome/2017/09/26/how-do-i-rename-a-local-git-branch/" class="article-date">
+  <time datetime="2017-09-26T10:40:46.000Z" itemprop="datePublished">2017-09-26</time>
 </a>
 
-      
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/somatome/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/">ローカルとリモートの両方でGitブランチを削除するには？</a>
+    <h1 class="article-title" itemprop="name">
+      ローカルGitブランチの名前を変更するにはどうすればいい？ [Git]
     </h1>
   
 
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    <li>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/" data-via="{{ theme.twitter }}" data-counturl="http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/" >Tweet</a>
+    </li>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        
+        <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><em><a href="https://stackoverflow.com/questions/1526794/rename-master-branch-for-both-local-and-remote-git-repositories?answertab=votes#tab-top" target="_blank" rel="external">ローカルとリモートの両方のGitリポジトリのMaster branchの名前を変更する</a></em>に書いてあるように、リモートブランチの名前は変更したくないんだけど。</p>
+<p>リモートブランチにプッシュされていないローカルブランチの名前を変更するにはどうしたらいいの？</p>
+<p><div style="text-align: right"> By  <a href="/users/338204/forrest">Forrest</a> | 質問日時： Jul 6 ‘11 at 3:20 </div><br></p>
+<a id="more"></a>
+<hr>
+<hr>
+<h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>あるブランチを指定してそのブランチの名前を変更する場合は、次のようにやればいいよ。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -m &lt;oldname&gt; &lt;newname&gt;</div></pre></td></tr></table></figure>
+<p>今使ってるブランチの名前を変更するには、次のように</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -m &lt;newname&gt;</div></pre></td></tr></table></figure>
+<p>これを覚えておくには、 <code>-m</code>は”move”(または<code>mv</code>)、つまりファイル名の変更だ、って覚えておくといいかも。</p>
+<p><div style="text-align: right"> By  <a href="/users/394487/siride">siride</a> | 回答日時： Jul 6 ‘11 at 3:21 </div><br></p>
+<hr>
+<hr>
+<h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -m old_branch_name new_branch_name</div></pre></td></tr></table></figure>
+<p>このコマンドで名前を変えられるけど、この名前を変更したブランチを使う時は注意。なぜなら、これはまだ古い上流ブランチを参照してるから（もしそれが存在するのであれば）。</p>
+<p>ローカルブランチを(例えば)<code>new_branch_name</code>に名前を変更した後、変更をマスターにプッシュしたい場合は：</p>
+<p><code>git push origin new_branch_name：master</code>(この変更はマスターブランチに行くけど、君のローカルブランチ名は<code>new_branch_name</code>だよ)</p>
+<p>詳細については、「<a href="http://madhan-tech-updates.blogspot.in/2013/01/how-to-rename-your-local-branch-name-in.html" target="_blank" rel="external">ローカルGitブランチ名の名前を変更する方法</a>」を参照。</p>
+<p><div style="text-align: right"> By  <a href="/users/1996609/madhan-ayyasamy">Madhan Ayyasamy</a> | 回答日時： Jan 21 ‘13 at 9:49 </div><br></p>
+<hr>
+<hr>
+<h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>ブランチの名前を変更する手順は次のとおり。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. 名前を変更する必要があるブランチに移動</div><div class="line">2. git branch -m &lt;new_name&gt;</div><div class="line">3. git push origin :&lt;old_name&gt;</div><div class="line">4. git push origin &lt;new_name&gt;:refs/heads/&lt;new_name&gt;</div></pre></td></tr></table></figure>
+<p><strong> 追記(2017/01/12)：</strong>コマンド <code>git status</code>を実行して、新しく作成したブランチが、古いものじゃなくそれ自身（新しいもの）を指していることを確認すること。まだ古いブランチへの参照してる場合は、以下のように上流でのを設定を解除する必要があるよ。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch --<span class="built_in">unset</span>-upstream</div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="/users/1719752/milind-anantwar">Milind Anantwar</a> | 回答日時： Apr 15 ‘15 at 12:50 </div><br></p>
+<hr>
+<hr>
+<p>Source: <a href="https://stackoverflow.com/questions/6591213/how-do-i-rename-a-local-git-branch" target="_blank" rel="external">How do I rename a local Git branch?</a></p>
+
+      
+
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/" data-id="cj81iaz4r0008sww6ip655pm0" class="article-share-link">Share</a>
+      
+      
+        <a href="http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/somatome/tags/git-branch/">git-branch</a></li></ul>
+
+
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/somatome/2017/09/25/accessing-the-index-in-python-for-loops/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older Post</strong>
+      <div class="article-nav-title">Python forループのインデックスへのアクセス方法 [Python]</div>
+    </a>
+  
+</nav>
+
 
   
-  
-    </div></section>
-  
-  
+</article>
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+      <hr>
+      <h3><strong>こちらの記事もどうぞ</strong></h3>
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/" title="ローカルとリモートの両方でGitブランチを削除するには？" rel="bookmark">ローカルとリモートの両方でGitブランチを削除するには？</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/24/how-to-undo-the-last-commits-in-git/" title="Gitの最後のコミットを元に戻す方法ってどうやるの？" rel="bookmark">Gitの最後のコミットを元に戻す方法ってどうやるの？</a></h3></div></li></ul>
+
+</section>
 
 
 </section>
@@ -219,11 +305,13 @@
 <script>
   var disqus_shortname = 'somatome';
   
+  var disqus_url = 'http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

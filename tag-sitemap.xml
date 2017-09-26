@@ -37,20 +37,6 @@
     </url>
 
     <url>
-        <loc>http://localhost:4000/tags/git/</loc>
-        <lastmod>2017-09-24T23:33:09.980Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://localhost:4000/tags/git-branch/</loc>
-        <lastmod>2017-09-24T23:33:09.980Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://localhost:4000/tags/git-remote/</loc>
         <lastmod>2017-09-24T23:33:09.980Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -179,6 +165,20 @@
     <url>
         <loc>http://localhost:4000/tags/list/</loc>
         <lastmod>2017-09-26T03:16:50.544Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/git/</loc>
+        <lastmod>2017-09-26T10:56:29.115Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/git-branch/</loc>
+        <lastmod>2017-09-26T10:56:29.115Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
