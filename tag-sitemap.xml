@@ -3,77 +3,77 @@
 
     <url>
         <loc>http://localhost:4000/tags/redirect/</loc>
-        <lastmod>2017-09-24T22:37:46.547Z</lastmod>
+        <lastmod>2017-09-24T22:37:46.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/git-rebase/</loc>
-        <lastmod>2017-09-24T23:12:07.371Z</lastmod>
+        <lastmod>2017-09-24T23:11:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/git-commit/</loc>
-        <lastmod>2017-09-24T23:12:07.371Z</lastmod>
+        <lastmod>2017-09-24T23:11:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/git-remote/</loc>
-        <lastmod>2017-09-24T23:33:09.980Z</lastmod>
+        <lastmod>2017-09-24T23:33:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/string/</loc>
-        <lastmod>2017-09-25T00:02:24.529Z</lastmod>
+        <lastmod>2017-09-25T00:02:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/substring/</loc>
-        <lastmod>2017-09-25T00:02:24.529Z</lastmod>
+        <lastmod>2017-09-25T00:02:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/contains/</loc>
-        <lastmod>2017-09-25T00:02:24.529Z</lastmod>
+        <lastmod>2017-09-25T00:02:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/string-matching/</loc>
-        <lastmod>2017-09-25T00:02:24.529Z</lastmod>
+        <lastmod>2017-09-25T00:02:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/jquery/</loc>
-        <lastmod>2017-09-25T05:30:11.154Z</lastmod>
+        <lastmod>2017-09-25T05:30:11.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/dom/</loc>
-        <lastmod>2017-09-25T05:30:11.154Z</lastmod>
+        <lastmod>2017-09-25T05:30:11.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/visibility/</loc>
-        <lastmod>2017-09-25T05:30:11.154Z</lastmod>
+        <lastmod>2017-09-25T05:30:11.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -129,84 +129,84 @@
 
     <url>
         <loc>http://localhost:4000/tags/loops/</loc>
-        <lastmod>2017-09-25T18:43:37.422Z</lastmod>
+        <lastmod>2017-09-25T18:43:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/python/</loc>
-        <lastmod>2017-09-26T03:16:50.544Z</lastmod>
+        <lastmod>2017-09-26T03:16:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/list/</loc>
-        <lastmod>2017-09-26T03:16:50.544Z</lastmod>
+        <lastmod>2017-09-26T03:16:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/git-branch/</loc>
-        <lastmod>2017-09-26T10:56:29.115Z</lastmod>
+        <lastmod>2017-09-26T10:56:29.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/git/</loc>
-        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
+        <lastmod>2017-09-28T23:15:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/git-checkout/</loc>
-        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
+        <lastmod>2017-09-28T23:15:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/git-reset/</loc>
-        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
+        <lastmod>2017-09-28T23:15:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/git-revert/</loc>
-        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://localhost:4000/tags/javascript/</loc>
-        <lastmod>2017-09-29T01:22:07.822Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://localhost:4000/tags/arrays/</loc>
-        <lastmod>2017-09-29T01:22:07.822Z</lastmod>
+        <lastmod>2017-09-28T23:15:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/json/</loc>
-        <lastmod>2017-09-29T01:23:37.828Z</lastmod>
+        <lastmod>2017-09-29T01:23:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://localhost:4000/tags/comments/</loc>
-        <lastmod>2017-09-29T01:23:37.828Z</lastmod>
+        <lastmod>2017-09-29T01:23:37.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/javascript/</loc>
+        <lastmod>2017-09-29T17:50:19.935Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/arrays/</loc>
+        <lastmod>2017-09-29T17:50:19.935Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
