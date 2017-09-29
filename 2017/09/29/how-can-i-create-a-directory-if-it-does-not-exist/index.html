@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Stack Overflow まとめ">
 <meta property="og:description" content="質問：ファイルが書き込まれるディレクトリが存在するかどうかを調べて、もし存在しない場合は、Pythonを使ってディレクトリを作るための最もエレガントな方法って何？以下は試したんだけど：  import osfile_path = &quot;/my/directory/filename.txt&quot;directory = os.path.dirname(file_path)try:    os.stat(dir">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-09-29T20:32:12.855Z">
+<meta property="og:updated_time" content="2017-09-29T20:48:34.572Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ディレクトリが存在しない場合、どうやって作ったらいいの？ [Python]">
 <meta name="twitter:description" content="質問：ファイルが書き込まれるディレクトリが存在するかどうかを調べて、もし存在しない場合は、Pythonを使ってディレクトリを作るための最もエレガントな方法って何？以下は試したんだけど：  import osfile_path = &quot;/my/directory/filename.txt&quot;directory = os.path.dirname(file_path)try:    os.stat(dir">
@@ -39,6 +39,17 @@
     
         <link rel="stylesheet" href="/somatome/libs/justified-gallery/justifiedGallery.min.css">
     
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-107309715-1', 'auto');
+ga('send', 'pageview');
+
+</script>
     
     
     
@@ -203,10 +214,12 @@
 <hr>
 <hr>
 <h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>私は個人的には<code>os.path.exists()</code>よりも <code>os.path.isdir()</code>を使うのをおすすめするかな：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>os.path.exists(<span class="string">'/ tmp/dirname'</span>)</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>os.path.exists(<span class="string">'/ tmp/dirname/filename.etc'</span>)</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>os.path.isdir(<span class="string">'/ tmp/dirname/filename.etc'</span>)</div><div class="line"><span class="keyword">False</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>os.path.isdir(<span class="string">'/ tmp/fakedirname'</span>)</div><div class="line"><span class="keyword">False</span></div><div class="line">```    </div><div class="line"></div><div class="line">これがあるとして、</div><div class="line"></div><div class="line">```python</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>dir = raw_input(<span class="string">":: "</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>os.path.exists(<span class="string">'/ tmp/dirname'</span>)</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>os.path.exists(<span class="string">'/ tmp/dirname/filename.etc'</span>)</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>os.path.isdir(<span class="string">'/ tmp/dirname/filename.etc'</span>)</div><div class="line"><span class="keyword">False</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>os.path.isdir(<span class="string">'/ tmp/fakedirname'</span>)</div><div class="line"><span class="keyword">False</span></div></pre></td></tr></table></figure>
+<p>これがあるとして、</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>dir = raw_input(<span class="string">":: "</span>)</div></pre></td></tr></table></figure>
 <p>そして、こんなバカみたいなユーザー入力があると：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><div class="line">:: /tmp/dirname/filename.etc</div></pre></td></tr></table></figure>
-<p>もし <code>os.path.exists()</code>でテストした場合、引数が<code>os.makedirs()</code>に渡されるから、<code>filename.etc</code>という名前のディレクトリができてしまうことになる。</p>
+<p>もし<code>os.path.exists()</code>でテストした場合、引数が<code>os.makedirs()</code>に渡されるから、<code>filename.etc</code>という名前のディレクトリができてしまうことになる。</p>
 <p><div style="text-align: right"> By          crimsonstone | 回答日時： 2009年1月14日 17:57 </div><br></p>
 <hr>
 <hr>
