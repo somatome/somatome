@@ -118,7 +118,7 @@ body,
 body {
   color: #565a5f;
   background: #f5f8f9;
-  font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  font: 15px "open sans", "Helvetica Neue", "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 a {
@@ -135,7 +135,7 @@ code {
   font-size: 0.9em;
   border-radius: 2px;
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
-  background-color: #f8f8f8;
+  background-color: #eff0f1;
 }
 .outer {
   max-width: 1020px;
@@ -167,13 +167,13 @@ code {
   clear: both;
 }
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 667px;
+  height: 154px;
   background-repeat: no-repeat;
-  background-image: url("images/logo.png");
-  -webkit-background-size: 40px 40px;
-  -moz-background-size: 40px 40px;
-  background-size: 40px 40px;
+  background-image: url("https://somatome.github.io/somatome/somatome_logo.png");
+  -webkit-background-size: 667px 154px;
+  -moz-background-size: 667px 154px;
+  background-size: 667px 154px;
 }
 #container {
   position: relative;
@@ -363,9 +363,9 @@ code {
 #main-nav,
 #sub-nav,
 #search-form-wrap {
-  height: 40px;
-  line-height: 40px;
-  padding: 12px 15px;
+  height: 154px;
+  line-height: 154px;
+  padding: -45px 15px;
 }
 .header-inner #logo,
 #main-nav {
@@ -394,11 +394,11 @@ code {
 }
 #header-title {
   text-align: center;
-  height: 40px;
+  height: 154px;
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -20px;
+  margin-top: -77px;
 }
 .header-sub {
   border-top: 1px solid #eceff2;
@@ -436,6 +436,9 @@ code {
     display: none;
   }
 }
+#main-nav {
+  height: 100px;
+}
 @media screen and (min-width: 560px) and (max-width: 799px) {
   #main-nav {
     display: none;
@@ -464,13 +467,13 @@ code {
 }
 .nav-icon {
   text-align: center;
-  font-size: 14px;
-  width: 14px;
-  height: 14px;
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
   position: relative;
   cursor: pointer;
-  height: 40px !important;
-  line-height: 40px !important;
+  height: 154px !important;
+  line-height: 154px !important;
 }
 .main-nav-link {
   font-weight: 300;
@@ -482,8 +485,8 @@ code {
 }
 #sub-nav #profile-nav #profile-anchor {
   display: block;
-  height: 40px;
-  line-height: 40px;
+  height: 154px;
+  line-height: 154px;
 }
 #sub-nav #profile-nav #profile-anchor:before,
 #sub-nav #profile-nav #profile-anchor:after {
@@ -498,12 +501,15 @@ code {
   float: left;
 }
 #sub-nav #profile-nav .avatar {
-  width: 40px;
-  height: 40px;
+  width: 154px;
+  height: 154px;
   margin-right: 8px;
 }
 #sub-nav #profile-nav .fa {
-  line-height: 40px;
+  line-height: 154px;
+}
+#search-form-wrap {
+  height: 100px;
 }
 @media screen and (max-width: 559px) {
   #search-form-wrap {
@@ -517,8 +523,8 @@ code {
   width: 100%;
   padding: 0 30px 0 15px;
   line-height: 40px;
-  height: 40px !important;
-  border-radius: 21px;
+  height: 40px;
+  border-radius: 78px;
 }
 #search-form-wrap .search-form .search-form-input::-webkit-search-results-decoration,
 #search-form-wrap .search-form .search-form-input::-webkit-search-cancel-button {
@@ -566,7 +572,7 @@ code {
   line-height: 1.6em;
   outline: none !important;
   background: none !important;
-  font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  font: 15px "open sans", "Helvetica Neue", "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   border: 1px solid #eceff2 !important;
 }
 .search-form-input:focus,
@@ -672,7 +678,7 @@ code {
   font-weight: 600;
 }
 #profile .inner .base-info #location {
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 5px;
   color: #9a9ea3;
 }
@@ -717,11 +723,11 @@ code {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 21px;
 }
 #profile .inner .article-info .article-info-block span {
   display: block;
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 #profile .inner .article-info .article-info-block:first-child {
@@ -732,7 +738,7 @@ code {
 }
 #profile .inner .social-links > table td {
   text-align: center;
-  font-size: 24px;
+  font-size: 25px;
 }
 #profile .inner .social-links > table td a {
   position: relative;
@@ -965,9 +971,9 @@ a.article-title:hover {
   position: static;
 }
 .article-entry blockquote footer {
-  font-size: 14px;
+  font-size: 15px;
   margin: 1.6em 0;
-  font-family: "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  font-family: "open sans", "Helvetica Neue", "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 .article-entry blockquote footer cite:before {
   content: "—";
@@ -1164,7 +1170,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  font: 14px "open sans", "Helvetica Neue", "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   padding: 0 10px;
   color: #565a5f;
   outline: none;
@@ -1506,7 +1512,7 @@ ol.toc {
 .layout-wrap-inner.list-categories ul li,
 .layout-wrap-inner.list-categories ul .category-list-child {
   padding: 10px 0;
-  font-size: 14px;
+  font-size: 15px;
   border-bottom: 1px solid border-color;
 }
 .layout-wrap-inner.list-categories ul li a,
@@ -1677,7 +1683,7 @@ ol.toc {
   padding: 20px 0;
   border-top: 1px solid #eceff2;
   color: #565a5f;
-  font-size: 16px;
+  font-size: 17px;
   text-align: center;
 }
 #footer .outer {
@@ -1796,7 +1802,7 @@ ol.toc {
 .widget ul .category-list-child,
 .widget ol .category-list-child {
   padding: 10px 0;
-  font-size: 14px;
+  font-size: 15px;
   border-bottom: 1px solid border-color;
 }
 .widget ul li a,
@@ -2100,9 +2106,9 @@ ol.toc {
   display: block;
   overflow-x: auto;
   padding: 15px 20px;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
-  line-height: 22.400000000000002px;
+  line-height: 24px;
 }
 .highlight table {
   margin: 0;
@@ -2126,76 +2132,56 @@ ol.toc {
   height: 1.6em;
 }
 .highlight {
+  padding: 0.5em;
   color: #333;
-  background: #f8f8f8;
+  background: #eff0f1;
 }
 .highlight .code .comment,
+.highlight .code .meta {
+  color: #969896;
+}
+.highlight .code .string,
+.highlight .code .variable,
+.highlight .code .template-variable,
+.highlight .code .strong,
+.highlight .code .emphasis,
 .highlight .code .quote {
-  color: #998;
-  font-style: italic;
+  color: #df5000;
 }
 .highlight .code .keyword,
 .highlight .code .selector-tag,
-.highlight .code .subst {
-  color: #333;
-  font-weight: bold;
+.highlight .code .type {
+  color: #a71d5d;
 }
-.highlight .code .number,
 .highlight .code .literal,
-.highlight .code .variable,
-.highlight .code .template-variable,
-.highlight .code .tag .attr {
-  color: #008080;
-}
-.highlight .code .string,
-.highlight .code .doctag {
-  color: #d14;
-}
-.highlight .code .title,
-.highlight .code .section,
-.highlight .code .selector-id {
-  color: #900;
-  font-weight: bold;
-}
-.highlight .code .subst {
-  font-weight: normal;
-}
-.highlight .code .type,
-.highlight .code .class .title {
-  color: #458;
-  font-weight: bold;
-}
-.highlight .code .tag,
-.highlight .code .name,
-.highlight .code .attribute {
-  color: #000080;
-  font-weight: normal;
-}
-.highlight .code .regexp,
-.highlight .code .link {
-  color: #009926;
-}
 .highlight .code .symbol,
-.highlight .code .bullet {
-  color: #990073;
-}
-.highlight .code .built_in,
-.highlight .code .builtin-name {
+.highlight .code .bullet,
+.highlight .code .attribute {
   color: #0086b3;
 }
-.highlight .code .meta {
-  color: #999;
-  font-weight: bold;
+.highlight .code .section,
+.highlight .code .name {
+  color: #63a35c;
 }
-.highlight .code .deletion {
-  background: #fdd;
+.highlight .code .tag {
+  color: #333;
+}
+.highlight .code .title,
+.highlight .code .attr,
+.highlight .code .selector-id,
+.highlight .code .selector-class,
+.highlight .code .selector-attr,
+.highlight .code .selector-pseudo {
+  color: #795da3;
 }
 .highlight .code .addition {
-  background: #dfd;
+  color: #55a532;
+  background-color: #eaffea;
 }
-.highlight .code .emphasis {
-  font-style: italic;
+.highlight .code .deletion {
+  color: #bd2c00;
+  background-color: #ffecec;
 }
-.highlight .code .strong {
-  font-weight: bold;
+.highlight .code .link {
+  text-decoration: underline;
 }
