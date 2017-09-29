@@ -7,6 +7,30 @@
     </url>
 
     <url>
+        <loc>http://localhost:4000/2017/09/29/can-comments-be-used-in-json/</loc>
+        <lastmod>2017-09-29T01:23:37.828Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/</loc>
+        <lastmod>2017-09-29T01:22:07.822Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/</loc>
+        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/</loc>
         <lastmod>2017-09-26T10:56:29.115Z</lastmod>
         <changefreq>weekly</changefreq>

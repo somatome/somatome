@@ -23,20 +23,6 @@
     </url>
 
     <url>
-        <loc>http://localhost:4000/tags/git-reset/</loc>
-        <lastmod>2017-09-24T23:12:07.371Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://localhost:4000/tags/git-revert/</loc>
-        <lastmod>2017-09-24T23:12:07.371Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://localhost:4000/tags/git-remote/</loc>
         <lastmod>2017-09-24T23:33:09.980Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -67,13 +53,6 @@
     <url>
         <loc>http://localhost:4000/tags/string-matching/</loc>
         <lastmod>2017-09-25T00:02:24.529Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://localhost:4000/tags/javascript/</loc>
-        <lastmod>2017-09-25T05:30:11.154Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -170,15 +149,64 @@
     </url>
 
     <url>
-        <loc>http://localhost:4000/tags/git/</loc>
+        <loc>http://localhost:4000/tags/git-branch/</loc>
         <lastmod>2017-09-26T10:56:29.115Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://localhost:4000/tags/git-branch/</loc>
-        <lastmod>2017-09-26T10:56:29.115Z</lastmod>
+        <loc>http://localhost:4000/tags/git/</loc>
+        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/git-checkout/</loc>
+        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/git-reset/</loc>
+        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/git-revert/</loc>
+        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/javascript/</loc>
+        <lastmod>2017-09-29T01:22:07.822Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/arrays/</loc>
+        <lastmod>2017-09-29T01:22:07.822Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/json/</loc>
+        <lastmod>2017-09-29T01:23:37.828Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/comments/</loc>
+        <lastmod>2017-09-29T01:23:37.828Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
