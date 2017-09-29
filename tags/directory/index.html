@@ -3,20 +3,15 @@
 <head>
     <meta charset="utf-8">
     
-    <title>JavaScriptの配列から特定の要素を削除するにはどうすればいいの？ [Javascript] | Stack Overflow まとめ</title>
+    <title>タグ: directory | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="質問：整数の配列があって、要素を追加するために`.push()``メソッドを使用してるとする。 ここで、配列から特定の要素を削除する簡単な方法ってある？ array.remove(int);みたいな感じの。 ただし、JavaScript のみ を使用するとして。フレームワークは使えないんだ。  By  Walker | 質問日時： 2011年4月23日 22:17">
-<meta name="keywords" content="javascript,arrays">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScriptの配列から特定の要素を削除するにはどうすればいいの？ [Javascript]">
-<meta property="og:url" content="http://localhost:4000/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Stack Overflow まとめ">
+<meta property="og:url" content="http://localhost:4000/tags/directory/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
-<meta property="og:description" content="質問：整数の配列があって、要素を追加するために`.push()``メソッドを使用してるとする。 ここで、配列から特定の要素を削除する簡単な方法ってある？ array.remove(int);みたいな感じの。 ただし、JavaScript のみ を使用するとして。フレームワークは使えないんだ。  By  Walker | 質問日時： 2011年4月23日 22:17">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-09-29T17:50:19.935Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScriptの配列から特定の要素を削除するにはどうすればいいの？ [Javascript]">
-<meta name="twitter:description" content="質問：整数の配列があって、要素を追加するために`.push()``メソッドを使用してるとする。 ここで、配列から特定の要素を削除する簡単な方法ってある？ array.remove(int);みたいな感じの。 ただし、JavaScript のみ を使用するとして。フレームワークは使えないんだ。  By  Walker | 質問日時： 2011年4月23日 22:17">
+<meta name="twitter:title" content="Stack Overflow まとめ">
     
 
     
@@ -138,194 +133,45 @@
 
         <div class="outer">
             
-            <section id="main"><article id="post-how-do-i-remove-a-particular-element-from-an-array-in-javascript" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
+            <section id="main">
+<div class="timeline timeline-wrap">
+    <div class="timeline-row timeline-row-major">
+        <span class="node"><i class="fa fa-tag"></i></span>
+        <h1 class="title">#directory</h1>
+    </div>
+    
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
                 
     
-        <h1 class="article-title" itemprop="name">
-            JavaScriptの配列から特定の要素を削除するにはどうすればいいの？ [Javascript]
+        <h1 itemprop="name">
+            <a class="timeline-article-title" href="/somatome/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/">ディレクトリが存在しない場合、どうやって作ったらいいの？ [Python]</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                <div class="article-meta">
+                    
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/somatome/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/">
-            <time datetime="2017-09-28T23:38:53.000Z" itemprop="datePublished">2017-09-29</time>
+        <a href="/somatome/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/">
+            <time datetime="2017-09-29T20:05:53.000Z" itemprop="datePublished">2017-09-29</time>
         </a>
     </div>
 
 
-                        
-                        
+                    
+                    
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/somatome/tags/arrays/">arrays</a>, <a class="tag-link" href="/somatome/tags/javascript/">javascript</a>
+        <a class="tag-link" href="/somatome/tags/directory/">directory</a>, <a class="tag-link" href="/somatome/tags/exception/">exception</a>, <a class="tag-link" href="/somatome/tags/python/">python</a>
     </div>
 
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>整数の配列があって、要素を追加するために`.push()``メソッドを使用してるとする。</p>
-<p>ここで、配列から特定の要素を削除する簡単な方法ってある？ <code>array.remove(int);</code>みたいな感じの。</p>
-<p>ただし、JavaScript <em>のみ</em> を使用するとして。フレームワークは使えないんだ。</p>
-<p><div style="text-align: right"> By  <a href="/users/364969/walker">Walker</a> | 質問日時： 2011年4月23日 22:17 </div><br></p>
-<a id="more"></a>
-<hr>
-<hr>
-<h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>まず、削除したい要素の <code>index</code>を見つけよう：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">9</span>];</div><div class="line"><span class="keyword">var</span> index = array.indexOf(<span class="number">5</span>);</div></pre></td></tr></table></figure>
-<p>_注：<a href="http://kangax.github.io/compat-table/es5/#test-Array.prototype.indexOf" target="_blank" rel="external">indexOfのブラウザサポート</a>は限られてる。Internet Explorer 7および8ではサポートされてないよ。</p>
-<p>次に、<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank" rel="external"><code>splice</code></a>で削除する：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> (index &gt; <span class="number">-1</span>) &#123;</div><div class="line">    array.splice(index, <span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>splice</code>の2番目のパラメータは削除する要素の数。<code>splice</code>は配列の場所を変えて、削除された要素を含む新しい配列を返す。</p>
-<hr>
-<p>サポートされていないブラウザで <code>indexOf</code>が必要な場合は、以下の<code>polyfill</code>を試してみて。詳しくは<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf#Polyfill" target="_blank" rel="external"><strong><em>ここの<code>polyfill</code></em></strong></a>を参照。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.indexOf || (<span class="built_in">Array</span>.prototype.indexOf = <span class="function"><span class="keyword">function</span>(<span class="params">d, e</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> a;</div><div class="line">    <span class="keyword">if</span> (<span class="literal">null</span> == <span class="keyword">this</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">'"これ" はNULLまたは定義されていない'</span>);</div><div class="line">    <span class="keyword">var</span> c = <span class="built_in">Object</span>(<span class="keyword">this</span>),</div><div class="line">        b = c.length &gt;&gt;&gt; <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span> (<span class="number">0</span> === b) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    a = +e || <span class="number">0</span>;</div><div class="line">    <span class="literal">Infinity</span> === <span class="built_in">Math</span>.abs(a) &amp;&amp; (a = <span class="number">0</span>);</div><div class="line">    <span class="keyword">if</span> (a &gt;= b) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    <span class="keyword">for</span> (a = <span class="built_in">Math</span>.max(<span class="number">0</span> &lt;= a ? a : b - <span class="built_in">Math</span>.abs(a), <span class="number">0</span>); a &lt; b;) &#123;</div><div class="line">        <span class="keyword">if</span> (a <span class="keyword">in</span> c &amp;&amp; c[a] === d) <span class="keyword">return</span> a;</div><div class="line">        a++</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p><div style="text-align: right"> By  <a href="/users/613430/tom-wadley">Tom Wadley</a> | 回答日時： 2011年4月23日 22:23 </div><br></p>
-<hr>
-<hr>
-<h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p><code>array.remove(int)</code>がどのように動作することを期待しているのか分からないけど、あなたが欲しいかもと思う答えは3つの可能性があるかな：</p>
-<p>インデックスがiである配列の要素を削除するには：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">array.splice(i, <span class="number">1</span>);</div></pre></td></tr></table></figure>
-<p>値 <code>number</code>を持つすべての要素を配列から削除する場合は、次のようにします。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = array.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</div><div class="line">    <span class="keyword">if</span>(array[i] === number) &#123;</div><div class="line">       array.splice(i, <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>インデックスのある要素<code>i</code>を削除したくて、でも他の要素のインデックスを変更したくないのなら、</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">delete</span> array[i];</div></pre></td></tr></table></figure>
-<p><div style="text-align: right"> By  <a href="/users/546661/peter-olson">Peter Olson</a> | 回答日時： 2011年4月23日 22:20 </div><br></p>
-<hr>
-<hr>
-<hr>
-<hr>
-<p>Source: <a href="https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript" target="_blank" rel="external">How do I remove a particular element from an array in JavaScript?</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://localhost:4000/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/" data-id="cj86coijx000aukg6r6k5c5k3" class="article-share-link"><i class="fa fa-share"></i>共有</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://localhost:4000/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://localhost:4000/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/">コメント</a>
-    
-
-        </footer>
-    </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/somatome/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">新しい記事</strong>
-            <div class="article-nav-title">
-                
-                    ディレクトリが存在しない場合、どうやって作ったらいいの？ [Python]
-                
+                </div>
             </div>
-        </a>
+        </div>
     
-    
-        <a href="/somatome/2017/09/29/can-comments-be-used-in-json/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">古い記事</strong>
-            <div class="article-nav-title">JSONでコメントって使用できる？ [JSON]</div>
-        </a>
-    
-</nav>
-
-
-    
-</article>
-
-
-    
-    
-        <section id="comments">
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-</section>
-    
-
+</div>
 </section>
             
                 
@@ -450,13 +296,11 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://localhost:4000/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/';
-        
-        this.page.identifier = 'how-do-i-remove-a-particular-element-from-an-array-in-javascript';
+        this.page.identifier = '';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'somatome' + '.disqus.com/embed.js';
+        s.src = '//' + 'somatome' + '.disqus.com/count.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();

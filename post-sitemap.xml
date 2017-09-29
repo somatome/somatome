@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://localhost:4000/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/</loc>
+        <lastmod>2017-09-29T20:32:12.855Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://localhost:4000/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/</loc>
         <lastmod>2017-09-29T17:50:19.935Z</lastmod>
         <changefreq>weekly</changefreq>

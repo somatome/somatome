@@ -135,13 +135,6 @@
     </url>
 
     <url>
-        <loc>http://localhost:4000/tags/python/</loc>
-        <lastmod>2017-09-26T03:16:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://localhost:4000/tags/list/</loc>
         <lastmod>2017-09-26T03:16:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -207,6 +200,27 @@
     <url>
         <loc>http://localhost:4000/tags/arrays/</loc>
         <lastmod>2017-09-29T17:50:19.935Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/python/</loc>
+        <lastmod>2017-09-29T20:32:12.855Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/exception/</loc>
+        <lastmod>2017-09-29T20:32:12.855Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/tags/directory/</loc>
+        <lastmod>2017-09-29T20:32:12.855Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

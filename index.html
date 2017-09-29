@@ -134,6 +134,139 @@
         <div class="outer">
             
             <section id="main">
+    <article id="post-how-can-i-create-a-directory-if-it-does-not-exist" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/somatome/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/">ディレクトリが存在しない場合、どうやって作ったらいいの？ [Python]</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/somatome/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/">
+            <time datetime="2017-09-29T20:05:53.000Z" itemprop="datePublished">2017-09-29</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/somatome/tags/directory/">directory</a>, <a class="tag-link" href="/somatome/tags/exception/">exception</a>, <a class="tag-link" href="/somatome/tags/python/">python</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>ファイルが書き込まれるディレクトリが存在するかどうかを調べて、もし存在しない場合は、Pythonを使ってディレクトリを作るための最もエレガントな方法って何？<br>以下は試したんだけど： </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"></div><div class="line">file_path = <span class="string">"/my/directory/filename.txt"</span></div><div class="line">directory = os.path.dirname(file_path)</div><div class="line"></div><div class="line"><span class="keyword">try</span>:</div><div class="line">    os.stat(directory)</div><div class="line"><span class="keyword">except</span>:</div><div class="line">    os.mkdir(directory)       </div><div class="line"></div><div class="line">f = file(filename)</div></pre></td></tr></table></figure>
+<p>どういうわけか<code>os.path.exists</code>っていうのがあるのを知らなかったので、こうしたんだけど： </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">ensure_dir</span><span class="params">(file_path)</span>:</span></div><div class="line">    directory = os.path.dirname(file_path)</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(directory):</div><div class="line">        os.makedirs(directory)</div></pre></td></tr></table></figure>
+<p>これが自動的に行われるようにするような、 “open”のためのフラグってある？ </p>
+<p><div style="text-align: right"> By  <a href="/users/13055/parand">Parand</a> | 質問日時： 2008年11月7日 18:56 </div><br></p></p>
+            <p class="article-more-link">
+                <a href="/somatome/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://localhost:4000/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" data-id="cj86coije0004ukg6qdpp4h3k" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://localhost:4000/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://localhost:4000/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-how-do-i-remove-a-particular-element-from-an-array-in-javascript" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -187,7 +320,7 @@
 
 </div>
 
-    <a data-url="http://localhost:4000/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/" data-id="cj867iej80008egg6495mldf9" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="http://localhost:4000/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/" data-id="cj86coijx000aukg6r6k5c5k3" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -316,7 +449,7 @@
 
 </div>
 
-    <a data-url="http://localhost:4000/2017/09/29/can-comments-be-used-in-json/" data-id="cj867ieiu0003egg6mfy3ko1r" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="http://localhost:4000/2017/09/29/can-comments-be-used-in-json/" data-id="cj86coijc0003ukg6b7r2t751" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -431,7 +564,7 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>現在の状態から、あるコミットの時点でのスナップショットに戻すのってどうやればいいの？<br><code>git log</code>をすると、こんなのが出力されるんだけど：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span></div><div class="line">commit a867b4af366350be2e7c21b8de9cc6504678a61b`</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 18:59:41 2010 -0400</div><div class="line"></div><div class="line">なんとかかんとか...</div><div class="line"></div><div class="line">commit 25eee4caef46ae64aa08e8ab3f988bc917ee1ce4</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 05:13:39 2010 -0400</div><div class="line"></div><div class="line">なんとかかんとかかんとか...</div><div class="line"></div><div class="line">commit 0766c053c0ea2035e90f504928f8df3c9363b8bd</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 00:55:06 2010 -0400</div><div class="line"></div><div class="line">さらになんとかかんとか...</div><div class="line"></div><div class="line">commit 0d1d7fc32e5a947fbd92ee598033d85bfc445a50</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Wed 11月 3 23:56:08 2010 -0400</div><div class="line"></div><div class="line">そう、もっともっとなんとかかんとか...</div></pre></td></tr></table></figure></p>
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>現在の状態から、あるコミットの時点でのスナップショットに戻すのってどうやればいいの？<br><code>git log</code>をすると、こんなのが出力されるんだけど：<br><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">$ git <span class="built_in">log</span></div><div class="line">commit a867b4af366350be2e7c21b8de9cc6504678a61b`</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 18:59:41 2010 -0400</div><div class="line"></div><div class="line">なんとかかんとか...</div><div class="line"></div><div class="line">commit 25eee4caef46ae64aa08e8ab3f988bc917ee1ce4</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 05:13:39 2010 -0400</div><div class="line"></div><div class="line">なんとかかんとかかんとか...</div><div class="line"></div><div class="line">commit 0766c053c0ea2035e90f504928f8df3c9363b8bd</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 00:55:06 2010 -0400</div><div class="line"></div><div class="line">さらになんとかかんとか...</div><div class="line"></div><div class="line">commit 0d1d7fc32e5a947fbd92ee598033d85bfc445a50</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Wed 11月 3 23:56:08 2010 -0400</div><div class="line"></div><div class="line">そう、もっともっとなんとかかんとか...</div></pre></td></tr></table></figure></p>
 <p>どうやってここから11月3日、つまりコミット0d1d7fc…に戻せばいいの？</p>
 <p><div style="text-align: right"> By  <a href="/users/111174/crazy-serb">Crazy Serb</a> | 質問日時： 2010年11月6日 16:58 </div><br></p></p>
             <p class="article-more-link">
@@ -446,7 +579,7 @@
 
 </div>
 
-    <a data-url="http://localhost:4000/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/" data-id="cj867ieji000begg6zvjdnrod" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="http://localhost:4000/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/" data-id="cj86coikb000kukg6uxfwflex" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -576,7 +709,7 @@
 
 </div>
 
-    <a data-url="http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/" data-id="cj867iej00005egg6v04eum2r" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="http://localhost:4000/2017/09/26/how-do-i-rename-a-local-git-branch/" data-id="cj86coik3000dukg6fdhonnty" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -692,7 +825,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>例えばこんなリストがあったとき、このリストのインデックスにアクセスするにはどうしたらいいの？</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ints = [<span class="number">8</span>, <span class="number">23</span>, <span class="number">45</span>, <span class="number">12</span>, <span class="number">78</span>]</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><div class="line">ints = [<span class="number">8</span>, <span class="number">23</span>, <span class="number">45</span>, <span class="number">12</span>, <span class="number">78</span>]</div></pre></td></tr></table></figure>
 <p>これをforループで使う時、どうやってこのループインデックス（この場合１から５）にアクセスしたらいいの？</p>
 <p><div style="text-align: right"> By  <a href="/users/51816/joan-venge">Joan Venge</a> | 質問日時： Feb 6 ‘09 at 22:47 </div><br></p></p>
             <p class="article-more-link">
@@ -707,7 +840,7 @@
 
 </div>
 
-    <a data-url="http://localhost:4000/2017/09/25/accessing-the-index-in-python-for-loops/" data-id="cj867iejn000eegg6a7yu0t2l" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="http://localhost:4000/2017/09/25/accessing-the-index-in-python-for-loops/" data-id="cj86coiix0000ukg662g2p1ux" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -836,7 +969,7 @@
 
 </div>
 
-    <a data-url="http://localhost:4000/2017/09/25/append-vs-extend/" data-id="cj867ieif0000egg6d6kx7v83" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="http://localhost:4000/2017/09/25/append-vs-extend/" data-id="cj86coijt0008ukg6tdo3pszh" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -951,7 +1084,7 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>例えばこんなのがあった時、<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a = []</div></pre></td></tr></table></figure></p>
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>例えばこんなのがあった時、<br><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">a = []</div></pre></td></tr></table></figure></p>
 <p>どうやってこの変数がカラだってチェックすればいいの？</p>
 <p><div style="text-align: right"> By  <a href="/users/4872/ray-vega">Ray Vega</a> | 質問日時： Sep 10 ‘08 at 6:20 </div><br></p></p>
             <p class="article-more-link">
@@ -966,7 +1099,7 @@
 
 </div>
 
-    <a data-url="http://localhost:4000/2017/09/25/best-way-to-check-if-a-list-is-empty/" data-id="cj867ieim0001egg6ji7jt6ow" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="http://localhost:4000/2017/09/25/best-way-to-check-if-a-list-is-empty/" data-id="cj86coij40001ukg6dli1s7ul" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1095,7 +1228,7 @@
 
 </div>
 
-    <a data-url="http://localhost:4000/2017/09/25/calling-an-external-command-in-python/" data-id="cj867iej30007egg6pgg8q5lg" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="http://localhost:4000/2017/09/25/calling-an-external-command-in-python/" data-id="cj86coik0000bukg6x1e2ufkl" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1224,7 +1357,7 @@
 
 </div>
 
-    <a data-url="http://localhost:4000/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" data-id="cj867ieiw0004egg6o4dcb0pc" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="http://localhost:4000/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/" data-id="cj86coiji0005ukg6ki5b7xda" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1302,134 +1435,6 @@
 
 
 
-    <article id="post-how-to-check-whether-a-string-contains-a-substring-in-javascript" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/">JavaScriptである文字列に別な文字列（substring）が含まれているかどうかをチェックする方法って？</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/">
-            <time datetime="2017-09-24T23:46:44.000Z" itemprop="datePublished">2017-09-25</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/somatome/tags/contains/">contains</a>, <a class="tag-link" href="/somatome/tags/javascript/">javascript</a>, <a class="tag-link" href="/somatome/tags/string/">string</a>, <a class="tag-link" href="/somatome/tags/string-matching/">string-matching</a>, <a class="tag-link" href="/somatome/tags/substring/">substring</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>String.contains()</code>メソッドだと思ったんだけど、ちょっと違うみたい。これをチェックするいい方法ってあるかな？</p></p>
-            <p class="article-more-link">
-                <a href="/somatome/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://localhost:4000/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/" data-id="cj867iejf000aegg6evhfh8af" class="article-share-link"><i class="fa fa-share"></i>共有</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://localhost:4000/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://localhost:4000/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/">コメント</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/somatome/page/2/">2</a><a class="extend next" rel="next" href="/somatome/page/2/">次 &raquo;</a>
     </nav>
@@ -1443,6 +1448,15 @@
         <h3 class="widget-title">最近の記事</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/somatome/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" class="title">ディレクトリが存在しない場合、どうやって作ったらいいの？ [Python]</a></p>
+                            <p class="item-date"><time datetime="2017-09-29T20:05:53.000Z" itemprop="datePublished">2017-09-29</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -1480,15 +1494,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/somatome/2017/09/25/accessing-the-index-in-python-for-loops/" class="title">Python forループのインデックスへのアクセス方法 [Python]</a></p>
-                            <p class="item-date"><time datetime="2017-09-25T14:24:08.000Z" itemprop="datePublished">2017-09-25</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1498,7 +1503,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">タグクラウド</h3>
         <div class="widget tagcloud">
-            <a href="/somatome/tags/append/" style="font-size: 10px;">append</a> <a href="/somatome/tags/arrays/" style="font-size: 10px;">arrays</a> <a href="/somatome/tags/command/" style="font-size: 10px;">command</a> <a href="/somatome/tags/comments/" style="font-size: 10px;">comments</a> <a href="/somatome/tags/contains/" style="font-size: 10px;">contains</a> <a href="/somatome/tags/data-structures/" style="font-size: 10px;">data-structures</a> <a href="/somatome/tags/dom/" style="font-size: 10px;">dom</a> <a href="/somatome/tags/extend/" style="font-size: 10px;">extend</a> <a href="/somatome/tags/external/" style="font-size: 10px;">external</a> <a href="/somatome/tags/git/" style="font-size: 20px;">git</a> <a href="/somatome/tags/git-branch/" style="font-size: 13.33px;">git-branch</a> <a href="/somatome/tags/git-checkout/" style="font-size: 10px;">git-checkout</a> <a href="/somatome/tags/git-commit/" style="font-size: 10px;">git-commit</a> <a href="/somatome/tags/git-rebase/" style="font-size: 10px;">git-rebase</a> <a href="/somatome/tags/git-remote/" style="font-size: 10px;">git-remote</a> <a href="/somatome/tags/git-reset/" style="font-size: 13.33px;">git-reset</a> <a href="/somatome/tags/git-revert/" style="font-size: 13.33px;">git-revert</a> <a href="/somatome/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/somatome/tags/jquery/" style="font-size: 13.33px;">jquery</a> <a href="/somatome/tags/json/" style="font-size: 10px;">json</a> <a href="/somatome/tags/list/" style="font-size: 16.67px;">list</a> <a href="/somatome/tags/loops/" style="font-size: 10px;">loops</a> <a href="/somatome/tags/python/" style="font-size: 20px;">python</a> <a href="/somatome/tags/redirect/" style="font-size: 10px;">redirect</a> <a href="/somatome/tags/shell/" style="font-size: 10px;">shell</a> <a href="/somatome/tags/string/" style="font-size: 10px;">string</a> <a href="/somatome/tags/string-matching/" style="font-size: 10px;">string-matching</a> <a href="/somatome/tags/subprocess/" style="font-size: 10px;">subprocess</a> <a href="/somatome/tags/substring/" style="font-size: 10px;">substring</a> <a href="/somatome/tags/visibility/" style="font-size: 10px;">visibility</a>
+            <a href="/somatome/tags/append/" style="font-size: 10px;">append</a> <a href="/somatome/tags/arrays/" style="font-size: 10px;">arrays</a> <a href="/somatome/tags/command/" style="font-size: 10px;">command</a> <a href="/somatome/tags/comments/" style="font-size: 10px;">comments</a> <a href="/somatome/tags/contains/" style="font-size: 10px;">contains</a> <a href="/somatome/tags/data-structures/" style="font-size: 10px;">data-structures</a> <a href="/somatome/tags/directory/" style="font-size: 10px;">directory</a> <a href="/somatome/tags/dom/" style="font-size: 10px;">dom</a> <a href="/somatome/tags/exception/" style="font-size: 10px;">exception</a> <a href="/somatome/tags/extend/" style="font-size: 10px;">extend</a> <a href="/somatome/tags/external/" style="font-size: 10px;">external</a> <a href="/somatome/tags/git/" style="font-size: 17.5px;">git</a> <a href="/somatome/tags/git-branch/" style="font-size: 12.5px;">git-branch</a> <a href="/somatome/tags/git-checkout/" style="font-size: 10px;">git-checkout</a> <a href="/somatome/tags/git-commit/" style="font-size: 10px;">git-commit</a> <a href="/somatome/tags/git-rebase/" style="font-size: 10px;">git-rebase</a> <a href="/somatome/tags/git-remote/" style="font-size: 10px;">git-remote</a> <a href="/somatome/tags/git-reset/" style="font-size: 12.5px;">git-reset</a> <a href="/somatome/tags/git-revert/" style="font-size: 12.5px;">git-revert</a> <a href="/somatome/tags/javascript/" style="font-size: 17.5px;">javascript</a> <a href="/somatome/tags/jquery/" style="font-size: 12.5px;">jquery</a> <a href="/somatome/tags/json/" style="font-size: 10px;">json</a> <a href="/somatome/tags/list/" style="font-size: 15px;">list</a> <a href="/somatome/tags/loops/" style="font-size: 10px;">loops</a> <a href="/somatome/tags/python/" style="font-size: 20px;">python</a> <a href="/somatome/tags/redirect/" style="font-size: 10px;">redirect</a> <a href="/somatome/tags/shell/" style="font-size: 10px;">shell</a> <a href="/somatome/tags/string/" style="font-size: 10px;">string</a> <a href="/somatome/tags/string-matching/" style="font-size: 10px;">string-matching</a> <a href="/somatome/tags/subprocess/" style="font-size: 10px;">subprocess</a> <a href="/somatome/tags/substring/" style="font-size: 10px;">substring</a> <a href="/somatome/tags/visibility/" style="font-size: 10px;">visibility</a>
         </div>
     </div>
 
@@ -1509,7 +1514,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">アーカイブ</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/somatome/archives/2017/09/">9月 2017</a><span class="archive-list-count">13</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/somatome/archives/2017/09/">9月 2017</a><span class="archive-list-count">14</span></li></ul>
         </div>
     </div>
 
@@ -1518,7 +1523,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">タグ</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/append/">append</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/arrays/">arrays</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/comments/">comments</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/contains/">contains</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/data-structures/">data-structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/dom/">dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/extend/">extend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/external/">external</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git/">git</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-branch/">git-branch</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-checkout/">git-checkout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-commit/">git-commit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-rebase/">git-rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-remote/">git-remote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-reset/">git-reset</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-revert/">git-revert</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/javascript/">javascript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/jquery/">jquery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/json/">json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/list/">list</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/loops/">loops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/redirect/">redirect</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string/">string</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string-matching/">string-matching</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/subprocess/">subprocess</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/substring/">substring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/visibility/">visibility</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/append/">append</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/arrays/">arrays</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/comments/">comments</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/contains/">contains</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/data-structures/">data-structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/directory/">directory</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/dom/">dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/exception/">exception</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/extend/">extend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/external/">external</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git/">git</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-branch/">git-branch</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-checkout/">git-checkout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-commit/">git-commit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-rebase/">git-rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-remote/">git-remote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-reset/">git-reset</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/git-revert/">git-revert</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/javascript/">javascript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/jquery/">jquery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/json/">json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/list/">list</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/loops/">loops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/python/">python</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/redirect/">redirect</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string/">string</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/string-matching/">string-matching</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/subprocess/">subprocess</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/substring/">substring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/somatome/tags/visibility/">visibility</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
