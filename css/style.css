@@ -117,7 +117,7 @@ body,
 }
 body {
   color: #565a5f;
-  background: #f5f8f9;
+  background: #fff;
   font: 15px "open sans", "Helvetica Neue", "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
@@ -1021,7 +1021,7 @@ a.article-title:hover {
   line-height: 1em;
   padding: 6px 15px;
   border-radius: 15px;
-  background: #f5f8f9;
+  background: #fff;
   color: #999;
   text-shadow: 0 1px #fff;
   text-decoration: none;
@@ -1180,7 +1180,7 @@ a.article-title:hover {
   line-height: 36px;
 }
 .article-share-links {
-  background: #f5f8f9;
+  background: #fff;
 }
 .article-share-links:before,
 .article-share-links:after {
