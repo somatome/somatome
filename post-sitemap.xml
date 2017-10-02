@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://somatome.github.io/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/</loc>
+        <lastmod>2017-10-02T20:21:34.820Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/</loc>
         <lastmod>2017-10-02T19:23:02.367Z</lastmod>
         <changefreq>weekly</changefreq>

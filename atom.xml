@@ -46,6 +46,48 @@
   </entry>
   
   <entry>
+    <title>git pullで強制的にローカルファイルを上書きするには？ [Git]</title>
+    <link href="https://somatome.github.io/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/"/>
+    <id>https://somatome.github.io/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/</id>
+    <published>2017-09-29T17:42:38.000Z</published>
+    <updated>2017-10-02T20:21:34.820Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>git pull</code>でローカルファイルを強制的に上書きするにはどうしたらいいの？</p><p>やろうとしてるのはこんな感じ：</p><ul><li>チームメンバーが取り組んでいるウェブサイトのテンプレートを変更</li><li>彼らは画像ディレクトリに画像を追加(ただし、ソース管理の下に追加することは忘れてる)</li><li>彼らは僕に「後で」メールで画像を送ってくる</li><li>で、僕が画像をソースコントロールの下に追加して、GitHubに他の変更と一緒に押し込んでる</li><li>でもGitはファイルを上書きしたくないので彼らはGitHubから更新をpullできない</li></ul><p>出て来るエラーは次の通り：</p><blockquote><p>error: Untracked working tree file ‘public/images/icon.gif’ would be overwritten by merge.<br>(訳：エラー：未処理の作業ツリーファイル’public/images/icon.gif’がマージによって上書きされます。)</p></blockquote><p>Gitにそれらを上書きさせるにはどうすればいい？その人(上書きされる人)はデザイナーで、通常は僕がそれらの競合を手作業で解決するから、サーバーには最新のバージョンがあって、彼らはただ彼らのコンピュータ内のファイルをで更新するだけでいいんだ。</p><p><div style="text-align: right"> By  <a href="/users/98046/jakub-troszok">Jakub Troszok</a> | 質問日時： 2009年7月14日 14:58 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><h2 id="重要：ローカルで変更があった場合、それらは失われる。-hardオプションがあろうがなかろうが、プッシュされていないローカルコミットは失われる"><a href="#重要：ローカルで変更があった場合、それらは失われる。-hardオプションがあろうがなかろうが、プッシュされていないローカルコミットは失われる" class="headerlink" title="重要：ローカルで変更があった場合、それらは失われる。--hardオプションがあろうがなかろうが、プッシュされていないローカルコミットは失われる[*]"></a>重要：ローカルで変更があった場合、それらは失われる。<code>--hard</code>オプションがあろうがなかろうが、プッシュされていないローカルコミットは失われる[*]</h2><p>Gitによって管理されてないファイルがある場合(例えば、アップロードされたユーザコンテント）、これらのファイルは影響を受けません。</p><hr><p>僕ははこれが一番いい方法だと思う：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git fetch --all</div></pre></td></tr></table></figure><p>次に、2つのオプションがある。</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git reset --hard origin/master</div></pre></td></tr></table></figure><p>または、他のブランチにいる場合：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git reset --hard origin/&lt;branch_name&gt;</div></pre></td></tr></table></figure><h3 id="説明："><a href="#説明：" class="headerlink" title="説明："></a>説明：</h3><p><code>git fetch</code>は、マージやリベースを試みずにリモートから最新のものをダウンロードする。</p><p>次に、 <code>git reset</code>はマスターブランチを君がちょうど取得したものにリセットする。<code>--hard</code>オプションは作業ツリー内のすべてのファイルを<code>origin/master</code>内のファイルに合わせて変更</p><hr><p>[*]：リセットする前に <code>master</code>からブランチを作成することによって現在のローカルコミットを維持することは可能であることは知っておくべきだと思う：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git checkout master</div><div class="line">git branch new-branch-to-save-current-commits</div><div class="line">git fetch --all</div><div class="line">git reset --hard origin/master</div></pre></td></tr></table></figure><p>この後、すべての古いコミットは <code>new-branch-to-save-current-commits</code>に保存される。ただしコミットされていない変更は(stagedのものでさえも)失われます。<br>だから必要なものを隠して、コミットしてね。</p><p><div style="text-align: right"> By  <a href="/users/489564/rna">RNA</a> | 回答日時： 2012年1月17日 0:02 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>これを試してみれば？：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git reset --hard HEAD</div><div class="line">git pull</div></pre></td></tr></table></figure><p>それで望む挙動になると思う。</p><p><div style="text-align: right"> By  <a href="/users/105562/travis-r">Travis R</a> | 回答日時： 2010年5月9日 19:45 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p><strong>警告： <code>git clean</code>はあなたの追跡されていないファイル/ディレクトリをすべて削除し、元に戻してしまうのに注意。</strong></p><hr><p>場合によっては <code>clean -f</code>が役に立たないこともある。untrackedなディレクトリがある場合、-dオプションも必要だよ：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git reset --hard HEAD</div><div class="line">git clean -f -d</div><div class="line">git pull</div></pre></td></tr></table></figure><p><strong>警告： <code>git clean</code>はあなたの追跡されていないファイル/ディレクトリをすべて削除し、元に戻してしまうのに注意。</strong></p><p><div style="text-align: right"> By  <a href="/users/667154/david-avsajanishvili">David Avsajanishvili</a> | 回答日時： 2011年3月19日 9:10 </div><br></p><hr><hr><p><a href="http://www.amazon.co.jp/gp/product/4873113911/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=247&creative=1211&creativeASIN=4873113911&linkCode=as2&tag=roosternews-22" target="_blank"><img border="0" src="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&ASIN=4873113911&Format=_SL400_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=roosternews-22" width="200" style="float: left; margin: 0 20px 20px 0;"></a><img src="http://www.assoc-amazon.jp/e/ir?t=roosternews-22&l=as2&o=9&a=4873113911" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"></p><p>Source: <a href="https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files" target="_blank" rel="external">How do I force “git pull” to overwrite local files?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;&lt;code&gt;git pull&lt;/code&gt;でローカルファイルを強制的に上書きするにはどうしたらいいの？&lt;/p&gt;
+&lt;p&gt;やろうとしてるのはこんな感じ：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;チームメンバーが取り組んでいるウェブサイトのテンプレートを変更&lt;/li&gt;
+&lt;li&gt;彼らは画像ディレクトリに画像を追加(ただし、ソース管理の下に追加することは忘れてる)&lt;/li&gt;
+&lt;li&gt;彼らは僕に「後で」メールで画像を送ってくる&lt;/li&gt;
+&lt;li&gt;で、僕が画像をソースコントロールの下に追加して、GitHubに他の変更と一緒に押し込んでる&lt;/li&gt;
+&lt;li&gt;でもGitはファイルを上書きしたくないので彼らはGitHubから更新をpullできない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;出て来るエラーは次の通り：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;error: Untracked working tree file ‘public/images/icon.gif’ would be overwritten by merge.&lt;br&gt;(訳：エラー：未処理の作業ツリーファイル’public/images/icon.gif’がマージによって上書きされます。)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Gitにそれらを上書きさせるにはどうすればいい？その人(上書きされる人)はデザイナーで、通常は僕がそれらの競合を手作業で解決するから、サーバーには最新のバージョンがあって、彼らはただ彼らのコンピュータ内のファイルをで更新するだけでいいんだ。&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/98046/jakub-troszok&quot;&gt;Jakub Troszok&lt;/a&gt; | 質問日時： 2009年7月14日 14:58 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://somatome.github.io/tags/git/"/>
+    
+      <category term="version-control" scheme="https://somatome.github.io/tags/version-control/"/>
+    
+      <category term="overwrite" scheme="https://somatome.github.io/tags/overwrite/"/>
+    
+      <category term="git-pull" scheme="https://somatome.github.io/tags/git-pull/"/>
+    
+      <category term="git-fetch" scheme="https://somatome.github.io/tags/git-fetch/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScriptの配列から特定の要素を削除するにはどうすればいいの？ [Javascript]</title>
     <link href="https://somatome.github.io/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/"/>
     <id>https://somatome.github.io/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/</id>
