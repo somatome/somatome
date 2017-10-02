@@ -3,15 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>タグ: namespaces | Stack Overflow まとめ</title>
+    <title>JavaScriptでの比較で、等号演算子（== vs ===）のどっちを使うべき？ [Javascript] | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Stack Overflow まとめ">
-<meta property="og:url" content="https://somatome.github.io/tags/namespaces/index.html">
+    <meta name="description" content="質問：JSLintを使ってて、if文の中でidSele_UNVEHtype.value.length == 0を比較する時とか、==(2つの等号)を===(3つの等号)で置き換えろ、ってサジェストが出るんだけど、==を===に置き換えるとパフォーマンス上のメリットとかってある？ 比較演算子をいっぱい使ってるので、パフォーマンスの改善は歓迎なんだけど。。。 型変換が行われない場合は、==を置き換える">
+<meta name="keywords" content="javascript,operators,equality,equality-operator,identity-operator">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScriptでの比較で、等号演算子（== vs ===）のどっちを使うべき？ [Javascript]">
+<meta property="og:url" content="https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
+<meta property="og:description" content="質問：JSLintを使ってて、if文の中でidSele_UNVEHtype.value.length == 0を比較する時とか、==(2つの等号)を===(3つの等号)で置き換えろ、ってサジェストが出るんだけど、==を===に置き換えるとパフォーマンス上のメリットとかってある？ 比較演算子をいっぱい使ってるので、パフォーマンスの改善は歓迎なんだけど。。。 型変換が行われない場合は、==を置き換える">
 <meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2017-10-02T19:23:02.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stack Overflow まとめ">
+<meta name="twitter:title" content="JavaScriptでの比較で、等号演算子（== vs ===）のどっちを使うべき？ [Javascript]">
+<meta name="twitter:description" content="質問：JSLintを使ってて、if文の中でidSele_UNVEHtype.value.length == 0を比較する時とか、==(2つの等号)を===(3つの等号)で置き換えろ、ってサジェストが出るんだけど、==を===に置き換えるとパフォーマンス上のメリットとかってある？ 比較演算子をいっぱい使ってるので、パフォーマンスの改善は歓迎なんだけど。。。 型変換が行われない場合は、==を置き換える">
     
 
     
@@ -144,45 +149,201 @@ ga('send', 'pageview');
 
         <div class="outer">
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-tag"></i></span>
-        <h1 class="title">#namespaces</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-which-equals-operator-vs-should-be-used-in-javascript-comparisons" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/somatome/2017/09/25/what-does-if-name-main-do/">__name__ == &#34;__main__&#34;って何やってるの？</a>
+        <h1 class="article-title" itemprop="name">
+            JavaScriptでの比較で、等号演算子（== vs ===）のどっちを使うべき？ [Javascript]
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/somatome/2017/09/25/what-does-if-name-main-do/">
-            <time datetime="2017-09-25T14:23:09.000Z" itemprop="datePublished">2017-09-25</time>
+        <a href="/somatome/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/">
+            <time datetime="2017-09-28T22:43:32.000Z" itemprop="datePublished">2017-09-28</time>
         </a>
     </div>
 
 
-                    
-                    
+                        
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/somatome/tags/idioms/">idioms</a>, <a class="tag-link" href="/somatome/tags/main/">main</a>, <a class="tag-link" href="/somatome/tags/module/">module</a>, <a class="tag-link" href="/somatome/tags/namespaces/">namespaces</a>, <a class="tag-link" href="/somatome/tags/python/">python</a>
+        <a class="tag-link" href="/somatome/tags/equality/">equality</a>, <a class="tag-link" href="/somatome/tags/equality-operator/">equality-operator</a>, <a class="tag-link" href="/somatome/tags/identity-operator/">identity-operator</a>, <a class="tag-link" href="/somatome/tags/javascript/">javascript</a>, <a class="tag-link" href="/somatome/tags/operators/">operators</a>
     </div>
 
-                </div>
-            </div>
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><a href="http://en.wikipedia.org/wiki/JSLint" target="_blank" rel="external">JSLint</a>を使ってて、<code>if</code>文の中で<code>idSele_UNVEHtype.value.length == 0</code>を比較する時とか、<code>==</code>(2つの等号)を<code>===</code>(3つの等号)で置き換えろ、ってサジェストが出るんだけど、<code>==</code>を<code>===</code>に置き換えるとパフォーマンス上のメリットとかってある？</p>
+<p>比較演算子をいっぱい使ってるので、パフォーマンスの改善は歓迎なんだけど。。。</p>
+<p>型変換が行われない場合は、<code>==</code>を置き換えるメリットってある？</p>
+<p><div style="text-align: right"> By  <a href="/users/44990/bcasp">bcasp</a> | 質問日時： 2008年12月11日 14:19 </div><br></p>
+<a id="more"></a>
+<hr>
+<hr>
+<h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>型変換が行われていないことを除けば、同一性(<code>===</code>)演算子は、等価(<code>==</code>)と同じように動作するよ。等しいとみなされるためには型は同じでなければだめ。</p>
+<p>リファレンス：<a href="http://www.c-point.com/javascript_tutorial/jsgrpComparison.htm" target="_blank" rel="external">Javascriptチュートリアル：比較オペレータ</a></p>
+<p><code>==</code>演算子は、<em>必要な型を実行した後</em>、等価性を比較する。<code>===&#39; 演算子はその変換をしないので、2つの値が同じ型じゃない時、</code>===<code>は単に</code>false`を返す。どちらもおんなじぐらい速いかな。</p>
+<p>ダグラス・クロフォードの優れた本<a href="http://rads.stackoverflow.com/amzn/click/0596517742" target="_blank" rel="external">JavaScript：The Good Parts</a>を引用すると、</p>
+<blockquote>
+<p>JavaScriptには、2種類の等価演算子、<code>===</code>と<code>!==</code>、そして出来の悪い双子 <code>==</code>と <code>!=</code>がある。良い子の方は、君が期待する方法で動作するだろう。もし2つのオペランドが同じ型で同じ値を持つなら、<code>===</code>は<code>true</code>を返し、<code>!==</code>は<code>false</code>を返す。邪悪な双子の方はオペランドの型が同じなら同じように働くけど、型が異なる場合は値を強制しようとする。このルールはは複雑で覚えてなんかいられない。下は一例：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">&gt; <span class="string">''</span> == <span class="string">'0'</span>           <span class="comment">// false</span></div><div class="line">&gt; <span class="number">0</span> == <span class="string">''</span>             <span class="comment">// true</span></div><div class="line">&gt; <span class="number">0</span> == <span class="string">'0'</span>            <span class="comment">// true</span></div><div class="line">&gt;</div><div class="line">&gt; <span class="literal">false</span> == <span class="string">'false'</span>    <span class="comment">// false</span></div><div class="line">&gt; <span class="literal">false</span> == <span class="string">'0'</span>        <span class="comment">// true</span></div><div class="line">&gt;</div><div class="line">&gt; <span class="literal">false</span> == <span class="literal">undefined</span>  <span class="comment">// false</span></div><div class="line">&gt; <span class="literal">false</span> == <span class="literal">null</span>       <span class="comment">// false</span></div><div class="line">&gt; <span class="literal">null</span> == <span class="literal">undefined</span>   <span class="comment">// true</span></div><div class="line">&gt;</div><div class="line">&gt; <span class="string">' \t\r\n '</span> == <span class="number">0</span>     <span class="comment">// true</span></div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p>推移性の欠如は気をつけるべき。僕のアドバイスは悪い双子をを使わないことだ。代わりに、常に<code>===</code>と <code>!==</code>を使用すること。<code>===</code>演算子では上でのすべての比較に<code>false</code>を返すから。</p>
+</blockquote>
+<hr>
+<p>###更新：</p>
+<p>参照までに、(特別な場合を除き)型<code>==</code>と<code>===</code>はお互い一貫して同じように動作するよ。<br>別のもの。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"></div><div class="line"><span class="keyword">var</span> c = &#123; <span class="attr">x</span>: <span class="number">1</span>, <span class="attr">y</span>: <span class="number">2</span> &#125;;</div><div class="line"><span class="keyword">var</span> d = &#123; <span class="attr">x</span>: <span class="number">1</span>, <span class="attr">y</span>: <span class="number">2</span> &#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> e = <span class="string">"text"</span>;</div><div class="line"><span class="keyword">var</span> f = <span class="string">"te"</span> + <span class="string">"xt"</span>;</div><div class="line"></div><div class="line">a == b            <span class="comment">// false</span></div><div class="line">a === b           <span class="comment">// false</span></div><div class="line"></div><div class="line">c == d            <span class="comment">// false</span></div><div class="line">c === d           <span class="comment">// false</span></div><div class="line"></div><div class="line">e == f            <span class="comment">// true</span></div><div class="line">e === f           <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<p>特殊なケースは、リテラルを評価するオブジェクトと比較する場合。<code>toString</code>や<code>valueOf</code>メソッドのために同じリテラルに変換する。例えば、文字列リテラルと、<code>String</code>コンストラクタによって作られた文字列オブジェクトの比較を見てみよう：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="string">"abc"</span> == <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>)    <span class="comment">// true</span></div><div class="line"><span class="string">"abc"</span> === <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>)   <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<p>ここで、 <code>==</code>演算子は2つのオブジェクトの値をチェックし、<code>true</code>だけど、<code>===</code>はそれらが同じ型ではないので<code>false</code>。どちらが正しいか？それは君が比較しようとしているものに依存するね。僕のアドバイスは、そんな質問は忘れて、文字列オブジェクトを作るために<code>String</code>コンストラクタを使わないこと。</p>
+<p><strong>参照</strong><br><a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3" target="_blank" rel="external">http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3</a></p>
+<p><div style="text-align: right"> By  <a href="/users/1288/bill-the-lizard">Bill the Lizard</a> | 回答日時： 2008年12月11日 14:25 </div><br></p>
+<hr>
+<hr>
+<h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p><code>==</code>演算子(<em>Equality</em>)を使うと、</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="literal">true</span> == <span class="number">1</span>; <span class="comment">// true、 'true'は1に変換されて比較される</span></div><div class="line"><span class="string">"2"</span> == <span class="number">2</span>;  <span class="comment">// true、 "2"が2に変換されて比較されるため</span></div></pre></td></tr></table></figure>
+<p><code>===</code>演算子(<em>Identity</em>)を使用すると、</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="literal">true</span> === <span class="number">1</span>; <span class="comment">//false</span></div><div class="line"><span class="string">"2"</span> === <span class="number">2</span>;  <span class="comment">//false</span></div></pre></td></tr></table></figure>
+<p>これは、<strong>等価演算子<code>==</code>は型強制</strong>を行うため。つまり、インタプリタは暗黙的に比較する前に値を変換しようとする。</p>
+<p>一方、<strong>アイデンティティ演算子 <code>===</code>は型強制をしない</strong>、だから比較の際には値を変換しないよ。</p>
+<hr>
+<hr>
+<p>Source: <a href="https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons" target="_blank" rel="external">Which equals operator (== vs ===) should be used in JavaScript comparisons?</a></p>
+
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
 </div>
+
+    <a data-url="https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" data-id="cj8aldg2b0000sww6w7v4ajk4" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/somatome/2017/09/29/can-comments-be-used-in-json/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新しい記事</strong>
+            <div class="article-nav-title">
+                
+                    JSONでコメントって使用できる？ [JSON]
+                
+            </div>
+        </a>
+    
+    
+        <a href="/somatome/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">古い記事</strong>
+            <div class="article-nav-title">Gitリポジトリを以前のコミットに戻すには？ [Git]</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+    
+
 </section>
             
                 
@@ -307,11 +468,13 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = '';
+            this.page.url = 'https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/';
+        
+        this.page.identifier = 'which-equals-operator-vs-should-be-used-in-javascript-comparisons';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'somatome' + '.disqus.com/count.js';
+        s.src = '//' + 'somatome' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
