@@ -173,6 +173,29 @@
   </entry>
   
   <entry>
+    <title>ディレクトリのすべてのファイルを一覧表示するにはどうすればよいですか？ [Python]</title>
+    <link href="https://somatome.github.io/2017/09/25/how-do-i-list-all-files-of-a-directory/"/>
+    <id>https://somatome.github.io/2017/09/25/how-do-i-list-all-files-of-a-directory/</id>
+    <published>2017-09-25T14:23:48.000Z</published>
+    <updated>2017-10-02T01:31:12.442Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>Pythonでディレクトリ内のすべてのファイルをリストアップして、リストに追加するのってどうやるの？</p><p><div style="text-align: right"> By  <a href="/users/385652/duhhunjonn">duhhunjonn</a> | 質問日時： Jul 8 ‘10 at 19:31 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p><a href="https://docs.python.org/2/library/os.html#os.listdir" title="os.listdir" target="_blank" rel="external"><code>os.listdir()</code></a>でディレクトリにある全てのもの（つまりファイルとディレクトリ）を取得できるよ。</p><p>ファイルのみが必要な場合は、<br><a href="https://docs.python.org/2/library/os.path.html#module-os.path" target="_blank" rel="external"><code>os.path</code></a>：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">from</span> os <span class="keyword">import</span> listdir</div><div class="line"><span class="keyword">from</span> os.path <span class="keyword">import</span> isfile, join</div><div class="line">onlyfiles = [f <span class="keyword">for</span> f <span class="keyword">in</span> listdir(mypath) <span class="keyword">if</span> isfile(join(mypath, f))]</div></pre></td></tr></table></figure><p>それか、<a href="https://docs.python.org/2/library/os.html#os.walk" title="os.walk" target="_blank" rel="external"><code>os.walk()</code></a>も使えるかな。<br>これは、訪問先のディレクトリごとに2つのリストを生成する — ファイルとディレクトリに分けてくれるんだ。<br>トップディレクトリのみが必要な場合は、１回目のループでbreakすればいいよ。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">from</span> os <span class="keyword">import</span> walk</div><div class="line"></div><div class="line">f = []</div><div class="line"><span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> walk(mypath):</div><div class="line">    f.extend(filenames)</div><div class="line">    <span class="keyword">break</span></div></pre></td></tr></table></figure><p>最後に、下の例のように、あるリストを別のリストに追加するには、<br><a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists" target="_blank" rel="external"><code>.extend()</code></a>を使うか、下の方法みたいにするか：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>q = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>w = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>q = q + w</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>q</div><div class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</div></pre></td></tr></table></figure><p>個人的には、 <code>.extend()</code>の方が好みだけど。</p><p><div style="text-align: right"> By  <a href="/users/346573/pycruft">pycruft</a> | 回答日時： Jul 8 ‘10 at 21:01 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>僕はは<a href="https://docs.python.org/library/glob.html" target="_blank" rel="external"><code>glob</code></a>モジュールを使用する方が好きかな。<br>パターンマッチングと展開が行われるから。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> glob</div><div class="line">print(glob.glob(<span class="string">"/home/adam/*.txt"</span>))</div></pre></td></tr></table></figure><p>上は、クエリーされたファイルを含むリストを返すよ：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">[<span class="string">'/home/adam/file1.txt'</span>, <span class="string">'/home/adam/file2.txt'</span>, .... ]</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/293929/adamk">adamk</a> | 回答日時： Jul 9 ‘10 at 18:13 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line">os.listdir(<span class="string">"somedirectory"</span>)</div></pre></td></tr></table></figure><p>これは、”somedirectory”内のすべてのファイルとディレクトリのリストを返す。</p><p><div style="text-align: right"> By  <a href="/users/149392/sepp2k">sepp2k</a> | 回答日時： Jul 8 ‘10 at 19:35 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory" target="_blank" rel="external">How do I list all files of a directory?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;Pythonでディレクトリ内のすべてのファイルをリストアップして、リストに追加するのってどうやるの？&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/385652/duhhunjonn&quot;&gt;duhhunjonn&lt;/a&gt; | 質問日時： Jul 8 ‘10 at 19:31 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+    
+      <category term="directory" scheme="https://somatome.github.io/tags/directory/"/>
+    
+  </entry>
+  
+  <entry>
     <title>append vs. extend [Python]</title>
     <link href="https://somatome.github.io/2017/09/25/append-vs-extend/"/>
     <id>https://somatome.github.io/2017/09/25/append-vs-extend/</id>
@@ -251,6 +274,35 @@
       <category term="subprocess" scheme="https://somatome.github.io/tags/subprocess/"/>
     
       <category term="external" scheme="https://somatome.github.io/tags/external/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>__name__ == &quot;__main__&quot;って何やってるの？</title>
+    <link href="https://somatome.github.io/2017/09/25/what-does-if-name-main-do/"/>
+    <id>https://somatome.github.io/2017/09/25/what-does-if-name-main-do/</id>
+    <published>2017-09-25T14:23:09.000Z</published>
+    <updated>2017-10-02T01:13:57.967Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>if __name__ == &quot;__main__&quot;:</code> ってこの場合で何やってるの？<br><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Threading example</span></div><div class="line"><span class="keyword">import</span> time, thread</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunction</span><span class="params">(string, sleeptime, lock, *args)</span>:</span></div><div class="line">    <span class="keyword">while</span> <span class="number">1</span>:</div><div class="line">        lock.acquire()</div><div class="line">        time.sleep(sleeptime)</div><div class="line">        lock.release()</div><div class="line">        time.sleep(sleeptime)</div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    lock = thread.allocate_lock()</div><div class="line">    thread.start_new_thread(myfunction, (<span class="string">"Thread #: 1"</span>, <span class="number">2</span>, lock))</div><div class="line">    thread.start_new_thread(myfunction, (<span class="string">"Thread #: 2"</span>, <span class="number">2</span>, lock))</div></pre></td></tr></table></figure></p><p><div style="text-align: right"> By  <a href="/users/51518/devoted">Devoted</a> | 質問日時： Jan 7 ‘09 at 4:11 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>Pythonインタプリタがソースファイルを読み込むと、ファイル内のすべてのコードが実行される。</p><p>コードを実行する前に、いくつかの特殊変数を定義するんだ。たとえば、Pythonインタプリタがそのモジュール(＝ソースファイル)を<br>メインプログラムとして走らせているとすると、特殊な <code>__name__</code>変数を値<code>&quot; __main __ &quot;</code>として設定する。このファイルが別のモジュールからインポートされている場合は、 <code>__name__</code>はモジュールの名前に設定されるってわけなんだ。</p><p>君のスクリプトの場合、それがメインとして実行されていると仮定しよう。で、例えば、コマンドラインでこう呼び出したとする：</p><pre><code class="python">python threading_example.py</code></pre><p>特殊変数を設定した後、<code>import</code>文を読み込み、それらのモジュールをロードする。次に、 <code>def</code>ブロックを評価し、<br>関数オブジェクトの作成とそれを指している<code>myfunction</code>という変数の作成を行う。<br>その後、<code>if</code>文を読み込み、<code>__name__</code>は<code>&quot;__main __&quot;</code>と等しいことを知り、その中のブロックを実行する。</p><p>One reason for doing this is that sometimes you write a module (a .py file) where it can be executed directly. Alternatively, it can also be imported and used in another module. By doing the main check, you can have that code only execute when you want to run the module as a program and not have it execute when someone just wants to import your module and call your functions themselves.</p><p>これを行う1つの理由は、直接実行することができるモジュール(<code>.py</code>ファイル)を時々書く必要があるから、って言う理由。それ以外の時はインポートして、他のモジュールとして使うこともできる。メイン関数のチェックを行うことで、そのモジュールをプログラムとして実行したい時にのみ実行されるコードを持つことができるし、また、誰かがあなたのモジュールをインポートしてあなたの関数を呼び出そうとしているときは実行されない。</p><p>詳しくは<a href="http://ibiblio.org/g2swap/byteofpython/read/module-name.html" target="_blank" rel="external">このページ</a>を参照してみて。</p><p><div style="text-align: right"> By  <a href="/users/25050/mr-fooz">Mr Fooz</a> | 回答日時： Jan 7 ‘09 at 4:26 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/419163/what-does-if-name-main-do" target="_blank" rel="external">What does if <strong>name</strong> == “<strong>main</strong>”: do?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;&lt;code&gt;if __name__ == &amp;quot;__main__&amp;quot;:&lt;/code&gt; ってこの場合で何やってるの？&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Threading example&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; time, thread&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;myfunction&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(string, sleeptime, lock, *args)&lt;/span&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        lock.acquire()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        time.sleep(sleeptime)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        lock.release()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        time.sleep(sleeptime)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; __name__ == &lt;span class=&quot;string&quot;&gt;&quot;__main__&quot;&lt;/span&gt;:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    lock = thread.allocate_lock()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    thread.start_new_thread(myfunction, (&lt;span class=&quot;string&quot;&gt;&quot;Thread #: 1&quot;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, lock))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    thread.start_new_thread(myfunction, (&lt;span class=&quot;string&quot;&gt;&quot;Thread #: 2&quot;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, lock))&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/51518/devoted&quot;&gt;Devoted&lt;/a&gt; | 質問日時： Jan 7 ‘09 at 4:11 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+    
+      <category term="module" scheme="https://somatome.github.io/tags/module/"/>
+    
+      <category term="namespaces" scheme="https://somatome.github.io/tags/namespaces/"/>
+    
+      <category term="main" scheme="https://somatome.github.io/tags/main/"/>
+    
+      <category term="idioms" scheme="https://somatome.github.io/tags/idioms/"/>
     
   </entry>
   
