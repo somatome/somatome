@@ -3,15 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>タグ: overwrite | Stack Overflow まとめ</title>
+    <title>変数を使用してオブジェクトプロパティに動的にアクセスする方法？ [Javascript] | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Stack Overflow まとめ">
-<meta property="og:url" content="https://somatome.github.io/tags/overwrite/index.html">
+    <meta name="description" content="質問：動的な変数名を使ってオブジェクトのプロパティにアクセスしようとしてるんだけど、これって可能？ const something = &amp;#123; bar: &quot;Foobar!&quot; &amp;#125;;const foo = &apos;bar&apos;;something.foo; // このsomething.bar, &quot;Foobar!&quot;を取得したい  By  RichW | 質問日時： 2010年11月22日 11:">
+<meta name="keywords" content="javascript,object,properties">
+<meta property="og:type" content="article">
+<meta property="og:title" content="変数を使用してオブジェクトプロパティに動的にアクセスする方法？ [Javascript]">
+<meta property="og:url" content="https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
+<meta property="og:description" content="質問：動的な変数名を使ってオブジェクトのプロパティにアクセスしようとしてるんだけど、これって可能？ const something = &amp;#123; bar: &quot;Foobar!&quot; &amp;#125;;const foo = &apos;bar&apos;;something.foo; // このsomething.bar, &quot;Foobar!&quot;を取得したい  By  RichW | 質問日時： 2010年11月22日 11:">
 <meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2017-10-10T14:19:17.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stack Overflow まとめ">
+<meta name="twitter:title" content="変数を使用してオブジェクトプロパティに動的にアクセスする方法？ [Javascript]">
+<meta name="twitter:description" content="質問：動的な変数名を使ってオブジェクトのプロパティにアクセスしようとしてるんだけど、これって可能？ const something = &amp;#123; bar: &quot;Foobar!&quot; &amp;#125;;const foo = &apos;bar&apos;;something.foo; // このsomething.bar, &quot;Foobar!&quot;を取得したい  By  RichW | 質問日時： 2010年11月22日 11:">
     
 
     
@@ -144,45 +149,186 @@ ga('send', 'pageview');
 
         <div class="outer">
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-tag"></i></span>
-        <h1 class="title">#overwrite</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-dynamically-access-object-property-using-variable" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/somatome/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/">git pullで強制的にローカルファイルを上書きするには？ [Git]</a>
+        <h1 class="article-title" itemprop="name">
+            変数を使用してオブジェクトプロパティに動的にアクセスする方法？ [Javascript]
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/somatome/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/">
-            <time datetime="2017-09-29T17:42:38.000Z" itemprop="datePublished">2017-09-29</time>
+        <a href="/somatome/2017/10/10/dynamically-access-object-property-using-variable/">
+            <time datetime="2017-10-10T13:59:28.000Z" itemprop="datePublished">2017-10-10</time>
         </a>
     </div>
 
 
-                    
-                    
+                        
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/somatome/tags/git/">git</a>, <a class="tag-link" href="/somatome/tags/git-fetch/">git-fetch</a>, <a class="tag-link" href="/somatome/tags/git-pull/">git-pull</a>, <a class="tag-link" href="/somatome/tags/overwrite/">overwrite</a>, <a class="tag-link" href="/somatome/tags/version-control/">version-control</a>
+        <a class="tag-link" href="/somatome/tags/javascript/">javascript</a>, <a class="tag-link" href="/somatome/tags/object/">object</a>, <a class="tag-link" href="/somatome/tags/properties/">properties</a>
     </div>
 
-                </div>
-            </div>
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>動的な変数名を使ってオブジェクトのプロパティにアクセスしようとしてるんだけど、これって可能？</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> something = &#123; <span class="attr">bar</span>: <span class="string">"Foobar!"</span> &#125;;</div><div class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</div><div class="line">something.foo; <span class="comment">// このsomething.bar, "Foobar!"を取得したい</span></div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/471628/richw" target="_blank" rel="external">RichW</a> | 質問日時： 2010年11月22日 11:23 </div><br></p>
+<a id="more"></a>
+<hr>
+<hr>
+<h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>プロパティにアクセスするには<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors" target="_blank" rel="external">2つの方法</a><br>がある</p>
+<ul>
+<li>ドット表記： <code>something.bar</code></li>
+<li>ブラケット記法： <code>something [&#39;bar&#39;]</code></li>
+</ul>
+<p>角かっこの間の値は、任意の式。だから、プロパティ名が変数に格納されている場合は、ブラケット表記を使用する必要があるよ。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</div><div class="line">something[foo];</div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/185527/jan-han%c4%8di%c4%8d" target="_blank" rel="external">Jan Hančič</a> | 回答日時： 2010年11月22日 11:25 </div><br></p>
+<hr>
+<hr>
+<h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>javascriptでは次の形でアクセスできるよ：</p>
+<ul>
+<li>ドット表記 -  <code>foo.bar</code></li>
+<li>大括弧 -  <code>foo [someVar]</code>または <code>foo [&quot; string &quot;]</code></li>
+</ul>
+<p>でも2番目のケースだけがプロパティに動的にアクセスできる。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = &#123; <span class="attr">pName1</span> : <span class="number">1</span>, <span class="attr">pName2</span> : [<span class="number">1</span>, &#123;<span class="attr">foo</span> : bar &#125;, <span class="number">3</span>] , ...&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> name = <span class="string">"pName"</span></div><div class="line"><span class="keyword">var</span> num  = <span class="number">1</span>;</div><div class="line"></div><div class="line">foo[name + num]; <span class="comment">// 1</span></div><div class="line"></div><div class="line"><span class="comment">// --</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> c = <span class="string">"foo"</span>;</div><div class="line"></div><div class="line">foo[name + a][b][c]; <span class="comment">// bar</span></div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1726507/sonique" target="_blank" rel="external">Sonique</a> | 回答日時： 2014年7月1日 15:40 </div><br></p>
+<hr>
+<hr>
+<h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>以下は、オブジェクトのプロパティにアクセスする方法のES6での例。<br>2つの文字列を連結して動的に生成されたプロパティ名を使用してアクセスする方法。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> suffix = <span class="string">" name"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    [<span class="string">"first"</span> + suffix]: <span class="string">"Nicholas"</span>,</div><div class="line">    [<span class="string">"last"</span> + suffix]: <span class="string">"Zakas"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person[<span class="string">"first name"</span>]);      <span class="comment">// "Nicholas"</span></div><div class="line"><span class="built_in">console</span>.log(person[<span class="string">"last name"</span>]);       <span class="comment">// "Zakas"</span></div></pre></td></tr></table></figure>
+<p>これは<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names" target="_blank" rel="external">計算されたプロパティ名 Computed property names</a>って呼ばれてる。</p>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1673376/zloctb" target="_blank" rel="external">zloctb</a> | 回答日時： 2016年8月2日 19:46 </div><br></p>
+<hr>
+<hr>
+<p>Source: <a href="https://stackoverflow.com/questions/4244896/dynamically-access-object-property-using-variable" target="_blank" rel="external">Dynamically access object property using variable</a></p>
+
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
 </div>
+
+    <a data-url="https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/" data-id="cj8lovzgt0000zyu18q24dd6n" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/somatome/2017/10/10/create-a-data-frame-of-unequal-lengths/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">古い記事</strong>
+            <div class="article-nav-title">サイズがバラバラなデータフレームを作成する [R]</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+    
+
 </section>
             
                 
@@ -307,11 +453,13 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = '';
+            this.page.url = 'https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/';
+        
+        this.page.identifier = 'dynamically-access-object-property-using-variable';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'somatome' + '.disqus.com/count.js';
+        s.src = '//' + 'somatome' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();

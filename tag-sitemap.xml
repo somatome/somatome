@@ -226,13 +226,6 @@
     </url>
 
     <url>
-        <loc>https://somatome.github.io/tags/javascript/</loc>
-        <lastmod>2017-10-02T19:23:02.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://somatome.github.io/tags/operators/</loc>
         <lastmod>2017-10-02T19:23:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -319,6 +312,27 @@
     <url>
         <loc>https://somatome.github.io/tags/dataframe/</loc>
         <lastmod>2017-10-10T13:59:28.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/javascript/</loc>
+        <lastmod>2017-10-10T14:19:17.441Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/object/</loc>
+        <lastmod>2017-10-10T14:19:17.441Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/properties/</loc>
+        <lastmod>2017-10-10T14:19:17.441Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

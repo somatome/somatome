@@ -6,7 +6,7 @@
   <link href="/somatome/atom.xml" rel="self"/>
   
   <link href="https://somatome.github.io/"/>
-  <updated>2017-10-10T13:59:28.071Z</updated>
+  <updated>2017-10-10T14:19:17.441Z</updated>
   <id>https://somatome.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>変数を使用してオブジェクトプロパティに動的にアクセスする方法？ [Javascript]</title>
+    <link href="https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/"/>
+    <id>https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/</id>
+    <published>2017-10-10T13:59:28.000Z</published>
+    <updated>2017-10-10T14:19:17.441Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>動的な変数名を使ってオブジェクトのプロパティにアクセスしようとしてるんだけど、これって可能？</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> something = &#123; <span class="attr">bar</span>: <span class="string">"Foobar!"</span> &#125;;</div><div class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</div><div class="line">something.foo; <span class="comment">// このsomething.bar, "Foobar!"を取得したい</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/471628/richw" target="_blank" rel="external">RichW</a> | 質問日時： 2010年11月22日 11:23 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>プロパティにアクセスするには<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors" target="_blank" rel="external">2つの方法</a><br>がある</p><ul><li>ドット表記： <code>something.bar</code></li><li>ブラケット記法： <code>something [&#39;bar&#39;]</code></li></ul><p>角かっこの間の値は、任意の式。だから、プロパティ名が変数に格納されている場合は、ブラケット表記を使用する必要があるよ。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</div><div class="line">something[foo];</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/185527/jan-han%c4%8di%c4%8d" target="_blank" rel="external">Jan Hančič</a> | 回答日時： 2010年11月22日 11:25 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>javascriptでは次の形でアクセスできるよ：</p><ul><li>ドット表記 -  <code>foo.bar</code></li><li>大括弧 -  <code>foo [someVar]</code>または <code>foo [&quot; string &quot;]</code></li></ul><p>でも2番目のケースだけがプロパティに動的にアクセスできる。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = &#123; <span class="attr">pName1</span> : <span class="number">1</span>, <span class="attr">pName2</span> : [<span class="number">1</span>, &#123;<span class="attr">foo</span> : bar &#125;, <span class="number">3</span>] , ...&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> name = <span class="string">"pName"</span></div><div class="line"><span class="keyword">var</span> num  = <span class="number">1</span>;</div><div class="line"></div><div class="line">foo[name + num]; <span class="comment">// 1</span></div><div class="line"></div><div class="line"><span class="comment">// --</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> c = <span class="string">"foo"</span>;</div><div class="line"></div><div class="line">foo[name + a][b][c]; <span class="comment">// bar</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1726507/sonique" target="_blank" rel="external">Sonique</a> | 回答日時： 2014年7月1日 15:40 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>以下は、オブジェクトのプロパティにアクセスする方法のES6での例。<br>2つの文字列を連結して動的に生成されたプロパティ名を使用してアクセスする方法。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> suffix = <span class="string">" name"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    [<span class="string">"first"</span> + suffix]: <span class="string">"Nicholas"</span>,</div><div class="line">    [<span class="string">"last"</span> + suffix]: <span class="string">"Zakas"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person[<span class="string">"first name"</span>]);      <span class="comment">// "Nicholas"</span></div><div class="line"><span class="built_in">console</span>.log(person[<span class="string">"last name"</span>]);       <span class="comment">// "Zakas"</span></div></pre></td></tr></table></figure><p>これは<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names" target="_blank" rel="external">計算されたプロパティ名 Computed property names</a>って呼ばれてる。</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1673376/zloctb" target="_blank" rel="external">zloctb</a> | 回答日時： 2016年8月2日 19:46 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/4244896/dynamically-access-object-property-using-variable" target="_blank" rel="external">Dynamically access object property using variable</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;動的な変数名を使ってオブジェクトのプロパティにアクセスしようとしてるんだけど、これって可能？&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; something = &amp;#123; &lt;span class=&quot;attr&quot;&gt;bar&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Foobar!&quot;&lt;/span&gt; &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; foo = &lt;span class=&quot;string&quot;&gt;&#39;bar&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;something.foo; &lt;span class=&quot;comment&quot;&gt;// このsomething.bar, &quot;Foobar!&quot;を取得したい&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/471628/richw&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RichW&lt;/a&gt; | 質問日時： 2010年11月22日 11:23 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="https://somatome.github.io/tags/javascript/"/>
+    
+      <category term="object" scheme="https://somatome.github.io/tags/object/"/>
+    
+      <category term="properties" scheme="https://somatome.github.io/tags/properties/"/>
+    
+  </entry>
   
   <entry>
     <title>サイズがバラバラなデータフレームを作成する [R]</title>
