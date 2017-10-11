@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     
-    <title>タグ: main | Stack Overflow まとめ</title>
+    <title>Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta property="og:type" content="website">
 <meta property="og:title" content="Stack Overflow まとめ">
-<meta property="og:url" content="https://somatome.github.io/tags/main/index.html">
+<meta property="og:url" content="https://somatome.github.io/page/3/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
 <meta property="og:locale" content="ja">
 <meta name="twitter:card" content="summary">
@@ -145,44 +145,138 @@ ga('send', 'pageview');
         <div class="outer">
             
             <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-tag"></i></span>
-        <h1 class="title">#main</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+    <article id="post-how-to-redirect-to-another-webpage" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
     
         <h1 itemprop="name">
-            <a class="timeline-article-title" href="/somatome/2017/09/25/what-does-if-name-main-do/">__name__ == &#34;__main__&#34;って何やってるの？</a>
+            <a class="article-title" href="/somatome/2017/09/24/how-to-redirect-to-another-webpage/">他のウェブページにリダイレクトする方法ってどうやるの？</a>
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/somatome/2017/09/25/what-does-if-name-main-do/">
-            <time datetime="2017-09-25T14:23:09.000Z" itemprop="datePublished">2017-09-25</time>
+        <a href="/somatome/2017/09/24/how-to-redirect-to-another-webpage/">
+            <time datetime="2017-09-24T22:18:43.000Z" itemprop="datePublished">2017-09-24</time>
         </a>
     </div>
 
 
-                    
-                    
+                        
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/somatome/tags/idioms/">idioms</a>, <a class="tag-link" href="/somatome/tags/main/">main</a>, <a class="tag-link" href="/somatome/tags/module/">module</a>, <a class="tag-link" href="/somatome/tags/namespaces/">namespaces</a>, <a class="tag-link" href="/somatome/tags/python/">python</a>
+        <a class="tag-link" href="/somatome/tags/javascript/">javascript</a>, <a class="tag-link" href="/somatome/tags/jquery/">jquery</a>, <a class="tag-link" href="/somatome/tags/redirect/">redirect</a>
     </div>
 
-                </div>
-            </div>
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>jQueryか純粋なJavaScriptを使って、あるページから別のページにユーザーをリダイレクトする方法ってどうやるの？</p>
+<p><div style="text-align: right"> By  <a href="/users/44984/venkatachalam">venkatachalam</a> | 質問日時： Feb 2 ‘09 at 12:54 </div><br></p></p>
+            <p class="article-more-link">
+                <a href="/somatome/2017/09/24/how-to-redirect-to-another-webpage/#more">Read More</a>
+            </p>
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
 </div>
+
+    <a data-url="https://somatome.github.io/2017/09/24/how-to-redirect-to-another-webpage/" data-id="cj8lq08c7000n5ru1td0nrfyd" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://somatome.github.io/2017/09/24/how-to-redirect-to-another-webpage/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://somatome.github.io/2017/09/24/how-to-redirect-to-another-webpage/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/somatome/page/2/">&laquo; 前</a><a class="page-number" href="/somatome/">1</a><a class="page-number" href="/somatome/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
 </section>
             
                 
