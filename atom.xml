@@ -6,7 +6,7 @@
   <link href="/somatome/atom.xml" rel="self"/>
   
   <link href="https://somatome.github.io/"/>
-  <updated>2017-10-11T14:31:04.921Z</updated>
+  <updated>2017-10-11T14:31:51.227Z</updated>
   <id>https://somatome.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pythonには部分文字列を探す文字列用の&#39;contains&#39;メソッドとかってある？ [Python]</title>
+    <link href="https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/"/>
+    <id>https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/</id>
+    <published>2017-10-11T08:00:01.000Z</published>
+    <updated>2017-10-11T14:31:51.227Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>string.contains</code> とか <code>string.indexof</code>みたいなメソッドをPythonで探してるんだけど。やりたい事は：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="keyword">not</span> somestring.contains(<span class="string">"blah"</span>):</div><div class="line">   <span class="keyword">continue</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/39677/blankman">Blankman</a> | 質問日時： Aug 9 ‘10 at 2:52 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p><a href="https://docs.python.org/3/reference/expressions.html#membership-test-details" target="_blank" rel="external"><code>in</code>演算子</a>を使うといいよ：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="string">"blah"</span> <span class="keyword">not</span> <span class="keyword">in</span> somestring:</div><div class="line">    <span class="keyword">continue</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/309308/michael-mrozek">Michael Mrozek</a> | 回答日時： Aug 9 ‘10 at 2:56 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>部分文字列検索の場合は <code>string.find(&quot;substring&quot;)</code>を使うことができるよ。</p><p>でも<code>find</code>、<code>index</code>、<code>in</code>を使う時はちょっと気をつけて。どうしてかって言うと、それらは部分文字列検索だから。言い換えれば、：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">s = <span class="string">"This be a string"</span></div><div class="line"><span class="keyword">if</span> s.find(<span class="string">"is"</span>) == <span class="number">-1</span>:</div><div class="line">    <span class="keyword">print</span> <span class="string">"No 'is' here!"</span></div><div class="line"><span class="keyword">else</span>:</div><div class="line">    <span class="keyword">print</span> <span class="string">"Found 'is' in the string."</span></div></pre></td></tr></table></figure><p>これは<code>Found &#39;is&#39; in the string.</code>を出力するはず。同様に <code>if &quot;is&quot; in s:</code>は<code>True</code>と評価されるはず。これは君が望むものかどうかわからないけど。</p><p><div style="text-align: right"> By  <a href="/users/390989/eldarerathis">eldarerathis</a> | 回答日時： Aug 9 ‘10 at 2:55 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/3437059/does-python-have-a-string-contains-substring-method" target="_blank" rel="external">Does Python have a string ‘contains’ substring method?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;&lt;code&gt;string.contains&lt;/code&gt; とか &lt;code&gt;string.indexof&lt;/code&gt;みたいなメソッドをPythonで探してるんだけど。やりたい事は：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; somestring.contains(&lt;span class=&quot;string&quot;&gt;&quot;blah&quot;&lt;/span&gt;):&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;continue&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/39677/blankman&quot;&gt;Blankman&lt;/a&gt; | 質問日時： Aug 9 ‘10 at 2:52 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+    
+      <category term="string" scheme="https://somatome.github.io/tags/string/"/>
+    
+      <category term="substring" scheme="https://somatome.github.io/tags/substring/"/>
+    
+      <category term="contains" scheme="https://somatome.github.io/tags/contains/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScriptでJSONをパースする方法？ [Javascript]</title>
@@ -538,35 +566,6 @@
       <category term="git-branch" scheme="https://somatome.github.io/tags/git-branch/"/>
     
       <category term="git-remote" scheme="https://somatome.github.io/tags/git-remote/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gitの最後のコミットを元に戻す方法ってどうやるの？</title>
-    <link href="https://somatome.github.io/2017/09/24/how-to-undo-the-last-commits-in-git/"/>
-    <id>https://somatome.github.io/2017/09/24/how-to-undo-the-last-commits-in-git/</id>
-    <published>2017-09-24T22:42:48.000Z</published>
-    <updated>2017-09-24T23:11:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>間違ったファイルを<a href="https://git-scm.com" target="_blank" rel="external">Git</a>にコミットしたんだけど、まだサーバーへはプッシュしていないんだ。</p><p>このコミットを元に戻すにはどうすればいいですか？</p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><h3 id="コミットとやり直しを元に戻す"><a href="#コミットとやり直しを元に戻す" class="headerlink" title="コミットとやり直しを元に戻す"></a>コミットとやり直しを元に戻す</h3><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">$ git commit -m <span class="string">"クソ間違えた内容"</span>  　　　　　　　             (1)</div><div class="line">$ git reset HEAD~                                           (2)</div><div class="line">&lt;&lt;必要に応じてファイルを編集する&gt;&gt;                             (3)</div><div class="line">$ git add ...                                               (4)</div><div class="line">$ git commit -c ORIG_HEAD                                   (5)</div></pre></td></tr></table></figure><ol><li>これを元に戻したい</li><li>これによって、作業ツリー(ディスク上のファイルの状態)は変更されませんが、コミットが取り消され、コミットされていない変更が残される(<code>git status</code>では” Changes not staged for commit”になってるのでコミットする前に再度追加する必要あり)。以前のコミットにもっと多くの変更を<em>add</em>したい場合や、コミットメッセージ（注）を変更したい場合は <code>git reset HEAD〜</code>のように <code>git reset --soft HEAD〜</code>を使うことができる。</li><li>作業ツリーファイルを修正。</li><li>新しいコミットに含めるものを <code>git add</code>する。</li><li>変更をコミットし、古いコミット・メッセージを再使用する。 <code>reset</code> は古いヘッドを <code>.git/ORIG_HEAD</code> にコピーする。 <code>-c ORIG_HEAD</code> で <code>commit&#39; を実行するとエディタが開く。エディタは最初は古いコミットのログメッセージを含み、編集することができる。メッセージを編集する必要がない場合は、</code>-C` オプションが使えるよ。</li></ol><hr><p><strong>注：</strong> <em>commitメッセージ</em>で間違えただけなら、以前のコミットにリセットする必要はないことに注意。この場合、 (それまでの変更を戻すために)<code>git reset</code>すればいい。そして<a href="https://stackoverflow.com/q/179123/1146608" target="_blank" rel="external"><code>git commit--amend</code></a>すると、<br>最後のコミットメッセージを含んだデフォルトのエディタが開くはず。</p><p>ただし、新しい変更をインデックスに追加した場合は、<code>commit --amend</code>は前のコミットにそれらを追加するよ。</p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>適宜ファイルを追加/削除する：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git rm classdir</div><div class="line">git add sourcedir</div></pre></td></tr></table></figure><p>それからコミットを修正：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git commit --amend</div></pre></td></tr></table></figure><p>以前の誤ったコミットは、新しいインデックス状態を反映するために編集されるよ。<br>言い換えれば、それは最初から間違いを犯さなかったようなかんじに。</p><p>まだプッシュしていない場合にのみこれを行うべきであることに注意。プッシュしちゃったなら、普通に修正をコミットする必要がある。</p><p><div style="text-align: right"> By  <a href="/users/36723/bdonlan">bdonlan</a> | 回答日時： May 29 ‘09 at 18:16 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/927358/how-to-undo-the-last-commits-in-git" target="_blank" rel="external">How to undo the last commits in Git?</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;間違ったファイルを&lt;a href=&quot;https://git-scm.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git&lt;/a&gt;にコミットしたんだけど、まだサーバーへはプッシュしていないんだ。&lt;/p&gt;
-&lt;p&gt;このコミットを元に戻すにはどうすればいいですか？&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="git" scheme="https://somatome.github.io/tags/git/"/>
-    
-      <category term="git-rebase" scheme="https://somatome.github.io/tags/git-rebase/"/>
-    
-      <category term="git-commit" scheme="https://somatome.github.io/tags/git-commit/"/>
-    
-      <category term="git-reset" scheme="https://somatome.github.io/tags/git-reset/"/>
-    
-      <category term="git-revert" scheme="https://somatome.github.io/tags/git-revert/"/>
     
   </entry>
   

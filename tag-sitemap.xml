@@ -30,27 +30,6 @@
     </url>
 
     <url>
-        <loc>https://somatome.github.io/tags/string/</loc>
-        <lastmod>2017-09-25T00:02:24.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/substring/</loc>
-        <lastmod>2017-09-25T00:02:24.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/contains/</loc>
-        <lastmod>2017-09-25T00:02:24.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://somatome.github.io/tags/string-matching/</loc>
         <lastmod>2017-09-25T00:02:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -282,13 +261,6 @@
     </url>
 
     <url>
-        <loc>https://somatome.github.io/tags/python/</loc>
-        <lastmod>2017-10-03T21:15:55.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://somatome.github.io/tags/directory/</loc>
         <lastmod>2017-10-03T21:15:55.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -340,6 +312,34 @@
     <url>
         <loc>https://somatome.github.io/tags/parsing/</loc>
         <lastmod>2017-10-11T14:31:04.921Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/python/</loc>
+        <lastmod>2017-10-11T14:31:51.227Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/string/</loc>
+        <lastmod>2017-10-11T14:31:51.227Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/substring/</loc>
+        <lastmod>2017-10-11T14:31:51.227Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/contains/</loc>
+        <lastmod>2017-10-11T14:31:51.227Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
