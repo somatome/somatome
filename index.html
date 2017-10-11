@@ -182,32 +182,13 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JavascriptでJSONをパースしたんだけど。レスポンスとして考えてるのはこんな感じ：</div><div class="line"></div><div class="line">```javascript</div><div class="line">var response = &apos;&#123;&quot;result&quot;:true,&quot;count&quot;:1&#125;&apos;;</div></pre></td></tr></table></figure>
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>JavascriptでJSONをパースしたんだけど。レスポンスとして考えてるのはこんな感じ：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> response = <span class="string">'&#123;"result":true,"count":1&#125;'</span>;</div></pre></td></tr></table></figure>
 <p>どうやったらresultとかcountとかの値を取ってこれる？</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div style=&quot;text-align: right&quot;&gt; By          user605334 | 質問日時： 2011年2月8日 16:34 &lt;/div&gt;&lt;br&gt;</div><div class="line"></div><div class="line">&lt;!--more--&gt;</div><div class="line"></div><div class="line"></div><div class="line">-----</div><div class="line"></div><div class="line">-----</div><div class="line"></div><div class="line">## 回答1:</div><div class="line"></div><div class="line">ほとんどのブラウザは[`JSON.parse(https://docs.microsoft.com/en-us/scripting/javascript/reference/json-parse-function-javascript)`]をサポートしてて、ECMA-262第5版(JavaScriptが基づいている仕様)で定義されてる。使い方は簡単：</div></pre></td></tr></table></figure>
-<p>var json = ‘{“result”:true,”count”:1}’,<br>    obj = JSON.parse(json);</p>
-<p>alert(obj.count);<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"></div><div class="line">これを実装することができないブラウザには、[json2.js](https://github.com/douglascrockford/JSON-js/blob/master/json2.js)をどうぞ。</div><div class="line"></div><div class="line">すでにjQueryを使ってる場合は、`$.parseJSON`関数が（利用可能な場合は）`JSON.parse`にマップし、古いブラウザでは `eval`の形式にマップしてくれる。でも、これは`JSON.parse`でも実行される、余計なチェックをしてしまうので、どんな状況でもいいパフォーマンスが出るこんなやり方をオススメするかな：</div><div class="line"></div><div class="line">```javascript</div><div class="line">var json = &apos;&#123;&quot;result&quot;:true,&quot;count&quot;:1&#125;&apos;,</div><div class="line">    obj = JSON &amp;&amp; JSON.parse(json) || $.parseJSON(json);</div></pre></td></tr></table></figure></p>
-<p>こうすると、ネイティブのパースする関数に渡す前にjQueryで文字列のサニティチェックを行わせるんじゃなくて、ネイティブの<code>JSON.parse</code>をすぐに使うことができる。</p>
-<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/94197/andy-e" target="_blank" rel="external">Andy E</a> | 回答日時： 2011年2月8日 16:38 </div><br></p>
-<hr>
-<hr>
-<h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>古いブラウザで<a href="http://bestiejs.github.com/json3/" target="_blank" rel="external">JSON 3</a>を使いたければ、こうやって条件付きでそれをロードすることができるよ：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    window.JSON ||</span></div><div class="line"><span class="xml">    document.write('<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdnjs.cloudflare.com/ajax/libs/json3/3.2.4/json3.min.js"</span>&gt;</span><span class="xml"><span class="tag">&lt;<span class="name">\</span>/<span class="attr">scr</span>'+'<span class="attr">ipt</span>&gt;</span>');</span></span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>これで標準のwindow.JSONオブジェクトはクライアントがどんなブラウザを使っていようと利用可能だよ。</p>
-<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1952201/huwiler" target="_blank" rel="external">huwiler</a> | 回答日時： 2013年4月19日 18:52 </div><br></p>
-<hr>
-<hr>
-<h2 id="回答5"><a href="#回答5" class="headerlink" title="回答5:"></a>回答5:</h2><p>これならわかりやすいかな？：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> jsontext   = <span class="string">'&#123;"name":"x","age":"11"&#125;'</span>;</div><div class="line"><span class="keyword">var</span> getContact = <span class="built_in">JSON</span>.parse(jsontext);</div><div class="line"><span class="built_in">document</span>.write(getContact.name + <span class="string">", "</span> + getContact.age);</div><div class="line"></div><div class="line"><span class="comment">// Output: x, 11</span></div></pre></td></tr></table></figure>
-<p>それか、<code>eval</code>関数を使うこともできるかな。次の例は、<code>eval</code>関数を使った例：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> jsontext   = <span class="string">'&#123;"name":"x","age":"11"&#125;'</span>;</div><div class="line"><span class="keyword">var</span> getContact = <span class="built_in">eval</span>(<span class="string">'('</span> + jsontext + <span class="string">')'</span>);</div><div class="line"><span class="built_in">document</span>.write(getContact.name + <span class="string">", "</span> + getContact.age);</div><div class="line"></div><div class="line"><span class="comment">// Output: x, 11</span></div></pre></td></tr></table></figure>
-<p><code>JSON.parse</code>関数はより安全で、eval関数より速いから、JSON.parse関数を使うことをお勧めするよ。</p>
-<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/2609966/joke-sense10" target="_blank" rel="external">Joke_Sense10</a> | 回答日時： 2013年10月1日 7:42 </div><br></p>
-<hr>
-<hr>
-<p>Source: <a href="https://stackoverflow.com/questions/4935632/parse-json-in-javascript" target="_blank" rel="external">Parse JSON in JavaScript? [duplicate]</a></p>
-
+<p><div style="text-align: right"> By          user605334 | 質問日時： 2011年2月8日 16:34 </div><br></p></p>
+            <p class="article-more-link">
+                <a href="/somatome/2017/10/11/parse-json-in-javascript/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
