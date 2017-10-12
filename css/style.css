@@ -167,13 +167,13 @@ code {
   clear: both;
 }
 .logo {
-  width: 667px;
-  height: 154px;
+  width: 895px;
+  height: 163px;
   background-repeat: no-repeat;
   background-image: url("https://somatome.github.io/somatome/somatome_logo.png");
-  -webkit-background-size: 667px 154px;
-  -moz-background-size: 667px 154px;
-  background-size: 667px 154px;
+  -webkit-background-size: 895px 163px;
+  -moz-background-size: 895px 163px;
+  background-size: 895px 163px;
 }
 #container {
   position: relative;
@@ -363,9 +363,9 @@ code {
 #main-nav,
 #sub-nav,
 #search-form-wrap {
-  height: 154px;
-  line-height: 154px;
-  padding: -45px 15px;
+  height: 163px;
+  line-height: 163px;
+  padding: -49.5px 15px;
 }
 .header-inner #logo,
 #main-nav {
@@ -394,11 +394,11 @@ code {
 }
 #header-title {
   text-align: center;
-  height: 154px;
+  height: 163px;
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -77px;
+  margin-top: -81.5px;
 }
 .header-sub {
   border-top: 1px solid #eceff2;
@@ -472,8 +472,8 @@ code {
   height: 15px;
   position: relative;
   cursor: pointer;
-  height: 154px !important;
-  line-height: 154px !important;
+  height: 163px !important;
+  line-height: 163px !important;
 }
 .main-nav-link {
   font-weight: 300;
@@ -485,8 +485,8 @@ code {
 }
 #sub-nav #profile-nav #profile-anchor {
   display: block;
-  height: 154px;
-  line-height: 154px;
+  height: 163px;
+  line-height: 163px;
 }
 #sub-nav #profile-nav #profile-anchor:before,
 #sub-nav #profile-nav #profile-anchor:after {
@@ -501,12 +501,12 @@ code {
   float: left;
 }
 #sub-nav #profile-nav .avatar {
-  width: 154px;
-  height: 154px;
+  width: 163px;
+  height: 163px;
   margin-right: 8px;
 }
 #sub-nav #profile-nav .fa {
-  line-height: 154px;
+  line-height: 163px;
 }
 #search-form-wrap {
   height: 100px;
@@ -524,7 +524,7 @@ code {
   padding: 0 30px 0 15px;
   line-height: 40px;
   height: 40px;
-  border-radius: 78px;
+  border-radius: 82.5px;
 }
 #search-form-wrap .search-form .search-form-input::-webkit-search-results-decoration,
 #search-form-wrap .search-form .search-form-input::-webkit-search-cancel-button {
