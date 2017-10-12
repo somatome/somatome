@@ -5,18 +5,18 @@
     
     <title>var functionName = function(){} 対 function functionName(){} [Javascript] | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="質問：最近他人のJavascriptのコードをメンテしだして、バグを修正したり、機能を追加したり、コードをきちんと整理して一貫するようにしてる。で、前の開発者は関数を宣言するのに2つの方法を使用してて、これらを使い分けるのに理由があるのかどうかよくわからないんだけど。その２つの方法は： var functionOne = function() &amp;#123;    // 何かのコード&amp;#125;;">
+    <meta name="description" content="質問：最近他人のJavascriptのコードをメンテしだして、バグを修正したり、機能を追加したり、コードをきちんと整理して一貫するようにしてる。 で、前の開発者は関数を宣言するのに2つの方法を使用してて、これらを使い分けるのに理由があるのかどうかよくわからないんだけど。その２つの方法は： var functionOne = function() &amp;#123;    // 何かのコード&amp;#125;;">
 <meta name="keywords" content="javascript,idioms,function,syntax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="var functionName = function(){} 対 function functionName(){} [Javascript]">
 <meta property="og:url" content="https://somatome.github.io/2017/10/12/var-functionname-function-vs-function-functionname/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
-<meta property="og:description" content="質問：最近他人のJavascriptのコードをメンテしだして、バグを修正したり、機能を追加したり、コードをきちんと整理して一貫するようにしてる。で、前の開発者は関数を宣言するのに2つの方法を使用してて、これらを使い分けるのに理由があるのかどうかよくわからないんだけど。その２つの方法は： var functionOne = function() &amp;#123;    // 何かのコード&amp;#125;;">
+<meta property="og:description" content="質問：最近他人のJavascriptのコードをメンテしだして、バグを修正したり、機能を追加したり、コードをきちんと整理して一貫するようにしてる。 で、前の開発者は関数を宣言するのに2つの方法を使用してて、これらを使い分けるのに理由があるのかどうかよくわからないんだけど。その２つの方法は： var functionOne = function() &amp;#123;    // 何かのコード&amp;#125;;">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-10-12T08:09:27.537Z">
+<meta property="og:updated_time" content="2017-10-12T08:10:53.676Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="var functionName = function(){} 対 function functionName(){} [Javascript]">
-<meta name="twitter:description" content="質問：最近他人のJavascriptのコードをメンテしだして、バグを修正したり、機能を追加したり、コードをきちんと整理して一貫するようにしてる。で、前の開発者は関数を宣言するのに2つの方法を使用してて、これらを使い分けるのに理由があるのかどうかよくわからないんだけど。その２つの方法は： var functionOne = function() &amp;#123;    // 何かのコード&amp;#125;;">
+<meta name="twitter:description" content="質問：最近他人のJavascriptのコードをメンテしだして、バグを修正したり、機能を追加したり、コードをきちんと整理して一貫するようにしてる。 で、前の開発者は関数を宣言するのに2つの方法を使用してて、これらを使い分けるのに理由があるのかどうかよくわからないんだけど。その２つの方法は： var functionOne = function() &amp;#123;    // 何かのコード&amp;#125;;">
     
 
     
@@ -189,7 +189,8 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>最近他人のJavascriptのコードをメンテしだして、バグを修正したり、機能を追加したり、コードをきちんと整理して<br>一貫するようにしてる。<br>で、前の開発者は関数を宣言するのに2つの方法を使用してて、これらを使い分けるのに理由があるのかどうかよくわからないんだけど。その２つの方法は：</p>
+            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>最近他人のJavascriptのコードをメンテしだして、バグを修正したり、機能を追加したり、コードをきちんと整理して一貫するようにしてる。</p>
+<p>で、前の開発者は関数を宣言するのに2つの方法を使用してて、これらを使い分けるのに理由があるのかどうかよくわからないんだけど。その２つの方法は：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> functionOne = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 何かのコード</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionTwo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 何かのコード</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>この2つの異なる方法を使用する理由って何？それぞれメリットデメリットってある？<br>もう片方ではできて、他では出来ないことってある？</p>

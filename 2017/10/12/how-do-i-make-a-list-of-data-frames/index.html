@@ -5,18 +5,18 @@
     
     <title>データフレームのリストを作成するにはどうすればいい？ [R] | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="質問：データフレームのリストを作成するのってどうすればいい？そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？なんか簡単な例を見つけることができなくって、、、 d1&amp;lt;-data.frame(y1&amp;lt;-c(1,2,3),y2&amp;lt;-c(4,5,6))d2&amp;lt;-data.frame(y1&amp;lt;-c(3,2,1),y2&amp;lt;-c(6,5,4))  By">
+    <meta name="description" content="質問：データフレームのリストを作成するのってどうすればいい？ そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？ なんか簡単な例を見つけることができなくって、、、 d1&amp;lt;-data.frame(y1&amp;lt;-c(1,2,3),y2&amp;lt;-c(4,5,6))d2&amp;lt;-data.frame(y1&amp;lt;-c(3,2,1),y2&amp;lt;-c(6,5,4))  B">
 <meta name="keywords" content="list,r,dataframe,r-faq">
 <meta property="og:type" content="article">
 <meta property="og:title" content="データフレームのリストを作成するにはどうすればいい？ [R]">
 <meta property="og:url" content="https://somatome.github.io/2017/10/12/how-do-i-make-a-list-of-data-frames/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
-<meta property="og:description" content="質問：データフレームのリストを作成するのってどうすればいい？そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？なんか簡単な例を見つけることができなくって、、、 d1&amp;lt;-data.frame(y1&amp;lt;-c(1,2,3),y2&amp;lt;-c(4,5,6))d2&amp;lt;-data.frame(y1&amp;lt;-c(3,2,1),y2&amp;lt;-c(6,5,4))  By">
+<meta property="og:description" content="質問：データフレームのリストを作成するのってどうすればいい？ そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？ なんか簡単な例を見つけることができなくって、、、 d1&amp;lt;-data.frame(y1&amp;lt;-c(1,2,3),y2&amp;lt;-c(4,5,6))d2&amp;lt;-data.frame(y1&amp;lt;-c(3,2,1),y2&amp;lt;-c(6,5,4))  B">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-10-12T08:09:41.592Z">
+<meta property="og:updated_time" content="2017-10-12T08:10:36.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="データフレームのリストを作成するにはどうすればいい？ [R]">
-<meta name="twitter:description" content="質問：データフレームのリストを作成するのってどうすればいい？そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？なんか簡単な例を見つけることができなくって、、、 d1&amp;lt;-data.frame(y1&amp;lt;-c(1,2,3),y2&amp;lt;-c(4,5,6))d2&amp;lt;-data.frame(y1&amp;lt;-c(3,2,1),y2&amp;lt;-c(6,5,4))  By">
+<meta name="twitter:description" content="質問：データフレームのリストを作成するのってどうすればいい？ そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？ なんか簡単な例を見つけることができなくって、、、 d1&amp;lt;-data.frame(y1&amp;lt;-c(1,2,3),y2&amp;lt;-c(4,5,6))d2&amp;lt;-data.frame(y1&amp;lt;-c(3,2,1),y2&amp;lt;-c(6,5,4))  B">
     
 
     
@@ -189,7 +189,9 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>データフレームのリストを作成するのってどうすればいい？そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？なんか簡単な例を見つけることができなくって、、、</p>
+            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>データフレームのリストを作成するのってどうすればいい？</p>
+<p>そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？</p>
+<p>なんか簡単な例を見つけることができなくって、、、</p>
 <figure class="highlight r"><table><tr><td class="code"><pre><div class="line">d1&lt;-data.frame(y1&lt;-c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),y2&lt;-c(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>))</div><div class="line">d2&lt;-data.frame(y1&lt;-c(<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>),y2&lt;-c(<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>))</div></pre></td></tr></table></figure>
 <p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/2146894/ben" target="_blank" rel="external">Ben</a> | 質問日時： 2013年7月6日 2:16 </div><br></p>
 <a id="more"></a>
