@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Stack Overflow まとめ">
 <meta property="og:description" content="質問：データフレームのリストを作成するのってどうすればいい？ そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？ なんか簡単な例を見つけることができなくって、、、 d1&amp;lt;-data.frame(y1&amp;lt;-c(1,2,3),y2&amp;lt;-c(4,5,6))d2&amp;lt;-data.frame(y1&amp;lt;-c(3,2,1),y2&amp;lt;-c(6,5,4))  B">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-10-12T08:10:36.518Z">
+<meta property="og:updated_time" content="2017-10-12T09:07:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="データフレームのリストを作成するにはどうすればいい？ [R]">
 <meta name="twitter:description" content="質問：データフレームのリストを作成するのってどうすればいい？ そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？ なんか簡単な例を見つけることができなくって、、、 d1&amp;lt;-data.frame(y1&amp;lt;-c(1,2,3),y2&amp;lt;-c(4,5,6))d2&amp;lt;-data.frame(y1&amp;lt;-c(3,2,1),y2&amp;lt;-c(6,5,4))  B">
@@ -199,9 +199,9 @@ ga('send', 'pageview');
 <hr>
 <h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>これは君の質問とは直接関係ないけど、 関数のコールの中では<code>=</code>じゃなく<code>&lt;-</code>を使うべき。<br><code>&lt;-</code>を使用すると、どんな環境であろうと<code>y1</code>と<code>y2</code>という変数を作っちゃう。：</p>
 <figure class="highlight r"><table><tr><td class="code"><pre><div class="line">d1&lt;-data.frame(y1&lt;-c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),y2&lt;-c(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>))</div><div class="line">y1</div><div class="line"><span class="comment"># [1] 1 2 3</span></div><div class="line">y2</div><div class="line"><span class="comment"># [1] 4 5 6</span></div></pre></td></tr></table></figure>
-<p>これは、これはデータフレーム内の列の名前として作ったのとは別の結果になってしまう：</p>
+<p>これはデータフレーム内の列の名前として作ったのとは別の結果になってしまう：</p>
 <figure class="highlight r"><table><tr><td class="code"><pre><div class="line">d1</div><div class="line"><span class="comment">#   y1....c.1..2..3. y2....c.4..5..6.</span></div><div class="line"><span class="comment"># 1                1                4</span></div><div class="line"><span class="comment"># 2                2                5</span></div><div class="line"><span class="comment"># 3                3                6</span></div></pre></td></tr></table></figure>
-<p>一方、 <code>= &#39;演算子は、あるベクトルを</code>data.frame`への引数として紐つけてくれる。</p>
+<p>一方、 <code>=</code>演算子は、あるベクトルを<code>data.frame</code>への引数として紐つけてくれる。</p>
 <p>で、君の質問だけど、データフレームのリストを作成するのは簡単：</p>
 <figure class="highlight r"><table><tr><td class="code"><pre><div class="line">d1 &lt;- data.frame(y1=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),y2=c(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>))</div><div class="line">d2 &lt;- data.frame(y1=c(<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>),y2=c(<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>))</div><div class="line">my.list &lt;- list(d1, d2)</div></pre></td></tr></table></figure>
 <p>他のリスト要素にアクセスするのと同じように、データフレームにアクセスできるよ。</p>
