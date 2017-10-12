@@ -361,20 +361,14 @@ ga('send', 'pageview');
                 
 <aside id="sidebar">
    
-        <% if (site.posts.length) { %>
+        
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title"><%= __('widget.links') %></h3>
+        <h3 class="widget-title">About</h3>
         <div class="widget">
-            <ul>
-                <% for (var i in theme.miscellaneous.links) { %>
-                    <li>
-                        <a href="<%- theme.miscellaneous.links[i] %>"><%= i %></a>
-                    </li>
-                <% } %>
-            </ul>
+	  <p>本サイトは海外の技術系ウェブサイト、<a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>、<a href="https://www.quora.com/" target="_blank">Quora</a>、<a href="https://medium.com/" target="_blank">Medium</a>などで投稿された良質問・記事をまとめ、翻訳しているサイトです。</p>
         </div>
     </div>
-<% } %>
+
 
     
         
