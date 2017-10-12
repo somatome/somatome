@@ -19,6 +19,8 @@
     
 
     
+        <link rel="icon" href="/somatome/favicon.ico" />
+    
 
     <link rel="stylesheet" href="/somatome/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/somatome/libs/open-sans/styles.css">
@@ -145,136 +147,6 @@ ga('send', 'pageview');
         <div class="outer">
             
             <section id="main">
-    <article id="post-does-python-have-a-string-contains-substring-method" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/somatome/2017/10/11/does-python-have-a-string-contains-substring-method/">Pythonには部分文字列を探す文字列用の&#39;contains&#39;メソッドとかってある？ [Python]</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/somatome/2017/10/11/does-python-have-a-string-contains-substring-method/">
-            <time datetime="2017-10-11T08:00:01.000Z" itemprop="datePublished">2017-10-11</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/somatome/tags/contains/">contains</a>, <a class="tag-link" href="/somatome/tags/python/">python</a>, <a class="tag-link" href="/somatome/tags/string/">string</a>, <a class="tag-link" href="/somatome/tags/substring/">substring</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>string.contains</code> とか <code>string.indexof</code>みたいなメソッドをPythonで探してるんだけど。やりたい事は：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="keyword">not</span> somestring.contains(<span class="string">"blah"</span>):</div><div class="line">   <span class="keyword">continue</span></div></pre></td></tr></table></figure>
-<p><div style="text-align: right"> By  <a href="/users/39677/blankman">Blankman</a> | 質問日時： Aug 9 ‘10 at 2:52 </div><br></p></p>
-            <p class="article-more-link">
-                <a href="/somatome/2017/10/11/does-python-have-a-string-contains-substring-method/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/" data-id="cj8n51166000axmu1mbkenv5k" class="article-share-link"><i class="fa fa-share"></i>共有</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/">コメント</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <article id="post-parse-json-in-javascript" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -328,7 +200,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io/2017/10/11/parse-json-in-javascript/" data-id="cj8n5116l000vxmu1725o52wo" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io/2017/10/11/parse-json-in-javascript/" data-id="cj8o6c08o000uwhu15b0m1wg4" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -406,7 +278,7 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-create-a-data-frame-of-unequal-lengths" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-does-python-have-a-string-contains-substring-method" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -414,7 +286,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/somatome/2017/10/10/create-a-data-frame-of-unequal-lengths/">サイズがバラバラなデータフレームを作成する [R]</a>
+            <a class="article-title" href="/somatome/2017/10/11/does-python-have-a-string-contains-substring-method/">Pythonには部分文字列を探す文字列用の&#39;contains&#39;メソッドとかってある？ [Python]</a>
         </h1>
     
 
@@ -423,8 +295,8 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/somatome/2017/10/10/create-a-data-frame-of-unequal-lengths/">
-            <time datetime="2017-10-10T13:59:28.000Z" itemprop="datePublished">2017-10-10</time>
+        <a href="/somatome/2017/10/11/does-python-have-a-string-contains-substring-method/">
+            <time datetime="2017-10-11T08:00:01.000Z" itemprop="datePublished">2017-10-11</time>
         </a>
     </div>
 
@@ -433,7 +305,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/somatome/tags/dataframe/">dataframe</a>, <a class="tag-link" href="/somatome/tags/r/">r</a>
+        <a class="tag-link" href="/somatome/tags/contains/">contains</a>, <a class="tag-link" href="/somatome/tags/python/">python</a>, <a class="tag-link" href="/somatome/tags/string/">string</a>, <a class="tag-link" href="/somatome/tags/substring/">substring</a>
     </div>
 
                     </div>
@@ -443,13 +315,11 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>データフレームって普通サイズが揃ってるけど、サイズの違うデータフレームって作る方法ある？１つのリストのバラバラな要素として保存するとかはしたくないんだ。なんでかって言うと、これを色んな人にCSVファイルとして送らないといけなくって、それをやるのはデータフレームが一番簡単だと思うから。</p>
-<figure class="highlight r"><table><tr><td class="code"><pre><div class="line">x = c(rep(<span class="string">"one"</span>,<span class="number">2</span>))</div><div class="line">y = c(rep(<span class="string">"two"</span>,<span class="number">10</span>))</div><div class="line">z = c(rep(<span class="string">"three"</span>,<span class="number">5</span>))</div><div class="line">cbind(x,y,z)</div></pre></td></tr></table></figure>
-<p>上のコードでは、<code>cbind()</code>関数は短いcolumnをリサイクルして要素が10個あるようにしてるけど、これを要素が2,5,10個になるようにしたいんだ。<br>以下の方法も試したけどあんまり効率が良くない。</p>
-<figure class="highlight r"><table><tr><td class="code"><pre><div class="line">df = data.frame(one=c(rep(<span class="string">"one"</span>,<span class="number">2</span>),rep(<span class="string">""</span>,<span class="number">8</span>)), </div><div class="line">                two=c(rep(<span class="string">"two"</span>,<span class="number">10</span>)), three=c(rep(<span class="string">"three"</span>,<span class="number">5</span>), rep(<span class="string">""</span>,<span class="number">5</span>)))</div></pre></td></tr></table></figure>
-<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/406278/atmathew" target="_blank" rel="external">ATMathew</a> | 質問日時： 2011年8月25日 19:58 </div><br></p></p>
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>string.contains</code> とか <code>string.indexof</code>みたいなメソッドをPythonで探してるんだけど。やりたい事は：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="keyword">not</span> somestring.contains(<span class="string">"blah"</span>):</div><div class="line">   <span class="keyword">continue</span></div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="/users/39677/blankman">Blankman</a> | 質問日時： Aug 9 ‘10 at 2:52 </div><br></p></p>
             <p class="article-more-link">
-                <a href="/somatome/2017/10/10/create-a-data-frame-of-unequal-lengths/#more">Read More</a>
+                <a href="/somatome/2017/10/11/does-python-have-a-string-contains-substring-method/#more">Read More</a>
             </p>
         
         </div>
@@ -460,7 +330,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io/2017/10/10/create-a-data-frame-of-unequal-lengths/" data-id="cj8n511620007xmu1j5psj4q2" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/" data-id="cj8o6c07o0007whu10kvqdz57" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -528,7 +398,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://somatome.github.io/2017/10/10/create-a-data-frame-of-unequal-lengths/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://somatome.github.io/2017/10/10/create-a-data-frame-of-unequal-lengths/">コメント</a>
+        <a href="https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/">コメント</a>
     
 
         </footer>
@@ -590,7 +460,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/" data-id="cj8n511640008xmu1k9atwwcd" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/" data-id="cj8o6c07r0008whu1j6crpq9o" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -668,6 +538,138 @@ ga('send', 'pageview');
 
 
 
+    <article id="post-create-a-data-frame-of-unequal-lengths" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/somatome/2017/10/10/create-a-data-frame-of-unequal-lengths/">サイズがバラバラなデータフレームを作成する [R]</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/somatome/2017/10/10/create-a-data-frame-of-unequal-lengths/">
+            <time datetime="2017-10-10T13:59:28.000Z" itemprop="datePublished">2017-10-10</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/somatome/tags/dataframe/">dataframe</a>, <a class="tag-link" href="/somatome/tags/r/">r</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>データフレームって普通サイズが揃ってるけど、サイズの違うデータフレームって作る方法ある？１つのリストのバラバラな要素として保存するとかはしたくないんだ。なんでかって言うと、これを色んな人にCSVファイルとして送らないといけなくって、それをやるのはデータフレームが一番簡単だと思うから。</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><div class="line">x = c(rep(<span class="string">"one"</span>,<span class="number">2</span>))</div><div class="line">y = c(rep(<span class="string">"two"</span>,<span class="number">10</span>))</div><div class="line">z = c(rep(<span class="string">"three"</span>,<span class="number">5</span>))</div><div class="line">cbind(x,y,z)</div></pre></td></tr></table></figure>
+<p>上のコードでは、<code>cbind()</code>関数は短いcolumnをリサイクルして要素が10個あるようにしてるけど、これを要素が2,5,10個になるようにしたいんだ。<br>以下の方法も試したけどあんまり効率が良くない。</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><div class="line">df = data.frame(one=c(rep(<span class="string">"one"</span>,<span class="number">2</span>),rep(<span class="string">""</span>,<span class="number">8</span>)), </div><div class="line">                two=c(rep(<span class="string">"two"</span>,<span class="number">10</span>)), three=c(rep(<span class="string">"three"</span>,<span class="number">5</span>), rep(<span class="string">""</span>,<span class="number">5</span>)))</div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/406278/atmathew" target="_blank" rel="external">ATMathew</a> | 質問日時： 2011年8月25日 19:58 </div><br></p></p>
+            <p class="article-more-link">
+                <a href="/somatome/2017/10/10/create-a-data-frame-of-unequal-lengths/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://somatome.github.io/2017/10/10/create-a-data-frame-of-unequal-lengths/" data-id="cj8o6c07w000awhu1u4xzdh3q" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://somatome.github.io/2017/10/10/create-a-data-frame-of-unequal-lengths/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://somatome.github.io/2017/10/10/create-a-data-frame-of-unequal-lengths/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-how-can-i-create-a-directory-if-it-does-not-exist" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -723,7 +725,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" data-id="cj8n5116a000exmu147cdwo37" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" data-id="cj8o6c07z000cwhu1dspqikk2" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -865,7 +867,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/" data-id="cj8n5116g000lxmu1u8mx48i2" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/" data-id="cj8o6c08i000lwhu14lrc7zbp" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -996,7 +998,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/" data-id="cj8n5116d000hxmu1zo8rsnwj" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/" data-id="cj8o6c08f000iwhu1j1ke0wt7" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1125,7 +1127,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io/2017/09/29/can-comments-be-used-in-json/" data-id="cj8n511600005xmu15ph57tun" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io/2017/09/29/can-comments-be-used-in-json/" data-id="cj8o6c07k0005whu17pyrk0mq" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1256,7 +1258,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" data-id="cj8n5116o0010xmu1ahoubkz5" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" data-id="cj8o6c08s000zwhu12avt14a1" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1386,7 +1388,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/" data-id="cj8n5116n000yxmu18a8mngmq" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/" data-id="cj8o6c08q000xwhu1yd0r9ndk" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1473,19 +1475,20 @@ ga('send', 'pageview');
 <aside id="sidebar">
    
         
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">About</h3>
+        <div class="widget">
+	  <p>このブログは</p>
+        </div>
+    </div>
+
+
+    
+        
     <div class="widget-wrap">
         <h3 class="widget-title">最近の記事</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/somatome/2017/10/11/does-python-have-a-string-contains-substring-method/" class="title">Pythonには部分文字列を探す文字列用の&#39;contains&#39;メソッドとかってある？ [Python]</a></p>
-                            <p class="item-date"><time datetime="2017-10-11T08:00:01.000Z" itemprop="datePublished">2017-10-11</time></p>
-                        </div>
-                    </li>
                 
                     <li>
                         
@@ -1500,8 +1503,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/somatome/2017/10/10/create-a-data-frame-of-unequal-lengths/" class="title">サイズがバラバラなデータフレームを作成する [R]</a></p>
-                            <p class="item-date"><time datetime="2017-10-10T13:59:28.000Z" itemprop="datePublished">2017-10-10</time></p>
+                            <p class="item-title"><a href="/somatome/2017/10/11/does-python-have-a-string-contains-substring-method/" class="title">Pythonには部分文字列を探す文字列用の&#39;contains&#39;メソッドとかってある？ [Python]</a></p>
+                            <p class="item-date"><time datetime="2017-10-11T08:00:01.000Z" itemprop="datePublished">2017-10-11</time></p>
                         </div>
                     </li>
                 
@@ -1510,6 +1513,15 @@ ga('send', 'pageview');
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/somatome/2017/10/10/dynamically-access-object-property-using-variable/" class="title">変数を使用してオブジェクトプロパティに動的にアクセスする方法？ [Javascript]</a></p>
+                            <p class="item-date"><time datetime="2017-10-10T13:59:28.000Z" itemprop="datePublished">2017-10-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/somatome/2017/10/10/create-a-data-frame-of-unequal-lengths/" class="title">サイズがバラバラなデータフレームを作成する [R]</a></p>
                             <p class="item-date"><time datetime="2017-10-10T13:59:28.000Z" itemprop="datePublished">2017-10-10</time></p>
                         </div>
                     </li>
@@ -1575,6 +1587,7 @@ ga('send', 'pageview');
     
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
+
 
             
         </div>
