@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang=ja>
+<head>
+    <meta charset="utf-8">
+    
+    <title>JavaScriptの変数のスコープって？ [Javascript] | Stack Overflow まとめ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="質問：javascriptの変数のスコープってどうなってる？関数の中と外で同じスコープを持ってる？それとも違う？また、グローバルに定義されている場合、変数はどこに格納されるの？  By  lYriCAlsSH | 質問日時： 2009年2月1日 8:27">
+<meta name="keywords" content="javascript,variables,scope">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScriptの変数のスコープって？ [Javascript]">
+<meta property="og:url" content="https://somatome.github.io/2017/10/13/what-is-the-scope-of-variables-in-javascript/index.html">
+<meta property="og:site_name" content="Stack Overflow まとめ">
+<meta property="og:description" content="質問：javascriptの変数のスコープってどうなってる？関数の中と外で同じスコープを持ってる？それとも違う？また、グローバルに定義されている場合、変数はどこに格納されるの？  By  lYriCAlsSH | 質問日時： 2009年2月1日 8:27">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2017-10-13T08:06:10.595Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScriptの変数のスコープって？ [Javascript]">
+<meta name="twitter:description" content="質問：javascriptの変数のスコープってどうなってる？関数の中と外で同じスコープを持ってる？それとも違う？また、グローバルに定義されている場合、変数はどこに格納されるの？  By  lYriCAlsSH | 質問日時： 2009年2月1日 8:27">
+    
+
+    
+        <link rel="alternate" href="/" title="Stack Overflow まとめ" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="../../../../favicon.png" />
+    
+
+    <link rel="stylesheet" href="../../../../libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../libs/open-sans/styles.css">
+    <link rel="stylesheet" href="../../../../libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="../../../../css/style.css">
+
+    <script src="../../../../libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="../../../../libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="../../../../libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-107309715-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="../../../../index.html" id="logo">
+                <i class="logo"></i>
+                <span class="site-title"><font color="white">Stack Overflow まとめ</font></span>
+            </a>
+            <br>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="../../../../.">Home</a>
+                
+                    <a class="main-nav-link" href="../../../../archives">Archives</a>
+                
+                    <a class="main-nav-link" href="../../../../javascript">Javascript</a>
+                
+                    <a class="main-nav-link" href="../../../../python">Python</a>
+                
+                    <a class="main-nav-link" href="../../../../about">About</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="検索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '投稿',
+            PAGES: 'Pages',
+            CATEGORIES: 'カテゴリ',
+            TAGS: 'タグ',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/somatome/',
+        CONTENT_URL: '../../../../content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="../../../../js/insight.js"></script>
+
+</div>
+
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="../../../../.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="../../../../archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="../../../../javascript">Javascript</a></td>
+                
+                    <td><a class="main-nav-link" href="../../../../python">Python</a></td>
+                
+                    <td><a class="main-nav-link" href="../../../../about">About</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="検索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            <section id="main"><article id="post-what-is-the-scope-of-variables-in-javascript" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            JavaScriptの変数のスコープって？ [Javascript]
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="">
+            <time datetime="2017-10-13T08:00:01.000Z" itemprop="datePublished">2017-10-13</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../../../tags/javascript/">javascript</a>, <a class="tag-link" href="../../../../tags/scope/">scope</a>, <a class="tag-link" href="../../../../tags/variables/">variables</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>javascriptの変数のスコープってどうなってる？関数の中と外で同じスコープを持ってる？それとも違う？<br>また、グローバルに定義されている場合、変数はどこに格納されるの？</p>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/60102/lyricalssh" target="_blank" rel="external">lYriCAlsSH</a> | 質問日時： 2009年2月1日 8:27 </div><br></p>
+<a id="more"></a>
+<hr>
+<hr>
+<h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>君が勉強するためにベストなのは例をたくさん与えることだと思う。<br>Javascriptのプログラマーは、どれくらいスコープを理解しているかによって実質的にランク付けされてるからね。<br>時には、スコープは直感に反することもあるけど。</p>
+<p>1.<em>＊グローバルスコープの変数*</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">var a = 1;</div><div class="line"></div><div class="line">// global scope</div><div class="line">function one() &#123;</div><div class="line">  alert(a); // alerts &apos;1&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li><strong>ローカルスコープ</strong></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">two</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  alert(a); <span class="comment">// '1'のグローバル値ではなく、指定された引数に警告する。</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// ローカルスコープ</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">three</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">3</span>;</div><div class="line">  alert(a); <span class="comment">// '3'を警告</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li><strong>中級</strong>：JavaScriptにブロックスコープなんてものは存在しない(ES5; ES6では <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements" target="_blank" rel="external"><code>let</code></a>が導入された)</li>
+</ol>
+<p>a.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">four</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">4</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  alert(a); <span class="comment">// '1'のグローバル値ではなく、4を警告</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>b.<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">one</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">    <span class="keyword">let</span> a = <span class="number">4</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  alert(a); <span class="comment">// 'let'キーワードがブロックスコープを使用するため、'1'を警告</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ol>
+<li><strong> </strong>中級**：<em>Objectプロパティ</em></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">five</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.a = <span class="number">5</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">alert(<span class="keyword">new</span> five().a); <span class="comment">// alerts '5'</span></div></pre></td></tr></table></figure>
+<ol>
+<li><strong>上級</strong>：<em>Closure</em></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> six = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">6</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// JavaScriptで "closure"はここの'a'にアクセスできることを意味する</span></div><div class="line">    <span class="comment">//なぜなら定義した関数内で定義されているから。</span></div><div class="line">    alert(a); <span class="comment">// alerts '6'</span></div><div class="line">  &#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<ol>
+<li><strong> </strong>上級**：<em>プロトタイプベースのスコープ解決</em></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">seven</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.a = <span class="number">7</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// [object].prototype.property はルックアップチェーン内の</span></div><div class="line"><span class="comment">// [object].property に失われる。例えば...</span></div><div class="line"></div><div class="line"><span class="comment">//上記のコンストラクタで 'a'が設定されているため、到達しない。</span></div><div class="line">seven.prototype.a = <span class="number">-1</span>;</div><div class="line"></div><div class="line"><span class="comment">//コンストラクタで 'b'が設定されていなくても、到達する。</span></div><div class="line">seven.prototype.b = <span class="number">8</span>;</div><div class="line"></div><div class="line">alert(<span class="keyword">new</span> seven().a); <span class="comment">// alerts '7'</span></div><div class="line">alert(<span class="keyword">new</span> seven().b); <span class="comment">// alerts '8'</span></div></pre></td></tr></table></figure>
+<hr>
+<ol>
+<li><strong>グローバル+ローカル</strong>：<em>必要以上に複雑なケース</em>  </li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">5</span>;</div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(x);</div><div class="line">    <span class="keyword">var</span> x = <span class="number">10</span>;</div><div class="line">    <span class="built_in">console</span>.log(x);</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<p><code>undefined</code>と<code>10 &#39;ではなく</code>5<code>と</code> 10`を出力。JavaScriptは変数宣言(初期化ではない)を常に先頭に移動し、以下のコードと同等になる。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">5</span>;</div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> x;</div><div class="line">    <span class="built_in">console</span>.log(x);</div><div class="line">    x = <span class="number">10</span>;</div><div class="line">    <span class="built_in">console</span>.log(x);</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<ol>
+<li><strong>キャッチ節のスコープを持つ変数</strong></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> e = <span class="number">5</span>;</div><div class="line"><span class="built_in">console</span>.log(e);</div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    <span class="keyword">throw</span> <span class="number">6</span>;</div><div class="line">&#125; <span class="keyword">catch</span> (e) &#123;</div><div class="line">    <span class="built_in">console</span>.log(e);</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(e);</div></pre></td></tr></table></figure>
+<p>これは <code>5</code>、<code>6</code>、 <code>5</code>を出力する。 catch節は<code>e</code>はグローバルにもローカル変数にも影響を持つ。でも、この特別なスコープはキャッチされた変数に対してのみです。<code>var f;</code>をcatch節の中に書くと、try-catchブロックの前または後に定義した場合とまったく同じ。</p>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/43089/triptych" target="_blank" rel="external">Triptych</a> | 回答日時： 2009年2月1日 8:58 </div><br></p>
+<hr>
+<hr>
+<p>Source: <a href="https://stackoverflow.com/questions/500431/what-is-the-scope-of-variables-in-javascript" target="_blank" rel="external">What is the scope of variables in JavaScript?</a></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://somatome.github.io2017/10/13/what-is-the-scope-of-variables-in-javascript/" data-id="cj8plzu7g0000m8g6sxyhegla" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://somatome.github.io2017/10/13/what-is-the-scope-of-variables-in-javascript/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://somatome.github.io2017/10/13/what-is-the-scope-of-variables-in-javascript/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="../how-to-sort-a-dataframe-by-columns/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">古い記事</strong>
+            <div class="article-nav-title">列単位でデータフレームをソートする方法は？[R]</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        <% if (site.posts.length) { %>
+<div class="widget-wrap widget-list">
+  <h3 class="widget-title">About</h3>
+  <div class="widget">
+    <p>本サイトは海外の技術系ウェブサイト、<a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>、<a href="https://www.quora.com/" target="_blank">Quora</a>、<a href="https://medium.com/" target="_blank">Medium</a>などで投稿された良質問・記事をまとめ、翻訳しているサイトです。</p>
+    <br>
+    <p>翻訳には正確さを心掛けていますが、全文翻訳・逐次訳ではない点にご注意願います。</p>
+    <p><a href="https://twitter.com/SOmatome_jp" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @SOmatome_jp</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+
+  </div>
+</div>
+<% } %>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">最近の記事</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="" class="title">JavaScriptの変数のスコープって？ [Javascript]</a></p>
+                            <p class="item-date"><time datetime="2017-10-13T08:00:01.000Z" itemprop="datePublished">2017-10-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="../how-to-sort-a-dataframe-by-columns/" class="title">列単位でデータフレームをソートする方法は？[R]</a></p>
+                            <p class="item-date"><time datetime="2017-10-13T08:00:01.000Z" itemprop="datePublished">2017-10-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="../commic-2017-09-13-apple-iphone-x-juste-a-small-troll/" class="title">iPhone X [Webコミック]</a></p>
+                            <p class="item-date"><time datetime="2017-10-13T00:06:14.000Z" itemprop="datePublished">2017-10-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="../../12/how-do-i-make-a-list-of-data-frames/" class="title">データフレームのリストを作成するにはどうすればいい？ [R]</a></p>
+                            <p class="item-date"><time datetime="2017-10-12T08:00:01.000Z" itemprop="datePublished">2017-10-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="../../12/var-functionname-function-vs-function-functionname/" class="title">var functionName = function(){} 対 function functionName(){} [Javascript]</a></p>
+                            <p class="item-date"><time datetime="2017-10-12T08:00:01.000Z" itemprop="datePublished">2017-10-12</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">タグクラウド</h3>
+        <div class="widget tagcloud">
+            <a href="../../../../tags/append/" style="font-size: 10px;">append</a> <a href="../../../../tags/arrays/" style="font-size: 10px;">arrays</a> <a href="../../../../tags/command/" style="font-size: 10px;">command</a> <a href="../../../../tags/comments/" style="font-size: 10px;">comments</a> <a href="../../../../tags/contains/" style="font-size: 11.67px;">contains</a> <a href="../../../../tags/data-structures/" style="font-size: 10px;">data-structures</a> <a href="../../../../tags/dataframe/" style="font-size: 13.33px;">dataframe</a> <a href="../../../../tags/directory/" style="font-size: 11.67px;">directory</a> <a href="../../../../tags/dom/" style="font-size: 10px;">dom</a> <a href="../../../../tags/equality/" style="font-size: 10px;">equality</a> <a href="../../../../tags/equality-operator/" style="font-size: 10px;">equality-operator</a> <a href="../../../../tags/exception/" style="font-size: 10px;">exception</a> <a href="../../../../tags/extend/" style="font-size: 10px;">extend</a> <a href="../../../../tags/external/" style="font-size: 10px;">external</a> <a href="../../../../tags/function/" style="font-size: 10px;">function</a> <a href="../../../../tags/git/" style="font-size: 16.67px;">git</a> <a href="../../../../tags/git-branch/" style="font-size: 11.67px;">git-branch</a> <a href="../../../../tags/git-checkout/" style="font-size: 10px;">git-checkout</a> <a href="../../../../tags/git-commit/" style="font-size: 10px;">git-commit</a> <a href="../../../../tags/git-fetch/" style="font-size: 10px;">git-fetch</a> <a href="../../../../tags/git-pull/" style="font-size: 10px;">git-pull</a> <a href="../../../../tags/git-rebase/" style="font-size: 10px;">git-rebase</a> <a href="../../../../tags/git-remote/" style="font-size: 10px;">git-remote</a> <a href="../../../../tags/git-reset/" style="font-size: 11.67px;">git-reset</a> <a href="../../../../tags/git-revert/" style="font-size: 11.67px;">git-revert</a> <a href="../../../../tags/identity-operator/" style="font-size: 10px;">identity-operator</a> <a href="../../../../tags/idioms/" style="font-size: 11.67px;">idioms</a> <a href="../../../../tags/ios/" style="font-size: 10px;">ios</a> <a href="../../../../tags/iphone/" style="font-size: 10px;">iphone</a> <a href="../../../../tags/iphone-x/" style="font-size: 10px;">iphone-x</a> <a href="../../../../tags/javascript/" style="font-size: 20px;">javascript</a> <a href="../../../../tags/jquery/" style="font-size: 11.67px;">jquery</a> <a href="../../../../tags/json/" style="font-size: 11.67px;">json</a> <a href="../../../../tags/list/" style="font-size: 15px;">list</a> <a href="../../../../tags/loops/" style="font-size: 10px;">loops</a> <a href="../../../../tags/main/" style="font-size: 10px;">main</a> <a href="../../../../tags/module/" style="font-size: 10px;">module</a> <a href="../../../../tags/namespaces/" style="font-size: 10px;">namespaces</a> <a href="../../../../tags/object/" style="font-size: 10px;">object</a> <a href="../../../../tags/objective-c/" style="font-size: 10px;">objective-c</a> <a href="../../../../tags/operators/" style="font-size: 10px;">operators</a> <a href="../../../../tags/overwrite/" style="font-size: 10px;">overwrite</a> <a href="../../../../tags/parsing/" style="font-size: 10px;">parsing</a> <a href="../../../../tags/properties/" style="font-size: 10px;">properties</a> <a href="../../../../tags/python/" style="font-size: 18.33px;">python</a> <a href="../../../../tags/r/" style="font-size: 13.33px;">r</a> <a href="../../../../tags/r-faq/" style="font-size: 11.67px;">r-faq</a> <a href="../../../../tags/redirect/" style="font-size: 10px;">redirect</a> <a href="../../../../tags/scope/" style="font-size: 10px;">scope</a> <a href="../../../../tags/shell/" style="font-size: 10px;">shell</a> <a href="../../../../tags/sorting/" style="font-size: 10px;">sorting</a> <a href="../../../../tags/string/" style="font-size: 11.67px;">string</a> <a href="../../../../tags/string-matching/" style="font-size: 10px;">string-matching</a> <a href="../../../../tags/subprocess/" style="font-size: 10px;">subprocess</a> <a href="../../../../tags/substring/" style="font-size: 11.67px;">substring</a> <a href="../../../../tags/swift/" style="font-size: 10px;">swift</a> <a href="../../../../tags/syntax/" style="font-size: 10px;">syntax</a> <a href="../../../../tags/variables/" style="font-size: 10px;">variables</a> <a href="../../../../tags/version-control/" style="font-size: 10px;">version-control</a> <a href="../../../../tags/visibility/" style="font-size: 10px;">visibility</a>
+        </div>
+    </div>
+
+    
+        
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">アーカイブ</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/10/">10月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/09/">9月 2017</a><span class="archive-list-count">18</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">タグ</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/append/">append</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/arrays/">arrays</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/comments/">comments</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/contains/">contains</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/data-structures/">data-structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/dataframe/">dataframe</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/directory/">directory</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/dom/">dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/equality/">equality</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/equality-operator/">equality-operator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/exception/">exception</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/extend/">extend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/external/">external</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/function/">function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git/">git</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git-branch/">git-branch</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git-checkout/">git-checkout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git-commit/">git-commit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git-fetch/">git-fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git-pull/">git-pull</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git-rebase/">git-rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git-remote/">git-remote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git-reset/">git-reset</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git-revert/">git-revert</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/identity-operator/">identity-operator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/idioms/">idioms</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ios/">ios</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iphone/">iphone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iphone-x/">iphone-x</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/javascript/">javascript</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/jquery/">jquery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/json/">json</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/list/">list</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/loops/">loops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/main/">main</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/module/">module</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/namespaces/">namespaces</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/object/">object</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/objective-c/">objective-c</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/operators/">operators</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/overwrite/">overwrite</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/parsing/">parsing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/properties/">properties</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/python/">python</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/r/">r</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/r-faq/">r-faq</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/redirect/">redirect</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/scope/">scope</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/sorting/">sorting</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/string/">string</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/string-matching/">string-matching</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/subprocess/">subprocess</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/substring/">substring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/swift/">swift</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/syntax/">syntax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/variables/">variables</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/version-control/">version-control</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/visibility/">visibility</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">リンク</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 John Doe<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'https://somatome.github.io2017/10/13/what-is-the-scope-of-variables-in-javascript/';
+        
+        this.page.identifier = 'what-is-the-scope-of-variables-in-javascript';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'somatome' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+
+    
+        <script src="../../../../libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="../../../../libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="../../../../js/main.js"></script>
+
+    </div>
+</body>
+</html>

@@ -8,7 +8,23 @@
 
     <url>
         <loc>https://somatome.github.io/2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/</loc>
-        <lastmod>2017-10-13T02:00:15.950Z</lastmod>
+        <lastmod>2017-10-13T09:35:23.006Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/2017/10/13/what-is-the-scope-of-variables-in-javascript/</loc>
+        <lastmod>2017-10-13T08:06:10.595Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/2017/10/13/how-to-sort-a-dataframe-by-columns/</loc>
+        <lastmod>2017-10-13T08:05:42.030Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
