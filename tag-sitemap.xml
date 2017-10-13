@@ -121,6 +121,13 @@
     </url>
 
     <url>
+        <loc>https://somatome.github.io/tags/git-checkout/</loc>
+        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://somatome.github.io/tags/git-reset/</loc>
         <lastmod>2017-09-28T23:15:08.970Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -129,13 +136,6 @@
 
     <url>
         <loc>https://somatome.github.io/tags/git-revert/</loc>
-        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git-checkout/</loc>
         <lastmod>2017-09-28T23:15:08.970Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

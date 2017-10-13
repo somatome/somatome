@@ -6,7 +6,7 @@
   <link href="/somatome/atom.xml" rel="self"/>
   
   <link href="https://somatome.github.io/"/>
-  <updated>2017-10-12T23:49:11.931Z</updated>
+  <updated>2017-10-13T00:41:25.315Z</updated>
   <id>https://somatome.github.io/</id>
   
   <author>
@@ -17,13 +17,21 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hoge_hoge_hoge_hoge</title>
-    <link href="https://somatome.github.io/2017/10/13/hoge-hoge-hoge-hoge/"/>
-    <id>https://somatome.github.io/2017/10/13/hoge-hoge-hoge-hoge/</id>
-    <published>2017-10-12T23:49:11.000Z</published>
-    <updated>2017-10-12T23:49:11.931Z</updated>
+    <title>iPhone X [Webコミック]</title>
+    <link href="https://somatome.github.io/2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/"/>
+    <id>https://somatome.github.io/2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/</id>
+    <published>2017-10-13T00:06:14.000Z</published>
+    <updated>2017-10-13T00:41:25.315Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>１コマ目：</strong><br>「さてこれまでで最大のキーノートスピーチが準備されています！我々は総工費50億ドルのAppleの新しいヘッドクォーターに来ております！」</p><p><strong>２コマ目：</strong><br>「これがあの有名なスティーブ・ジョブズ・シアターです。この素晴らしい空間で我々はもうすぐ史上最高のスマートフォンを目にしようとしています！」</p><img src="/somatome/2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/commic-2017-09-13-apple-iphone-x-juste-a-small-troll.jpg" alt="The orphaned program" title="The orphaned program"><p><strong>３コマ目：</strong><br>「来ました！我々の目の前にiPhone Xが姿を表しました！最新のiPhoneがなんと1000ドル以下！この技術的驚異はかならずスマートフォンの世界を革新することでしょう！」<br><strong>４コマ目：</strong><br>「すばらしい、、、、ただすばらしい、、、、」</p><hr><hr><p>Source: <a href="http://www.commitstrip.com/en/2017/09/13/apple-iphone-x-juste-a-small-troll/" target="_blank" rel="external">Apple iPhone X - Juste a small troll</a></p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;１コマ目：&lt;/strong&gt;&lt;br&gt;「さてこれまでで最大のキーノートスピーチが準備されています！我々は総工費50億ドルのAppleの新しいヘッドクォーターに来ております！」&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;２コマ目：&lt;/strong&gt;&lt;br&gt;「これがあの有名な
+      
     
     </summary>
     
@@ -401,11 +409,11 @@
     
       <category term="git" scheme="https://somatome.github.io/tags/git/"/>
     
+      <category term="git-checkout" scheme="https://somatome.github.io/tags/git-checkout/"/>
+    
       <category term="git-reset" scheme="https://somatome.github.io/tags/git-reset/"/>
     
       <category term="git-revert" scheme="https://somatome.github.io/tags/git-revert/"/>
-    
-      <category term="git-checkout" scheme="https://somatome.github.io/tags/git-checkout/"/>
     
   </entry>
   
@@ -454,9 +462,9 @@
     
       <category term="python" scheme="https://somatome.github.io/tags/python/"/>
     
-      <category term="loops" scheme="https://somatome.github.io/tags/loops/"/>
-    
       <category term="list" scheme="https://somatome.github.io/tags/list/"/>
+    
+      <category term="loops" scheme="https://somatome.github.io/tags/loops/"/>
     
   </entry>
   
