@@ -147,6 +147,137 @@ ga('send', 'pageview');
         <div class="outer">
             
             <section id="main">
+    <article id="post-how-do-i-remove-a-particular-element-from-an-array-in-javascript" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="../../2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/">JavaScriptの配列から特定の要素を削除するにはどうすればいいの？ [Javascript]</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="../../2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/">
+            <time datetime="2017-09-28T23:38:53.000Z" itemprop="datePublished">2017-09-29</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../tags/arrays/">arrays</a>, <a class="tag-link" href="../../tags/javascript/">javascript</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>整数の配列があって、要素を追加するために`.push()``メソッドを使用してるとする。</p>
+<p>ここで、配列から特定の要素を削除する簡単な方法ってある？ <code>array.remove(int);</code>みたいな感じの。</p>
+<p>ただし、JavaScript <em>のみ</em> を使用するとして。フレームワークは使えないんだ。</p>
+<p><div style="text-align: right"> By  <a href="/users/364969/walker">Walker</a> | 質問日時： 2011年4月23日 22:17 </div><br></p></p>
+            <p class="article-more-link">
+                <a href="../../2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/#more">Читать дальше</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://somatome.github.io2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/" data-id="cj8p4p50e000mgow6ubnn0270" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://somatome.github.io2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://somatome.github.io2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-can-comments-be-used-in-json" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -187,7 +318,7 @@ ga('send', 'pageview');
             <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>JSONファイル内でコメントって使用できる？もしそうなら、どうやるの？</p>
 <p><div style="text-align: right"> By  <a href="/users/4105/michael-gundlach">Michael Gundlach</a> | 質問日時： 2008年10月28日 20:39 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/29/can-comments-be-used-in-json/#more">Read More</a>
+                <a href="../../2017/09/29/can-comments-be-used-in-json/#more">Читать дальше</a>
             </p>
         
         </div>
@@ -198,7 +329,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io2017/09/29/can-comments-be-used-in-json/" data-id="cj8otkwx000047sg61b99qvys" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io2017/09/29/can-comments-be-used-in-json/" data-id="cj8p4p4y40004gow67nihr0u7" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -318,7 +449,7 @@ ga('send', 'pageview');
 <p>型変換が行われない場合は、<code>==</code>を置き換えるメリットってある？</p>
 <p><div style="text-align: right"> By  <a href="/users/44990/bcasp">bcasp</a> | 質問日時： 2008年12月11日 14:19 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/#more">Read More</a>
+                <a href="../../2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/#more">Читать дальше</a>
             </p>
         
         </div>
@@ -329,7 +460,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" data-id="cj8otkwym00137sg63z85rh0b" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" data-id="cj8p4p53g0018gow6uund1m1s" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -448,7 +579,7 @@ ga('send', 'pageview');
 <p>どうやってここから11月3日、つまりコミット0d1d7fc…に戻せばいいの？</p>
 <p><div style="text-align: right"> By  <a href="/users/111174/crazy-serb">Crazy Serb</a> | 質問日時： 2010年11月6日 16:58 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/28/how-to-revert-git-repository-to-a-previous-commit/#more">Read More</a>
+                <a href="../../2017/09/28/how-to-revert-git-repository-to-a-previous-commit/#more">Читать дальше</a>
             </p>
         
         </div>
@@ -459,7 +590,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io2017/09/28/how-to-revert-git-repository-to-a-previous-commit/" data-id="cj8otkwy8000t7sg6zhpmxpj6" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io2017/09/28/how-to-revert-git-repository-to-a-previous-commit/" data-id="cj8p4p5320011gow6yfjm4zzl" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -578,7 +709,7 @@ ga('send', 'pageview');
 <p>リモートブランチにプッシュされていないローカルブランチの名前を変更するにはどうしたらいいの？</p>
 <p><div style="text-align: right"> By  <a href="/users/338204/forrest">Forrest</a> | 質問日時： Jul 6 ‘11 at 3:20 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/26/how-do-i-rename-a-local-git-branch/#more">Read More</a>
+                <a href="../../2017/09/26/how-do-i-rename-a-local-git-branch/#more">Читать дальше</a>
             </p>
         
         </div>
@@ -589,7 +720,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io2017/09/26/how-do-i-rename-a-local-git-branch/" data-id="cj8otkwy4000q7sg6au1vxxay" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io2017/09/26/how-do-i-rename-a-local-git-branch/" data-id="cj8p4p51a000rgow6vz4rhip1" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -709,7 +840,7 @@ ga('send', 'pageview');
 <p>これをforループで使う時、どうやってこのループインデックス（この場合１から５）にアクセスしたらいいの？</p>
 <p><div style="text-align: right"> By  <a href="/users/51816/joan-venge">Joan Venge</a> | 質問日時： Feb 6 ‘09 at 22:47 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/25/accessing-the-index-in-python-for-loops/#more">Read More</a>
+                <a href="../../2017/09/25/accessing-the-index-in-python-for-loops/#more">Читать дальше</a>
             </p>
         
         </div>
@@ -720,7 +851,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io2017/09/25/accessing-the-index-in-python-for-loops/" data-id="cj8otkwwg00007sg64ngmcra6" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io2017/09/25/accessing-the-index-in-python-for-loops/" data-id="cj8p4p4wp0000gow66rjm7puv" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -838,7 +969,7 @@ ga('send', 'pageview');
             <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>Pythonでディレクトリ内のすべてのファイルをリストアップして、リストに追加するのってどうやるの？</p>
 <p><div style="text-align: right"> By  <a href="/users/385652/duhhunjonn">duhhunjonn</a> | 質問日時： Jul 8 ‘10 at 19:31 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/25/how-do-i-list-all-files-of-a-directory/#more">Read More</a>
+                <a href="../../2017/09/25/how-do-i-list-all-files-of-a-directory/#more">Читать дальше</a>
             </p>
         
         </div>
@@ -849,7 +980,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io2017/09/25/how-do-i-list-all-files-of-a-directory/" data-id="cj8otkwxo000f7sg61ds0ghcy" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io2017/09/25/how-do-i-list-all-files-of-a-directory/" data-id="cj8p4p512000pgow6kr8pzajh" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -967,7 +1098,7 @@ ga('send', 'pageview');
             <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>リストメソッドの <code>append()</code>と <code>extend()</code>の違いって何？</p>
 <p><div style="text-align: right"> By  <a href="/users/15055/claudiu">Claudiu</a> | 質問日時： Oct 31 ‘08 at 5:55 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/25/append-vs-extend/#more">Read More</a>
+                <a href="../../2017/09/25/append-vs-extend/#more">Читать дальше</a>
             </p>
         
         </div>
@@ -978,7 +1109,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io2017/09/25/append-vs-extend/" data-id="cj8otkwx700077sg6udt84oez" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io2017/09/25/append-vs-extend/" data-id="cj8p4p4x50001gow6bplsqfaa" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1097,7 +1228,7 @@ ga('send', 'pageview');
 <p>どうやってこの変数がカラだってチェックすればいいの？</p>
 <p><div style="text-align: right"> By  <a href="/users/4872/ray-vega">Ray Vega</a> | 質問日時： Sep 10 ‘08 at 6:20 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/25/best-way-to-check-if-a-list-is-empty/#more">Read More</a>
+                <a href="../../2017/09/25/best-way-to-check-if-a-list-is-empty/#more">Читать дальше</a>
             </p>
         
         </div>
@@ -1108,7 +1239,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io2017/09/25/best-way-to-check-if-a-list-is-empty/" data-id="cj8otkwwy00037sg65zua2jd1" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io2017/09/25/best-way-to-check-if-a-list-is-empty/" data-id="cj8p4p4yq0007gow6po3nryox" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1226,7 +1357,7 @@ ga('send', 'pageview');
             <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>Pythonスクリプトから外部コマンド(UNIXシェルとかWindowsのコマンドプロンプトで入力したみたいに)ってどうやって呼び出せるの？</p>
 <p><div style="text-align: right"> By  <a href="/users/17085/freshwower">freshWoWer</a> | 質問日時： Sep 18 ‘08 at 1:35 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/25/calling-an-external-command-in-python/#more">Read More</a>
+                <a href="../../2017/09/25/calling-an-external-command-in-python/#more">Читать дальше</a>
             </p>
         
         </div>
@@ -1237,7 +1368,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io2017/09/25/calling-an-external-command-in-python/" data-id="cj8otkwwo00017sg6rs9bsmoy" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io2017/09/25/calling-an-external-command-in-python/" data-id="cj8p4p4xt0003gow6umhtvy1u" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1315,135 +1446,6 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-what-does-if-name-main-do" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="../../2017/09/25/what-does-if-name-main-do/">__name__ == &#34;__main__&#34;って何やってるの？</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="../../2017/09/25/what-does-if-name-main-do/">
-            <time datetime="2017-09-25T14:23:09.000Z" itemprop="datePublished">2017-09-25</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="../../tags/idioms/">idioms</a>, <a class="tag-link" href="../../tags/main/">main</a>, <a class="tag-link" href="../../tags/module/">module</a>, <a class="tag-link" href="../../tags/namespaces/">namespaces</a>, <a class="tag-link" href="../../tags/python/">python</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>if __name__ == &quot;__main__&quot;:</code> ってこの場合で何やってるの？<br><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Threading example</span></div><div class="line"><span class="keyword">import</span> time, thread</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunction</span><span class="params">(string, sleeptime, lock, *args)</span>:</span></div><div class="line">    <span class="keyword">while</span> <span class="number">1</span>:</div><div class="line">        lock.acquire()</div><div class="line">        time.sleep(sleeptime)</div><div class="line">        lock.release()</div><div class="line">        time.sleep(sleeptime)</div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    lock = thread.allocate_lock()</div><div class="line">    thread.start_new_thread(myfunction, (<span class="string">"Thread #: 1"</span>, <span class="number">2</span>, lock))</div><div class="line">    thread.start_new_thread(myfunction, (<span class="string">"Thread #: 2"</span>, <span class="number">2</span>, lock))</div></pre></td></tr></table></figure></p>
-<p><div style="text-align: right"> By  <a href="/users/51518/devoted">Devoted</a> | 質問日時： Jan 7 ‘09 at 4:11 </div><br></p></p>
-            <p class="article-more-link">
-                <a href="../../2017/09/25/what-does-if-name-main-do/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://somatome.github.io2017/09/25/what-does-if-name-main-do/" data-id="cj8otkwyp00167sg6v2kskre0" class="article-share-link"><i class="fa fa-share"></i>共有</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://somatome.github.io2017/09/25/what-does-if-name-main-do/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://somatome.github.io2017/09/25/what-does-if-name-main-do/">コメント</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <nav id="page-nav">
         <a class="extend prev" rel="prev" href="../../index.html">&laquo; 前</a><a class="page-number" href="../../index.html">1</a><span class="page-number current">2</span><a class="page-number" href="../3/">3</a><a class="extend next" rel="next" href="../3/">次 &raquo;</a>
     </nav>
@@ -1452,20 +1454,16 @@ ga('send', 'pageview');
                 
 <aside id="sidebar">
    
-        <% if (site.posts.length) { %>
+        
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title"><%= __('widget.links') %></h3>
+        <h3 class="widget-title">About</h3>
         <div class="widget">
-            <ul>
-                <% for (var i in theme.miscellaneous.links) { %>
-                    <li>
-                        <a href="<%- theme.miscellaneous.links[i] %>"><%= i %></a>
-                    </li>
-                <% } %>
-            </ul>
+	  <p>本サイトは海外の技術系ウェブサイト、<a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>、<a href="https://www.quora.com/" target="_blank">Quora</a>、<a href="https://medium.com/" target="_blank">Medium</a>などで投稿された良質問・記事をまとめ、翻訳しているサイトです。</p>
+    <br>
+	  <p>翻訳には正確さを心掛けていますが、全文翻訳・逐次訳ではない点にご注意願います。</p>
         </div>
     </div>
-<% } %>
+
 
     
         
@@ -1478,8 +1476,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="../../2017/10/12/how-do-i-make-a-list-of-data-frames/" class="title">データフレームのリストを作成するにはどうすればいい？ [R]</a></p>
-                            <p class="item-date"><time datetime="2017-10-12T08:00:01.000Z" itemprop="datePublished">2017-10-12</time></p>
+                            <p class="item-title"><a href="../../2017/10/13/hoge-hoge-hoge-hoge/" class="title">hoge_hoge_hoge_hoge</a></p>
+                            <p class="item-date"><time datetime="2017-10-12T23:49:11.000Z" itemprop="datePublished">2017-10-13</time></p>
                         </div>
                     </li>
                 
@@ -1496,8 +1494,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="../../2017/10/11/detect-if-the-device-is-iphone-x/" class="title">デバイスがiPhone Xであるかどうかを検出する [iOS]</a></p>
-                            <p class="item-date"><time datetime="2017-10-11T21:55:38.000Z" itemprop="datePublished">2017-10-11</time></p>
+                            <p class="item-title"><a href="../../2017/10/12/how-do-i-make-a-list-of-data-frames/" class="title">データフレームのリストを作成するにはどうすればいい？ [R]</a></p>
+                            <p class="item-date"><time datetime="2017-10-12T08:00:01.000Z" itemprop="datePublished">2017-10-12</time></p>
                         </div>
                     </li>
                 
@@ -1505,8 +1503,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="../../2017/10/11/does-python-have-a-string-contains-substring-method/" class="title">Pythonには部分文字列を探す文字列用の&#39;contains&#39;メソッドとかってある？ [Python]</a></p>
-                            <p class="item-date"><time datetime="2017-10-11T08:00:01.000Z" itemprop="datePublished">2017-10-11</time></p>
+                            <p class="item-title"><a href="../../2017/10/11/detect-if-the-device-is-iphone-x/" class="title">デバイスがiPhone Xであるかどうかを検出する [iOS]</a></p>
+                            <p class="item-date"><time datetime="2017-10-11T21:55:38.000Z" itemprop="datePublished">2017-10-11</time></p>
                         </div>
                     </li>
                 
@@ -1539,7 +1537,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">アーカイブ</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2017/10/">10月 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2017/09/">9月 2017</a><span class="archive-list-count">18</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2017/10/">10月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2017/09/">9月 2017</a><span class="archive-list-count">18</span></li></ul>
         </div>
     </div>
 
