@@ -55,6 +55,15 @@ ga('send', 'pageview');
 </head>
 
 <body>
+    <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
     <div id="container">
         <header id="header">
     <div id="header-main" class="header-inner">
@@ -187,7 +196,7 @@ ga('send', 'pageview');
             <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>if __name__ == &quot;__main__&quot;:</code> ってこの場合で何やってるの？<br><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Threading example</span></div><div class="line"><span class="keyword">import</span> time, thread</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunction</span><span class="params">(string, sleeptime, lock, *args)</span>:</span></div><div class="line">    <span class="keyword">while</span> <span class="number">1</span>:</div><div class="line">        lock.acquire()</div><div class="line">        time.sleep(sleeptime)</div><div class="line">        lock.release()</div><div class="line">        time.sleep(sleeptime)</div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    lock = thread.allocate_lock()</div><div class="line">    thread.start_new_thread(myfunction, (<span class="string">"Thread #: 1"</span>, <span class="number">2</span>, lock))</div><div class="line">    thread.start_new_thread(myfunction, (<span class="string">"Thread #: 2"</span>, <span class="number">2</span>, lock))</div></pre></td></tr></table></figure></p>
 <p><div style="text-align: right"> By  <a href="/users/51518/devoted">Devoted</a> | 質問日時： Jan 7 ‘09 at 4:11 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/25/what-does-if-name-main-do/#more">자세히 보기</a>
+                <a href="../../2017/09/25/what-does-if-name-main-do/#more">Read More</a>
             </p>
         
         </div>
@@ -316,7 +325,7 @@ ga('send', 'pageview');
             <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>.hide()</code>、 <code>.show()</code>、 <code>.toggle()</code>関数を使えば要素の可視性を切り替えることができるけど、要素が表示されているか隠れているかはどうやってテストすればいいの？</p>
 <p><div style="text-align: right"> By  <a href="/users/21709/philip-morton">Philip Morton</a> | 質問日時： Oct 7 ‘08 at 13:03 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/#more">자세히 보기</a>
+                <a href="../../2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/#more">Read More</a>
             </p>
         
         </div>
@@ -444,7 +453,7 @@ ga('send', 'pageview');
         
             <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>String.contains()</code>メソッドだと思ったんだけど、ちょっと違うみたい。これをチェックするいい方法ってあるかな？</p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/#more">자세히 보기</a>
+                <a href="../../2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/#more">Read More</a>
             </p>
         
         </div>
@@ -576,7 +585,7 @@ ga('send', 'pageview');
 <p><code>remotes/origin/bugfix</code>ブランチをローカルとリモート両方で削除するにはほか何をしたらいいの？</p>
 <p><div style="text-align: right"> By  <a href="/users/95592/matthew-rankin">Matthew Rankin</a> | 質問日時： Jan 5 ‘10 at 1:12 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/#more">자세히 보기</a>
+                <a href="../../2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/#more">Read More</a>
             </p>
         
         </div>
@@ -705,7 +714,7 @@ ga('send', 'pageview');
             <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>間違ったファイルを<a href="https://git-scm.com" target="_blank" rel="external">Git</a>にコミットしたんだけど、まだサーバーへはプッシュしていないんだ。</p>
 <p>このコミットを元に戻すにはどうすればいいですか？</p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/24/how-to-undo-the-last-commits-in-git/#more">자세히 보기</a>
+                <a href="../../2017/09/24/how-to-undo-the-last-commits-in-git/#more">Read More</a>
             </p>
         
         </div>
@@ -834,7 +843,7 @@ ga('send', 'pageview');
             <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>jQueryか純粋なJavaScriptを使って、あるページから別のページにユーザーをリダイレクトする方法ってどうやるの？</p>
 <p><div style="text-align: right"> By  <a href="/users/44984/venkatachalam">venkatachalam</a> | 質問日時： Feb 2 ‘09 at 12:54 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/24/how-to-redirect-to-another-webpage/#more">자세히 보기</a>
+                <a href="../../2017/09/24/how-to-redirect-to-another-webpage/#more">Read More</a>
             </p>
         
         </div>
