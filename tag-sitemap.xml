@@ -310,13 +310,6 @@
     </url>
 
     <url>
-        <loc>https://somatome.github.io/tags/idioms/</loc>
-        <lastmod>2017-10-12T08:10:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://somatome.github.io/tags/function/</loc>
         <lastmod>2017-10-12T08:10:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -325,6 +318,13 @@
 
     <url>
         <loc>https://somatome.github.io/tags/syntax/</loc>
+        <lastmod>2017-10-12T08:10:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/idioms/</loc>
         <lastmod>2017-10-12T08:10:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -374,49 +374,49 @@
 
     <url>
         <loc>https://somatome.github.io/tags/r/</loc>
-        <lastmod>2017-10-13T08:05:42.030Z</lastmod>
+        <lastmod>2017-10-13T08:05:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/dataframe/</loc>
-        <lastmod>2017-10-13T08:05:42.030Z</lastmod>
+        <lastmod>2017-10-13T08:05:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/r-faq/</loc>
-        <lastmod>2017-10-13T08:05:42.030Z</lastmod>
+        <lastmod>2017-10-13T08:05:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/sorting/</loc>
-        <lastmod>2017-10-13T08:05:42.030Z</lastmod>
+        <lastmod>2017-10-13T08:05:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/javascript/</loc>
-        <lastmod>2017-10-13T08:06:10.595Z</lastmod>
+        <lastmod>2017-10-13T08:06:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/variables/</loc>
-        <lastmod>2017-10-13T08:06:10.595Z</lastmod>
+        <lastmod>2017-10-13T08:06:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/scope/</loc>
-        <lastmod>2017-10-13T08:06:10.595Z</lastmod>
+        <lastmod>2017-10-13T08:06:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
