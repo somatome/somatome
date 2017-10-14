@@ -5,18 +5,21 @@
     
     <title>Gitリポジトリを以前のコミットに戻すには？ [Git] | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="質問：現在の状態から、あるコミットの時点でのスナップショットに戻すのってどうやればいいの？git logをすると、こんなのが出力されるんだけど：$ git logcommit a867b4af366350be2e7c21b8de9cc6504678a61b`Author: Me &amp;lt;me@me.com&amp;gt;Date:   Thu 11月 4 18:59:41 2010 -0400なんとかかん">
+    <meta name="description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
 <meta name="keywords" content="git,git-checkout,git-reset,git-revert">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gitリポジトリを以前のコミットに戻すには？ [Git]">
 <meta property="og:url" content="https://somatome.github.io/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
-<meta property="og:description" content="質問：現在の状態から、あるコミットの時点でのスナップショットに戻すのってどうやればいいの？git logをすると、こんなのが出力されるんだけど：$ git logcommit a867b4af366350be2e7c21b8de9cc6504678a61b`Author: Me &amp;lt;me@me.com&amp;gt;Date:   Thu 11月 4 18:59:41 2010 -0400なんとかかん">
+<meta property="og:description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-09-28T23:15:08.970Z">
+<meta property="og:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
+<meta property="og:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
+<meta property="og:updated_time" content="2017-10-14T08:17:05.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gitリポジトリを以前のコミットに戻すには？ [Git]">
-<meta name="twitter:description" content="質問：現在の状態から、あるコミットの時点でのスナップショットに戻すのってどうやればいいの？git logをすると、こんなのが出力されるんだけど：$ git logcommit a867b4af366350be2e7c21b8de9cc6504678a61b`Author: Me &amp;lt;me@me.com&amp;gt;Date:   Thu 11月 4 18:59:41 2010 -0400なんとかかん">
+<meta name="twitter:description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
+<meta name="twitter:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
     
 
     
@@ -198,7 +201,8 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>現在の状態から、あるコミットの時点でのスナップショットに戻すのってどうやればいいの？<br><code>git log</code>をすると、こんなのが出力されるんだけど：<br><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">$ git <span class="built_in">log</span></div><div class="line">commit a867b4af366350be2e7c21b8de9cc6504678a61b`</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 18:59:41 2010 -0400</div><div class="line"></div><div class="line">なんとかかんとか...</div><div class="line"></div><div class="line">commit 25eee4caef46ae64aa08e8ab3f988bc917ee1ce4</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 05:13:39 2010 -0400</div><div class="line"></div><div class="line">なんとかかんとかかんとか...</div><div class="line"></div><div class="line">commit 0766c053c0ea2035e90f504928f8df3c9363b8bd</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 00:55:06 2010 -0400</div><div class="line"></div><div class="line">さらになんとかかんとか...</div><div class="line"></div><div class="line">commit 0d1d7fc32e5a947fbd92ee598033d85bfc445a50</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Wed 11月 3 23:56:08 2010 -0400</div><div class="line"></div><div class="line">そう、もっともっとなんとかかんとか...</div></pre></td></tr></table></figure></p>
+            <p><div class="fb-like" data-href="https://somatome.github.io/somatome/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加" target="_blank" rel="external"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large" target="_blank" rel="external">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/widgets.js’;fjs.parentNode.insertBefore(js,fjs);}}(document, ‘script’, ‘twitter-wjs’);</script> </p>
+<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>現在の状態から、あるコミットの時点でのスナップショットに戻すのってどうやればいいの？<br><code>git log</code>をすると、こんなのが出力されるんだけど：<br><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">$ git <span class="built_in">log</span></div><div class="line">commit a867b4af366350be2e7c21b8de9cc6504678a61b`</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 18:59:41 2010 -0400</div><div class="line"></div><div class="line">なんとかかんとか...</div><div class="line"></div><div class="line">commit 25eee4caef46ae64aa08e8ab3f988bc917ee1ce4</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 05:13:39 2010 -0400</div><div class="line"></div><div class="line">なんとかかんとかかんとか...</div><div class="line"></div><div class="line">commit 0766c053c0ea2035e90f504928f8df3c9363b8bd</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 00:55:06 2010 -0400</div><div class="line"></div><div class="line">さらになんとかかんとか...</div><div class="line"></div><div class="line">commit 0d1d7fc32e5a947fbd92ee598033d85bfc445a50</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Wed 11月 3 23:56:08 2010 -0400</div><div class="line"></div><div class="line">そう、もっともっとなんとかかんとか...</div></pre></td></tr></table></figure></p>
 <p>どうやってここから11月3日、つまりコミット0d1d7fc…に戻せばいいの？</p>
 <p><div style="text-align: right"> By  <a href="/users/111174/crazy-serb">Crazy Serb</a> | 質問日時： 2010年11月6日 16:58 </div><br></p>
 <a id="more"></a>
@@ -281,6 +285,7 @@ checkout-revet-reflog-reset/34519716＃34519716" target="_blank" rel="external">
 <p><div style="text-align: right"> By  <a href="/users/1606432/pogrindis">Pogrindis</a> | 回答日時： Oct 22 ‘13 at 11:53 </div><br></p>
 <hr>
 <hr>
+<p><div class="fb-like" data-href="https://somatome.github.io/somatome/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加" target="_blank" rel="external"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large" target="_blank" rel="external">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/widgets.js’;fjs.parentNode.insertBefore(js,fjs);}}(document, ‘script’, ‘twitter-wjs’);</script> </p>
 <p>Source: <a href="https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-previous-commit" target="_blank" rel="external">How to revert Git repository to a previous commit?</a></p>
 
         
@@ -412,7 +417,7 @@ checkout-revet-reflog-reset/34519716＃34519716" target="_blank" rel="external">
     <p>本サイトは海外の技術系ウェブサイト、<a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>、<a href="https://www.quora.com/" target="_blank">Quora</a>、<a href="https://medium.com/" target="_blank">Medium</a>などで投稿された良質問・記事をまとめ、翻訳しているサイトです。</p>
     <p>主にWeb開発（Javascript）とデータサイエンス（Python, R）の記事を中心に紹介しています。</p>
     <p>翻訳には正確さを心掛けていますが、全文翻訳・逐次訳ではない点にご注意願います。</p>
-    <p>　</p>
+    <p>　 </p>
     <p><a href="https://twitter.com/SOmatome_jp" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @SOmatome_jp</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs'); </script> <div class="fb-like" data-href="https://somatome.github.io/somatome/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fhttps%3A%2F%2Fsomatome.github.io%2Fsomatome%2Fatom.xml'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png' alt='follow us in feedly' width='71' height='28'></a>
 <a href="https://somatome.github.io/somatome/atom.xml"><img src="images/rss_subscribe.png" alt="RSSを購読する" width="130px"></a> </p>

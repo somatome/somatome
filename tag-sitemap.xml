@@ -2,421 +2,421 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://somatome.github.io/tags/redirect/</loc>
-        <lastmod>2017-09-24T22:37:46.547Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git-rebase/</loc>
-        <lastmod>2017-09-24T23:12:07.371Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git-commit/</loc>
-        <lastmod>2017-09-24T23:12:07.371Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git-remote/</loc>
-        <lastmod>2017-09-24T23:33:09.980Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/string-matching/</loc>
-        <lastmod>2017-09-25T00:02:24.529Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/jquery/</loc>
-        <lastmod>2017-09-25T05:30:11.154Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/dom/</loc>
-        <lastmod>2017-09-25T05:30:11.154Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/visibility/</loc>
-        <lastmod>2017-09-25T05:30:11.154Z</lastmod>
+        <loc>https://somatome.github.io/tags/loops/</loc>
+        <lastmod>2017-10-14T08:17:05.273Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/data-structures/</loc>
-        <lastmod>2017-09-25T15:02:13.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.276Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/append/</loc>
-        <lastmod>2017-09-25T15:02:13.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.276Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/extend/</loc>
-        <lastmod>2017-09-25T15:02:13.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.276Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/shell/</loc>
-        <lastmod>2017-09-25T15:41:11.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/command/</loc>
-        <lastmod>2017-09-25T15:41:11.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/subprocess/</loc>
-        <lastmod>2017-09-25T15:41:11.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/external/</loc>
-        <lastmod>2017-09-25T15:41:11.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/loops/</loc>
-        <lastmod>2017-09-25T18:43:37.422Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git-branch/</loc>
-        <lastmod>2017-09-26T10:56:29.115Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git-checkout/</loc>
-        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git-reset/</loc>
-        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git-revert/</loc>
-        <lastmod>2017-09-28T23:15:08.970Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/comments/</loc>
-        <lastmod>2017-09-29T01:23:37.828Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/arrays/</loc>
-        <lastmod>2017-09-29T17:50:19.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/exception/</loc>
-        <lastmod>2017-09-29T20:48:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/module/</loc>
-        <lastmod>2017-10-02T01:13:57.967Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/namespaces/</loc>
-        <lastmod>2017-10-02T01:13:57.967Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/main/</loc>
-        <lastmod>2017-10-02T01:13:57.967Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/operators/</loc>
-        <lastmod>2017-10-02T19:23:02.367Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/equality/</loc>
-        <lastmod>2017-10-02T19:23:02.367Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/equality-operator/</loc>
-        <lastmod>2017-10-02T19:23:02.367Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/identity-operator/</loc>
-        <lastmod>2017-10-02T19:23:02.367Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git/</loc>
-        <lastmod>2017-10-02T22:25:48.181Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/version-control/</loc>
-        <lastmod>2017-10-02T22:25:48.181Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/overwrite/</loc>
-        <lastmod>2017-10-02T22:25:48.181Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git-pull/</loc>
-        <lastmod>2017-10-02T22:25:48.181Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/git-fetch/</loc>
-        <lastmod>2017-10-02T22:25:48.181Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/directory/</loc>
-        <lastmod>2017-10-03T21:15:55.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/object/</loc>
-        <lastmod>2017-10-10T14:19:17.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/properties/</loc>
-        <lastmod>2017-10-10T14:19:17.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/python/</loc>
-        <lastmod>2017-10-11T14:31:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/string/</loc>
-        <lastmod>2017-10-11T14:31:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/substring/</loc>
-        <lastmod>2017-10-11T14:31:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/contains/</loc>
-        <lastmod>2017-10-11T14:31:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/json/</loc>
-        <lastmod>2017-10-11T14:35:27.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/parsing/</loc>
-        <lastmod>2017-10-11T14:35:27.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/function/</loc>
-        <lastmod>2017-10-12T08:10:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/syntax/</loc>
-        <lastmod>2017-10-12T08:10:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/idioms/</loc>
-        <lastmod>2017-10-12T08:10:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/list/</loc>
-        <lastmod>2017-10-12T09:07:39.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.315Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/ios/</loc>
-        <lastmod>2017-10-12T18:47:10.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.357Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/objective-c/</loc>
-        <lastmod>2017-10-12T18:47:10.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.357Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/iphone/</loc>
-        <lastmod>2017-10-12T18:47:10.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.357Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/swift/</loc>
-        <lastmod>2017-10-12T18:47:10.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.357Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/iphone-x/</loc>
-        <lastmod>2017-10-12T18:47:10.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.357Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/object/</loc>
+        <lastmod>2017-10-14T08:17:05.364Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/properties/</loc>
+        <lastmod>2017-10-14T08:17:05.364Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/exception/</loc>
+        <lastmod>2017-10-14T08:17:05.367Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/dom/</loc>
+        <lastmod>2017-10-14T08:17:05.370Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/visibility/</loc>
+        <lastmod>2017-10-14T08:17:05.370Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/git-remote/</loc>
+        <lastmod>2017-10-14T08:17:05.374Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/version-control/</loc>
+        <lastmod>2017-10-14T08:17:05.377Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/overwrite/</loc>
+        <lastmod>2017-10-14T08:17:05.377Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/git-pull/</loc>
+        <lastmod>2017-10-14T08:17:05.377Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/git-fetch/</loc>
+        <lastmod>2017-10-14T08:17:05.377Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/directory/</loc>
+        <lastmod>2017-10-14T08:17:05.380Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/list/</loc>
+        <lastmod>2017-10-14T08:17:05.383Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/arrays/</loc>
+        <lastmod>2017-10-14T08:17:05.386Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/git-branch/</loc>
+        <lastmod>2017-10-14T08:17:05.389Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/string/</loc>
+        <lastmod>2017-10-14T08:17:05.393Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/substring/</loc>
+        <lastmod>2017-10-14T08:17:05.393Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/contains/</loc>
+        <lastmod>2017-10-14T08:17:05.393Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/string-matching/</loc>
+        <lastmod>2017-10-14T08:17:05.393Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/jquery/</loc>
+        <lastmod>2017-10-14T08:17:05.397Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/redirect/</loc>
+        <lastmod>2017-10-14T08:17:05.397Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/git-checkout/</loc>
+        <lastmod>2017-10-14T08:17:05.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/r/</loc>
-        <lastmod>2017-10-13T08:05:42.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.439Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/dataframe/</loc>
-        <lastmod>2017-10-13T08:05:42.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.439Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/r-faq/</loc>
-        <lastmod>2017-10-13T08:05:42.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.439Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/sorting/</loc>
-        <lastmod>2017-10-13T08:05:42.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.439Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://somatome.github.io/tags/javascript/</loc>
-        <lastmod>2017-10-13T08:06:10.000Z</lastmod>
+        <loc>https://somatome.github.io/tags/git/</loc>
+        <lastmod>2017-10-14T08:17:05.471Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/git-reset/</loc>
+        <lastmod>2017-10-14T08:17:05.471Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/git-revert/</loc>
+        <lastmod>2017-10-14T08:17:05.471Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/git-rebase/</loc>
+        <lastmod>2017-10-14T08:17:05.471Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/git-commit/</loc>
+        <lastmod>2017-10-14T08:17:05.471Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/json/</loc>
+        <lastmod>2017-10-14T08:17:05.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/parsing/</loc>
+        <lastmod>2017-10-14T08:17:05.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/function/</loc>
+        <lastmod>2017-10-14T08:17:05.478Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/syntax/</loc>
+        <lastmod>2017-10-14T08:17:05.478Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/python/</loc>
+        <lastmod>2017-10-14T08:17:05.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/idioms/</loc>
+        <lastmod>2017-10-14T08:17:05.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/module/</loc>
+        <lastmod>2017-10-14T08:17:05.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/namespaces/</loc>
+        <lastmod>2017-10-14T08:17:05.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/main/</loc>
+        <lastmod>2017-10-14T08:17:05.481Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/variables/</loc>
-        <lastmod>2017-10-13T08:06:10.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.484Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://somatome.github.io/tags/scope/</loc>
-        <lastmod>2017-10-13T08:06:10.000Z</lastmod>
+        <lastmod>2017-10-14T08:17:05.484Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/javascript/</loc>
+        <lastmod>2017-10-14T08:17:05.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/operators/</loc>
+        <lastmod>2017-10-14T08:17:05.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/equality/</loc>
+        <lastmod>2017-10-14T08:17:05.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/equality-operator/</loc>
+        <lastmod>2017-10-14T08:17:05.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/identity-operator/</loc>
+        <lastmod>2017-10-14T08:17:05.487Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

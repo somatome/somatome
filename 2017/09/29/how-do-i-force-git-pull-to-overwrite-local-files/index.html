@@ -5,21 +5,23 @@
     
     <title>git pullで強制的にローカルファイルを上書きするには？ [Git] | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="質問：git pullでローカルファイルを強制的に上書きするにはどうしたらいいの？ やろうとしてるのはこんな感じ：  チームメンバーが取り組んでいるウェブサイトのテンプレートを変更 彼らは画像ディレクトリに画像を追加(ただし、ソース管理の下に追加することは忘れてる) 彼らは僕に「後で」メールで画像を送ってくる で、僕が画像をソースコントロールの下に追加して、GitHubに他の変更と一緒に押し込んで">
+    <meta name="description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
 <meta name="keywords" content="git,version-control,overwrite,git-pull,git-fetch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git pullで強制的にローカルファイルを上書きするには？ [Git]">
 <meta property="og:url" content="https://somatome.github.io/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
-<meta property="og:description" content="質問：git pullでローカルファイルを強制的に上書きするにはどうしたらいいの？ やろうとしてるのはこんな感じ：  チームメンバーが取り組んでいるウェブサイトのテンプレートを変更 彼らは画像ディレクトリに画像を追加(ただし、ソース管理の下に追加することは忘れてる) 彼らは僕に「後で」メールで画像を送ってくる で、僕が画像をソースコントロールの下に追加して、GitHubに他の変更と一緒に押し込んで">
+<meta property="og:description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
 <meta property="og:locale" content="ja">
+<meta property="og:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
 <meta property="og:image" content="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&ASIN=4873113911&Format=_SL400_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=roosternews-22">
 <meta property="og:image" content="http://www.assoc-amazon.jp/e/ir?t=roosternews-22&l=as2&o=9&a=4873113911">
-<meta property="og:updated_time" content="2017-10-02T22:25:48.181Z">
+<meta property="og:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
+<meta property="og:updated_time" content="2017-10-14T08:17:05.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git pullで強制的にローカルファイルを上書きするには？ [Git]">
-<meta name="twitter:description" content="質問：git pullでローカルファイルを強制的に上書きするにはどうしたらいいの？ やろうとしてるのはこんな感じ：  チームメンバーが取り組んでいるウェブサイトのテンプレートを変更 彼らは画像ディレクトリに画像を追加(ただし、ソース管理の下に追加することは忘れてる) 彼らは僕に「後で」メールで画像を送ってくる で、僕が画像をソースコントロールの下に追加して、GitHubに他の変更と一緒に押し込んで">
-<meta name="twitter:image" content="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&ASIN=4873113911&Format=_SL400_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=roosternews-22">
+<meta name="twitter:description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
+<meta name="twitter:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
     
 
     
@@ -201,7 +203,8 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>git pull</code>でローカルファイルを強制的に上書きするにはどうしたらいいの？</p>
+            <p><div class="fb-like" data-href="https://somatome.github.io/somatome/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加" target="_blank" rel="external"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large" target="_blank" rel="external">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/widgets.js’;fjs.parentNode.insertBefore(js,fjs);}}(document, ‘script’, ‘twitter-wjs’);</script> </p>
+<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>git pull</code>でローカルファイルを強制的に上書きするにはどうしたらいいの？</p>
 <p>やろうとしてるのはこんな感じ：</p>
 <ul>
 <li>チームメンバーが取り組んでいるウェブサイトのテンプレートを変更</li>
@@ -251,6 +254,7 @@ ga('send', 'pageview');
 <hr>
 <hr>
 <a href="http://www.amazon.co.jp/gp/product/4873113911/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=247&creative=1211&creativeASIN=4873113911&linkCode=as2&tag=roosternews-22" target="_blank"><img border="0" src="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&ASIN=4873113911&Format=_SL400_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=roosternews-22" width="200" style="float: left; margin: 0 20px 20px 0;"></a><img src="http://www.assoc-amazon.jp/e/ir?t=roosternews-22&l=as2&o=9&a=4873113911" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;">
+<p><div class="fb-like" data-href="https://somatome.github.io/somatome/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加" target="_blank" rel="external"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large" target="_blank" rel="external">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/widgets.js’;fjs.parentNode.insertBefore(js,fjs);}}(document, ‘script’, ‘twitter-wjs’);</script> </p>
 <p>Source: <a href="https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files" target="_blank" rel="external">How do I force “git pull” to overwrite local files?</a></p>
 
         
@@ -382,7 +386,7 @@ ga('send', 'pageview');
     <p>本サイトは海外の技術系ウェブサイト、<a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>、<a href="https://www.quora.com/" target="_blank">Quora</a>、<a href="https://medium.com/" target="_blank">Medium</a>などで投稿された良質問・記事をまとめ、翻訳しているサイトです。</p>
     <p>主にWeb開発（Javascript）とデータサイエンス（Python, R）の記事を中心に紹介しています。</p>
     <p>翻訳には正確さを心掛けていますが、全文翻訳・逐次訳ではない点にご注意願います。</p>
-    <p>　</p>
+    <p>　 </p>
     <p><a href="https://twitter.com/SOmatome_jp" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @SOmatome_jp</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs'); </script> <div class="fb-like" data-href="https://somatome.github.io/somatome/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fhttps%3A%2F%2Fsomatome.github.io%2Fsomatome%2Fatom.xml'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png' alt='follow us in feedly' width='71' height='28'></a>
 <a href="https://somatome.github.io/somatome/atom.xml"><img src="images/rss_subscribe.png" alt="RSSを購読する" width="130px"></a> </p>

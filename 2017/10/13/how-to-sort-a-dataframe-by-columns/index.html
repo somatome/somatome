@@ -5,18 +5,21 @@
     
     <title>列単位でデータフレームをソートする方法は？[R] | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="質問：私は複数の列でdata.frameをソートしたいんだけど。たとえば、下のようなデータフレームで、列zを降順に、列bを昇順にソートするには？： dd &amp;lt;- data.frame(b = factor(c(&quot;Hi&quot;, &quot;Med&quot;, &quot;Hi&quot;, &quot;Low&quot;),      levels = c(&quot;Low&quot;, &quot;Med&quot;, &quot;Hi&quot;), ordered = TRUE),      x = c(&quot;">
+    <meta name="description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
 <meta name="keywords" content="r,dataframe,r-faq,sorting">
 <meta property="og:type" content="article">
 <meta property="og:title" content="列単位でデータフレームをソートする方法は？[R]">
 <meta property="og:url" content="https://somatome.github.io/2017/10/13/how-to-sort-a-dataframe-by-columns/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
-<meta property="og:description" content="質問：私は複数の列でdata.frameをソートしたいんだけど。たとえば、下のようなデータフレームで、列zを降順に、列bを昇順にソートするには？： dd &amp;lt;- data.frame(b = factor(c(&quot;Hi&quot;, &quot;Med&quot;, &quot;Hi&quot;, &quot;Low&quot;),      levels = c(&quot;Low&quot;, &quot;Med&quot;, &quot;Hi&quot;), ordered = TRUE),      x = c(&quot;">
+<meta property="og:description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-10-13T08:05:42.000Z">
+<meta property="og:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
+<meta property="og:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
+<meta property="og:updated_time" content="2017-10-14T08:17:05.439Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="列単位でデータフレームをソートする方法は？[R]">
-<meta name="twitter:description" content="質問：私は複数の列でdata.frameをソートしたいんだけど。たとえば、下のようなデータフレームで、列zを降順に、列bを昇順にソートするには？： dd &amp;lt;- data.frame(b = factor(c(&quot;Hi&quot;, &quot;Med&quot;, &quot;Hi&quot;, &quot;Low&quot;),      levels = c(&quot;Low&quot;, &quot;Med&quot;, &quot;Hi&quot;), ordered = TRUE),      x = c(&quot;">
+<meta name="twitter:description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
+<meta name="twitter:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
     
 
     
@@ -198,7 +201,8 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>私は複数の列でdata.frameをソートしたいんだけど。たとえば、下のようなデータフレームで、列<code>z</code>を降順に、列<code>b</code>を昇順にソートするには？：</p>
+            <p><div class="fb-like" data-href="https://somatome.github.io/somatome/2017/10/13/how-to-sort-a-dataframe-by-columns/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加" target="_blank" rel="external"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large" target="_blank" rel="external">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/widgets.js’;fjs.parentNode.insertBefore(js,fjs);}}(document, ‘script’, ‘twitter-wjs’);</script> </p>
+<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>私は複数の列でdata.frameをソートしたいんだけど。たとえば、下のようなデータフレームで、列<code>z</code>を降順に、列<code>b</code>を昇順にソートするには？：</p>
 <figure class="highlight r"><table><tr><td class="code"><pre><div class="line">dd &lt;- data.frame(b = factor(c(<span class="string">"Hi"</span>, <span class="string">"Med"</span>, <span class="string">"Hi"</span>, <span class="string">"Low"</span>),</div><div class="line">      levels = c(<span class="string">"Low"</span>, <span class="string">"Med"</span>, <span class="string">"Hi"</span>), ordered = <span class="literal">TRUE</span>),</div><div class="line">      x = c(<span class="string">"A"</span>, <span class="string">"D"</span>, <span class="string">"A"</span>, <span class="string">"C"</span>), y = c(<span class="number">8</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">9</span>),</div><div class="line">      z = c(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>))</div><div class="line">dd</div><div class="line">    b x y z</div><div class="line"><span class="number">1</span>  Hi A <span class="number">8</span> <span class="number">1</span></div><div class="line"><span class="number">2</span> Med D <span class="number">3</span> <span class="number">1</span></div><div class="line"><span class="number">3</span>  Hi A <span class="number">9</span> <span class="number">1</span></div><div class="line"><span class="number">4</span> Low C <span class="number">9</span> <span class="number">2</span></div></pre></td></tr></table></figure>
 <p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/84458/christopher-dubois" target="_blank" rel="external">Christopher DuBois</a> | 質問日時： 2009年8月18日 21:33 </div><br></p>
 <a id="more"></a>
@@ -232,6 +236,7 @@ ga('send', 'pageview');
 <p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1036500/ben" target="_blank" rel="external">Ben</a> | 回答日時： 2014年2月18日 21:29 </div><br></p>
 <hr>
 <hr>
+<p><div class="fb-like" data-href="https://somatome.github.io/somatome/2017/10/13/how-to-sort-a-dataframe-by-columns/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加" target="_blank" rel="external"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large" target="_blank" rel="external">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/widgets.js’;fjs.parentNode.insertBefore(js,fjs);}}(document, ‘script’, ‘twitter-wjs’);</script> </p>
 <p>Source: <a href="https://stackoverflow.com/questions/1296646/how-to-sort-a-dataframe-by-columns" target="_blank" rel="external">How to sort a dataframe by column(s)?</a></p>
 
         
@@ -363,7 +368,7 @@ ga('send', 'pageview');
     <p>本サイトは海外の技術系ウェブサイト、<a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>、<a href="https://www.quora.com/" target="_blank">Quora</a>、<a href="https://medium.com/" target="_blank">Medium</a>などで投稿された良質問・記事をまとめ、翻訳しているサイトです。</p>
     <p>主にWeb開発（Javascript）とデータサイエンス（Python, R）の記事を中心に紹介しています。</p>
     <p>翻訳には正確さを心掛けていますが、全文翻訳・逐次訳ではない点にご注意願います。</p>
-    <p>　</p>
+    <p>　 </p>
     <p><a href="https://twitter.com/SOmatome_jp" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @SOmatome_jp</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs'); </script> <div class="fb-like" data-href="https://somatome.github.io/somatome/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fhttps%3A%2F%2Fsomatome.github.io%2Fsomatome%2Fatom.xml'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png' alt='follow us in feedly' width='71' height='28'></a>
 <a href="https://somatome.github.io/somatome/atom.xml"><img src="images/rss_subscribe.png" alt="RSSを購読する" width="130px"></a> </p>

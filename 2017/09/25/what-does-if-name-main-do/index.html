@@ -5,18 +5,21 @@
     
     <title>__name__ == &#34;__main__&#34;って何やってるの？ | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="質問：if __name__ == &amp;quot;__main__&amp;quot;: ってこの場合で何やってるの？# Threading exampleimport time, threaddef myfunction(string, sleeptime, lock, *args):    while 1:        lock.acquire()        time.sleep(sleeptim">
+    <meta name="description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
 <meta name="keywords" content="python,idioms,module,namespaces,main">
 <meta property="og:type" content="article">
 <meta property="og:title" content="__name__ == &quot;__main__&quot;って何やってるの？">
 <meta property="og:url" content="https://somatome.github.io/2017/09/25/what-does-if-name-main-do/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
-<meta property="og:description" content="質問：if __name__ == &amp;quot;__main__&amp;quot;: ってこの場合で何やってるの？# Threading exampleimport time, threaddef myfunction(string, sleeptime, lock, *args):    while 1:        lock.acquire()        time.sleep(sleeptim">
+<meta property="og:description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-10-02T01:13:57.967Z">
+<meta property="og:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
+<meta property="og:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
+<meta property="og:updated_time" content="2017-10-14T08:17:05.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="__name__ == &quot;__main__&quot;って何やってるの？">
-<meta name="twitter:description" content="質問：if __name__ == &amp;quot;__main__&amp;quot;: ってこの場合で何やってるの？# Threading exampleimport time, threaddef myfunction(string, sleeptime, lock, *args):    while 1:        lock.acquire()        time.sleep(sleeptim">
+<meta name="twitter:description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
+<meta name="twitter:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
     
 
     
@@ -198,7 +201,8 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>if __name__ == &quot;__main__&quot;:</code> ってこの場合で何やってるの？<br><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Threading example</span></div><div class="line"><span class="keyword">import</span> time, thread</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunction</span><span class="params">(string, sleeptime, lock, *args)</span>:</span></div><div class="line">    <span class="keyword">while</span> <span class="number">1</span>:</div><div class="line">        lock.acquire()</div><div class="line">        time.sleep(sleeptime)</div><div class="line">        lock.release()</div><div class="line">        time.sleep(sleeptime)</div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    lock = thread.allocate_lock()</div><div class="line">    thread.start_new_thread(myfunction, (<span class="string">"Thread #: 1"</span>, <span class="number">2</span>, lock))</div><div class="line">    thread.start_new_thread(myfunction, (<span class="string">"Thread #: 2"</span>, <span class="number">2</span>, lock))</div></pre></td></tr></table></figure></p>
+            <p><div class="fb-like" data-href="https://somatome.github.io/somatome/2017/09/25/what-does-if-name-main-do/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加" target="_blank" rel="external"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large" target="_blank" rel="external">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/widgets.js’;fjs.parentNode.insertBefore(js,fjs);}}(document, ‘script’, ‘twitter-wjs’);</script> </p>
+<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>if __name__ == &quot;__main__&quot;:</code> ってこの場合で何やってるの？<br><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Threading example</span></div><div class="line"><span class="keyword">import</span> time, thread</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunction</span><span class="params">(string, sleeptime, lock, *args)</span>:</span></div><div class="line">    <span class="keyword">while</span> <span class="number">1</span>:</div><div class="line">        lock.acquire()</div><div class="line">        time.sleep(sleeptime)</div><div class="line">        lock.release()</div><div class="line">        time.sleep(sleeptime)</div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    lock = thread.allocate_lock()</div><div class="line">    thread.start_new_thread(myfunction, (<span class="string">"Thread #: 1"</span>, <span class="number">2</span>, lock))</div><div class="line">    thread.start_new_thread(myfunction, (<span class="string">"Thread #: 2"</span>, <span class="number">2</span>, lock))</div></pre></td></tr></table></figure></p>
 <p><div style="text-align: right"> By  <a href="/users/51518/devoted">Devoted</a> | 質問日時： Jan 7 ‘09 at 4:11 </div><br></p>
 <a id="more"></a>
 <hr>
@@ -215,6 +219,7 @@ ga('send', 'pageview');
 <p><div style="text-align: right"> By  <a href="/users/25050/mr-fooz">Mr Fooz</a> | 回答日時： Jan 7 ‘09 at 4:26 </div><br></p>
 <hr>
 <hr>
+<p><div class="fb-like" data-href="https://somatome.github.io/somatome/2017/09/25/what-does-if-name-main-do/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加" target="_blank" rel="external"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large" target="_blank" rel="external">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/widgets.js’;fjs.parentNode.insertBefore(js,fjs);}}(document, ‘script’, ‘twitter-wjs’);</script> </p>
 <p>Source: <a href="https://stackoverflow.com/questions/419163/what-does-if-name-main-do" target="_blank" rel="external">What does if <strong>name</strong> == “<strong>main</strong>”: do?</a></p>
 
         
@@ -346,7 +351,7 @@ ga('send', 'pageview');
     <p>本サイトは海外の技術系ウェブサイト、<a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>、<a href="https://www.quora.com/" target="_blank">Quora</a>、<a href="https://medium.com/" target="_blank">Medium</a>などで投稿された良質問・記事をまとめ、翻訳しているサイトです。</p>
     <p>主にWeb開発（Javascript）とデータサイエンス（Python, R）の記事を中心に紹介しています。</p>
     <p>翻訳には正確さを心掛けていますが、全文翻訳・逐次訳ではない点にご注意願います。</p>
-    <p>　</p>
+    <p>　 </p>
     <p><a href="https://twitter.com/SOmatome_jp" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @SOmatome_jp</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs'); </script> <div class="fb-like" data-href="https://somatome.github.io/somatome/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fhttps%3A%2F%2Fsomatome.github.io%2Fsomatome%2Fatom.xml'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png' alt='follow us in feedly' width='71' height='28'></a>
 <a href="https://somatome.github.io/somatome/atom.xml"><img src="images/rss_subscribe.png" alt="RSSを購読する" width="130px"></a> </p>
