@@ -7,16 +7,8 @@
     </url>
 
     <url>
-        <loc>https://somatome.github.io/2017/09/01/about/</loc>
-        <lastmod>2017-10-14T10:55:05.475Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/</loc>
-        <lastmod>2017-10-14T08:17:05.487Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.675Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,7 +16,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/10/13/what-is-the-scope-of-variables-in-javascript/</loc>
-        <lastmod>2017-10-14T08:17:05.484Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.673Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -32,7 +24,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/25/what-does-if-name-main-do/</loc>
-        <lastmod>2017-10-14T08:17:05.481Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.670Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -40,7 +32,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/10/12/var-functionname-function-vs-function-functionname/</loc>
-        <lastmod>2017-10-14T08:17:05.478Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.667Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -48,7 +40,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/10/11/parse-json-in-javascript/</loc>
-        <lastmod>2017-10-14T08:17:05.475Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.663Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -56,7 +48,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/24/how-to-undo-the-last-commits-in-git/</loc>
-        <lastmod>2017-10-14T08:17:05.471Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.661Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -64,7 +56,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/10/13/how-to-sort-a-dataframe-by-columns/</loc>
-        <lastmod>2017-10-14T08:17:05.439Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.632Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -72,7 +64,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/</loc>
-        <lastmod>2017-10-14T08:17:05.435Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.629Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -80,7 +72,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/24/how-to-redirect-to-another-webpage/</loc>
-        <lastmod>2017-10-14T08:17:05.397Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.596Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -88,7 +80,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/</loc>
-        <lastmod>2017-10-14T08:17:05.393Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.592Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -96,7 +88,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/26/how-do-i-rename-a-local-git-branch/</loc>
-        <lastmod>2017-10-14T08:17:05.389Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.589Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -104,7 +96,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/</loc>
-        <lastmod>2017-10-14T08:17:05.386Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.586Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -112,7 +104,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/10/12/how-do-i-make-a-list-of-data-frames/</loc>
-        <lastmod>2017-10-14T08:17:05.383Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.582Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -120,7 +112,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/25/how-do-i-list-all-files-of-a-directory/</loc>
-        <lastmod>2017-10-14T08:17:05.380Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.578Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -128,7 +120,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/</loc>
-        <lastmod>2017-10-14T08:17:05.377Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.575Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -136,7 +128,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/25/how-do-i-delete-a-git-branch-both-locally-and-remotely/</loc>
-        <lastmod>2017-10-14T08:17:05.374Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.542Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -144,7 +136,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/</loc>
-        <lastmod>2017-10-14T08:17:05.370Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.539Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -152,7 +144,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/</loc>
-        <lastmod>2017-10-14T08:17:05.367Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.507Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -160,7 +152,7 @@
 
     <url>
         <loc>https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/</loc>
-        <lastmod>2017-10-14T08:17:05.364Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.504Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -168,7 +160,63 @@
 
     <url>
         <loc>https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/</loc>
-        <lastmod>2017-10-14T08:17:05.361Z</lastmod>
+        <lastmod>2017-10-14T11:23:54.501Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/2017/10/10/create-a-data-frame-of-unequal-lengths/</loc>
+        <lastmod>2017-10-14T11:23:54.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/2017/09/29/can-comments-be-used-in-json/</loc>
+        <lastmod>2017-10-14T11:23:54.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/2017/09/25/calling-an-external-command-in-python/</loc>
+        <lastmod>2017-10-14T11:23:54.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/2017/09/25/best-way-to-check-if-a-list-is-empty/</loc>
+        <lastmod>2017-10-14T11:23:54.482Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/2017/09/25/append-vs-extend/</loc>
+        <lastmod>2017-10-14T11:23:54.479Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/2017/09/25/accessing-the-index-in-python-for-loops/</loc>
+        <lastmod>2017-10-14T11:23:54.447Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/2017/09/01/about/</loc>
+        <lastmod>2017-10-14T10:55:05.475Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -183,56 +231,8 @@
     </url>
 
     <url>
-        <loc>https://somatome.github.io/2017/10/10/create-a-data-frame-of-unequal-lengths/</loc>
-        <lastmod>2017-10-14T08:17:05.354Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://somatome.github.io/2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/</loc>
         <lastmod>2017-10-14T08:17:05.351Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/2017/09/29/can-comments-be-used-in-json/</loc>
-        <lastmod>2017-10-14T08:17:05.315Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/2017/09/25/calling-an-external-command-in-python/</loc>
-        <lastmod>2017-10-14T08:17:05.284Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/2017/09/25/best-way-to-check-if-a-list-is-empty/</loc>
-        <lastmod>2017-10-14T08:17:05.280Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/2017/09/25/append-vs-extend/</loc>
-        <lastmod>2017-10-14T08:17:05.276Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/2017/09/25/accessing-the-index-in-python-for-loops/</loc>
-        <lastmod>2017-10-14T08:17:05.273Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
