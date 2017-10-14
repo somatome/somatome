@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://somatome.github.io/2017/09/01/about/</loc>
+        <lastmod>2017-10-14T10:55:05.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/</loc>
         <lastmod>2017-10-14T08:17:05.487Z</lastmod>
         <changefreq>weekly</changefreq>
