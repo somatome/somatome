@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://somatome.github.io/2017/10/13/how-to-sort-a-dataframe-by-columns/</loc>
+        <lastmod>2017-10-14T11:28:33.027Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/</loc>
         <lastmod>2017-10-14T11:23:54.675Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -49,14 +57,6 @@
     <url>
         <loc>https://somatome.github.io/2017/09/24/how-to-undo-the-last-commits-in-git/</loc>
         <lastmod>2017-10-14T11:23:54.661Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/2017/10/13/how-to-sort-a-dataframe-by-columns/</loc>
-        <lastmod>2017-10-14T11:23:54.632Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
