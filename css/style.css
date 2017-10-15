@@ -952,32 +952,16 @@ a.article-title:hover {
   padding: 10px 0;
 }
 .article-entry blockquote {
-  position: static;
-  font-family: Georgia, "Times New Roman", "Microsoft Yahei", serif;
-  font-size: 1.1em;
-  margin: 0 -20px;
-  padding: 10px 20px 10px 54px;
-  background: #fcfcfc;
-  border-left: 4px solid #eee;
-}
-.article-entry blockquote:before {
-  top: 20px;
-  left: 10px;
-  content: "\f10d";
-  color: #e2e2e2;
-  font-size: 32px;
-  font-family: FontAwesome;
-  text-align: center;
-  position: static;
-}
-.article-entry blockquote footer {
-  font-size: 15px;
-  margin: 1.6em 0;
-  font-family: "open sans", "Helvetica Neue", "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-}
-.article-entry blockquote footer cite:before {
-  content: "—";
-  padding: 0 0.5em;
+  font-size: 1em;
+  margin: 1.6em 0px;
+  text-align: left;
+  margin-bottom: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #fff8dc;
+  border-left: 2px solid #ffeb8e;
 }
 .article-entry .pullquote {
   text-align: left;

@@ -2,41 +2,6 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://somatome.github.io/tags/ios/</loc>
-        <lastmod>2017-10-14T08:17:05.357Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/objective-c/</loc>
-        <lastmod>2017-10-14T08:17:05.357Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/iphone/</loc>
-        <lastmod>2017-10-14T08:17:05.357Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/swift/</loc>
-        <lastmod>2017-10-14T08:17:05.357Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://somatome.github.io/tags/iphone-x/</loc>
-        <lastmod>2017-10-14T08:17:05.357Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://somatome.github.io/tags/loops/</loc>
         <lastmod>2017-10-14T11:23:54.447Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -95,6 +60,41 @@
     <url>
         <loc>https://somatome.github.io/tags/comments/</loc>
         <lastmod>2017-10-14T11:23:54.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/ios/</loc>
+        <lastmod>2017-10-14T11:23:54.498Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/objective-c/</loc>
+        <lastmod>2017-10-14T11:23:54.498Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/iphone/</loc>
+        <lastmod>2017-10-14T11:23:54.498Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/swift/</loc>
+        <lastmod>2017-10-14T11:23:54.498Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/iphone-x/</loc>
+        <lastmod>2017-10-14T11:23:54.498Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -431,6 +431,27 @@
     <url>
         <loc>https://somatome.github.io/tags/sorting/</loc>
         <lastmod>2017-10-14T11:28:33.027Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/video/</loc>
+        <lastmod>2017-10-15T00:32:55.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/english/</loc>
+        <lastmod>2017-10-15T00:32:55.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://somatome.github.io/tags/TED/</loc>
+        <lastmod>2017-10-15T00:32:55.870Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
