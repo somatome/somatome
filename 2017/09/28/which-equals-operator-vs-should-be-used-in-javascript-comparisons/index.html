@@ -5,21 +5,18 @@
     
     <title>JavaScriptでの比較で、等号演算子（== vs ===）のどっちを使うべき？ [Javascript] | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
+    <meta name="description" content="質問：JSLintを使ってて、if文の中でidSele_UNVEHtype.value.length == 0を比較する時とか、==(2つの等号)を===(3つの等号)で置き換えろ、ってサジェストが出るんだけど、==を===に置き換えるとパフォーマンス上のメリットとかってある？ 比較演算子をいっぱい使ってるので、パフォーマンスの改善は歓迎なんだけど。。。 型変換が行われない場合は、==を置き換える">
 <meta name="keywords" content="webdev,javascript,operators,equality,equality-operator,identity-operator">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScriptでの比較で、等号演算子（== vs ===）のどっちを使うべき？ [Javascript]">
 <meta property="og:url" content="https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
-<meta property="og:description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
+<meta property="og:description" content="質問：JSLintを使ってて、if文の中でidSele_UNVEHtype.value.length == 0を比較する時とか、==(2つの等号)を===(3つの等号)で置き換えろ、ってサジェストが出るんだけど、==を===に置き換えるとパフォーマンス上のメリットとかってある？ 比較演算子をいっぱい使ってるので、パフォーマンスの改善は歓迎なんだけど。。。 型変換が行われない場合は、==を置き換える">
 <meta property="og:locale" content="ja">
-<meta property="og:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
-<meta property="og:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
-<meta property="og:updated_time" content="2017-10-14T11:23:54.000Z">
+<meta property="og:updated_time" content="2017-10-16T19:34:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScriptでの比較で、等号演算子（== vs ===）のどっちを使うべき？ [Javascript]">
-<meta name="twitter:description" content="Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/">
-<meta name="twitter:image" content="https://b.st-hatena.com/images/entry-button/button-only@2x.png">
+<meta name="twitter:description" content="質問：JSLintを使ってて、if文の中でidSele_UNVEHtype.value.length == 0を比較する時とか、==(2つの等号)を===(3つの等号)で置き換えろ、ってサジェストが出るんだけど、==を===に置き換えるとパフォーマンス上のメリットとかってある？ 比較演算子をいっぱい使ってるので、パフォーマンスの改善は歓迎なんだけど。。。 型変換が行われない場合は、==を置き換える">
     
 
     
@@ -87,9 +84,9 @@ ga('send', 'pageview');
                 
                     <a class="main-nav-link" href="../../../../archives">Archives</a>
                 
-                    <a class="main-nav-link" href="/somatome/tags/webdev">Web Devevelopment</a>
-                    <a class="main-nav-link" href="/somatome/tags/datasci">Data Science</a>
-                    <a class="main-nav-link" href="/somatome/2017/09/01/about/">About</a>
+                    <a class="main-nav-link" href="/tags/webdev">Web Devevelopment</a>
+                    <a class="main-nav-link" href="/tags/datasci">Data Science</a>
+                    <a class="main-nav-link" href="/2017/09/01/about/">About</a>
             </nav>
             
             <div id="search-form-wrap">
@@ -190,10 +187,13 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
+        <div class="article-sharing">
+<div class="fb-like" data-href="https://somatome.github.io2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://somatome.github.io2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+
         
             
-            <p><div class="fb-like" data-href="https://somatome.github.io/somatome/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加" target="_blank" rel="external"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large" target="_blank" rel="external">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/widgets.js’;fjs.parentNode.insertBefore(js,fjs);}}(document, ‘script’, ‘twitter-wjs’);</script> </p>
-<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><a href="http://en.wikipedia.org/wiki/JSLint" target="_blank" rel="external">JSLint</a>を使ってて、<code>if</code>文の中で<code>idSele_UNVEHtype.value.length == 0</code>を比較する時とか、<code>==</code>(2つの等号)を<code>===</code>(3つの等号)で置き換えろ、ってサジェストが出るんだけど、<code>==</code>を<code>===</code>に置き換えるとパフォーマンス上のメリットとかってある？</p>
+            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><a href="http://en.wikipedia.org/wiki/JSLint" target="_blank" rel="external">JSLint</a>を使ってて、<code>if</code>文の中で<code>idSele_UNVEHtype.value.length == 0</code>を比較する時とか、<code>==</code>(2つの等号)を<code>===</code>(3つの等号)で置き換えろ、ってサジェストが出るんだけど、<code>==</code>を<code>===</code>に置き換えるとパフォーマンス上のメリットとかってある？</p>
 <p>比較演算子をいっぱい使ってるので、パフォーマンスの改善は歓迎なんだけど。。。</p>
 <p>型変換が行われない場合は、<code>==</code>を置き換えるメリットってある？</p>
 <p><div style="text-align: right"> By  <a href="/users/44990/bcasp">bcasp</a> | 質問日時： 2008年12月11日 14:19 </div><br></p>
@@ -231,7 +231,6 @@ ga('send', 'pageview');
 <p>一方、<strong>アイデンティティ演算子 <code>===</code>は型強制をしない</strong>、だから比較の際には値を変換しないよ。</p>
 <hr>
 <hr>
-<p><div class="fb-like" data-href="https://somatome.github.io/somatome/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加" target="_blank" rel="external"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large" target="_blank" rel="external">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?’http’:’https’;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+’://platform.twitter.com/widgets.js’;fjs.parentNode.insertBefore(js,fjs);}}(document, ‘script’, ‘twitter-wjs’);</script> </p>
 <p>Source: <a href="https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons" target="_blank" rel="external">Which equals operator (== vs ===) should be used in JavaScript comparisons?</a></p>
 
         
@@ -243,7 +242,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://somatome.github.io2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" data-id="cj8tvx32j001fv0g68l435ruy" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://somatome.github.io2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/" data-id="cj8vbj9lr001nysu10i2rtviu" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -351,6 +350,7 @@ ga('send', 'pageview');
 </section>
     
 
+
 </section>
             
                 
@@ -379,7 +379,25 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="../../../10/16/pandas-grep-like-function/" class="title">Pandasでgrepのような機能 [Python]</a></p>
+                            <p class="item-title"><a href="../../../10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2017-10-17T08:00:01.848Z" itemprop="datePublished">2017-10-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="../../../10/17/using-global-variables-in-a-function-other-than-the-one-that-created-them/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2017-10-17T08:00:01.840Z" itemprop="datePublished">2017-10-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="../../../10/16/jquery-ajax-file-upload/" class="title">jQuery Ajaxファイルアップロード [Javascript]</a></p>
                             <p class="item-date"><time datetime="2017-10-16T08:00:01.000Z" itemprop="datePublished">2017-10-16</time></p>
                         </div>
                     </li>
@@ -388,7 +406,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="../../../10/16/jquery-ajax-file-upload/" class="title">jQuery Ajaxファイルアップロード [Javascript] [Jquery] [Ajax] [Post] [File-upload]</a></p>
+                            <p class="item-title"><a href="../../../10/16/pandas-grep-like-function/" class="title">Pandasでgrepのような機能 [Python]</a></p>
                             <p class="item-date"><time datetime="2017-10-16T08:00:01.000Z" itemprop="datePublished">2017-10-16</time></p>
                         </div>
                     </li>
@@ -399,24 +417,6 @@ ga('send', 'pageview');
                             <p class="item-category"></p>
                             <p class="item-title"><a href="../../../10/14/ted-talks-programming-everyone-must-watch-1/" class="title">プログラマーが見るべき20のTEDトーク(1)　12歳のアプリ開発者 [Video]</a></p>
                             <p class="item-date"><time datetime="2017-10-14T20:40:59.000Z" itemprop="datePublished">2017-10-14</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="../../../10/13/what-is-the-scope-of-variables-in-javascript/" class="title">JavaScriptの変数のスコープって？ [Javascript]</a></p>
-                            <p class="item-date"><time datetime="2017-10-13T08:00:01.000Z" itemprop="datePublished">2017-10-13</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="../../../10/13/how-to-sort-a-dataframe-by-columns/" class="title">列単位でデータフレームをソートする方法は？[R]</a></p>
-                            <p class="item-date"><time datetime="2017-10-13T08:00:01.000Z" itemprop="datePublished">2017-10-13</time></p>
                         </div>
                     </li>
                 
@@ -440,7 +440,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">アーカイブ</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/10/">10月 2017</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/09/">9月 2017</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/10/">10月 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/09/">9月 2017</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 
