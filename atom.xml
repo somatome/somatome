@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://somatome.github.io/"/>
-  <updated>2017-10-17T08:00:01.684Z</updated>
-  <id>https://somatome.github.io/</id>
+  <link href="https://so-matome.net/"/>
+  <updated>2017-10-17T12:45:12.914Z</updated>
+  <id>https://so-matome.net/</id>
   
   <author>
     <name>John Doe</name>
@@ -17,66 +17,61 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://somatome.github.io/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/"/>
-    <id>https://somatome.github.io/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/</id>
-    <published>2017-10-17T08:00:01.848Z</published>
-    <updated>2017-10-17T08:00:01.684Z</updated>
+    <title>JavaScriptは参照渡しpass-by-value言語か値渡しpass-by-reference言語か [Javascript]</title>
+    <link href="https://so-matome.net/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/"/>
+    <id>https://so-matome.net/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/</id>
+    <published>2017-10-17T08:00:01.000Z</published>
+    <updated>2017-10-17T12:45:12.914Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>date: 2017-10-17 09:00:01</p><p>tags:</p><ul><li>javascript</li><li>pass-by-reference</li><li>pass-by-value<br>title: JavaScriptは参照渡しpass-by-value言語か値渡しpass-by-reference言語か [Javascript]</li></ul><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>プリミティブ型(Number、Stringなど)は値によって渡されるけど、でもObjectは決まってない、なぜなら値渡し(オブジェクトを保持する変数が実際にはオブジェクトへの参照である場合)にも参照渡し(あるオブジェクトへの変数がそのオブジェクト自体を保持している時)の療法があるから。</p><p>あと、あんまり重要じゃないけど、引数を渡す慣習的なやり方の正しい方法ってある？あと、これに関するセマンティクスが何でべきか定義してるようなJavaScriptの仕様を抜粋したものとかって無いかな？？</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/3219/danail-nachev" target="_blank" rel="external">Danail Nachev</a> | 質問日時： 2009年2月5日 21:23 </div><br></p><a id="more"></a><p>–</p><p>–</p><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>これはJavascriptで面白い問題だよね。こんな例を考えてみよう：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeStuff</span>(<span class="params">a, b, c</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">  a = a * <span class="number">10</span>;</div><div class="line">  b.item = <span class="string">"changed"</span>;</div><div class="line">  c = &#123;<span class="attr">item</span>: <span class="string">"changed"</span>&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"><span class="keyword">var</span> obj2 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"></div><div class="line">changeStuff(num, obj1, obj2);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num);</div><div class="line"><span class="built_in">console</span>.log(obj1.item);    </div><div class="line"><span class="built_in">console</span>.log(obj2.item);</div></pre></td></tr></table></figure><p>これは次のような出力をする：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="number">10</span></div><div class="line">changed</div><div class="line">unchanged</div></pre></td></tr></table></figure><p>In practical terms, this means that if you change the parameter itself (as with num and obj2), that won’t affect the item that was fed into the parameter.<br>But if you change the INTERNALS of the parameter, that will propagate back up (as with obj1).</p><p>もし純粋な値渡しでだった場合、 <code>obj1.item</code>を変更することは関数の外では<code>obj1</code>への影響は全く無い。<br>もし参照渡しだった場合、話が変わってくる。 <code>num</code>は<code>100</code>、 <code>obj2.item</code>は<code>changed</code>になる。</p><p>そうじゃなくて、考える状況は渡されたアイテムが値渡しであって、でも値渡しされるアイテムそれ自身は参照になってる状況だ。</p><p>技術的には、これは<a href="http://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing" target="_blank" rel="external">call-by-sharing</a>って呼ばれてる。</p><p>実際には、(<code>num</code>と<code>obj2</code>のように)パラメータ自体を変更した場合、それはパラメータに渡されるアイテム自身には影響を与えない。でも、(<code>obj1</code>のように)パラメータの<strong>内部</strong>を変更すると、その影響は（<code>obj1</code>に）伝わっていく。</p><p>–</p><p>–</p><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>It’s always pass by value, but for objects the value of the variable is a reference.  Because of this, when you pass an object and change its members, those changes persist outside of the function.  This makes it look like pass by reference.  But if you actually change the value of the object variable you will see that the change does not persist, proving it’s really pass by value.<br>Example:</p><p>基本常に値渡しだけど、オブジェクトの場合は変数の値は参照になってる。だから、オブジェクトを渡してそのメンバーを変更すると、その変更は関数の外でも引き継がれる。<br>これは、参照渡し<em>のように見える</em>。でも、実際にオブジェクト変数の値を変更すると変化が引き継がれないことがわかるので、それが本当に値渡しであることの証明になってる。</p><p>例：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeObject</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  x = &#123;<span class="attr">member</span>:<span class="string">"bar"</span>&#125;;</div><div class="line">  alert(<span class="string">"in changeObject: "</span> + x.member);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeMember</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  x.member = <span class="string">"bar"</span>;</div><div class="line">  alert(<span class="string">"in changeMember: "</span> + x.member);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> x = &#123;<span class="attr">member</span>:<span class="string">"foo"</span>&#125;;</div><div class="line"></div><div class="line">alert(<span class="string">"before changeObject: "</span> + x.member);</div><div class="line">changeObject(x);</div><div class="line">alert(<span class="string">"after changeObject: "</span> + x.member); <span class="comment">/*変更は引き継がない */</span></div><div class="line"></div><div class="line">alert(<span class="string">"before changeMember: "</span> + x.member);</div><div class="line">changeMember(x);</div><div class="line">alert(<span class="string">"after changeMember: "</span> + x.member); <span class="comment">/* 変更は引き継ぐ */</span></div></pre></td></tr></table></figure><p>出力：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">before changeObject: foo</div><div class="line"><span class="keyword">in</span> changeObject: bar</div><div class="line">after changeObject: foo</div><div class="line"></div><div class="line">before changeMember: foo</div><div class="line"><span class="keyword">in</span> changeMember: bar</div><div class="line">after changeMember: bar</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/254364/tim-goodman" target="_blank" rel="external">Tim Goodman</a> | 回答日時： 2011年3月15日 16:38 </div><br></p><p>–</p><p>–</p><p>Source: <a href="https://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language" target="_blank" rel="external">Is JavaScript a pass-by-reference or pass-by-value language?</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>プリミティブ型(Number、Stringなど)は値によって渡されるけど、でもObjectは決まってない、なぜなら値渡し(オブジェクトを保持する変数が実際にはオブジェクトへの参照である場合)にも参照渡し(あるオブジェクトへの変数がそのオブジェクト自体を保持している時)の療法があるから。</p><p>あと、あんまり重要じゃないけど、引数を渡す慣習的なやり方の正しい方法ってある？あと、これに関するセマンティクスが何でべきか定義してるようなJavaScriptの仕様を抜粋したものとかって無いかな？？</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/3219/danail-nachev" target="_blank" rel="external">Danail Nachev</a> | 質問日時： 2009年2月5日 21:23 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>これはJavascriptで面白い問題だよね。こんな例を考えてみよう：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeStuff</span>(<span class="params">a, b, c</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">  a = a * <span class="number">10</span>;</div><div class="line">  b.item = <span class="string">"changed"</span>;</div><div class="line">  c = &#123;<span class="attr">item</span>: <span class="string">"changed"</span>&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"><span class="keyword">var</span> obj2 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"></div><div class="line">changeStuff(num, obj1, obj2);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num);</div><div class="line"><span class="built_in">console</span>.log(obj1.item);    </div><div class="line"><span class="built_in">console</span>.log(obj2.item);</div></pre></td></tr></table></figure><p>これは次のような出力をする：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="number">10</span></div><div class="line">changed</div><div class="line">unchanged</div></pre></td></tr></table></figure><p>もし純粋な値渡しでだった場合、 <code>obj1.item</code>を変更することは関数の外では<code>obj1</code>への影響は全く無い。<br>もし参照渡しだった場合、話が変わってくる。 <code>num</code>は<code>100</code>、 <code>obj2.item</code>は<code>changed</code>になる。</p><p>そうじゃなくて、考える状況は渡されたアイテムが値渡しであって、でも値渡しされるアイテムそれ自身は参照になってる状況だ。</p><p>技術的には、これは<a href="http://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing" target="_blank" rel="external">call-by-sharing</a>って呼ばれてる。</p><p>実際には、(<code>num</code>と<code>obj2</code>のように)パラメータ自体を変更した場合、それはパラメータに渡されるアイテム自身には影響を与えない。でも、(<code>obj1</code>のように)パラメータの<strong>内部</strong>を変更すると、その影響は（<code>obj1</code>に）伝わっていく。</p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>基本常に値渡しだけど、オブジェクトの場合は変数の値は参照になってる。だから、オブジェクトを渡してそのメンバーを変更すると、その変更は関数の外でも引き継がれる。<br>これは、参照渡し<em>のように見える</em>。でも、実際にオブジェクト変数の値を変更すると変化が引き継がれないことがわかるので、それが本当に値渡しであることの証明になってる。</p><p>例：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeObject</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  x = &#123;<span class="attr">member</span>:<span class="string">"bar"</span>&#125;;</div><div class="line">  alert(<span class="string">"in changeObject: "</span> + x.member);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeMember</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  x.member = <span class="string">"bar"</span>;</div><div class="line">  alert(<span class="string">"in changeMember: "</span> + x.member);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> x = &#123;<span class="attr">member</span>:<span class="string">"foo"</span>&#125;;</div><div class="line"></div><div class="line">alert(<span class="string">"before changeObject: "</span> + x.member);</div><div class="line">changeObject(x);</div><div class="line">alert(<span class="string">"after changeObject: "</span> + x.member); <span class="comment">/*変更は引き継がない */</span></div><div class="line"></div><div class="line">alert(<span class="string">"before changeMember: "</span> + x.member);</div><div class="line">changeMember(x);</div><div class="line">alert(<span class="string">"after changeMember: "</span> + x.member); <span class="comment">/* 変更は引き継ぐ */</span></div></pre></td></tr></table></figure><p>出力：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">before changeObject: foo</div><div class="line"><span class="keyword">in</span> changeObject: bar</div><div class="line">after changeObject: foo</div><div class="line"></div><div class="line">before changeMember: foo</div><div class="line"><span class="keyword">in</span> changeMember: bar</div><div class="line">after changeMember: bar</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/254364/tim-goodman" target="_blank" rel="external">Tim Goodman</a> | 回答日時： 2011年3月15日 16:38 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language" target="_blank" rel="external">Is JavaScript a pass-by-reference or pass-by-value language?</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;date: 2017-10-17 09:00:01&lt;/p&gt;
-&lt;p&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;javascript&lt;/li&gt;
-&lt;li&gt;pass-by-reference&lt;/li&gt;
-&lt;li&gt;pass-by-value&lt;br&gt;title: JavaScriptは参照渡しpass-by-value言語か値渡しpass-by-reference言語か [Javascript]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;プリミティブ型(Number、Stringなど)は値によって渡されるけど、でもObjectは決まってない、なぜなら値渡し(オブジェクトを保持する変数が実際にはオブジェクトへの参照である場合)にも参照渡し(あるオブジェクトへの変数がそのオブジェクト自体を保持している時)の療法があるから。&lt;/p&gt;
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;プリミティブ型(Number、Stringなど)は値によって渡されるけど、でもObjectは決まってない、なぜなら値渡し(オブジェクトを保持する変数が実際にはオブジェクトへの参照である場合)にも参照渡し(あるオブジェクトへの変数がそのオブジェクト自体を保持している時)の療法があるから。&lt;/p&gt;
 &lt;p&gt;あと、あんまり重要じゃないけど、引数を渡す慣習的なやり方の正しい方法ってある？あと、これに関するセマンティクスが何でべきか定義してるようなJavaScriptの仕様を抜粋したものとかって無いかな？？&lt;/p&gt;
 &lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/3219/danail-nachev&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Danail Nachev&lt;/a&gt; | 質問日時： 2009年2月5日 21:23 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
     
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
+    
+      <category term="pass-by-reference" scheme="https://so-matome.net/tags/pass-by-reference/"/>
+    
+      <category term="pass-by-value" scheme="https://so-matome.net/tags/pass-by-value/"/>
+    
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://somatome.github.io/2017/10/17/using-global-variables-in-a-function-other-than-the-one-that-created-them/"/>
-    <id>https://somatome.github.io/2017/10/17/using-global-variables-in-a-function-other-than-the-one-that-created-them/</id>
-    <published>2017-10-17T08:00:01.840Z</published>
-    <updated>2017-10-17T08:00:01.640Z</updated>
+    <title>グローバル変数を作成した関数以外の関数で使用する [Python]</title>
+    <link href="https://so-matome.net/2017/10/17/using-global-variables-in-a-function-other-than-the-one-that-created-them/"/>
+    <id>https://so-matome.net/2017/10/17/using-global-variables-in-a-function-other-than-the-one-that-created-them/</id>
+    <published>2017-10-17T08:00:01.000Z</published>
+    <updated>2017-10-17T12:44:03.000Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>date: 2017-10-17 09:00:01</p><p>tags:</p><ul><li>python</li><li>global-variables</li><li>scope<br>title: グローバル変数を作成した関数以外の関数で使用する [Python]</li></ul><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>If I create a global variable in one function, how can I use that variable in another function?<br>Do I need to store the global variable in a local variable of the function which needs its access?</p><p>1つの関数で作成したグローバル変数って、他の関数の中で使える？</p><p>その場合、グローバル変数をそれにアクセスする必要のある関数の中のローカル変数に格納する必要とかがあるのかな？</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/46646/user46646" target="_blank" rel="external">user46646</a> | 質問日時： 2009年1月8日 5:45 </div><br></p><a id="more"></a><p>–</p><p>–</p><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>他の関数でグローバル変数を使用するには、それをアサインする各関数の中で<code>global</code>と宣言すればいいよ。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">globvar = <span class="number">0</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_globvar_to_one</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">global</span> globvar    <span class="comment"># globvarのグローバルコピーを変更する必要があったので</span></div><div class="line">    globvar = <span class="number">1</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_globvar</span><span class="params">()</span>:</span></div><div class="line">    print(globvar)     <span class="comment"># globvarの値を読み込むためのグローバルとしての宣言は不要</span></div><div class="line"></div><div class="line">set_globvar_to_one()</div><div class="line">print_globvar()       <span class="comment"># １を出力</span></div></pre></td></tr></table></figure><p>I imagine the reason for it is that, since global variables are so dangerous, Python wants to make sure that you really know that’s what you’re playing with by explicitly requiring the global keyword.<br>See other answers if you want to share a global variable across modules.</p><p>こうする理由は、グローバル変数が非常に危険だから、Pythonは明示的に明示的に <code>global</code>キーワードを必要とさせることでそのこと（＝危険であるということ）を確認させてるんだと想像してる。</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/5536/paul-stephenson" target="_blank" rel="external">Paul Stephenson</a> | 回答日時： 2009年1月8日 8:39 </div><br></p><p>–</p><p>–</p><p>Source: <a href="https://stackoverflow.com/questions/423379/using-global-variables-in-a-function-other-than-the-one-that-created-them" target="_blank" rel="external">Using global variables in a function other than the one that created them</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>1つの関数で作成したグローバル変数って、他の関数の中で使える？</p><p>その場合、グローバル変数をそれにアクセスする必要のある関数の中のローカル変数に格納する必要とかがあるのかな？</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/46646/user46646" target="_blank" rel="external">user46646</a> | 質問日時： 2009年1月8日 5:45 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>他の関数でグローバル変数を使用するには、それをアサインする各関数の中で<code>global</code>と宣言すればいいよ。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">globvar = <span class="number">0</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_globvar_to_one</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">global</span> globvar    <span class="comment"># globvarのグローバルコピーを変更する必要があったので</span></div><div class="line">    globvar = <span class="number">1</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_globvar</span><span class="params">()</span>:</span></div><div class="line">    print(globvar)     <span class="comment"># globvarの値を読み込むためのグローバルとしての宣言は不要</span></div><div class="line"></div><div class="line">set_globvar_to_one()</div><div class="line">print_globvar()       <span class="comment"># １を出力</span></div></pre></td></tr></table></figure><p>こうする理由は、グローバル変数が非常に危険だから、Pythonは明示的に明示的に <code>global</code>キーワードを必要とさせることでそのこと（＝危険であるということ）を確認させてるんだと想像してる。</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/5536/paul-stephenson" target="_blank" rel="external">Paul Stephenson</a> | 回答日時： 2009年1月8日 8:39 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/423379/using-global-variables-in-a-function-other-than-the-one-that-created-them" target="_blank" rel="external">Using global variables in a function other than the one that created them</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;date: 2017-10-17 09:00:01&lt;/p&gt;
-&lt;p&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;python&lt;/li&gt;
-&lt;li&gt;global-variables&lt;/li&gt;
-&lt;li&gt;scope&lt;br&gt;title: グローバル変数を作成した関数以外の関数で使用する [Python]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;If I create a global variable in one function, how can I use that variable in another function?&lt;br&gt;Do I need to store the global variable in a local variable of the function which needs its access?&lt;/p&gt;
-&lt;p&gt;1つの関数で作成したグローバル変数って、他の関数の中で使える？&lt;/p&gt;
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;1つの関数で作成したグローバル変数って、他の関数の中で使える？&lt;/p&gt;
 &lt;p&gt;その場合、グローバル変数をそれにアクセスする必要のある関数の中のローカル変数に格納する必要とかがあるのかな？&lt;/p&gt;
 &lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/46646/user46646&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;user46646&lt;/a&gt; | 質問日時： 2009年1月8日 5:45 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
     
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
+    
+      <category term="scope" scheme="https://so-matome.net/tags/scope/"/>
+    
+      <category term="global-variables" scheme="https://so-matome.net/tags/global-variables/"/>
+    
   </entry>
   
   <entry>
     <title>jQuery Ajaxファイルアップロード [Javascript]</title>
-    <link href="https://somatome.github.io/2017/10/16/jquery-ajax-file-upload/"/>
-    <id>https://somatome.github.io/2017/10/16/jquery-ajax-file-upload/</id>
+    <link href="https://so-matome.net/2017/10/16/jquery-ajax-file-upload/"/>
+    <id>https://so-matome.net/2017/10/16/jquery-ajax-file-upload/</id>
     <published>2017-10-16T08:00:01.000Z</published>
     <updated>2017-10-16T18:47:53.000Z</updated>
     
@@ -93,22 +88,22 @@
     </summary>
     
     
-      <category term="javascript" scheme="https://somatome.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
-      <category term="jquery" scheme="https://somatome.github.io/tags/jquery/"/>
+      <category term="jquery" scheme="https://so-matome.net/tags/jquery/"/>
     
-      <category term="ajax" scheme="https://somatome.github.io/tags/ajax/"/>
+      <category term="ajax" scheme="https://so-matome.net/tags/ajax/"/>
     
-      <category term="post" scheme="https://somatome.github.io/tags/post/"/>
+      <category term="post" scheme="https://so-matome.net/tags/post/"/>
     
-      <category term="file-upload" scheme="https://somatome.github.io/tags/file-upload/"/>
+      <category term="file-upload" scheme="https://so-matome.net/tags/file-upload/"/>
     
   </entry>
   
   <entry>
     <title>Pandasでgrepのような機能 [Python]</title>
-    <link href="https://somatome.github.io/2017/10/16/pandas-grep-like-function/"/>
-    <id>https://somatome.github.io/2017/10/16/pandas-grep-like-function/</id>
+    <link href="https://so-matome.net/2017/10/16/pandas-grep-like-function/"/>
+    <id>https://so-matome.net/2017/10/16/pandas-grep-like-function/</id>
     <published>2017-10-16T08:00:01.000Z</published>
     <updated>2017-10-16T08:00:01.820Z</updated>
     
@@ -122,18 +117,18 @@
     </summary>
     
     
-      <category term="grep" scheme="https://somatome.github.io/tags/grep/"/>
+      <category term="grep" scheme="https://so-matome.net/tags/grep/"/>
     
-      <category term="row" scheme="https://somatome.github.io/tags/row/"/>
+      <category term="row" scheme="https://so-matome.net/tags/row/"/>
     
-      <category term="pandas" scheme="https://somatome.github.io/tags/pandas/"/>
+      <category term="pandas" scheme="https://so-matome.net/tags/pandas/"/>
     
   </entry>
   
   <entry>
     <title>プログラマーが見るべき20のTEDトーク(1)　12歳のアプリ開発者 [Video]</title>
-    <link href="https://somatome.github.io/2017/10/14/ted-talks-programming-everyone-must-watch-1/"/>
-    <id>https://somatome.github.io/2017/10/14/ted-talks-programming-everyone-must-watch-1/</id>
+    <link href="https://so-matome.net/2017/10/14/ted-talks-programming-everyone-must-watch-1/"/>
+    <id>https://so-matome.net/2017/10/14/ted-talks-programming-everyone-must-watch-1/</id>
     <published>2017-10-14T20:40:59.000Z</published>
     <updated>2017-10-16T19:34:38.000Z</updated>
     
@@ -153,18 +148,18 @@
     </summary>
     
     
-      <category term="video" scheme="https://somatome.github.io/tags/video/"/>
+      <category term="video" scheme="https://so-matome.net/tags/video/"/>
     
-      <category term="english" scheme="https://somatome.github.io/tags/english/"/>
+      <category term="english" scheme="https://so-matome.net/tags/english/"/>
     
-      <category term="TED" scheme="https://somatome.github.io/tags/TED/"/>
+      <category term="TED" scheme="https://so-matome.net/tags/TED/"/>
     
   </entry>
   
   <entry>
     <title>列単位でデータフレームをソートする方法は？[R]</title>
-    <link href="https://somatome.github.io/2017/10/13/how-to-sort-a-dataframe-by-columns/"/>
-    <id>https://somatome.github.io/2017/10/13/how-to-sort-a-dataframe-by-columns/</id>
+    <link href="https://so-matome.net/2017/10/13/how-to-sort-a-dataframe-by-columns/"/>
+    <id>https://so-matome.net/2017/10/13/how-to-sort-a-dataframe-by-columns/</id>
     <published>2017-10-13T08:00:01.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -179,22 +174,22 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="r" scheme="https://somatome.github.io/tags/r/"/>
+      <category term="r" scheme="https://so-matome.net/tags/r/"/>
     
-      <category term="dataframe" scheme="https://somatome.github.io/tags/dataframe/"/>
+      <category term="dataframe" scheme="https://so-matome.net/tags/dataframe/"/>
     
-      <category term="r-faq" scheme="https://somatome.github.io/tags/r-faq/"/>
+      <category term="r-faq" scheme="https://so-matome.net/tags/r-faq/"/>
     
-      <category term="sorting" scheme="https://somatome.github.io/tags/sorting/"/>
+      <category term="sorting" scheme="https://so-matome.net/tags/sorting/"/>
     
   </entry>
   
   <entry>
     <title>JavaScriptの変数のスコープって？ [Javascript]</title>
-    <link href="https://somatome.github.io/2017/10/13/what-is-the-scope-of-variables-in-javascript/"/>
-    <id>https://somatome.github.io/2017/10/13/what-is-the-scope-of-variables-in-javascript/</id>
+    <link href="https://so-matome.net/2017/10/13/what-is-the-scope-of-variables-in-javascript/"/>
+    <id>https://so-matome.net/2017/10/13/what-is-the-scope-of-variables-in-javascript/</id>
     <published>2017-10-13T08:00:01.000Z</published>
     <updated>2017-10-16T19:34:38.000Z</updated>
     
@@ -208,20 +203,20 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="javascript" scheme="https://somatome.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
-      <category term="variables" scheme="https://somatome.github.io/tags/variables/"/>
+      <category term="variables" scheme="https://so-matome.net/tags/variables/"/>
     
-      <category term="scope" scheme="https://somatome.github.io/tags/scope/"/>
+      <category term="scope" scheme="https://so-matome.net/tags/scope/"/>
     
   </entry>
   
   <entry>
     <title>iPhone X [Webコミック]</title>
-    <link href="https://somatome.github.io/2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/"/>
-    <id>https://somatome.github.io/2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/</id>
+    <link href="https://so-matome.net/2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/"/>
+    <id>https://so-matome.net/2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/</id>
     <published>2017-10-13T00:06:14.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -241,8 +236,8 @@
   
   <entry>
     <title>var functionName = function(){} 対 function functionName(){} [Javascript]</title>
-    <link href="https://somatome.github.io/2017/10/12/var-functionname-function-vs-function-functionname/"/>
-    <id>https://somatome.github.io/2017/10/12/var-functionname-function-vs-function-functionname/</id>
+    <link href="https://so-matome.net/2017/10/12/var-functionname-function-vs-function-functionname/"/>
+    <id>https://so-matome.net/2017/10/12/var-functionname-function-vs-function-functionname/</id>
     <published>2017-10-12T08:00:01.000Z</published>
     <updated>2017-10-16T19:34:38.000Z</updated>
     
@@ -260,22 +255,22 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="javascript" scheme="https://somatome.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
-      <category term="function" scheme="https://somatome.github.io/tags/function/"/>
+      <category term="function" scheme="https://so-matome.net/tags/function/"/>
     
-      <category term="syntax" scheme="https://somatome.github.io/tags/syntax/"/>
+      <category term="syntax" scheme="https://so-matome.net/tags/syntax/"/>
     
-      <category term="idioms" scheme="https://somatome.github.io/tags/idioms/"/>
+      <category term="idioms" scheme="https://so-matome.net/tags/idioms/"/>
     
   </entry>
   
   <entry>
     <title>データフレームのリストを作成するにはどうすればいい？ [R]</title>
-    <link href="https://somatome.github.io/2017/10/12/how-do-i-make-a-list-of-data-frames/"/>
-    <id>https://somatome.github.io/2017/10/12/how-do-i-make-a-list-of-data-frames/</id>
+    <link href="https://so-matome.net/2017/10/12/how-do-i-make-a-list-of-data-frames/"/>
+    <id>https://so-matome.net/2017/10/12/how-do-i-make-a-list-of-data-frames/</id>
     <published>2017-10-12T08:00:01.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -292,22 +287,22 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="list" scheme="https://somatome.github.io/tags/list/"/>
+      <category term="list" scheme="https://so-matome.net/tags/list/"/>
     
-      <category term="r" scheme="https://somatome.github.io/tags/r/"/>
+      <category term="r" scheme="https://so-matome.net/tags/r/"/>
     
-      <category term="dataframe" scheme="https://somatome.github.io/tags/dataframe/"/>
+      <category term="dataframe" scheme="https://so-matome.net/tags/dataframe/"/>
     
-      <category term="r-faq" scheme="https://somatome.github.io/tags/r-faq/"/>
+      <category term="r-faq" scheme="https://so-matome.net/tags/r-faq/"/>
     
   </entry>
   
   <entry>
     <title>デバイスがiPhone Xであるかどうかを検出する [iOS]</title>
-    <link href="https://somatome.github.io/2017/10/11/detect-if-the-device-is-iphone-x/"/>
-    <id>https://somatome.github.io/2017/10/11/detect-if-the-device-is-iphone-x/</id>
+    <link href="https://so-matome.net/2017/10/11/detect-if-the-device-is-iphone-x/"/>
+    <id>https://so-matome.net/2017/10/11/detect-if-the-device-is-iphone-x/</id>
     <published>2017-10-11T21:55:38.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -325,22 +320,22 @@
     </summary>
     
     
-      <category term="ios" scheme="https://somatome.github.io/tags/ios/"/>
+      <category term="ios" scheme="https://so-matome.net/tags/ios/"/>
     
-      <category term="objective-c" scheme="https://somatome.github.io/tags/objective-c/"/>
+      <category term="objective-c" scheme="https://so-matome.net/tags/objective-c/"/>
     
-      <category term="iphone" scheme="https://somatome.github.io/tags/iphone/"/>
+      <category term="iphone" scheme="https://so-matome.net/tags/iphone/"/>
     
-      <category term="swift" scheme="https://somatome.github.io/tags/swift/"/>
+      <category term="swift" scheme="https://so-matome.net/tags/swift/"/>
     
-      <category term="iphone-x" scheme="https://somatome.github.io/tags/iphone-x/"/>
+      <category term="iphone-x" scheme="https://so-matome.net/tags/iphone-x/"/>
     
   </entry>
   
   <entry>
     <title>JavaScriptでJSONをパースする方法？ [Javascript]</title>
-    <link href="https://somatome.github.io/2017/10/11/parse-json-in-javascript/"/>
-    <id>https://somatome.github.io/2017/10/11/parse-json-in-javascript/</id>
+    <link href="https://so-matome.net/2017/10/11/parse-json-in-javascript/"/>
+    <id>https://so-matome.net/2017/10/11/parse-json-in-javascript/</id>
     <published>2017-10-11T08:00:01.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -356,20 +351,20 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="json" scheme="https://somatome.github.io/tags/json/"/>
+      <category term="json" scheme="https://so-matome.net/tags/json/"/>
     
-      <category term="javascript" scheme="https://somatome.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
-      <category term="parsing" scheme="https://somatome.github.io/tags/parsing/"/>
+      <category term="parsing" scheme="https://so-matome.net/tags/parsing/"/>
     
   </entry>
   
   <entry>
     <title>Pythonには部分文字列を探す文字列用の&#39;contains&#39;メソッドとかってある？ [Python]</title>
-    <link href="https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/"/>
-    <id>https://somatome.github.io/2017/10/11/does-python-have-a-string-contains-substring-method/</id>
+    <link href="https://so-matome.net/2017/10/11/does-python-have-a-string-contains-substring-method/"/>
+    <id>https://so-matome.net/2017/10/11/does-python-have-a-string-contains-substring-method/</id>
     <published>2017-10-11T08:00:01.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -384,22 +379,22 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
-      <category term="string" scheme="https://somatome.github.io/tags/string/"/>
+      <category term="string" scheme="https://so-matome.net/tags/string/"/>
     
-      <category term="substring" scheme="https://somatome.github.io/tags/substring/"/>
+      <category term="substring" scheme="https://so-matome.net/tags/substring/"/>
     
-      <category term="contains" scheme="https://somatome.github.io/tags/contains/"/>
+      <category term="contains" scheme="https://so-matome.net/tags/contains/"/>
     
   </entry>
   
   <entry>
     <title>サイズがバラバラなデータフレームを作成する [R]</title>
-    <link href="https://somatome.github.io/2017/10/10/create-a-data-frame-of-unequal-lengths/"/>
-    <id>https://somatome.github.io/2017/10/10/create-a-data-frame-of-unequal-lengths/</id>
+    <link href="https://so-matome.net/2017/10/10/create-a-data-frame-of-unequal-lengths/"/>
+    <id>https://so-matome.net/2017/10/10/create-a-data-frame-of-unequal-lengths/</id>
     <published>2017-10-10T13:59:28.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -416,18 +411,18 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="r" scheme="https://somatome.github.io/tags/r/"/>
+      <category term="r" scheme="https://so-matome.net/tags/r/"/>
     
-      <category term="dataframe" scheme="https://somatome.github.io/tags/dataframe/"/>
+      <category term="dataframe" scheme="https://so-matome.net/tags/dataframe/"/>
     
   </entry>
   
   <entry>
     <title>変数を使用してオブジェクトプロパティに動的にアクセスする方法？ [Javascript]</title>
-    <link href="https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/"/>
-    <id>https://somatome.github.io/2017/10/10/dynamically-access-object-property-using-variable/</id>
+    <link href="https://so-matome.net/2017/10/10/dynamically-access-object-property-using-variable/"/>
+    <id>https://so-matome.net/2017/10/10/dynamically-access-object-property-using-variable/</id>
     <published>2017-10-10T13:59:28.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -442,20 +437,20 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="javascript" scheme="https://somatome.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
-      <category term="object" scheme="https://somatome.github.io/tags/object/"/>
+      <category term="object" scheme="https://so-matome.net/tags/object/"/>
     
-      <category term="properties" scheme="https://somatome.github.io/tags/properties/"/>
+      <category term="properties" scheme="https://so-matome.net/tags/properties/"/>
     
   </entry>
   
   <entry>
     <title>ディレクトリが存在しない場合、どうやって作ったらいいの？ [Python]</title>
-    <link href="https://somatome.github.io/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/"/>
-    <id>https://somatome.github.io/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/</id>
+    <link href="https://so-matome.net/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/"/>
+    <id>https://so-matome.net/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/</id>
     <published>2017-09-29T20:05:53.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -473,20 +468,20 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
-      <category term="exception" scheme="https://somatome.github.io/tags/exception/"/>
+      <category term="exception" scheme="https://so-matome.net/tags/exception/"/>
     
-      <category term="directory" scheme="https://somatome.github.io/tags/directory/"/>
+      <category term="directory" scheme="https://so-matome.net/tags/directory/"/>
     
   </entry>
   
   <entry>
     <title>git pullで強制的にローカルファイルを上書きするには？ [Git]</title>
-    <link href="https://somatome.github.io/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/"/>
-    <id>https://somatome.github.io/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/</id>
+    <link href="https://so-matome.net/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/"/>
+    <id>https://so-matome.net/2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/</id>
     <published>2017-09-29T17:42:38.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -513,26 +508,26 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="git" scheme="https://somatome.github.io/tags/git/"/>
+      <category term="git" scheme="https://so-matome.net/tags/git/"/>
     
-      <category term="version-control" scheme="https://somatome.github.io/tags/version-control/"/>
+      <category term="version-control" scheme="https://so-matome.net/tags/version-control/"/>
     
-      <category term="overwrite" scheme="https://somatome.github.io/tags/overwrite/"/>
+      <category term="overwrite" scheme="https://so-matome.net/tags/overwrite/"/>
     
-      <category term="git-pull" scheme="https://somatome.github.io/tags/git-pull/"/>
+      <category term="git-pull" scheme="https://so-matome.net/tags/git-pull/"/>
     
-      <category term="git-fetch" scheme="https://somatome.github.io/tags/git-fetch/"/>
+      <category term="git-fetch" scheme="https://so-matome.net/tags/git-fetch/"/>
     
   </entry>
   
   <entry>
     <title>JavaScriptの配列から特定の要素を削除するにはどうすればいいの？ [Javascript]</title>
-    <link href="https://somatome.github.io/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/"/>
-    <id>https://somatome.github.io/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/</id>
+    <link href="https://so-matome.net/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/"/>
+    <id>https://so-matome.net/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/</id>
     <published>2017-09-28T23:38:53.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -548,18 +543,18 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="javascript" scheme="https://somatome.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
-      <category term="arrays" scheme="https://somatome.github.io/tags/arrays/"/>
+      <category term="arrays" scheme="https://so-matome.net/tags/arrays/"/>
     
   </entry>
   
   <entry>
     <title>JSONでコメントって使用できる？ [JSON]</title>
-    <link href="https://somatome.github.io/2017/09/29/can-comments-be-used-in-json/"/>
-    <id>https://somatome.github.io/2017/09/29/can-comments-be-used-in-json/</id>
+    <link href="https://so-matome.net/2017/09/29/can-comments-be-used-in-json/"/>
+    <id>https://so-matome.net/2017/09/29/can-comments-be-used-in-json/</id>
     <published>2017-09-28T23:20:46.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -573,18 +568,18 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="json" scheme="https://somatome.github.io/tags/json/"/>
+      <category term="json" scheme="https://so-matome.net/tags/json/"/>
     
-      <category term="comments" scheme="https://somatome.github.io/tags/comments/"/>
+      <category term="comments" scheme="https://so-matome.net/tags/comments/"/>
     
   </entry>
   
   <entry>
     <title>JavaScriptでの比較で、等号演算子（== vs ===）のどっちを使うべき？ [Javascript]</title>
-    <link href="https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/"/>
-    <id>https://somatome.github.io/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/</id>
+    <link href="https://so-matome.net/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/"/>
+    <id>https://so-matome.net/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/</id>
     <published>2017-09-28T22:43:32.000Z</published>
     <updated>2017-10-16T19:34:38.000Z</updated>
     
@@ -600,24 +595,24 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="javascript" scheme="https://somatome.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
-      <category term="operators" scheme="https://somatome.github.io/tags/operators/"/>
+      <category term="operators" scheme="https://so-matome.net/tags/operators/"/>
     
-      <category term="equality" scheme="https://somatome.github.io/tags/equality/"/>
+      <category term="equality" scheme="https://so-matome.net/tags/equality/"/>
     
-      <category term="equality-operator" scheme="https://somatome.github.io/tags/equality-operator/"/>
+      <category term="equality-operator" scheme="https://so-matome.net/tags/equality-operator/"/>
     
-      <category term="identity-operator" scheme="https://somatome.github.io/tags/identity-operator/"/>
+      <category term="identity-operator" scheme="https://so-matome.net/tags/identity-operator/"/>
     
   </entry>
   
   <entry>
     <title>Gitリポジトリを以前のコミットに戻すには？ [Git]</title>
-    <link href="https://somatome.github.io/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/"/>
-    <id>https://somatome.github.io/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/</id>
+    <link href="https://so-matome.net/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/"/>
+    <id>https://so-matome.net/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/</id>
     <published>2017-09-28T20:17:49.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -632,24 +627,24 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="git" scheme="https://somatome.github.io/tags/git/"/>
+      <category term="git" scheme="https://so-matome.net/tags/git/"/>
     
-      <category term="git-checkout" scheme="https://somatome.github.io/tags/git-checkout/"/>
+      <category term="git-checkout" scheme="https://so-matome.net/tags/git-checkout/"/>
     
-      <category term="git-reset" scheme="https://somatome.github.io/tags/git-reset/"/>
+      <category term="git-reset" scheme="https://so-matome.net/tags/git-reset/"/>
     
-      <category term="git-revert" scheme="https://somatome.github.io/tags/git-revert/"/>
+      <category term="git-revert" scheme="https://so-matome.net/tags/git-revert/"/>
     
   </entry>
   
   <entry>
     <title>ローカルGitブランチの名前を変更するにはどうすればいい？ [Git]</title>
-    <link href="https://somatome.github.io/2017/09/26/how-do-i-rename-a-local-git-branch/"/>
-    <id>https://somatome.github.io/2017/09/26/how-do-i-rename-a-local-git-branch/</id>
+    <link href="https://so-matome.net/2017/09/26/how-do-i-rename-a-local-git-branch/"/>
+    <id>https://so-matome.net/2017/09/26/how-do-i-rename-a-local-git-branch/</id>
     <published>2017-09-26T10:40:46.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -664,20 +659,20 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="git" scheme="https://somatome.github.io/tags/git/"/>
+      <category term="git" scheme="https://so-matome.net/tags/git/"/>
     
-      <category term="git-branch" scheme="https://somatome.github.io/tags/git-branch/"/>
+      <category term="git-branch" scheme="https://so-matome.net/tags/git-branch/"/>
     
   </entry>
   
   <entry>
     <title>Python forループのインデックスへのアクセス方法 [Python]</title>
-    <link href="https://somatome.github.io/2017/09/25/accessing-the-index-in-python-for-loops/"/>
-    <id>https://somatome.github.io/2017/09/25/accessing-the-index-in-python-for-loops/</id>
+    <link href="https://so-matome.net/2017/09/25/accessing-the-index-in-python-for-loops/"/>
+    <id>https://so-matome.net/2017/09/25/accessing-the-index-in-python-for-loops/</id>
     <published>2017-09-25T14:24:08.000Z</published>
     <updated>2017-10-16T19:34:36.000Z</updated>
     
@@ -693,20 +688,20 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
-      <category term="loops" scheme="https://somatome.github.io/tags/loops/"/>
+      <category term="loops" scheme="https://so-matome.net/tags/loops/"/>
     
-      <category term="list" scheme="https://somatome.github.io/tags/list/"/>
+      <category term="list" scheme="https://so-matome.net/tags/list/"/>
     
   </entry>
   
   <entry>
     <title>ディレクトリの全部のファイルを一覧表示するのってどうすればいい？ [Python]</title>
-    <link href="https://somatome.github.io/2017/09/25/how-do-i-list-all-files-of-a-directory/"/>
-    <id>https://somatome.github.io/2017/09/25/how-do-i-list-all-files-of-a-directory/</id>
+    <link href="https://so-matome.net/2017/09/25/how-do-i-list-all-files-of-a-directory/"/>
+    <id>https://so-matome.net/2017/09/25/how-do-i-list-all-files-of-a-directory/</id>
     <published>2017-09-25T14:23:48.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -720,18 +715,18 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
-      <category term="directory" scheme="https://somatome.github.io/tags/directory/"/>
+      <category term="directory" scheme="https://so-matome.net/tags/directory/"/>
     
   </entry>
   
   <entry>
     <title>append vs. extend [Python]</title>
-    <link href="https://somatome.github.io/2017/09/25/append-vs-extend/"/>
-    <id>https://somatome.github.io/2017/09/25/append-vs-extend/</id>
+    <link href="https://so-matome.net/2017/09/25/append-vs-extend/"/>
+    <id>https://so-matome.net/2017/09/25/append-vs-extend/</id>
     <published>2017-09-25T14:23:42.000Z</published>
     <updated>2017-10-16T19:34:36.000Z</updated>
     
@@ -745,24 +740,24 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
-      <category term="list" scheme="https://somatome.github.io/tags/list/"/>
+      <category term="list" scheme="https://so-matome.net/tags/list/"/>
     
-      <category term="data-structures" scheme="https://somatome.github.io/tags/data-structures/"/>
+      <category term="data-structures" scheme="https://so-matome.net/tags/data-structures/"/>
     
-      <category term="append" scheme="https://somatome.github.io/tags/append/"/>
+      <category term="append" scheme="https://so-matome.net/tags/append/"/>
     
-      <category term="extend" scheme="https://somatome.github.io/tags/extend/"/>
+      <category term="extend" scheme="https://so-matome.net/tags/extend/"/>
     
   </entry>
   
   <entry>
     <title>リストが空であるかどうかをチェックする最良の方法って？ [Python]</title>
-    <link href="https://somatome.github.io/2017/09/25/best-way-to-check-if-a-list-is-empty/"/>
-    <id>https://somatome.github.io/2017/09/25/best-way-to-check-if-a-list-is-empty/</id>
+    <link href="https://so-matome.net/2017/09/25/best-way-to-check-if-a-list-is-empty/"/>
+    <id>https://so-matome.net/2017/09/25/best-way-to-check-if-a-list-is-empty/</id>
     <published>2017-09-25T14:23:37.000Z</published>
     <updated>2017-10-16T19:34:36.000Z</updated>
     
@@ -777,18 +772,18 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
-      <category term="list" scheme="https://somatome.github.io/tags/list/"/>
+      <category term="list" scheme="https://so-matome.net/tags/list/"/>
     
   </entry>
   
   <entry>
     <title>Pythonで外部コマンドを呼び出す [Python]</title>
-    <link href="https://somatome.github.io/2017/09/25/calling-an-external-command-in-python/"/>
-    <id>https://somatome.github.io/2017/09/25/calling-an-external-command-in-python/</id>
+    <link href="https://so-matome.net/2017/09/25/calling-an-external-command-in-python/"/>
+    <id>https://so-matome.net/2017/09/25/calling-an-external-command-in-python/</id>
     <published>2017-09-25T14:23:15.000Z</published>
     <updated>2017-10-16T19:34:36.000Z</updated>
     
@@ -802,24 +797,24 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
-      <category term="shell" scheme="https://somatome.github.io/tags/shell/"/>
+      <category term="shell" scheme="https://so-matome.net/tags/shell/"/>
     
-      <category term="command" scheme="https://somatome.github.io/tags/command/"/>
+      <category term="command" scheme="https://so-matome.net/tags/command/"/>
     
-      <category term="subprocess" scheme="https://somatome.github.io/tags/subprocess/"/>
+      <category term="subprocess" scheme="https://so-matome.net/tags/subprocess/"/>
     
-      <category term="external" scheme="https://somatome.github.io/tags/external/"/>
+      <category term="external" scheme="https://so-matome.net/tags/external/"/>
     
   </entry>
   
   <entry>
     <title>__name__ == &quot;__main__&quot;って何やってるの？</title>
-    <link href="https://somatome.github.io/2017/09/25/what-does-if-name-main-do/"/>
-    <id>https://somatome.github.io/2017/09/25/what-does-if-name-main-do/</id>
+    <link href="https://so-matome.net/2017/09/25/what-does-if-name-main-do/"/>
+    <id>https://so-matome.net/2017/09/25/what-does-if-name-main-do/</id>
     <published>2017-09-25T14:23:09.000Z</published>
     <updated>2017-10-16T19:34:38.000Z</updated>
     
@@ -833,24 +828,24 @@
     </summary>
     
     
-      <category term="datasci" scheme="https://somatome.github.io/tags/datasci/"/>
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
     
-      <category term="python" scheme="https://somatome.github.io/tags/python/"/>
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
-      <category term="idioms" scheme="https://somatome.github.io/tags/idioms/"/>
+      <category term="idioms" scheme="https://so-matome.net/tags/idioms/"/>
     
-      <category term="module" scheme="https://somatome.github.io/tags/module/"/>
+      <category term="module" scheme="https://so-matome.net/tags/module/"/>
     
-      <category term="namespaces" scheme="https://somatome.github.io/tags/namespaces/"/>
+      <category term="namespaces" scheme="https://so-matome.net/tags/namespaces/"/>
     
-      <category term="main" scheme="https://somatome.github.io/tags/main/"/>
+      <category term="main" scheme="https://so-matome.net/tags/main/"/>
     
   </entry>
   
   <entry>
     <title>jQueryで要素が非表示になっているかどうかを確認するのってどうすればいい？？</title>
-    <link href="https://somatome.github.io/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/"/>
-    <id>https://somatome.github.io/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/</id>
+    <link href="https://so-matome.net/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/"/>
+    <id>https://so-matome.net/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/</id>
     <published>2017-09-25T05:10:14.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -864,22 +859,22 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="javascript" scheme="https://somatome.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
-      <category term="jquery" scheme="https://somatome.github.io/tags/jquery/"/>
+      <category term="jquery" scheme="https://so-matome.net/tags/jquery/"/>
     
-      <category term="dom" scheme="https://somatome.github.io/tags/dom/"/>
+      <category term="dom" scheme="https://so-matome.net/tags/dom/"/>
     
-      <category term="visibility" scheme="https://somatome.github.io/tags/visibility/"/>
+      <category term="visibility" scheme="https://so-matome.net/tags/visibility/"/>
     
   </entry>
   
   <entry>
     <title>JavaScriptである文字列に別な文字列（substring）が含まれているかどうかをチェックする方法って？</title>
-    <link href="https://somatome.github.io/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/"/>
-    <id>https://somatome.github.io/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/</id>
+    <link href="https://so-matome.net/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/"/>
+    <id>https://so-matome.net/2017/09/25/how-to-check-whether-a-string-contains-a-substring-in-javascript/</id>
     <published>2017-09-24T23:46:44.000Z</published>
     <updated>2017-10-16T19:34:37.000Z</updated>
     
@@ -892,17 +887,17 @@
     </summary>
     
     
-      <category term="webdev" scheme="https://somatome.github.io/tags/webdev/"/>
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
     
-      <category term="string" scheme="https://somatome.github.io/tags/string/"/>
+      <category term="string" scheme="https://so-matome.net/tags/string/"/>
     
-      <category term="substring" scheme="https://somatome.github.io/tags/substring/"/>
+      <category term="substring" scheme="https://so-matome.net/tags/substring/"/>
     
-      <category term="contains" scheme="https://somatome.github.io/tags/contains/"/>
+      <category term="contains" scheme="https://so-matome.net/tags/contains/"/>
     
-      <category term="javascript" scheme="https://somatome.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
-      <category term="string-matching" scheme="https://somatome.github.io/tags/string-matching/"/>
+      <category term="string-matching" scheme="https://so-matome.net/tags/string-matching/"/>
     
   </entry>
   
