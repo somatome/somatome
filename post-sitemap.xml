@@ -7,6 +7,30 @@
     </url>
 
     <url>
+        <loc>https://so-matome.net/2017/10/18/commic-2017-05-29-trapped/</loc>
+        <lastmod>2017-10-18T08:00:01.736Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/2017/10/18/why-is-using-for-in-with-array-iteration-a-bad-idea/</loc>
+        <lastmod>2017-10-18T08:00:01.720Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/2017/10/18/is-there-a-simple-way-to-delete-a-list-element-by-value/</loc>
+        <lastmod>2017-10-18T08:00:01.700Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://so-matome.net/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/</loc>
         <lastmod>2017-10-17T12:45:12.914Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -47,7 +71,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/10/13/what-is-the-scope-of-variables-in-javascript/</loc>
+        <loc>https://so-matome.net/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/</loc>
         <lastmod>2017-10-16T19:34:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -55,7 +79,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/09/28/which-equals-operator-vs-should-be-used-in-javascript-comparisons/</loc>
+        <loc>https://so-matome.net/2017/10/13/what-is-the-scope-of-variables-in-javascript/</loc>
         <lastmod>2017-10-16T19:34:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -87,7 +111,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/10/11/does-python-have-a-string-contains-substring-method/</loc>
+        <loc>https://so-matome.net/2017/10/11/detect-if-the-device-is-iphone-x/</loc>
         <lastmod>2017-10-16T19:34:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -95,7 +119,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/10/11/detect-if-the-device-is-iphone-x/</loc>
+        <loc>https://so-matome.net/2017/10/11/does-python-have-a-string-contains-substring-method/</loc>
         <lastmod>2017-10-16T19:34:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -111,7 +135,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/</loc>
+        <loc>https://so-matome.net/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/</loc>
         <lastmod>2017-10-16T19:34:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -119,7 +143,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/</loc>
+        <loc>https://so-matome.net/2017/09/25/how-do-i-check-if-an-element-is-hidden-in-jquery/</loc>
         <lastmod>2017-10-16T19:34:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -151,7 +175,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/</loc>
+        <loc>https://so-matome.net/2017/10/12/how-do-i-make-a-list-of-data-frames/</loc>
         <lastmod>2017-10-16T19:34:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -159,7 +183,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/10/12/how-do-i-make-a-list-of-data-frames/</loc>
+        <loc>https://so-matome.net/2017/09/29/how-do-i-remove-a-particular-element-from-an-array-in-javascript/</loc>
         <lastmod>2017-10-16T19:34:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -191,7 +215,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/</loc>
+        <loc>https://so-matome.net/2017/10/13/how-to-sort-a-dataframe-by-columns/</loc>
         <lastmod>2017-10-16T19:34:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -199,7 +223,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/10/13/how-to-sort-a-dataframe-by-columns/</loc>
+        <loc>https://so-matome.net/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/</loc>
         <lastmod>2017-10-16T19:34:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -239,7 +263,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/09/25/append-vs-extend/</loc>
+        <loc>https://so-matome.net/2017/09/25/best-way-to-check-if-a-list-is-empty/</loc>
         <lastmod>2017-10-16T19:34:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -247,7 +271,7 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/09/25/best-way-to-check-if-a-list-is-empty/</loc>
+        <loc>https://so-matome.net/2017/09/25/append-vs-extend/</loc>
         <lastmod>2017-10-16T19:34:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -272,7 +296,7 @@
 
     <url>
         <loc>https://so-matome.net/2017/10/16/pandas-grep-like-function/</loc>
-        <lastmod>2017-10-16T08:00:01.820Z</lastmod>
+        <lastmod>2017-10-16T08:00:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
