@@ -5,18 +5,18 @@
     
     <title>ダイナミックに作成された要素のイベントバインド [Javascript] | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="質問：I have a bit of code where I am looping through all the select boxes on a page and binding a .hover event to them to do a bit of twiddling with their width on mouse on/off.This happens on page read">
+    <meta name="description" content="質問：ページ上のすべての選択ボックスに対して.hoverイベントをバインドして、オンマウスかどうかによってその幅を少し変えるようなコードが有るんだけど、これはページの準備ができた時点ではうまく動作してる。 で、問題なのは、AjaxまたはDOMを介して追加した選択ボックスだとイベントがバインドされない、ってことなんだ。 幸いこのプラグイン(jQuery Live Queryプラグイン)を見つけたんだ">
 <meta name="keywords" content="javascript,jquery,events,unobtrusive-javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ダイナミックに作成された要素のイベントバインド [Javascript]">
 <meta property="og:url" content="https://so-matome.net/2017/10/19/event-binding-on-dynamically-created-elements/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
-<meta property="og:description" content="質問：I have a bit of code where I am looping through all the select boxes on a page and binding a .hover event to them to do a bit of twiddling with their width on mouse on/off.This happens on page read">
+<meta property="og:description" content="質問：ページ上のすべての選択ボックスに対して.hoverイベントをバインドして、オンマウスかどうかによってその幅を少し変えるようなコードが有るんだけど、これはページの準備ができた時点ではうまく動作してる。 で、問題なのは、AjaxまたはDOMを介して追加した選択ボックスだとイベントがバインドされない、ってことなんだ。 幸いこのプラグイン(jQuery Live Queryプラグイン)を見つけたんだ">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-10-19T08:00:01.709Z">
+<meta property="og:updated_time" content="2017-10-19T08:10:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ダイナミックに作成された要素のイベントバインド [Javascript]">
-<meta name="twitter:description" content="質問：I have a bit of code where I am looping through all the select boxes on a page and binding a .hover event to them to do a bit of twiddling with their width on mouse on/off.This happens on page read">
+<meta name="twitter:description" content="質問：ページ上のすべての選択ボックスに対して.hoverイベントをバインドして、オンマウスかどうかによってその幅を少し変えるようなコードが有るんだけど、これはページの準備ができた時点ではうまく動作してる。 で、問題なのは、AjaxまたはDOMを介して追加した選択ボックスだとイベントがバインドされない、ってことなんだ。 幸いこのプラグイン(jQuery Live Queryプラグイン)を見つけたんだ">
     
 
     
@@ -169,7 +169,7 @@ ga('send', 'pageview');
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="">
-            <time datetime="2017-10-19T08:00:01.917Z" itemprop="datePublished">2017-10-19</time>
+            <time datetime="2017-10-19T08:10:32.883Z" itemprop="datePublished">2017-10-19</time>
         </a>
     </div>
 
@@ -188,13 +188,12 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="https://so-matome.net2017/10/19/event-binding-on-dynamically-created-elements/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/10/19/event-binding-on-dynamically-created-elements/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/10/19/event-binding-on-dynamically-created-elements/" data-counturl="https://so-matome.net2017/10/19/event-binding-on-dynamically-created-elements/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
+<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
 
         
             
-            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>I have a bit of code where I am looping through all the select boxes on a page and binding a .hover event to them to do a bit of twiddling with their width on mouse on/off.<br>This happens on page ready and works just fine.<br>The problem I have is that any select boxes I add via Ajax or DOM after the initial loop won’t have the event bound.<br>I have found this plugin (jQuery Live Query Plugin), but before I add another 5k to my pages with a plugin, I want to see if anyone knows a way to do this, either with jQuery directly or by another option.</p>
-<p>ページ上のすべての選択ボックスに対して<code>.hover</code>イベントをバインドして、オンマウスかどうかによってその幅を少し変えるようなコードが有るんだけど、これはページの準備ができた時点ではうまく動作してる。</p>
+            <h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>ページ上のすべての選択ボックスに対して<code>.hover</code>イベントをバインドして、オンマウスかどうかによってその幅を少し変えるようなコードが有るんだけど、これはページの準備ができた時点ではうまく動作してる。</p>
 <p>で、問題なのは、AjaxまたはDOMを介して追加した選択ボックスだとイベントがバインドされない、ってことなんだ。</p>
 <p>幸いこのプラグイン(<a href="http://brandonaaron.net/docs/livequery/#getting-started" target="_blank" rel="external">jQuery Live Queryプラグイン</a>)を見つけたんだけど、僕のページにプラグインを追加する前に、誰かjQueryを使うか、別の方法かでこの問題を解決する方法を知ってる人がいないかなって聞きたいと思ったんだ。誰かいいアイデア無い？？</p>
 <p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/27580/eli" target="_blank" rel="external">Eli</a> | 質問日時： 2008年10月14日 23:25 </div><br></p>
@@ -213,7 +212,6 @@ ga('send', 'pageview');
 <hr>
 <p>たとえば、あるページがクラス名<code>dosomething</code>を持つ要素を動的に作成していたとすると、、イベントはすでに存在する親にバインドされてる。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).on(<span class="string">'mouseover mouseout'</span>, <span class="string">'.dosomething'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//マウスオーバーやマウスアウト時に何をしたいか</span></div><div class="line">    <span class="comment">// '.dosomething'と一致する要素で発生する</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>Any parent that exists at the time the event is bound is fine. For example</p>
 <p>イベントがバインドされる時点で存在するすべての親でうまくいくよ。例えば</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(<span class="string">'.buttons'</span>).on(<span class="string">'click'</span>, <span class="string">'button'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">//ここで何かする</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>は以下に適用される</p>
@@ -373,7 +371,7 @@ ga('send', 'pageview');
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="" class="title">ダイナミックに作成された要素のイベントバインド [Javascript]</a></p>
-                            <p class="item-date"><time datetime="2017-10-19T08:00:01.917Z" itemprop="datePublished">2017-10-19</time></p>
+                            <p class="item-date"><time datetime="2017-10-19T08:10:32.883Z" itemprop="datePublished">2017-10-19</time></p>
                         </div>
                     </li>
                 
