@@ -147,6 +147,141 @@ ga('send', 'pageview');
         <div class="outer">
             
             <section id="main">
+    <article id="post-how-to-sort-a-dataframe-by-columns" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="../../2017/10/13/how-to-sort-a-dataframe-by-columns/">列単位でデータフレームをソートする方法は？[R]</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="../../2017/10/13/how-to-sort-a-dataframe-by-columns/">
+            <time datetime="2017-10-13T08:00:01.000Z" itemprop="datePublished">2017-10-13</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../tags/dataframe/">dataframe</a>, <a class="tag-link" href="../../tags/datasci/">datasci</a>, <a class="tag-link" href="../../tags/r/">r</a>, <a class="tag-link" href="../../tags/r-faq/">r-faq</a>, <a class="tag-link" href="../../tags/sorting/">sorting</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        <div class="article-sharing">
+<div class="fb-like" data-href="https://so-matome.net2017/10/13/how-to-sort-a-dataframe-by-columns/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/10/13/how-to-sort-a-dataframe-by-columns/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/10/13/how-to-sort-a-dataframe-by-columns/" data-counturl="https://so-matome.net2017/10/13/how-to-sort-a-dataframe-by-columns/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
+</div>
+
+        
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>僕は複数の列でdata.frameをソートしたいんだ。たとえば、下のようなデータフレームで、列<code>z</code>を降順に、列<code>b</code>を昇順にソートするにはどうしたらいい？：</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><div class="line">dd &lt;- data.frame(b = factor(c(<span class="string">"Hi"</span>, <span class="string">"Med"</span>, <span class="string">"Hi"</span>, <span class="string">"Low"</span>),</div><div class="line">      levels = c(<span class="string">"Low"</span>, <span class="string">"Med"</span>, <span class="string">"Hi"</span>), ordered = <span class="literal">TRUE</span>),</div><div class="line">      x = c(<span class="string">"A"</span>, <span class="string">"D"</span>, <span class="string">"A"</span>, <span class="string">"C"</span>), y = c(<span class="number">8</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">9</span>),</div><div class="line">      z = c(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>))</div><div class="line">dd</div><div class="line">    b x y z</div><div class="line"><span class="number">1</span>  Hi A <span class="number">8</span> <span class="number">1</span></div><div class="line"><span class="number">2</span> Med D <span class="number">3</span> <span class="number">1</span></div><div class="line"><span class="number">3</span>  Hi A <span class="number">9</span> <span class="number">1</span></div><div class="line"><span class="number">4</span> Low C <span class="number">9</span> <span class="number">2</span></div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/84458/christopher-dubois" target="_blank" rel="external">Christopher DuBois</a> | 質問日時： 2009年8月18日 21:33 </div><br></p></p>
+            <p class="article-more-link">
+                <a href="../../2017/10/13/how-to-sort-a-dataframe-by-columns/#more">자세히 보기</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://so-matome.net2017/10/13/how-to-sort-a-dataframe-by-columns/" data-id="cj8xpwnqp0013uow6o58427dn" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://so-matome.net2017/10/13/how-to-sort-a-dataframe-by-columns/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/13/how-to-sort-a-dataframe-by-columns/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+
     <article id="post-commic-2017-09-13-apple-iphone-x-juste-a-small-troll" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -179,7 +314,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="fb-like" data-href="https://so-matome.net2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/" data-counturl="https://so-matome.net2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
 </div>
 
         
@@ -207,7 +342,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://so-matome.net2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/" data-id="cj8vy7186000880g6c1wr2og3" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://so-matome.net2017/10/13/commic-2017-09-13-apple-iphone-x-juste-a-small-troll/" data-id="cj8xpwnp0000auow649n0aonk" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -323,7 +458,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="fb-like" data-href="https://so-matome.net2017/10/12/var-functionname-function-vs-function-functionname/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/10/12/var-functionname-function-vs-function-functionname/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/10/12/var-functionname-function-vs-function-functionname/" data-counturl="https://so-matome.net2017/10/12/var-functionname-function-vs-function-functionname/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
 </div>
 
         
@@ -334,7 +469,7 @@ ga('send', 'pageview');
 <p>この2つの異なる方法を使用する理由って何？それぞれメリットデメリットってある？<br>もう片方ではできて、他では出来ないことってある？</p>
 <p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/31569/richard-garside" target="_blank" rel="external">Richard Garside</a> | 質問日時： 2008年12月3日 11:31 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/10/12/var-functionname-function-vs-function-functionname/#more">Read More</a>
+                <a href="../../2017/10/12/var-functionname-function-vs-function-functionname/#more">자세히 보기</a>
             </p>
         
         </div>
@@ -345,7 +480,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://so-matome.net2017/10/12/var-functionname-function-vs-function-functionname/" data-id="cj8vy719w001h80g66jjvkwti" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://so-matome.net2017/10/12/var-functionname-function-vs-function-functionname/" data-id="cj8xpwnrl001juow6bgrclaf6" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -461,7 +596,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="fb-like" data-href="https://so-matome.net2017/10/12/how-do-i-make-a-list-of-data-frames/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/10/12/how-do-i-make-a-list-of-data-frames/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/10/12/how-do-i-make-a-list-of-data-frames/" data-counturl="https://so-matome.net2017/10/12/how-do-i-make-a-list-of-data-frames/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
 </div>
 
         
@@ -471,7 +606,7 @@ ga('send', 'pageview');
 <figure class="highlight r"><table><tr><td class="code"><pre><div class="line">d1&lt;-data.frame(y1&lt;-c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),y2&lt;-c(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>))</div><div class="line">d2&lt;-data.frame(y1&lt;-c(<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>),y2&lt;-c(<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>))</div></pre></td></tr></table></figure>
 <p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/2146894/ben" target="_blank" rel="external">Ben</a> | 質問日時： 2013年7月6日 2:16 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/10/12/how-do-i-make-a-list-of-data-frames/#more">Read More</a>
+                <a href="../../2017/10/12/how-do-i-make-a-list-of-data-frames/#more">자세히 보기</a>
             </p>
         
         </div>
@@ -482,7 +617,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://so-matome.net2017/10/12/how-do-i-make-a-list-of-data-frames/" data-id="cj8vy7190000q80g6r842vx99" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://so-matome.net2017/10/12/how-do-i-make-a-list-of-data-frames/" data-id="cj8xpwnq6000vuow6ywpp9xdp" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -598,7 +733,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="fb-like" data-href="https://so-matome.net2017/10/11/detect-if-the-device-is-iphone-x/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/10/11/detect-if-the-device-is-iphone-x/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/10/11/detect-if-the-device-is-iphone-x/" data-counturl="https://so-matome.net2017/10/11/detect-if-the-device-is-iphone-x/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
 </div>
 
         
@@ -609,7 +744,7 @@ ga('send', 'pageview');
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) &#123;</div><div class="line">    CGSize screenSize = [[UIScreen mainScreen] bounds].size;</div><div class="line">    if (screenSize.height == 812)</div><div class="line">        NSLog(@&quot;iPhone X&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/777861/andrei-herford" target="_blank" rel="external">Andrei Herford</a> | 質問日時： 2017年9月13日 8:12 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/10/11/detect-if-the-device-is-iphone-x/#more">Read More</a>
+                <a href="../../2017/10/11/detect-if-the-device-is-iphone-x/#more">자세히 보기</a>
             </p>
         
         </div>
@@ -620,7 +755,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://so-matome.net2017/10/11/detect-if-the-device-is-iphone-x/" data-id="cj8vy718e000c80g6zr7k5byb" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://so-matome.net2017/10/11/detect-if-the-device-is-iphone-x/" data-id="cj8xpwnp7000fuow68h37swte" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -736,7 +871,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="fb-like" data-href="https://so-matome.net2017/10/11/does-python-have-a-string-contains-substring-method/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/10/11/does-python-have-a-string-contains-substring-method/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/10/11/does-python-have-a-string-contains-substring-method/" data-counturl="https://so-matome.net2017/10/11/does-python-have-a-string-contains-substring-method/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
 </div>
 
         
@@ -744,7 +879,7 @@ ga('send', 'pageview');
 <figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="keyword">not</span> somestring.contains(<span class="string">"blah"</span>):</div><div class="line">   <span class="keyword">continue</span></div></pre></td></tr></table></figure>
 <p><div style="text-align: right"> By  <a href="/users/39677/blankman">Blankman</a> | 質問日時： Aug 9 ‘10 at 2:52 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/10/11/does-python-have-a-string-contains-substring-method/#more">Read More</a>
+                <a href="../../2017/10/11/does-python-have-a-string-contains-substring-method/#more">자세히 보기</a>
             </p>
         
         </div>
@@ -755,7 +890,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://so-matome.net2017/10/11/does-python-have-a-string-contains-substring-method/" data-id="cj8vy718h000f80g66cjwdgtq" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://so-matome.net2017/10/11/does-python-have-a-string-contains-substring-method/" data-id="cj8xpwnpa000guow6z445ubgj" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -871,7 +1006,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="fb-like" data-href="https://so-matome.net2017/10/11/parse-json-in-javascript/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/10/11/parse-json-in-javascript/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/10/11/parse-json-in-javascript/" data-counturl="https://so-matome.net2017/10/11/parse-json-in-javascript/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
 </div>
 
         
@@ -880,7 +1015,7 @@ ga('send', 'pageview');
 <p>どうやったらresultとかcountとかの値を取ってこれる？</p>
 <p><div style="text-align: right"> By          user605334 | 質問日時： 2011年2月8日 16:34 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/10/11/parse-json-in-javascript/#more">Read More</a>
+                <a href="../../2017/10/11/parse-json-in-javascript/#more">자세히 보기</a>
             </p>
         
         </div>
@@ -891,7 +1026,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://so-matome.net2017/10/11/parse-json-in-javascript/" data-id="cj8vy719r001c80g64tkyq6hj" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://so-matome.net2017/10/11/parse-json-in-javascript/" data-id="cj8xpwnrf001euow6tgz1m9wa" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -970,143 +1105,6 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-create-a-data-frame-of-unequal-lengths" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="../../2017/10/10/create-a-data-frame-of-unequal-lengths/">サイズがバラバラなデータフレームを作成する [R]</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="../../2017/10/10/create-a-data-frame-of-unequal-lengths/">
-            <time datetime="2017-10-10T13:59:28.000Z" itemprop="datePublished">2017-10-10</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="../../tags/dataframe/">dataframe</a>, <a class="tag-link" href="../../tags/datasci/">datasci</a>, <a class="tag-link" href="../../tags/r/">r</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        <div class="article-sharing">
-<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div>
-
-        
-            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>データフレームって普通サイズが揃ってるけど、サイズの違うデータフレームって作る方法ある？１つのリストのバラバラな要素として保存するとかはしたくないんだ。なんでかって言うと、これを色んな人にCSVファイルとして送らないといけなくって、それをやるのはデータフレームが一番簡単だと思うから。</p>
-<figure class="highlight r"><table><tr><td class="code"><pre><div class="line">x = c(rep(<span class="string">"one"</span>,<span class="number">2</span>))</div><div class="line">y = c(rep(<span class="string">"two"</span>,<span class="number">10</span>))</div><div class="line">z = c(rep(<span class="string">"three"</span>,<span class="number">5</span>))</div><div class="line">cbind(x,y,z)</div></pre></td></tr></table></figure>
-<p>上のコードでは、<code>cbind()</code>関数は短いcolumnをリサイクルして要素が10個あるようにしてるけど、これを要素が2,5,10個になるようにしたいんだ。<br>以下の方法も試したけどあんまり効率が良くない。</p>
-<figure class="highlight r"><table><tr><td class="code"><pre><div class="line">df = data.frame(one=c(rep(<span class="string">"one"</span>,<span class="number">2</span>),rep(<span class="string">""</span>,<span class="number">8</span>)), </div><div class="line">                two=c(rep(<span class="string">"two"</span>,<span class="number">10</span>)), three=c(rep(<span class="string">"three"</span>,<span class="number">5</span>), rep(<span class="string">""</span>,<span class="number">5</span>)))</div></pre></td></tr></table></figure>
-<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/406278/atmathew" target="_blank" rel="external">ATMathew</a> | 質問日時： 2011年8月25日 19:58 </div><br></p></p>
-            <p class="article-more-link">
-                <a href="../../2017/10/10/create-a-data-frame-of-unequal-lengths/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://so-matome.net2017/10/10/create-a-data-frame-of-unequal-lengths/" data-id="cj8vy718c000a80g65ka6ocuu" class="article-share-link"><i class="fa fa-share"></i>共有</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://so-matome.net2017/10/10/create-a-data-frame-of-unequal-lengths/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/10/create-a-data-frame-of-unequal-lengths/">コメント</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-
     <article id="post-dynamically-access-object-property-using-variable" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -1144,7 +1142,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="fb-like" data-href="https://so-matome.net2017/10/10/dynamically-access-object-property-using-variable/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/10/10/dynamically-access-object-property-using-variable/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/10/10/dynamically-access-object-property-using-variable/" data-counturl="https://so-matome.net2017/10/10/dynamically-access-object-property-using-variable/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
 </div>
 
         
@@ -1152,7 +1150,7 @@ ga('send', 'pageview');
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> something = &#123; <span class="attr">bar</span>: <span class="string">"Foobar!"</span> &#125;;</div><div class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</div><div class="line">something.foo; <span class="comment">// このsomething.bar, "Foobar!"を取得したい</span></div></pre></td></tr></table></figure>
 <p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/471628/richw" target="_blank" rel="external">RichW</a> | 質問日時： 2010年11月22日 11:23 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/10/10/dynamically-access-object-property-using-variable/#more">Read More</a>
+                <a href="../../2017/10/10/dynamically-access-object-property-using-variable/#more">자세히 보기</a>
             </p>
         
         </div>
@@ -1163,7 +1161,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://so-matome.net2017/10/10/dynamically-access-object-property-using-variable/" data-id="cj8vy718j000g80g60zwjmi01" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://so-matome.net2017/10/10/dynamically-access-object-property-using-variable/" data-id="cj8xpwnpe000iuow6zfmre5d8" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1242,6 +1240,143 @@ ga('send', 'pageview');
 
 
 
+    <article id="post-create-a-data-frame-of-unequal-lengths" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="../../2017/10/10/create-a-data-frame-of-unequal-lengths/">サイズがバラバラなデータフレームを作成する [R]</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="../../2017/10/10/create-a-data-frame-of-unequal-lengths/">
+            <time datetime="2017-10-10T13:59:28.000Z" itemprop="datePublished">2017-10-10</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../tags/dataframe/">dataframe</a>, <a class="tag-link" href="../../tags/datasci/">datasci</a>, <a class="tag-link" href="../../tags/r/">r</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        <div class="article-sharing">
+<div class="fb-like" data-href="https://so-matome.net2017/10/10/create-a-data-frame-of-unequal-lengths/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/10/10/create-a-data-frame-of-unequal-lengths/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/10/10/create-a-data-frame-of-unequal-lengths/" data-counturl="https://so-matome.net2017/10/10/create-a-data-frame-of-unequal-lengths/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
+</div>
+
+        
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>データフレームって普通サイズが揃ってるけど、サイズの違うデータフレームって作る方法ある？１つのリストのバラバラな要素として保存するとかはしたくないんだ。なんでかって言うと、これを色んな人にCSVファイルとして送らないといけなくって、それをやるのはデータフレームが一番簡単だと思うから。</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><div class="line">x = c(rep(<span class="string">"one"</span>,<span class="number">2</span>))</div><div class="line">y = c(rep(<span class="string">"two"</span>,<span class="number">10</span>))</div><div class="line">z = c(rep(<span class="string">"three"</span>,<span class="number">5</span>))</div><div class="line">cbind(x,y,z)</div></pre></td></tr></table></figure>
+<p>上のコードでは、<code>cbind()</code>関数は短いcolumnをリサイクルして要素が10個あるようにしてるけど、これを要素が2,5,10個になるようにしたいんだ。<br>以下の方法も試したけどあんまり効率が良くない。</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><div class="line">df = data.frame(one=c(rep(<span class="string">"one"</span>,<span class="number">2</span>),rep(<span class="string">""</span>,<span class="number">8</span>)), </div><div class="line">                two=c(rep(<span class="string">"two"</span>,<span class="number">10</span>)), three=c(rep(<span class="string">"three"</span>,<span class="number">5</span>), rep(<span class="string">""</span>,<span class="number">5</span>)))</div></pre></td></tr></table></figure>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/406278/atmathew" target="_blank" rel="external">ATMathew</a> | 質問日時： 2011年8月25日 19:58 </div><br></p></p>
+            <p class="article-more-link">
+                <a href="../../2017/10/10/create-a-data-frame-of-unequal-lengths/#more">자세히 보기</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://so-matome.net2017/10/10/create-a-data-frame-of-unequal-lengths/" data-id="cj8xpwnp3000cuow6a4684iim" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://so-matome.net2017/10/10/create-a-data-frame-of-unequal-lengths/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/10/create-a-data-frame-of-unequal-lengths/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+
     <article id="post-how-can-i-create-a-directory-if-it-does-not-exist" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -1279,7 +1414,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="fb-like" data-href="https://so-matome.net2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/https://so-matome.net2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://so-matome.net2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" data-counturl="https://so-matome.net2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" data-via="SOmatome_jp" data-size="large">Tweet</a> 
 </div>
 
         
@@ -1290,7 +1425,7 @@ ga('send', 'pageview');
 <p>これが自動的に行われるようにするような、 “open”のためのフラグってある？ </p>
 <p><div style="text-align: right"> By  <a href="/users/13055/parand">Parand</a> | 質問日時： 2008年11月7日 18:56 </div><br></p></p>
             <p class="article-more-link">
-                <a href="../../2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/#more">Read More</a>
+                <a href="../../2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/#more">자세히 보기</a>
             </p>
         
         </div>
@@ -1301,7 +1436,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://so-matome.net2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" data-id="cj8vy718m000i80g65w60g6z5" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://so-matome.net2017/09/29/how-can-i-create-a-directory-if-it-does-not-exist/" data-id="cj8xpwnph000juow6wafhy6ex" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1380,153 +1515,6 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-how-do-i-force-git-pull-to-overwrite-local-files" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="../../2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/">git pullで強制的にローカルファイルを上書きするには？ [Git]</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="../../2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/">
-            <time datetime="2017-09-29T17:42:38.000Z" itemprop="datePublished">2017-09-29</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="../../tags/datasci/">datasci</a>, <a class="tag-link" href="../../tags/git/">git</a>, <a class="tag-link" href="../../tags/git-fetch/">git-fetch</a>, <a class="tag-link" href="../../tags/git-pull/">git-pull</a>, <a class="tag-link" href="../../tags/overwrite/">overwrite</a>, <a class="tag-link" href="../../tags/version-control/">version-control</a>, <a class="tag-link" href="../../tags/webdev/">webdev</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        <div class="article-sharing">
-<div class="fb-like" data-href="<%- post.permalink %>" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> <a href="http://b.hatena.ne.jp/entry/<%- post.permalink %>" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div>
-
-        
-            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><code>git pull</code>でローカルファイルを強制的に上書きするにはどうしたらいいの？</p>
-<p>やろうとしてるのはこんな感じ：</p>
-<ul>
-<li>チームメンバーが取り組んでいるウェブサイトのテンプレートを変更</li>
-<li>彼らは画像ディレクトリに画像を追加(ただし、ソース管理の下に追加することは忘れてる)</li>
-<li>彼らは僕に「後で」メールで画像を送ってくる</li>
-<li>で、僕が画像をソースコントロールの下に追加して、GitHubに他の変更と一緒に押し込んでる</li>
-<li>でもGitはファイルを上書きしたくないので彼らはGitHubから更新をpullできない</li>
-</ul>
-<p>出て来るエラーは次の通り：</p>
-<blockquote>
-<p>error: Untracked working tree file ‘public/images/icon.gif’ would be overwritten by merge.<br>(訳：エラー：未処理の作業ツリーファイル’public/images/icon.gif’がマージによって上書きされます。)</p>
-</blockquote>
-<p>Gitにそれらを上書きさせるにはどうすればいい？その人(上書きされる人)はデザイナーで、通常は僕がそれらの競合を手作業で解決するから、サーバーには最新のバージョンがあって、彼らはただ彼らのコンピュータ内のファイルをで更新するだけでいいんだ。</p>
-<p><div style="text-align: right"> By  <a href="/users/98046/jakub-troszok">Jakub Troszok</a> | 質問日時： 2009年7月14日 14:58 </div><br></p></p>
-            <p class="article-more-link">
-                <a href="../../2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://so-matome.net2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/" data-id="cj8vy718t000m80g6xykzox6d" class="article-share-link"><i class="fa fa-share"></i>共有</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://so-matome.net2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/09/29/how-do-i-force-git-pull-to-overwrite-local-files/">コメント</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-
     <nav id="page-nav">
         <a class="extend prev" rel="prev" href="../../index.html">&laquo; 前</a><a class="page-number" href="../../index.html">1</a><span class="page-number current">2</span><a class="page-number" href="../3/">3</a><a class="page-number" href="../4/">4</a><a class="extend next" rel="next" href="../3/">次 &raquo;</a>
     </nav>
@@ -1558,8 +1546,17 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="../../2017/10/18/commic-2017-05-29-trapped/" class="title"></a></p>
-                            <p class="item-date"><time datetime="2017-10-18T08:00:01.736Z" itemprop="datePublished">2017-10-18</time></p>
+                            <p class="item-title"><a href="../../2017/10/19/event-binding-on-dynamically-created-elements/" class="title">ダイナミックに作成された要素のイベントバインド [Javascript]</a></p>
+                            <p class="item-date"><time datetime="2017-10-19T08:00:01.917Z" itemprop="datePublished">2017-10-19</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="../../2017/10/19/normalize-data-in-pandas/" class="title">Pandasのデータを標準化する方法 [Python]</a></p>
+                            <p class="item-date"><time datetime="2017-10-19T08:00:01.725Z" itemprop="datePublished">2017-10-19</time></p>
                         </div>
                     </li>
                 
@@ -1568,7 +1565,7 @@ ga('send', 'pageview');
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="../../2017/10/18/is-there-a-simple-way-to-delete-a-list-element-by-value/" class="title">値を指定してリストから要素を削除する簡単な方法ってある？ [Python]</a></p>
-                            <p class="item-date"><time datetime="2017-10-18T08:00:01.736Z" itemprop="datePublished">2017-10-18</time></p>
+                            <p class="item-date"><time datetime="2017-10-18T18:43:05.424Z" itemprop="datePublished">2017-10-18</time></p>
                         </div>
                     </li>
                 
@@ -1577,7 +1574,7 @@ ga('send', 'pageview');
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="../../2017/10/18/why-is-using-for-in-with-array-iteration-a-bad-idea/" class="title">なぜ&#34;for ... in&#34;を使って配列の反復をするはダメなの？ [Javascript]</a></p>
-                            <p class="item-date"><time datetime="2017-10-18T08:00:01.720Z" itemprop="datePublished">2017-10-18</time></p>
+                            <p class="item-date"><time datetime="2017-10-18T18:43:05.269Z" itemprop="datePublished">2017-10-18</time></p>
                         </div>
                     </li>
                 
@@ -1585,17 +1582,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="../../2017/10/17/using-global-variables-in-a-function-other-than-the-one-that-created-them/" class="title">グローバル変数を作成した関数以外の関数で使用する [Python]</a></p>
-                            <p class="item-date"><time datetime="2017-10-17T08:00:01.000Z" itemprop="datePublished">2017-10-17</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="../../2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/" class="title">JavaScriptは参照渡しpass-by-value言語か値渡しpass-by-reference言語か [Javascript]</a></p>
-                            <p class="item-date"><time datetime="2017-10-17T08:00:01.000Z" itemprop="datePublished">2017-10-17</time></p>
+                            <p class="item-title"><a href="../../2017/10/18/commic-2017-05-29-trapped/" class="title">Trapped (出られない) [Webコミック]</a></p>
+                            <p class="item-date"><time datetime="2017-10-18T08:00:01.000Z" itemprop="datePublished">2017-10-18</time></p>
                         </div>
                     </li>
                 
@@ -1608,7 +1596,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">タグクラウド</h3>
         <div class="widget tagcloud">
-            <a href="../../tags/TED/" style="font-size: 10px;">TED</a> <a href="../../tags/ajax/" style="font-size: 10px;">ajax</a> <a href="../../tags/append/" style="font-size: 10px;">append</a> <a href="../../tags/arrays/" style="font-size: 11.43px;">arrays</a> <a href="../../tags/command/" style="font-size: 10px;">command</a> <a href="../../tags/comments/" style="font-size: 10px;">comments</a> <a href="../../tags/contains/" style="font-size: 11.43px;">contains</a> <a href="../../tags/data-structures/" style="font-size: 10px;">data-structures</a> <a href="../../tags/dataframe/" style="font-size: 12.86px;">dataframe</a> <a href="../../tags/datasci/" style="font-size: 20px;">datasci</a> <a href="../../tags/directory/" style="font-size: 11.43px;">directory</a> <a href="../../tags/dom/" style="font-size: 10px;">dom</a> <a href="../../tags/english/" style="font-size: 10px;">english</a> <a href="../../tags/equality/" style="font-size: 10px;">equality</a> <a href="../../tags/equality-operator/" style="font-size: 10px;">equality-operator</a> <a href="../../tags/exception/" style="font-size: 10px;">exception</a> <a href="../../tags/extend/" style="font-size: 10px;">extend</a> <a href="../../tags/external/" style="font-size: 10px;">external</a> <a href="../../tags/file-upload/" style="font-size: 10px;">file-upload</a> <a href="../../tags/for-loop/" style="font-size: 10px;">for-loop</a> <a href="../../tags/function/" style="font-size: 10px;">function</a> <a href="../../tags/git/" style="font-size: 14.29px;">git</a> <a href="../../tags/git-branch/" style="font-size: 11.43px;">git-branch</a> <a href="../../tags/git-checkout/" style="font-size: 10px;">git-checkout</a> <a href="../../tags/git-commit/" style="font-size: 10px;">git-commit</a> <a href="../../tags/git-fetch/" style="font-size: 10px;">git-fetch</a> <a href="../../tags/git-pull/" style="font-size: 10px;">git-pull</a> <a href="../../tags/git-rebase/" style="font-size: 10px;">git-rebase</a> <a href="../../tags/git-remote/" style="font-size: 10px;">git-remote</a> <a href="../../tags/git-reset/" style="font-size: 11.43px;">git-reset</a> <a href="../../tags/git-revert/" style="font-size: 11.43px;">git-revert</a> <a href="../../tags/global-variables/" style="font-size: 10px;">global-variables</a> <a href="../../tags/grep/" style="font-size: 10px;">grep</a> <a href="../../tags/identity-operator/" style="font-size: 10px;">identity-operator</a> <a href="../../tags/idioms/" style="font-size: 11.43px;">idioms</a> <a href="../../tags/ios/" style="font-size: 10px;">ios</a> <a href="../../tags/iphone/" style="font-size: 10px;">iphone</a> <a href="../../tags/iphone-x/" style="font-size: 10px;">iphone-x</a> <a href="../../tags/javascript/" style="font-size: 17.14px;">javascript</a> <a href="../../tags/jquery/" style="font-size: 12.86px;">jquery</a> <a href="../../tags/json/" style="font-size: 11.43px;">json</a> <a href="../../tags/list/" style="font-size: 14.29px;">list</a> <a href="../../tags/loops/" style="font-size: 10px;">loops</a> <a href="../../tags/main/" style="font-size: 10px;">main</a> <a href="../../tags/module/" style="font-size: 10px;">module</a> <a href="../../tags/namespaces/" style="font-size: 10px;">namespaces</a> <a href="../../tags/object/" style="font-size: 10px;">object</a> <a href="../../tags/objective-c/" style="font-size: 10px;">objective-c</a> <a href="../../tags/operators/" style="font-size: 10px;">operators</a> <a href="../../tags/overwrite/" style="font-size: 10px;">overwrite</a> <a href="../../tags/pandas/" style="font-size: 10px;">pandas</a> <a href="../../tags/parsing/" style="font-size: 10px;">parsing</a> <a href="../../tags/pass-by-reference/" style="font-size: 10px;">pass-by-reference</a> <a href="../../tags/pass-by-value/" style="font-size: 10px;">pass-by-value</a> <a href="../../tags/post/" style="font-size: 10px;">post</a> <a href="../../tags/properties/" style="font-size: 10px;">properties</a> <a href="../../tags/python/" style="font-size: 15.71px;">python</a> <a href="../../tags/r/" style="font-size: 12.86px;">r</a> <a href="../../tags/r-faq/" style="font-size: 11.43px;">r-faq</a> <a href="../../tags/redirect/" style="font-size: 10px;">redirect</a> <a href="../../tags/row/" style="font-size: 10px;">row</a> <a href="../../tags/scope/" style="font-size: 11.43px;">scope</a> <a href="../../tags/shell/" style="font-size: 10px;">shell</a> <a href="../../tags/sorting/" style="font-size: 10px;">sorting</a> <a href="../../tags/string/" style="font-size: 11.43px;">string</a> <a href="../../tags/string-matching/" style="font-size: 10px;">string-matching</a> <a href="../../tags/subprocess/" style="font-size: 10px;">subprocess</a> <a href="../../tags/substring/" style="font-size: 11.43px;">substring</a> <a href="../../tags/swift/" style="font-size: 10px;">swift</a> <a href="../../tags/syntax/" style="font-size: 10px;">syntax</a> <a href="../../tags/variables/" style="font-size: 10px;">variables</a> <a href="../../tags/version-control/" style="font-size: 10px;">version-control</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/visibility/" style="font-size: 10px;">visibility</a> <a href="../../tags/webdev/" style="font-size: 18.57px;">webdev</a>
+            <a href="../../tags/TED/" style="font-size: 10px;">TED</a> <a href="../../tags/ajax/" style="font-size: 10px;">ajax</a> <a href="../../tags/append/" style="font-size: 10px;">append</a> <a href="../../tags/arrays/" style="font-size: 11.25px;">arrays</a> <a href="../../tags/comic/" style="font-size: 10px;">comic</a> <a href="../../tags/command/" style="font-size: 10px;">command</a> <a href="../../tags/comments/" style="font-size: 10px;">comments</a> <a href="../../tags/contains/" style="font-size: 11.25px;">contains</a> <a href="../../tags/data-structures/" style="font-size: 10px;">data-structures</a> <a href="../../tags/dataframe/" style="font-size: 12.5px;">dataframe</a> <a href="../../tags/datasci/" style="font-size: 20px;">datasci</a> <a href="../../tags/directory/" style="font-size: 11.25px;">directory</a> <a href="../../tags/dom/" style="font-size: 10px;">dom</a> <a href="../../tags/english/" style="font-size: 10px;">english</a> <a href="../../tags/equality/" style="font-size: 10px;">equality</a> <a href="../../tags/equality-operator/" style="font-size: 10px;">equality-operator</a> <a href="../../tags/events/" style="font-size: 10px;">events</a> <a href="../../tags/exception/" style="font-size: 10px;">exception</a> <a href="../../tags/extend/" style="font-size: 10px;">extend</a> <a href="../../tags/external/" style="font-size: 10px;">external</a> <a href="../../tags/file-upload/" style="font-size: 10px;">file-upload</a> <a href="../../tags/for-loop/" style="font-size: 10px;">for-loop</a> <a href="../../tags/function/" style="font-size: 10px;">function</a> <a href="../../tags/git/" style="font-size: 15px;">git</a> <a href="../../tags/git-branch/" style="font-size: 11.25px;">git-branch</a> <a href="../../tags/git-checkout/" style="font-size: 10px;">git-checkout</a> <a href="../../tags/git-commit/" style="font-size: 10px;">git-commit</a> <a href="../../tags/git-fetch/" style="font-size: 10px;">git-fetch</a> <a href="../../tags/git-pull/" style="font-size: 10px;">git-pull</a> <a href="../../tags/git-rebase/" style="font-size: 10px;">git-rebase</a> <a href="../../tags/git-remote/" style="font-size: 10px;">git-remote</a> <a href="../../tags/git-reset/" style="font-size: 11.25px;">git-reset</a> <a href="../../tags/git-revert/" style="font-size: 11.25px;">git-revert</a> <a href="../../tags/grep/" style="font-size: 10px;">grep</a> <a href="../../tags/identity-operator/" style="font-size: 10px;">identity-operator</a> <a href="../../tags/idioms/" style="font-size: 11.25px;">idioms</a> <a href="../../tags/ios/" style="font-size: 10px;">ios</a> <a href="../../tags/iphone/" style="font-size: 10px;">iphone</a> <a href="../../tags/iphone-x/" style="font-size: 10px;">iphone-x</a> <a href="../../tags/javascript/" style="font-size: 17.5px;">javascript</a> <a href="../../tags/jquery/" style="font-size: 13.75px;">jquery</a> <a href="../../tags/json/" style="font-size: 11.25px;">json</a> <a href="../../tags/list/" style="font-size: 15px;">list</a> <a href="../../tags/loops/" style="font-size: 10px;">loops</a> <a href="../../tags/main/" style="font-size: 10px;">main</a> <a href="../../tags/module/" style="font-size: 10px;">module</a> <a href="../../tags/namespaces/" style="font-size: 10px;">namespaces</a> <a href="../../tags/numpy/" style="font-size: 10px;">numpy</a> <a href="../../tags/object/" style="font-size: 10px;">object</a> <a href="../../tags/objective-c/" style="font-size: 10px;">objective-c</a> <a href="../../tags/operators/" style="font-size: 10px;">operators</a> <a href="../../tags/overwrite/" style="font-size: 10px;">overwrite</a> <a href="../../tags/pandas/" style="font-size: 11.25px;">pandas</a> <a href="../../tags/parsing/" style="font-size: 10px;">parsing</a> <a href="../../tags/pass-by-reference/" style="font-size: 10px;">pass-by-reference</a> <a href="../../tags/pass-by-value/" style="font-size: 10px;">pass-by-value</a> <a href="../../tags/post/" style="font-size: 10px;">post</a> <a href="../../tags/properties/" style="font-size: 10px;">properties</a> <a href="../../tags/python/" style="font-size: 16.25px;">python</a> <a href="../../tags/r/" style="font-size: 12.5px;">r</a> <a href="../../tags/r-faq/" style="font-size: 11.25px;">r-faq</a> <a href="../../tags/redirect/" style="font-size: 10px;">redirect</a> <a href="../../tags/row/" style="font-size: 10px;">row</a> <a href="../../tags/scope/" style="font-size: 10px;">scope</a> <a href="../../tags/shell/" style="font-size: 10px;">shell</a> <a href="../../tags/sorting/" style="font-size: 10px;">sorting</a> <a href="../../tags/string/" style="font-size: 11.25px;">string</a> <a href="../../tags/string-matching/" style="font-size: 10px;">string-matching</a> <a href="../../tags/subprocess/" style="font-size: 10px;">subprocess</a> <a href="../../tags/substring/" style="font-size: 11.25px;">substring</a> <a href="../../tags/swift/" style="font-size: 10px;">swift</a> <a href="../../tags/syntax/" style="font-size: 10px;">syntax</a> <a href="../../tags/unobtrusive-javascript/" style="font-size: 10px;">unobtrusive-javascript</a> <a href="../../tags/variables/" style="font-size: 10px;">variables</a> <a href="../../tags/version-control/" style="font-size: 10px;">version-control</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/visibility/" style="font-size: 10px;">visibility</a> <a href="../../tags/webdev/" style="font-size: 18.75px;">webdev</a>
         </div>
     </div>
 
@@ -1619,7 +1607,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">アーカイブ</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2017/10/">10月 2017</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2017/09/">9月 2017</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2017/10/">10月 2017</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2017/09/">9月 2017</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 
@@ -1628,7 +1616,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">タグ</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/TED/">TED</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ajax/">ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/append/">append</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/arrays/">arrays</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/comments/">comments</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/contains/">contains</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/data-structures/">data-structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataframe/">dataframe</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/datasci/">datasci</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/directory/">directory</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dom/">dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/english/">english</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/equality/">equality</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/equality-operator/">equality-operator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/exception/">exception</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/extend/">extend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/external/">external</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/file-upload/">file-upload</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/for-loop/">for-loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/function/">function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/">git</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-branch/">git-branch</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-checkout/">git-checkout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-commit/">git-commit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-fetch/">git-fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-pull/">git-pull</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-rebase/">git-rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-remote/">git-remote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-reset/">git-reset</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-revert/">git-revert</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/global-variables/">global-variables</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/grep/">grep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/identity-operator/">identity-operator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/idioms/">idioms</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ios/">ios</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iphone/">iphone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iphone-x/">iphone-x</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/javascript/">javascript</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/jquery/">jquery</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/json/">json</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/list/">list</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/loops/">loops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/main/">main</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/module/">module</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/namespaces/">namespaces</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/object/">object</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/objective-c/">objective-c</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/operators/">operators</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/overwrite/">overwrite</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/pandas/">pandas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/parsing/">parsing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/pass-by-reference/">pass-by-reference</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/pass-by-value/">pass-by-value</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/post/">post</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/properties/">properties</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/">python</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/r/">r</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/r-faq/">r-faq</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/redirect/">redirect</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/row/">row</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/scope/">scope</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/sorting/">sorting</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/string/">string</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/string-matching/">string-matching</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/subprocess/">subprocess</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/substring/">substring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/swift/">swift</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/syntax/">syntax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/variables/">variables</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/version-control/">version-control</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/">video</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/visibility/">visibility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/webdev/">webdev</a><span class="tag-list-count">16</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/TED/">TED</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ajax/">ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/append/">append</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/arrays/">arrays</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/comic/">comic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/comments/">comments</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/contains/">contains</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/data-structures/">data-structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataframe/">dataframe</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/datasci/">datasci</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/directory/">directory</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dom/">dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/english/">english</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/equality/">equality</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/equality-operator/">equality-operator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/events/">events</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/exception/">exception</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/extend/">extend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/external/">external</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/file-upload/">file-upload</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/for-loop/">for-loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/function/">function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/">git</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-branch/">git-branch</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-checkout/">git-checkout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-commit/">git-commit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-fetch/">git-fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-pull/">git-pull</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-rebase/">git-rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-remote/">git-remote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-reset/">git-reset</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git-revert/">git-revert</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/grep/">grep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/identity-operator/">identity-operator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/idioms/">idioms</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ios/">ios</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iphone/">iphone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iphone-x/">iphone-x</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/javascript/">javascript</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/jquery/">jquery</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/json/">json</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/list/">list</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/loops/">loops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/main/">main</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/module/">module</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/namespaces/">namespaces</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/numpy/">numpy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/object/">object</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/objective-c/">objective-c</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/operators/">operators</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/overwrite/">overwrite</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/pandas/">pandas</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/parsing/">parsing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/pass-by-reference/">pass-by-reference</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/pass-by-value/">pass-by-value</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/post/">post</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/properties/">properties</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/">python</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/r/">r</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/r-faq/">r-faq</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/redirect/">redirect</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/row/">row</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/scope/">scope</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/sorting/">sorting</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/string/">string</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/string-matching/">string-matching</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/subprocess/">subprocess</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/substring/">substring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/swift/">swift</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/syntax/">syntax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/unobtrusive-javascript/">unobtrusive-javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/variables/">variables</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/version-control/">version-control</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/">video</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/visibility/">visibility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/webdev/">webdev</a><span class="tag-list-count">16</span></li></ul>
         </div>
     </div>
 

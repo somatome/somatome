@@ -170,7 +170,7 @@ code {
   width: 895px;
   height: 163px;
   background-repeat: no-repeat;
-  background-image: url("https://somatome.github.io/somatome/somatome_logo.png");
+  background-image: url("/images/somatome_logo.png");
   -webkit-background-size: 895px 163px;
   -moz-background-size: 895px 163px;
   background-size: 895px 163px;
