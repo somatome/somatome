@@ -7,24 +7,24 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/10/20/why-is-document-write-considered-a-bad-practice/</loc>
-        <lastmod>2017-10-20T08:00:01.254Z</lastmod>
+        <loc>https://so-matome.net/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/</loc>
+        <lastmod>2017-10-20T22:14:34.264Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/10/20/output-matplotlib-figure-to-svg-with-text-as-text-not-curves/</loc>
-        <lastmod>2017-10-20T08:00:01.206Z</lastmod>
+        <loc>https://so-matome.net/2017/10/18/why-is-using-for-in-with-array-iteration-a-bad-idea/</loc>
+        <lastmod>2017-10-20T22:03:11.995Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/10/19/event-binding-on-dynamically-created-elements/</loc>
-        <lastmod>2017-10-19T08:10:28.000Z</lastmod>
+        <loc>https://so-matome.net/2017/10/18/is-there-a-simple-way-to-delete-a-list-element-by-value/</loc>
+        <lastmod>2017-10-20T22:03:06.329Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -32,7 +32,39 @@
 
     <url>
         <loc>https://so-matome.net/2017/10/19/normalize-data-in-pandas/</loc>
-        <lastmod>2017-10-19T08:00:01.653Z</lastmod>
+        <lastmod>2017-10-20T22:02:48.254Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/2017/10/19/event-binding-on-dynamically-created-elements/</loc>
+        <lastmod>2017-10-20T22:02:34.903Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/2017/10/20/output-matplotlib-figure-to-svg-with-text-as-text-not-curves/</loc>
+        <lastmod>2017-10-20T22:02:13.366Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/2017/10/20/why-is-document-write-considered-a-bad-practice/</loc>
+        <lastmod>2017-10-20T22:01:41.720Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/2017/09/01/about/</loc>
+        <lastmod>2017-10-20T21:59:08.077Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -41,30 +73,6 @@
     <url>
         <loc>https://so-matome.net/2017/10/18/commic-2017-05-29-trapped/</loc>
         <lastmod>2017-10-19T00:17:42.137Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/2017/10/18/why-is-using-for-in-with-array-iteration-a-bad-idea/</loc>
-        <lastmod>2017-10-18T19:16:36.233Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/2017/10/18/is-there-a-simple-way-to-delete-a-list-element-by-value/</loc>
-        <lastmod>2017-10-18T08:29:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/</loc>
-        <lastmod>2017-10-17T12:45:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -313,14 +321,6 @@
     <url>
         <loc>https://so-matome.net/2017/09/25/accessing-the-index-in-python-for-loops/</loc>
         <lastmod>2017-10-16T19:34:36.896Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/2017/09/01/about/</loc>
-        <lastmod>2017-10-16T19:34:36.847Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
