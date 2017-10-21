@@ -338,27 +338,6 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/tags/video/</loc>
-        <lastmod>2017-10-16T19:34:38.003Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/english/</loc>
-        <lastmod>2017-10-16T19:34:38.003Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/TED/</loc>
-        <lastmod>2017-10-16T19:34:38.003Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://so-matome.net/tags/function/</loc>
         <lastmod>2017-10-16T19:34:38.070Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -450,104 +429,6 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/tags/svg/</loc>
-        <lastmod>2017-10-20T22:02:13.366Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/matplotlib/</loc>
-        <lastmod>2017-10-20T22:02:13.366Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/jquery/</loc>
-        <lastmod>2017-10-20T22:02:34.903Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/events/</loc>
-        <lastmod>2017-10-20T22:02:34.903Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/unobtrusive-javascript/</loc>
-        <lastmod>2017-10-20T22:02:34.903Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/pandas/</loc>
-        <lastmod>2017-10-20T22:02:48.254Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/numpy/</loc>
-        <lastmod>2017-10-20T22:02:48.254Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/datasci/</loc>
-        <lastmod>2017-10-20T22:03:06.329Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/python/</loc>
-        <lastmod>2017-10-20T22:03:06.329Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/list/</loc>
-        <lastmod>2017-10-20T22:03:06.329Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/arrays/</loc>
-        <lastmod>2017-10-20T22:03:11.995Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/for-loop/</loc>
-        <lastmod>2017-10-20T22:03:11.995Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/webdev/</loc>
-        <lastmod>2017-10-20T22:14:34.264Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/javascript/</loc>
-        <lastmod>2017-10-20T22:14:34.264Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://so-matome.net/tags/pass-by-reference/</loc>
         <lastmod>2017-10-20T22:14:34.264Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -557,6 +438,125 @@
     <url>
         <loc>https://so-matome.net/tags/pass-by-value/</loc>
         <lastmod>2017-10-20T22:14:34.264Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/list/</loc>
+        <lastmod>2017-10-21T09:46:59.115Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/pandas/</loc>
+        <lastmod>2017-10-21T09:47:13.797Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/numpy/</loc>
+        <lastmod>2017-10-21T09:47:13.797Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/arrays/</loc>
+        <lastmod>2017-10-21T09:47:44.971Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/for-loop/</loc>
+        <lastmod>2017-10-21T09:47:44.971Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/jquery/</loc>
+        <lastmod>2017-10-21T09:48:12.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/events/</loc>
+        <lastmod>2017-10-21T09:48:12.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/unobtrusive-javascript/</loc>
+        <lastmod>2017-10-21T09:48:12.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/datasci/</loc>
+        <lastmod>2017-10-21T09:48:32.226Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/python/</loc>
+        <lastmod>2017-10-21T09:48:32.226Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/svg/</loc>
+        <lastmod>2017-10-21T09:48:32.226Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/matplotlib/</loc>
+        <lastmod>2017-10-21T09:48:32.226Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/webdev/</loc>
+        <lastmod>2017-10-21T09:48:50.085Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/javascript/</loc>
+        <lastmod>2017-10-21T09:48:50.085Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/video/</loc>
+        <lastmod>2017-10-21T21:00:01.474Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/english/</loc>
+        <lastmod>2017-10-21T21:00:01.474Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/TED/</loc>
+        <lastmod>2017-10-21T21:00:01.474Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
