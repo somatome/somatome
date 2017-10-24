@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://so-matome.net/"/>
-  <updated>2017-10-21T09:16:20.522Z</updated>
+  <updated>2017-10-24T04:06:51.695Z</updated>
   <id>https://so-matome.net/</id>
   
   <author>
@@ -15,6 +15,95 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ループ内のJavaScriptクロージャ - 簡単な実用的な例 [Javascript]</title>
+    <link href="https://so-matome.net/2017/10/24/javascript-closure-inside-loops-simple-practical-example/"/>
+    <id>https://so-matome.net/2017/10/24/javascript-closure-inside-loops-simple-practical-example/</id>
+    <published>2017-10-24T04:06:51.000Z</published>
+    <updated>2017-10-24T04:06:51.695Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> funcs = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;      <span class="comment">// 関数を３つ作る</span></div><div class="line">  funcs[i] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;          <span class="comment">// それらをfuncsに入れる</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"My value: "</span> + i); <span class="comment">// 各関数はその値を記録する</span></div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) &#123;</div><div class="line">  funcs[j]();                      <span class="comment">// 走らせる</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p>でもこれは以下を出力してしまう：</p><blockquote><p>My value: 3<br>My value: 3<br>My value: 3</p></blockquote><p>でも僕が欲しいのは</p><blockquote><p>My value: 0<br>My value: 1<br>My value: 2</p></blockquote><hr><p>同じ問題は、関数の実行がイベントリスナーを使用することによって遅延してしまう時にも起こる：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> buttons = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"button"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; buttons.length; i++) &#123;          <span class="comment">// let's create 3 functions</span></div><div class="line">  buttons[i].addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">// as event listeners</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"My value: "</span> + i);                  <span class="comment">// each should log its value.</span></div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>0<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>1<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure><p>この基本的な問題の解決策ってある？？</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/9021/nickf" target="_blank" rel="external">nickf</a> | 質問日時： 2009年4月15日 6:06 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>えっと、問題は、それぞれの匿名の関数の中にある変数<code>i</code>が関数の外部にある同じ変数にバインドされてるってことだよ。</p><p>君がしたいのは、各関数内の変数を独立した変数にバインドすることだと思う。そうすれば関数の外で値が変わらない：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> funcs = [];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createfunc</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">"My value: "</span> + i); &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</div><div class="line">    funcs[i] = createfunc(i);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) &#123;</div><div class="line">    funcs[j]();                        <span class="comment">// 表示させてみる</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p>JavaScriptにはブロックスコープがないので（関数スコープのみ）、新しい関数の中で関数の作成をラップすると、<br><code>&quot;i&quot;</code>は君が意図した通りになるように気をつけないといけない。</p><hr><p><strong> Update：</strong><br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> someArray = [ <span class="comment">/* なんでもいい */</span> ];</div><div class="line"><span class="comment">// ...</span></div><div class="line">someArray.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">arrayElement</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...この要素のコードコードコード</span></div><div class="line">  someAsynchronousFunction(arrayElement, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    arrayElement.doSomething();</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p><p>つまり、<code>.forEach</code>ループと一緒に使われたコールバック関数の各呼び出しが独自のクロージャになる。そのハンドラに渡されたパラメータは、その特定の反復ステップに固有の配列要素になってる。非同期コールバックで使用されている場合、それはその反復の他のステップで確立された他のコールバックどれとも衝突しない。</p><p>もしjQueryで作業している場合なら、<code>$ .each()</code>関数で同じようなことができるよ。</p><p><strong>Update 2：</strong> JavaScriptの最新バージョンであるECMAScript 6(ES6)は、多くのブラウザとバックエンドシステムで実装され始めてる。古いシステムで新しい機能を使用できるようにES6からES5に変換する<a href="http://babeljs.io/" target="_blank" rel="external">Babel</a>のようなトランスパイライザーとかももあります。</p><p>ES6では、<code>var</code>ベースの変数とは違うスコープを持つ新しい <code>let</code>と<code>const</code>キーワードが導入されてる。たとえば、 <code>let</code>ベースのインデックスを持つループでは、それぞれループを通る反復は新しい値「i」を持ち、各値はループの内側にスコープがあるので、君のコードは期待どおりに動作するはず。いろんなリソースがあると思うけど、僕は<a href="http://www.2ality.com/2015/02/es6-scoping.html" target="_blank" rel="external">2alityのブロックスコープに関する記事</a>の素晴らしいソースとしておすすめするよ。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</div><div class="line">    funcs[i] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"My value: "</span> + i);</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>でも注意すべきはIE9-IE11とEdge14以前のEdgeは、<code>let</code>をサポートしてるけど、上記の間違いをしてしまう(毎回新しい <code>i</code>を作成しないので、上で書いたどの関数も<code>var</code>を使用した場合と同様に「3」を出力する)。Edge 14では最終的にそれは解決してる。</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/86463/harto" target="_blank" rel="external">harto</a> | 回答日時： 2009年4月15日 6:18 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>最初にループの外側で関数を作り、その結果をループ内でバインドさせる方がパフォーマンスがいいと思うよ。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'My value: '</span> + x);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> funcs = [];</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</div><div class="line">    funcs[i] = log.bind(<span class="keyword">this</span>, i);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) &#123;</div><div class="line">    funcs[j]();</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1408717/aust" target="_blank" rel="external">Aust</a> | 回答日時： 2013年10月11日 16:41 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/750486/javascript-closure-inside-loops-simple-practical-example/" target="_blank" rel="external">JavaScript closure inside loops – simple practical example</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; funcs = [];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;; i++) &amp;#123;      &lt;span class=&quot;comment&quot;&gt;// 関数を３つ作る&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  funcs[i] = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;          &lt;span class=&quot;comment&quot;&gt;// それらをfuncsに入れる&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&quot;My value: &quot;&lt;/span&gt; + i); &lt;span class=&quot;comment&quot;&gt;// 各関数はその値を記録する&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;; j++) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  funcs[j]();                      &lt;span class=&quot;comment&quot;&gt;// 走らせる&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;でもこれは以下を出力してしまう：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;My value: 3&lt;br&gt;My value: 3&lt;br&gt;My value: 3&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;でも僕が欲しいのは&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;My value: 0&lt;br&gt;My value: 1&lt;br&gt;My value: 2&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;同じ問題は、関数の実行がイベントリスナーを使用することによって遅延してしまう時にも起こる：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; buttons = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementsByTagName(&lt;span class=&quot;string&quot;&gt;&quot;button&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; buttons.length; i++) &amp;#123;          &lt;span class=&quot;comment&quot;&gt;// let&#39;s create 3 functions&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  buttons[i].addEventListener(&lt;span class=&quot;string&quot;&gt;&quot;click&quot;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;span class=&quot;comment&quot;&gt;// as event listeners&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&quot;My value: &quot;&lt;/span&gt; + i);                  &lt;span class=&quot;comment&quot;&gt;// each should log its value.&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;0&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;br&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;br&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;この基本的な問題の解決策ってある？？&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/9021/nickf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nickf&lt;/a&gt; | 質問日時： 2009年4月15日 6:06 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="loops" scheme="https://so-matome.net/tags/loops/"/>
+    
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
+    
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
+    
+      <category term="closures" scheme="https://so-matome.net/tags/closures/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pythonの@staticmethodと@classmethodの違いって何？ [Python]</title>
+    <link href="https://so-matome.net/2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/"/>
+    <id>https://so-matome.net/2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/</id>
+    <published>2017-10-24T04:06:51.000Z</published>
+    <updated>2017-10-24T04:06:51.663Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><a href="http://docs.python.org/library/functions.html#staticmethod" target="_blank" rel="external"><code>@staticmethod</code></a>が付いてる関数と、<a href="http://docs.python.org/library/functions.html#classmethod" target="_blank" rel="external"><code>@classmethod</code></a>が付いてる関数の違いって何？</p><p><div style="text-align: right"> By  <a href="/users/4766/daryl-spitzer">Daryl Spitzer</a> | 質問日時： Sep 25 ‘08 at 21:01 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>たぶんコード例で見たほうがいいと思う：<code>foo</code>、<code>class_foo</code>と <code>static_foo</code>のコールのsignature(訳注：メソッド名、パラメータ、戻り値の型をあわせたもの)の違いに注意：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(self,x)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">"を実行する foo(%s,%s)"</span>%(self,x)</div><div class="line"></div><div class="line"><span class="meta">    @classmethod</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">class_foo</span><span class="params">(cls,x)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">"を実行する class_foo(%s,%s)"</span>%(cls,x)</div><div class="line"></div><div class="line"><span class="meta">    @staticmethod</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">static_foo</span><span class="params">(x)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">"を実行する static_foo(%s)"</span>%x</div><div class="line"></div><div class="line">a=A()</div></pre></td></tr></table></figure><p>以下は、オブジェクトインスタンスがメソッドを呼び出す一般的な方法。オブジェクトインスタンス<code>a</code>は最初の引数として暗黙的に渡される。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">a.foo(<span class="number">1</span>)</div><div class="line"><span class="comment">#  foo(&lt;__main__.A object at 0xb7dbef0c&gt;,1)を実行する</span></div></pre></td></tr></table></figure><hr><p><strong>classmethods</strong>では、オブジェクトインスタンスのクラスは、<code>self</code>じゃなく最初の引数として暗黙的に渡される。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">a.class_foo(<span class="number">1</span>)</div><div class="line"><span class="comment"># class_foo(&lt;class '__main__.A'&gt;,1)を実行する</span></div></pre></td></tr></table></figure><p>クラスを使って <code>class_foo</code>を呼び出すこともできるよ。実際、何かをクラスメソッドとが定義した場合、たぶんそれはクラスインスタンスからじゃなくクラスから呼び出されると仮定して定義しているはずなので。<code>A.foo(1)</code>はTypeErrorだけど、 <code>A.class_foo(1)</code>はうまくいくよ：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">A.class_foo(<span class="number">1</span>)</div><div class="line"><span class="comment"># class_foo(&lt;class '__main__.A'&gt;,1)を実行する</span></div></pre></td></tr></table></figure><p>クラスメソッドとしてよく使われるのは、<a href="https://stackoverflow.com/a/1950927/190597" target="_blank" rel="external">継承可能な代替コンストラクタ</a>を作ること。</p><hr><p><strong>staticmethods</strong>では、 <code>self</code>(オブジェクトインスタンス)も<code>cls</code>(クラス)も暗黙のうちに第1引数として渡されない。インスタンスやクラスから呼び出すことができる点を除いて、通常の関数のように動作するよ。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">a.static_foo(<span class="number">1</span>)</div><div class="line"><span class="comment"># static_foo(1)を実行する</span></div><div class="line"></div><div class="line">A.static_foo(<span class="string">'hi'</span>)</div><div class="line"><span class="comment"># static_foo(hi)を実行する</span></div></pre></td></tr></table></figure><p>staticmethodsはあるクラスとそのクラスへの論理接続を持つ関数をグループ化するために使用される。</p><hr><p><code>foo</code>は単なる関数だけど、<code>a.foo</code>を呼び出すと、関数自身は得ることができなくて、最初の引数としてバインドされたオブジェクトインスタンス <code>a</code>へ”部分的に適用された”関数が与えられる。<code>foo</code>は２つの引数があることを期待してるけど、<code>a.foo</code>は1つの引数しか期待していない。</p><p>ここで<code>a</code>は<code>foo</code>にバインドされてる。これは、以下のように「束縛」(bound)が意味してるものでもある：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(a.foo)</div><div class="line"><span class="comment"># &lt;bound method A.foo of &lt;__main__.A object at 0xb7d52f0c&gt;&gt;</span></div></pre></td></tr></table></figure><p><code>a.class_foo</code>では、<code>a</code>は <code>class_foo</code>に束縛されず、むしろクラス<code>A</code>は<code>class_foo</code>に束縛されてる。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(a.class_foo)</div><div class="line"><span class="comment"># &lt;bound method type.class_foo of &lt;class '__main__.A'&gt;&gt;</span></div></pre></td></tr></table></figure><p>staticメソッドでは、例えそれがメソッドであっても <code>a.static_foo</code>は何も引数がバインドされていない「古き良き」関数を返してくれる。<code>static_foo</code>は1つ引数があるのをを期待してて、<code>a.static_foo</code>も1つの引数があるのを期待してる。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(a.static_foo)</div><div class="line"><span class="comment"># &lt;function static_foo at 0xb7d479cc&gt;</span></div></pre></td></tr></table></figure><p>そしてもちろん、代わりにクラス<code>A</code>で<code>static_foo</code>を呼び出すと同じことが起こる。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(A.static_foo)</div><div class="line"><span class="comment"># &lt;function static_foo at 0xb7d479cc&gt;</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/190597/unutbu">unutbu</a> | 回答日時： Nov 3 ‘09 at 19:13 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/136097/what-is-the-difference-between-staticmethod-and-classmethod-in-python" target="_blank" rel="external">What is the difference between @staticmethod and @classmethod in Python?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://docs.python.org/library/functions.html#staticmethod&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;@staticmethod&lt;/code&gt;&lt;/a&gt;が付いてる関数と、&lt;a href=&quot;http://docs.python.org/library/functions.html#classmethod&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;@classmethod&lt;/code&gt;&lt;/a&gt;が付いてる関数の違いって何？&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/4766/daryl-spitzer&quot;&gt;Daryl Spitzer&lt;/a&gt; | 質問日時： Sep 25 ‘08 at 21:01 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
+    
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
+    
+      <category term="oop" scheme="https://so-matome.net/tags/oop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>昔話 [Webコミック]</title>
+    <link href="https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/"/>
+    <id>https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/</id>
+    <published>2017-10-24T04:06:51.000Z</published>
+    <updated>2017-10-24T04:06:51.711Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>１コマ目：</strong><br>「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」<br>「何が分からないんだい？」</p><p><strong>２コマ目：</strong><br>「どうしてハードディスクはA:からじゃなくて、C:から始まるの？」<br>「ああ！」</p><img src="/2017/10/24/commic-2017-05-02-telling-our-story/commic-2017-05-02-telling-our-story.jpg" alt="commic-2017-05-02-telling-our-story.jpg" title=""><p><strong>３コマ目：</strong><br>「お前がそんな事を聞くなんて思っても見なかったなー！」<br>「よし、それじゃ初めから話をしてやろう」</p><p><strong>４コマ目：</strong><br>「むかぁ～し昔、あるところに、、、」</p><hr><hr><p>Source: <a href="http://www.commitstrip.com/en/2017/05/02/telling-our-story/" target="_blank" rel="external">Telling our story</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;１コマ目：&lt;/strong&gt;&lt;br&gt;「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」&lt;br&gt;「何が分からないんだい？」&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;２コマ目：&lt;/strong&gt;&lt;br&gt;「どうしてハードディスクはA:からじゃなくて、C:から始
+      
+    
+    </summary>
+    
+    
+      <category term="comic" scheme="https://so-matome.net/tags/comic/"/>
+    
+  </entry>
   
   <entry>
     <title>プログラマーが見るべき20のTEDトーク(２)　 怠け者の達人の頭の中 [Video]</title>
@@ -128,6 +217,28 @@
   </entry>
   
   <entry>
+    <title>Trapped (出られない) [Webコミック]</title>
+    <link href="https://so-matome.net/2017/10/18/commic-2017-05-29-trapped/"/>
+    <id>https://so-matome.net/2017/10/18/commic-2017-05-29-trapped/</id>
+    <published>2017-10-18T08:00:01.000Z</published>
+    <updated>2017-10-19T00:17:42.137Z</updated>
+    
+    <content type="html"><![CDATA[<p>毎週水曜日はIT企業で働く人達をネタにしたWebコミック、<a href="http://www.commitstrip.com/en/" target="_blank" rel="external">Commit Strip</a>を翻訳したものを紹介しています。</p><p>今回のお題は「Trapped（出られない）」です。</p><p>&lt;%- post.permalink %&gt;</p><a id="more"></a><hr><hr><p><strong>１コマ目：</strong><br>「もう何日も出口を探してるのに。これって馬鹿げてるよ！」<br>「忘れな。もう俺達は出られないよ。」</p><p><strong>２コマ目：</strong><br>「でもさ、ここからずっと出られないなんて馬鹿げて、、、」「あっ！」</p><p><strong>３コマ目：</strong><br>「えええー、彼まで！」</p><p><strong>４コマ目：</strong><br>「すまん、お前らを助け出すつもりできたのに、でも上手く行かなかった、、、」<br>「えーっ！あんたが最後の希望だったのに！」</p><img src="/2017/10/18/commic-2017-05-29-trapped/commic-2017-05-29-trapped.jpg" alt="commic-2017-05-29-trapped.jpg" title=""><p><strong>５コマ目：</strong><br>「もうハード・リブートするしかないのかな、、、」<br>「落ち着いて！Vimから出る方法はあるはずだ。きっと俺達なら探し出せる、、、」</p><hr><hr><p>Source: <a href="http://www.commitstrip.com/en/2017/05/29/trapped/" target="_blank" rel="external">Trapped</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;毎週水曜日はIT企業で働く人達をネタにしたWebコミック、&lt;a href=&quot;http://www.commitstrip.com/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Commit Strip&lt;/a&gt;を翻訳したものを紹介しています。&lt;/p&gt;
+&lt;p&gt;今回のお題は「Trapped（出られない）」です。&lt;/p&gt;
+&lt;p&gt;&amp;lt;%- post.permalink %&amp;gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="comic" scheme="https://so-matome.net/tags/comic/"/>
+    
+  </entry>
+  
+  <entry>
     <title>値を指定してリストから要素を削除する簡単な方法ってある？ [Python]</title>
     <link href="https://so-matome.net/2017/10/18/is-there-a-simple-way-to-delete-a-list-element-by-value/"/>
     <id>https://so-matome.net/2017/10/18/is-there-a-simple-way-to-delete-a-list-element-by-value/</id>
@@ -154,28 +265,6 @@
       <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
       <category term="list" scheme="https://so-matome.net/tags/list/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Trapped (出られない) [Webコミック]</title>
-    <link href="https://so-matome.net/2017/10/18/commic-2017-05-29-trapped/"/>
-    <id>https://so-matome.net/2017/10/18/commic-2017-05-29-trapped/</id>
-    <published>2017-10-18T08:00:01.000Z</published>
-    <updated>2017-10-19T00:17:42.137Z</updated>
-    
-    <content type="html"><![CDATA[<p>毎週水曜日はIT企業で働く人達をネタにしたWebコミック、<a href="http://www.commitstrip.com/en/" target="_blank" rel="external">Commit Strip</a>を翻訳したものを紹介しています。</p><p>今回のお題は「Trapped（出られない）」です。</p><p>&lt;%- post.permalink %&gt;</p><a id="more"></a><hr><hr><p><strong>１コマ目：</strong><br>「もう何日も出口を探してるのに。これって馬鹿げてるよ！」<br>「忘れな。もう俺達は出られないよ。」</p><p><strong>２コマ目：</strong><br>「でもさ、ここからずっと出られないなんて馬鹿げて、、、」「あっ！」</p><p><strong>３コマ目：</strong><br>「えええー、彼まで！」</p><p><strong>４コマ目：</strong><br>「すまん、お前らを助け出すつもりできたのに、でも上手く行かなかった、、、」<br>「えーっ！あんたが最後の希望だったのに！」</p><img src="/2017/10/18/commic-2017-05-29-trapped/commic-2017-05-29-trapped.jpg" alt="commic-2017-05-29-trapped.jpg" title=""><p><strong>５コマ目：</strong><br>「もうハード・リブートするしかないのかな、、、」<br>「落ち着いて！Vimから出る方法はあるはずだ。きっと俺達なら探し出せる、、、」</p><hr><hr><p>Source: <a href="http://www.commitstrip.com/en/2017/05/29/trapped/" target="_blank" rel="external">Trapped</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;毎週水曜日はIT企業で働く人達をネタにしたWebコミック、&lt;a href=&quot;http://www.commitstrip.com/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Commit Strip&lt;/a&gt;を翻訳したものを紹介しています。&lt;/p&gt;
-&lt;p&gt;今回のお題は「Trapped（出られない）」です。&lt;/p&gt;
-&lt;p&gt;&amp;lt;%- post.permalink %&amp;gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="comic" scheme="https://so-matome.net/tags/comic/"/>
     
   </entry>
   
@@ -268,6 +357,31 @@
   </entry>
   
   <entry>
+    <title>Pandasでgrepのような機能 [Python]</title>
+    <link href="https://so-matome.net/2017/10/16/pandas-grep-like-function/"/>
+    <id>https://so-matome.net/2017/10/16/pandas-grep-like-function/</id>
+    <published>2017-10-16T08:00:01.000Z</published>
+    <updated>2017-10-16T19:34:37.904Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>Pandasのbuilt-in関数で、ある文字列や値を含む行を削除するような、grepみたいな関数ってある？<br>よろしくお願いします。</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1289107/fred" target="_blank" rel="external">fred</a> | 質問日時： 2012年9月27日 16:10 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>df[‘column_label].strを見てみて。以下の例は、列Aに’a’という文字、列Bに20を持つようなすべての行を削除するよ。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">In [<span class="number">46</span>]: df</div><div class="line">Out[<span class="number">46</span>]:</div><div class="line">     A   B</div><div class="line"><span class="number">0</span>  foo  <span class="number">10</span></div><div class="line"><span class="number">1</span>  bar  <span class="number">20</span></div><div class="line"><span class="number">2</span>  baz  <span class="number">30</span></div><div class="line"></div><div class="line">In [<span class="number">47</span>]: cond = df[<span class="string">'A'</span>].str.contains(<span class="string">'a'</span>) &amp;amp; (df[<span class="string">'B'</span>] == <span class="number">20</span>)</div><div class="line"></div><div class="line">In [<span class="number">48</span>]: df.drop(df[cond].index.values)</div><div class="line">Out[<span class="number">48</span>]:</div><div class="line">     A   B</div><div class="line"><span class="number">0</span>  foo  <span class="number">10</span></div><div class="line"><span class="number">2</span>  baz  <span class="number">30</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1548051/wouter-overmeire" target="_blank" rel="external">Wouter Overmeire</a> | 回答日時： 2012年9月27日 18:03 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/12625650/pandas-grep-like-function" target="_blank" rel="external">Pandas: grep like function</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;Pandasのbuilt-in関数で、ある文字列や値を含む行を削除するような、grepみたいな関数ってある？&lt;br&gt;よろしくお願いします。&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/1289107/fred&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fred&lt;/a&gt; | 質問日時： 2012年9月27日 16:10 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="pandas" scheme="https://so-matome.net/tags/pandas/"/>
+    
+      <category term="grep" scheme="https://so-matome.net/tags/grep/"/>
+    
+      <category term="row" scheme="https://so-matome.net/tags/row/"/>
+    
+  </entry>
+  
+  <entry>
     <title>jQuery Ajaxファイルアップロード [Javascript]</title>
     <link href="https://so-matome.net/2017/10/16/jquery-ajax-file-upload/"/>
     <id>https://so-matome.net/2017/10/16/jquery-ajax-file-upload/</id>
@@ -296,31 +410,6 @@
       <category term="post" scheme="https://so-matome.net/tags/post/"/>
     
       <category term="file-upload" scheme="https://so-matome.net/tags/file-upload/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pandasでgrepのような機能 [Python]</title>
-    <link href="https://so-matome.net/2017/10/16/pandas-grep-like-function/"/>
-    <id>https://so-matome.net/2017/10/16/pandas-grep-like-function/</id>
-    <published>2017-10-16T08:00:01.000Z</published>
-    <updated>2017-10-16T19:34:37.904Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>Pandasのbuilt-in関数で、ある文字列や値を含む行を削除するような、grepみたいな関数ってある？<br>よろしくお願いします。</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1289107/fred" target="_blank" rel="external">fred</a> | 質問日時： 2012年9月27日 16:10 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>df[‘column_label].strを見てみて。以下の例は、列Aに’a’という文字、列Bに20を持つようなすべての行を削除するよ。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">In [<span class="number">46</span>]: df</div><div class="line">Out[<span class="number">46</span>]:</div><div class="line">     A   B</div><div class="line"><span class="number">0</span>  foo  <span class="number">10</span></div><div class="line"><span class="number">1</span>  bar  <span class="number">20</span></div><div class="line"><span class="number">2</span>  baz  <span class="number">30</span></div><div class="line"></div><div class="line">In [<span class="number">47</span>]: cond = df[<span class="string">'A'</span>].str.contains(<span class="string">'a'</span>) &amp;amp; (df[<span class="string">'B'</span>] == <span class="number">20</span>)</div><div class="line"></div><div class="line">In [<span class="number">48</span>]: df.drop(df[cond].index.values)</div><div class="line">Out[<span class="number">48</span>]:</div><div class="line">     A   B</div><div class="line"><span class="number">0</span>  foo  <span class="number">10</span></div><div class="line"><span class="number">2</span>  baz  <span class="number">30</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1548051/wouter-overmeire" target="_blank" rel="external">Wouter Overmeire</a> | 回答日時： 2012年9月27日 18:03 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/12625650/pandas-grep-like-function" target="_blank" rel="external">Pandas: grep like function</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;Pandasのbuilt-in関数で、ある文字列や値を含む行を削除するような、grepみたいな関数ってある？&lt;br&gt;よろしくお願いします。&lt;/p&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/1289107/fred&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fred&lt;/a&gt; | 質問日時： 2012年9月27日 16:10 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="pandas" scheme="https://so-matome.net/tags/pandas/"/>
-    
-      <category term="grep" scheme="https://so-matome.net/tags/grep/"/>
-    
-      <category term="row" scheme="https://so-matome.net/tags/row/"/>
     
   </entry>
   
@@ -591,34 +680,6 @@
   </entry>
   
   <entry>
-    <title>変数を使用してオブジェクトプロパティに動的にアクセスする方法？ [Javascript]</title>
-    <link href="https://so-matome.net/2017/10/10/dynamically-access-object-property-using-variable/"/>
-    <id>https://so-matome.net/2017/10/10/dynamically-access-object-property-using-variable/</id>
-    <published>2017-10-10T13:59:28.000Z</published>
-    <updated>2017-10-16T19:34:37.270Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>動的な変数名を使ってオブジェクトのプロパティにアクセスしようとしてるんだけど、これって可能？</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> something = &#123; <span class="attr">bar</span>: <span class="string">"Foobar!"</span> &#125;;</div><div class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</div><div class="line">something.foo; <span class="comment">// このsomething.bar, "Foobar!"を取得したい</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/471628/richw" target="_blank" rel="external">RichW</a> | 質問日時： 2010年11月22日 11:23 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>プロパティにアクセスするには<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors" target="_blank" rel="external">2つの方法</a><br>がある</p><ul><li>ドット表記： <code>something.bar</code></li><li>ブラケット記法： <code>something [&#39;bar&#39;]</code></li></ul><p>角かっこの間の値は、任意の式。だから、プロパティ名が変数に格納されている場合は、ブラケット表記を使用する必要があるよ。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</div><div class="line">something[foo];</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/185527/jan-han%c4%8di%c4%8d" target="_blank" rel="external">Jan Hančič</a> | 回答日時： 2010年11月22日 11:25 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>javascriptでは次の形でアクセスできるよ：</p><ul><li>ドット表記 -  <code>foo.bar</code></li><li>大括弧 -  <code>foo [someVar]</code>または <code>foo [&quot; string &quot;]</code></li></ul><p>でも2番目のケースだけがプロパティに動的にアクセスできる。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = &#123; <span class="attr">pName1</span> : <span class="number">1</span>, <span class="attr">pName2</span> : [<span class="number">1</span>, &#123;<span class="attr">foo</span> : bar &#125;, <span class="number">3</span>] , ...&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> name = <span class="string">"pName"</span></div><div class="line"><span class="keyword">var</span> num  = <span class="number">1</span>;</div><div class="line"></div><div class="line">foo[name + num]; <span class="comment">// 1</span></div><div class="line"></div><div class="line"><span class="comment">// --</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> c = <span class="string">"foo"</span>;</div><div class="line"></div><div class="line">foo[name + a][b][c]; <span class="comment">// bar</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1726507/sonique" target="_blank" rel="external">Sonique</a> | 回答日時： 2014年7月1日 15:40 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>以下は、オブジェクトのプロパティにアクセスする方法のES6での例。<br>2つの文字列を連結して動的に生成されたプロパティ名を使用してアクセスする方法。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> suffix = <span class="string">" name"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    [<span class="string">"first"</span> + suffix]: <span class="string">"Nicholas"</span>,</div><div class="line">    [<span class="string">"last"</span> + suffix]: <span class="string">"Zakas"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person[<span class="string">"first name"</span>]);      <span class="comment">// "Nicholas"</span></div><div class="line"><span class="built_in">console</span>.log(person[<span class="string">"last name"</span>]);       <span class="comment">// "Zakas"</span></div></pre></td></tr></table></figure><p>これは<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names" target="_blank" rel="external">計算されたプロパティ名 Computed property names</a>って呼ばれてる。</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1673376/zloctb" target="_blank" rel="external">zloctb</a> | 回答日時： 2016年8月2日 19:46 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/4244896/dynamically-access-object-property-using-variable" target="_blank" rel="external">Dynamically access object property using variable</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;動的な変数名を使ってオブジェクトのプロパティにアクセスしようとしてるんだけど、これって可能？&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; something = &amp;#123; &lt;span class=&quot;attr&quot;&gt;bar&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Foobar!&quot;&lt;/span&gt; &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; foo = &lt;span class=&quot;string&quot;&gt;&#39;bar&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;something.foo; &lt;span class=&quot;comment&quot;&gt;// このsomething.bar, &quot;Foobar!&quot;を取得したい&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/471628/richw&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RichW&lt;/a&gt; | 質問日時： 2010年11月22日 11:23 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
-    
-      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
-    
-      <category term="object" scheme="https://so-matome.net/tags/object/"/>
-    
-      <category term="properties" scheme="https://so-matome.net/tags/properties/"/>
-    
-  </entry>
-  
-  <entry>
     <title>サイズがバラバラなデータフレームを作成する [R]</title>
     <link href="https://so-matome.net/2017/10/10/create-a-data-frame-of-unequal-lengths/"/>
     <id>https://so-matome.net/2017/10/10/create-a-data-frame-of-unequal-lengths/</id>
@@ -643,6 +704,34 @@
       <category term="r" scheme="https://so-matome.net/tags/r/"/>
     
       <category term="dataframe" scheme="https://so-matome.net/tags/dataframe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>変数を使用してオブジェクトプロパティに動的にアクセスする方法？ [Javascript]</title>
+    <link href="https://so-matome.net/2017/10/10/dynamically-access-object-property-using-variable/"/>
+    <id>https://so-matome.net/2017/10/10/dynamically-access-object-property-using-variable/</id>
+    <published>2017-10-10T13:59:28.000Z</published>
+    <updated>2017-10-16T19:34:37.270Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>動的な変数名を使ってオブジェクトのプロパティにアクセスしようとしてるんだけど、これって可能？</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> something = &#123; <span class="attr">bar</span>: <span class="string">"Foobar!"</span> &#125;;</div><div class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</div><div class="line">something.foo; <span class="comment">// このsomething.bar, "Foobar!"を取得したい</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/471628/richw" target="_blank" rel="external">RichW</a> | 質問日時： 2010年11月22日 11:23 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>プロパティにアクセスするには<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors" target="_blank" rel="external">2つの方法</a><br>がある</p><ul><li>ドット表記： <code>something.bar</code></li><li>ブラケット記法： <code>something [&#39;bar&#39;]</code></li></ul><p>角かっこの間の値は、任意の式。だから、プロパティ名が変数に格納されている場合は、ブラケット表記を使用する必要があるよ。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</div><div class="line">something[foo];</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/185527/jan-han%c4%8di%c4%8d" target="_blank" rel="external">Jan Hančič</a> | 回答日時： 2010年11月22日 11:25 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>javascriptでは次の形でアクセスできるよ：</p><ul><li>ドット表記 -  <code>foo.bar</code></li><li>大括弧 -  <code>foo [someVar]</code>または <code>foo [&quot; string &quot;]</code></li></ul><p>でも2番目のケースだけがプロパティに動的にアクセスできる。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = &#123; <span class="attr">pName1</span> : <span class="number">1</span>, <span class="attr">pName2</span> : [<span class="number">1</span>, &#123;<span class="attr">foo</span> : bar &#125;, <span class="number">3</span>] , ...&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> name = <span class="string">"pName"</span></div><div class="line"><span class="keyword">var</span> num  = <span class="number">1</span>;</div><div class="line"></div><div class="line">foo[name + num]; <span class="comment">// 1</span></div><div class="line"></div><div class="line"><span class="comment">// --</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> c = <span class="string">"foo"</span>;</div><div class="line"></div><div class="line">foo[name + a][b][c]; <span class="comment">// bar</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1726507/sonique" target="_blank" rel="external">Sonique</a> | 回答日時： 2014年7月1日 15:40 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>以下は、オブジェクトのプロパティにアクセスする方法のES6での例。<br>2つの文字列を連結して動的に生成されたプロパティ名を使用してアクセスする方法。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> suffix = <span class="string">" name"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    [<span class="string">"first"</span> + suffix]: <span class="string">"Nicholas"</span>,</div><div class="line">    [<span class="string">"last"</span> + suffix]: <span class="string">"Zakas"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person[<span class="string">"first name"</span>]);      <span class="comment">// "Nicholas"</span></div><div class="line"><span class="built_in">console</span>.log(person[<span class="string">"last name"</span>]);       <span class="comment">// "Zakas"</span></div></pre></td></tr></table></figure><p>これは<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names" target="_blank" rel="external">計算されたプロパティ名 Computed property names</a>って呼ばれてる。</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1673376/zloctb" target="_blank" rel="external">zloctb</a> | 回答日時： 2016年8月2日 19:46 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/4244896/dynamically-access-object-property-using-variable" target="_blank" rel="external">Dynamically access object property using variable</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;動的な変数名を使ってオブジェクトのプロパティにアクセスしようとしてるんだけど、これって可能？&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; something = &amp;#123; &lt;span class=&quot;attr&quot;&gt;bar&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Foobar!&quot;&lt;/span&gt; &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; foo = &lt;span class=&quot;string&quot;&gt;&#39;bar&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;something.foo; &lt;span class=&quot;comment&quot;&gt;// このsomething.bar, &quot;Foobar!&quot;を取得したい&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/471628/richw&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RichW&lt;/a&gt; | 質問日時： 2010年11月22日 11:23 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
+    
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
+    
+      <category term="object" scheme="https://so-matome.net/tags/object/"/>
+    
+      <category term="properties" scheme="https://so-matome.net/tags/properties/"/>
     
   </entry>
   
@@ -805,95 +894,6 @@
       <category term="equality-operator" scheme="https://so-matome.net/tags/equality-operator/"/>
     
       <category term="identity-operator" scheme="https://so-matome.net/tags/identity-operator/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gitリポジトリを以前のコミットに戻すには？ [Git]</title>
-    <link href="https://so-matome.net/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/"/>
-    <id>https://so-matome.net/2017/09/28/how-to-revert-git-repository-to-a-previous-commit/</id>
-    <published>2017-09-28T20:17:49.000Z</published>
-    <updated>2017-10-16T19:34:37.725Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>現在の状態から、あるコミットの時点でのスナップショットに戻すのってどうやればいいの？<br><code>git log</code>をすると、こんなのが出力されるんだけど：<br><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">$ git <span class="built_in">log</span></div><div class="line">commit a867b4af366350be2e7c21b8de9cc6504678a61b`</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 18:59:41 2010 -0400</div><div class="line"></div><div class="line">なんとかかんとか...</div><div class="line"></div><div class="line">commit 25eee4caef46ae64aa08e8ab3f988bc917ee1ce4</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 05:13:39 2010 -0400</div><div class="line"></div><div class="line">なんとかかんとかかんとか...</div><div class="line"></div><div class="line">commit 0766c053c0ea2035e90f504928f8df3c9363b8bd</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Thu 11月 4 00:55:06 2010 -0400</div><div class="line"></div><div class="line">さらになんとかかんとか...</div><div class="line"></div><div class="line">commit 0d1d7fc32e5a947fbd92ee598033d85bfc445a50</div><div class="line">Author: Me &lt;me@me.com&gt;</div><div class="line">Date:   Wed 11月 3 23:56:08 2010 -0400</div><div class="line"></div><div class="line">そう、もっともっとなんとかかんとか...</div></pre></td></tr></table></figure></p><p>どうやってここから11月3日、つまりコミット0d1d7fc…に戻せばいいの？</p><p><div style="text-align: right"> By  <a href="/users/111174/crazy-serb">Crazy Serb</a> | 質問日時： 2010年11月6日 16:58 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>これは”元に戻す”がどういう意味かによるかな。</p><h2 id="一時的に別のコミットに切り替える"><a href="#一時的に別のコミットに切り替える" class="headerlink" title="一時的に別のコミットに切り替える"></a>一時的に別のコミットに切り替える</h2><p>もし一時的にそれに戻して、なんか作業して、また元に戻ってきたいのなら、望みのコミットをチェックアウトすればいい：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line"><span class="comment"># これはHEADを切り離す、つまり、ブランチをチェックアウトしないままにする：</span></div><div class="line">git checkout 0d1d7fc32</div></pre></td></tr></table></figure><p>または、そこに戻してる間にコミットしたい場合は、そこにいる間に新しいブランチを作るべき：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git checkout -b old-state 0d1d7fc32</div></pre></td></tr></table></figure><p>元の場所に戻るには、もう一度あなたがいた支店をチェックしてください。 (If<br>ブランチを切り替えるときはいつものように変更を加えました。<br>必要に応じてそれらと一緒に。あなたはそれらを捨てるようにリセットすることができます。あなたは隠れて、<br>チェックアウトして、あなたと一緒に連れていってください。それらをブランチにコミットすることができます<br>そこに支店が必要な場合はそこに。)</p><p>##非公開のコミットをハード削除する</p><p>一方で、あなたが本当にやったことすべてを取り除きたいのであれば<br>それ以来、2つの可能性があります。 1つ、あなたが<br>これらのコミットは、単にリセットします：</p><pre><code>＃これにより、ローカルの変更はすべて破棄されます。＃コミットしたくない作業が残っている場合は、実行しないでください。git reset --hard 0d1d7fc32＃あるいは、保存する作業がある場合：git stashgit reset --hard 0d1d7fc32git stash pop＃これは変更を保存し、リセット後にそのパッチを再適用します。＃マージの競合が発生する可能性があります。＃あなたがリセットしたコミットから変更されました。</code></pre><p>面倒なことがあれば、あなたはすでにローカルの変更を投げ捨てましたが、<br>もう一度リセットすることで、以前の場所に戻ってください。</p><p>##新しいコミットでコミットされたコミットを元に戻す</p><p>一方、あなたが作品を発表した場合、おそらく<br>ブランチをリセットすると、効果的に履歴を書き換えられるからです。その場合、<br>あなたは確かにコミットを元に戻すことができます。 Gitを使うと、元に戻すことは非常に特殊です<br>意味：逆パッチでコミットを作成して取り消します。このようにして<br>履歴を書き換えないでください。</p><pre><code>＃これは3つの別々の復帰コミットを作成します：git revert a867b4af 25eee4ca 0766c053＃それはまた範囲を取る。これは最後の2つのコミットを元に戻します：git revert HEAD〜2..HEAD＃同様に、コミットハッシュを使用して一連のコミットを元に戻すことができます。git revert a867b4af..0766c053＃マージコミットを元に戻すgit revert -m 1 &lt;merge_commit_sha&gt;＃ちょうど1つを得るには、 `rebase -i`を使って後でそれらを押しつぶすことができます＃または、手動で行うこともできます(リポジトリのトップレベルでこれを行うことを忘れないでください)＃HEADを変更せずに、あなたのインデックスと作業ツリーを目的の状態にする：git checkout 0d1d7fc32。＃次にコミットします。あなたがやったことを説明する良いメッセージを書いてくださいgit commit</code></pre><p><a href="http://schacon.github.com/git/git-revert.html" target="_blank" rel="external"><code>git-revert</code>マンページ</a><br>実際にはその説明で多くのことをカバーしています。もう一つの役に立つリンクは[this<br>git-scm.comブログ投稿でgit-revertについて議論する(http：// git-<br>scm.com/blog/2010/03/02/undoing-merges.html)。</p><p>あなたが結局元に戻したくないと決めたら、元に戻すことができます<br>(ここで説明したように)、または元に戻す前にリセットすることができます(前の<br>セクション)。</p><p>この回答は、この場合に役立ちます：<br><a href="https://stackoverflow.com/questions/34519665/how-to-move-head-forward-checkout-revet-reflog-reset/34519716＃34519716" target="_blank" rel="external">HEADを元の場所に戻す方法は？ (分離された<br>head)</a></p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># This will destroy any local modifications.</div><div class="line"># Don&apos;t do it if you have uncommitted work you want to keep.</div><div class="line">git reset --hard 0d1d7fc32</div><div class="line"></div><div class="line"># Alternatively, if there&apos;s work to keep:</div><div class="line">git stash</div><div class="line">git reset --hard 0d1d7fc32</div><div class="line">git stash pop</div><div class="line"># This saves the modifications, then reapplies that patch after resetting.</div><div class="line"># You could get merge conflicts, if you&apos;ve modified things which were</div><div class="line"># changed since the commit you reset to.</div></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># This will create three separate revert commits:</div><div class="line">git revert a867b4af 25eee4ca 0766c053</div><div class="line"></div><div class="line"># It also takes ranges. This will revert the last two commits:</div><div class="line">git revert HEAD~2..HEAD</div><div class="line"></div><div class="line">#Similarly, you can revert a range of commits using commit hashes:</div><div class="line">git revert a867b4af..0766c053</div><div class="line"></div><div class="line"># Reverting a merge commit</div><div class="line">git revert -m 1 &lt;merge_commit_sha&gt;</div><div class="line"></div><div class="line"># To get just one, you could use `rebase -i` to squash them afterwards</div><div class="line"># Or, you could do it manually (be sure to do this at top level of the repo)</div><div class="line"># get your index and work tree into the desired state, without changing HEAD:</div><div class="line">git checkout 0d1d7fc32 .</div><div class="line"></div><div class="line"># Then commit. Be sure and write a good message describing what you just did</div><div class="line">git commit</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/119963/jefromi">Jefromi</a> | 回答日時： Nov 6 2010 at 17:04 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><h3 id="作業コピーを最新のコミットに戻す"><a href="#作業コピーを最新のコミットに戻す" class="headerlink" title="作業コピーを最新のコミットに戻す"></a>作業コピーを最新のコミットに戻す</h3><p>以前のコミットに戻し、変更を無視するには：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git reset --hard HEAD</div></pre></td></tr></table></figure><p>HEADは現在のブランチの最後のコミットね。</p><h3 id="作業コピーを古いコミットに戻す"><a href="#作業コピーを古いコミットに戻す" class="headerlink" title="作業コピーを古いコミットに戻す"></a>作業コピーを古いコミットに戻す</h3><p>直近のコミットよりも古いコミットに戻すには：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line"><span class="comment"># インデックスを以前のコミットにリセットする。 '56e05fced'は適宜書き換えて</span></div><div class="line">git reset 56e05fced</div><div class="line"></div><div class="line"><span class="comment"># ポインタを前のHEADに戻す</span></div><div class="line">git reset --soft HEAD@&#123;1&#125;</div><div class="line"></div><div class="line">git commit -m <span class="string">"56e05fcedに戻す"</span></div><div class="line"></div><div class="line"><span class="comment"># 新しいコミットを反映するように作業コピーを更新する</span></div><div class="line">git reset --hard</div></pre></td></tr></table></figure><p>元ネタは同じような質問のページ: <a href="https://stackoverflow.com/questions/1895059/revert-to-a-commit-by-a-sha-hash-in-git" target="_blank" rel="external">SHAハッシュで以前のコミットに戻る方法？</a></p><p><div style="text-align: right"> By  <a href="/users/1276506/boulder-ruby">boulder_ruby</a> | 回答日時： Aug 21 ‘12 at 6:19 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>複雑でヤバい答えがたくさんあるけど、実際は簡単：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git revert --no-commit 0766c053..HEAD</div><div class="line">git commit</div></pre></td></tr></table></figure><p>これは、HEADからコミットハッシュに戻ってすべてを元に戻すよ。つまり、すべてのコミットがその状態に戻ったかのように作業ツリー内のそのコミット状態を再び作成してる。。それから現在のツリーをコミットすると、「元に戻した」コミットと本質的に同等の新しいコミットをするよ。</p><p>(<code>--no-commit</code>フラグは、すべてのコミットを一度に元に戻す - そうじゃければ範囲内の各コミットのコメントを入れるように促される、これはコミット履歴を不要な新しいコミットのゴミで汚しちゃうけど)</p><p>重要なのは、これは以前の状態にロールバックする<strong>安全かつ簡単な方法</strong>だってこと。履歴は壊されることなく、すでに公開されているコミットに使用することができる。</p><p><div style="text-align: right"> By  <a href="/users/165673/yarin">Yarin</a> | 回答日時： Feb 12 ‘14 at 4:18 </div><br></p><hr><hr><h2 id="回答4"><a href="#回答4" class="headerlink" title="回答4:"></a>回答4:</h2><p>僕にとっては（たぶん他の人にも）、一番いいのはGitリセットオプションだよ：</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git reset --hard &lt;commidId&gt; &amp;amp;&amp;amp; git clean -f</div></pre></td></tr></table></figure><p>これは僕にとって最高の選択肢だった！シンプルで、速く、効果的！</p><hr><p><strong>注意：</strong> でも古いコミットのコピーを持っている他の人とブランチを共有している場合は、この方法は使わないこと！</p><p>あと、あんまりヤバくない方法がお好みの時は、</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git clean -i</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/1606432/pogrindis">Pogrindis</a> | 回答日時： Oct 22 ‘13 at 11:53 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-previous-commit" target="_blank" rel="external">How to revert Git repository to a previous commit?</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;現在の状態から、あるコミットの時点でのスナップショットに戻すのってどうやればいいの？&lt;br&gt;&lt;code&gt;git log&lt;/code&gt;をすると、こんなのが出力されるんだけど：&lt;br&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ git &lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;commit a867b4af366350be2e7c21b8de9cc6504678a61b`&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Author: Me &amp;lt;me@me.com&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Date:   Thu 11月 4 18:59:41 2010 -0400&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;なんとかかんとか...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;commit 25eee4caef46ae64aa08e8ab3f988bc917ee1ce4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Author: Me &amp;lt;me@me.com&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Date:   Thu 11月 4 05:13:39 2010 -0400&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;なんとかかんとかかんとか...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;commit 0766c053c0ea2035e90f504928f8df3c9363b8bd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Author: Me &amp;lt;me@me.com&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Date:   Thu 11月 4 00:55:06 2010 -0400&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;さらになんとかかんとか...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;commit 0d1d7fc32e5a947fbd92ee598033d85bfc445a50&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Author: Me &amp;lt;me@me.com&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Date:   Wed 11月 3 23:56:08 2010 -0400&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;そう、もっともっとなんとかかんとか...&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;どうやってここから11月3日、つまりコミット0d1d7fc…に戻せばいいの？&lt;/p&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/111174/crazy-serb&quot;&gt;Crazy Serb&lt;/a&gt; | 質問日時： 2010年11月6日 16:58 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
-    
-      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
-    
-      <category term="git" scheme="https://so-matome.net/tags/git/"/>
-    
-      <category term="git-checkout" scheme="https://so-matome.net/tags/git-checkout/"/>
-    
-      <category term="git-reset" scheme="https://so-matome.net/tags/git-reset/"/>
-    
-      <category term="git-revert" scheme="https://so-matome.net/tags/git-revert/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ローカルGitブランチの名前を変更するにはどうすればいい？ [Git]</title>
-    <link href="https://so-matome.net/2017/09/26/how-do-i-rename-a-local-git-branch/"/>
-    <id>https://so-matome.net/2017/09/26/how-do-i-rename-a-local-git-branch/</id>
-    <published>2017-09-26T10:40:46.000Z</published>
-    <updated>2017-10-16T19:34:37.571Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><em><a href="https://stackoverflow.com/questions/1526794/rename-master-branch-for-both-local-and-remote-git-repositories?answertab=votes#tab-top" target="_blank" rel="external">ローカルとリモートの両方のGitリポジトリのMaster branchの名前を変更する</a></em>に書いてあるように、リモートブランチの名前は変更したくないんだけど。</p><p>リモートブランチにプッシュされていないローカルブランチの名前を変更するにはどうしたらいいの？</p><p><div style="text-align: right"> By  <a href="/users/338204/forrest">Forrest</a> | 質問日時： Jul 6 ‘11 at 3:20 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>あるブランチを指定してそのブランチの名前を変更する場合は、次のようにやればいいよ。</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git branch -m &lt;oldname&gt; &lt;newname&gt;</div></pre></td></tr></table></figure><p>今使ってるブランチの名前を変更するには、次のように</p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">git branch -m &lt;newname&gt;</div></pre></td></tr></table></figure><p>これを覚えておくには、 <code>-m</code>は”move”(または<code>mv</code>)、つまりファイル名の変更だ、って覚えておくといいかも。</p><p><div style="text-align: right"> By  <a href="/users/394487/siride">siride</a> | 回答日時： Jul 6 ‘11 at 3:21 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git branch -m old_branch_name new_branch_name</div></pre></td></tr></table></figure><p>このコマンドで名前を変えられるけど、この名前を変更したブランチを使う時は注意。なぜなら、これはまだ古い上流ブランチを参照してるから（もしそれが存在するのであれば）。</p><p>ローカルブランチを(例えば)<code>new_branch_name</code>に名前を変更した後、変更をマスターにプッシュしたい場合は：</p><p><code>git push origin new_branch_name：master</code>(この変更はマスターブランチに行くけど、君のローカルブランチ名は<code>new_branch_name</code>だよ)</p><p>詳細については、「<a href="http://madhan-tech-updates.blogspot.in/2013/01/how-to-rename-your-local-branch-name-in.html" target="_blank" rel="external">ローカルGitブランチ名の名前を変更する方法</a>」を参照。</p><p><div style="text-align: right"> By  <a href="/users/1996609/madhan-ayyasamy">Madhan Ayyasamy</a> | 回答日時： Jan 21 ‘13 at 9:49 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>ブランチの名前を変更する手順は次のとおり。</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">1. 名前を変更する必要があるブランチに移動</div><div class="line">2. git branch -m &lt;new_name&gt;</div><div class="line">3. git push origin :&lt;old_name&gt;</div><div class="line">4. git push origin &lt;new_name&gt;:refs/heads/&lt;new_name&gt;</div></pre></td></tr></table></figure><p><strong> 追記(2017/01/12)：</strong>コマンド <code>git status</code>を実行して、新しく作成したブランチが、古いものじゃなくそれ自身（新しいもの）を指していることを確認すること。まだ古いブランチへの参照してる場合は、以下のように上流でのを設定を解除する必要があるよ。</p><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">git branch --<span class="built_in">unset</span>-upstream</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/1719752/milind-anantwar">Milind Anantwar</a> | 回答日時： Apr 15 ‘15 at 12:50 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/6591213/how-do-i-rename-a-local-git-branch" target="_blank" rel="external">How do I rename a local Git branch?</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1526794/rename-master-branch-for-both-local-and-remote-git-repositories?answertab=votes#tab-top&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ローカルとリモートの両方のGitリポジトリのMaster branchの名前を変更する&lt;/a&gt;&lt;/em&gt;に書いてあるように、リモートブランチの名前は変更したくないんだけど。&lt;/p&gt;
-&lt;p&gt;リモートブランチにプッシュされていないローカルブランチの名前を変更するにはどうしたらいいの？&lt;/p&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/338204/forrest&quot;&gt;Forrest&lt;/a&gt; | 質問日時： Jul 6 ‘11 at 3:20 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
-    
-      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
-    
-      <category term="git" scheme="https://so-matome.net/tags/git/"/>
-    
-      <category term="git-branch" scheme="https://so-matome.net/tags/git-branch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python forループのインデックスへのアクセス方法 [Python]</title>
-    <link href="https://so-matome.net/2017/09/25/accessing-the-index-in-python-for-loops/"/>
-    <id>https://so-matome.net/2017/09/25/accessing-the-index-in-python-for-loops/</id>
-    <published>2017-09-25T14:24:08.000Z</published>
-    <updated>2017-10-16T19:34:36.896Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>例えばこんなリストがあったとき、このリストのインデックスにアクセスするにはどうしたらいいの？</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">ints = [<span class="number">8</span>, <span class="number">23</span>, <span class="number">45</span>, <span class="number">12</span>, <span class="number">78</span>]</div></pre></td></tr></table></figure><p>これをforループで使う時、どうやってこのループインデックス（この場合１から５）にアクセスしたらいいの？</p><p><div style="text-align: right"> By  <a href="/users/51816/joan-venge">Joan Venge</a> | 質問日時： Feb 6 ‘09 at 22:47 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>インデックス変数とかの追加の状態変数を使用するのはあんまりPythonっぽく無いんだ(CとかPHPなどの言語だと普通だけど)。</p><p>より良い方法は組み込み関数を使うこと：<br><a href="https://docs.python.org/3/library/functions.html#enumerate" title="enumerate" target="_blank" rel="external"><code>enumerate()</code>]</a>、Python2と3の両方で利用できるよ：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span> idx, val <span class="keyword">in</span> enumerate(ints):</div><div class="line">    print(idx, val)</div></pre></td></tr></table></figure><p>詳しく知りたければ<a href="https://www.python.org/dev/peps/pep-0279/" target="_blank" rel="external">PEP 279</a>を参照してみて。</p><p><div style="text-align: right"> By  <a href="/users/19082/mike-hordecki">Mike Hordecki</a> | 回答日時： Feb 6 ‘09 at 22:52 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><blockquote><h3 id="これをforループで使う時、どうやってこのループインデックス（この場合１から５）にアクセスしたらいいの？"><a href="#これをforループで使う時、どうやってこのループインデックス（この場合１から５）にアクセスしたらいいの？" class="headerlink" title="これをforループで使う時、どうやってこのループインデックス（この場合１から５）にアクセスしたらいいの？"></a>これをforループで使う時、どうやってこのループインデックス（この場合１から５）にアクセスしたらいいの？</h3></blockquote><p><code>enumerate</code>を使おう：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span> index, item <span class="keyword">in</span> enumerate(items):</div><div class="line">    print(index, item)</div></pre></td></tr></table></figure><p>あとインデックスはゼロから始まるので、これで0〜4になることに注意。もし、あんたがカウントをしたいっていうのなら、こんな感じに説明するかな。</p><h2 id="慣習的じゃないやり方"><a href="#慣習的じゃないやり方" class="headerlink" title="慣習的じゃないやり方"></a>慣習的じゃないやり方</h2><p>君が求めているのは、以下のPythonicなやり方だろ。これはほとんどの低レベル言語のプログラマーはこのアルゴリズムを使うと思う：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">index = <span class="number">0</span>            <span class="comment"># Pythonのインデックスはゼロから始まる</span></div><div class="line"><span class="keyword">for</span> item <span class="keyword">in</span> items:   <span class="comment"># Pythonのforループは "for each"ループ</span></div><div class="line">    print(index, item)</div><div class="line">    index += <span class="number">1</span></div></pre></td></tr></table></figure><p>それかfor-eachループを持たない言語だと：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">index = <span class="number">0</span></div><div class="line"><span class="keyword">while</span> index &amp;lt; len(items):</div><div class="line">    print(index, items[index])</div><div class="line">    index += <span class="number">1</span></div></pre></td></tr></table></figure><p>それか、ときどきより一般的に(慣習的じゃない)やり方：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span> index <span class="keyword">in</span> range(len(items)):</div><div class="line">    print(index, items[index])</div></pre></td></tr></table></figure><h2 id="列挙関数enumerateを使う"><a href="#列挙関数enumerateを使う" class="headerlink" title="列挙関数enumerateを使う"></a>列挙関数<code>enumerate</code>を使う</h2><p>Pythonの<a href="https://docs.python.org/2/library/functions.html#enumerate" target="_blank" rel="external"><code>enumerate</code>関数</a>は、インデックスのための計算処理を隠して、変数をカプセル化することで視覚的にごちゃごちゃしたのを減らす効果がある。こんな感じ：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span> index, item <span class="keyword">in</span> enumerate(items, start=<span class="number">0</span>):   <span class="comment"># default is zero</span></div><div class="line">    print(index, item)</div></pre></td></tr></table></figure><p>このコードサンプルは、Pythonの慣習的な書き方と、そうじゃない書き方の違いを表すかなり<a href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html#index-item-2-enumerate" target="_blank" rel="external">典型的な</a>例。慣用的なコードは洗練されている(でもそんな複雑じゃない)Python。<br>この慣用コードは、言語の設計者が意図した書き方、つまり、通常このコードはあんまり読みやすくないけど、より効率的。</p><h2 id="カウントする"><a href="#カウントする" class="headerlink" title="カウントする"></a>カウントする</h2><p>たとえインデックスが必要じゃなくても、iterationsのカウントが１から始まって、最後は自分のカウントする数になってほしい(時にはあった方がいい)時がある。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span> count, item <span class="keyword">in</span> enumerate(items, start=<span class="number">1</span>):   <span class="comment"># default is zero</span></div><div class="line">    print(item)</div><div class="line"></div><div class="line">print(<span class="string">'there were &#123;0&#125; items printed'</span>.format(count))</div></pre></td></tr></table></figure><p>カウントする、っていうのは君が求めているもの以上のもの(インデックスだけじゃなくて)だとおもうけど、念のため。</p><hr><h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><ul><li>Pythonのインデックスはゼロから始まる</li><li>反復処理中にこれらのインデックスを反復可能コードから取得するには、列挙関数を使用します</li><li>列挙型を慣用的な方法で(タプルのアンパックと一緒に)使用すると、読みやすくメンテナンス可能なコードが作れる。</li></ul><p>だから、こうすべき：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span> index, item <span class="keyword">in</span> enumerate(items, start=<span class="number">0</span>):   <span class="comment"># Pythonのインデックスはゼロから始まる</span></div><div class="line">    print(index, item)</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/541136/aaron-hall">Aaron Hall</a><span class="mod-flair" title="moderator">♦</span> | 回答日時： Jan 21 ‘15 at 17:11 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p><code>0</code>以外の<code>1</code>から始めるのはかなり簡単：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span> index <span class="keyword">in</span> enumerate(iterable, start=<span class="number">1</span>):</div><div class="line">   <span class="keyword">print</span> index</div></pre></td></tr></table></figure><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>インデックスはここでは<code>タプル　(idx、item)</code>だよ。ちょっとややこしいかもだけど。</p><p><div style="text-align: right"> By  <a href="/users/570826/clayton">Clayton</a> | 回答日時： May 27 ‘14 at 10:04 </div><br></p><hr><hr><h2 id="回答4"><a href="#回答4" class="headerlink" title="回答4:"></a>回答4:</h2><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(ints)):</div><div class="line">   <span class="keyword">print</span> i, ints[i]</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/42136/david-hanak">David Hanak</a> | 回答日時： Feb 6 ‘09 at 22:49 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/522563/accessing-the-index-in-python-for-loops" target="_blank" rel="external">Accessing the index in Python ‘for’ loops</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;例えばこんなリストがあったとき、このリストのインデックスにアクセスするにはどうしたらいいの？&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ints = [&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;45&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;78&lt;/span&gt;]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;これをforループで使う時、どうやってこのループインデックス（この場合１から５）にアクセスしたらいいの？&lt;/p&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/51816/joan-venge&quot;&gt;Joan Venge&lt;/a&gt; | 質問日時： Feb 6 ‘09 at 22:47 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
-    
-      <category term="python" scheme="https://so-matome.net/tags/python/"/>
-    
-      <category term="loops" scheme="https://so-matome.net/tags/loops/"/>
-    
-      <category term="list" scheme="https://so-matome.net/tags/list/"/>
     
   </entry>
   
