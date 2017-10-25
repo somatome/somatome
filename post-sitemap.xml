@@ -7,24 +7,24 @@
     </url>
 
     <url>
+        <loc>https://so-matome.net/2017/10/24/how-to-replace-all-occurrences-of-a-string-in-javascript/</loc>
+        <lastmod>2017-10-25T17:33:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/2017/10/25/concatenate-multiple-files-into-a-single-file-object-without-creating-a-new-file/</loc>
+        <lastmod>2017-10-25T17:33:37.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://so-matome.net/2017/10/24/commic-2017-09-12-versioning-is-important/</loc>
         <lastmod>2017-10-24T21:00:01.408Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/2017/10/24/how-to-replace-all-occurrences-of-a-string-in-javascript/</loc>
-        <lastmod>2017-10-24T21:00:01.360Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/2017/10/24/concatenate-multiple-files-into-a-single-file-object-without-creating-a-new-file/</loc>
-        <lastmod>2017-10-24T21:00:01.352Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
