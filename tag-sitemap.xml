@@ -520,69 +520,6 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/tags/datasci/</loc>
-        <lastmod>2017-10-26T22:36:39.877Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/r/</loc>
-        <lastmod>2017-10-26T22:36:39.877Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/dataframe/</loc>
-        <lastmod>2017-10-26T22:36:39.877Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/r-faq/</loc>
-        <lastmod>2017-10-26T22:36:39.877Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/join/</loc>
-        <lastmod>2017-10-26T22:36:39.877Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/merge/</loc>
-        <lastmod>2017-10-26T22:36:39.877Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/webdev/</loc>
-        <lastmod>2017-10-26T22:36:40.156Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/javascript/</loc>
-        <lastmod>2017-10-26T22:36:40.156Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/closures/</loc>
-        <lastmod>2017-10-26T22:36:40.156Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://so-matome.net/tags/video/</loc>
         <lastmod>2017-10-27T21:00:01.627Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -599,6 +536,69 @@
     <url>
         <loc>https://so-matome.net/tags/TED/</loc>
         <lastmod>2017-10-27T21:00:01.627Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/datasci/</loc>
+        <lastmod>2017-10-28T02:50:56.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/r/</loc>
+        <lastmod>2017-10-28T02:50:56.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/dataframe/</loc>
+        <lastmod>2017-10-28T02:50:56.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/r-faq/</loc>
+        <lastmod>2017-10-28T02:50:56.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/join/</loc>
+        <lastmod>2017-10-28T02:50:56.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/merge/</loc>
+        <lastmod>2017-10-28T02:50:56.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/webdev/</loc>
+        <lastmod>2017-10-28T02:51:44.394Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/javascript/</loc>
+        <lastmod>2017-10-28T02:51:44.394Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/closures/</loc>
+        <lastmod>2017-10-28T02:51:44.394Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

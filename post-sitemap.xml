@@ -7,16 +7,8 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/2017/10/27/ted-talks-programming-everyone-must-watch-13/</loc>
-        <lastmod>2017-10-27T21:00:01.627Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://so-matome.net/2017/10/26/javascript-infamous-loop-issue/</loc>
-        <lastmod>2017-10-26T22:36:40.156Z</lastmod>
+        <lastmod>2017-10-28T02:51:44.394Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,7 +16,15 @@
 
     <url>
         <loc>https://so-matome.net/2017/10/26/how-to-join-merge-data-frames-inner-outer-left-right/</loc>
-        <lastmod>2017-10-26T22:36:39.877Z</lastmod>
+        <lastmod>2017-10-28T02:50:56.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/2017/10/27/ted-talks-programming-everyone-must-watch-13/</loc>
+        <lastmod>2017-10-27T21:00:01.627Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
