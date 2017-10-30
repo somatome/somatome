@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>https://so-matome.net/2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/</loc>
+        <lastmod>2017-10-30T22:00:01.710Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/2017/10/30/hoge/</loc>
+        <lastmod>2017-10-30T22:00:01.638Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://so-matome.net/2017/10/29/how-do-i-correctly-clone-a-javascript-object/</loc>
         <lastmod>2017-10-29T22:00:01.503Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -41,14 +57,6 @@
     <url>
         <loc>https://so-matome.net/2017/10/27/ted-talks-programming-everyone-must-watch-13/</loc>
         <lastmod>2017-10-27T21:00:01.627Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/</loc>
-        <lastmod>2017-10-26T21:00:02.312Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

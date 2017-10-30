@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript] [Replace] | Stack Overflow まとめ</title>
+    <title>どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript] | Stack Overflow まとめ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="質問：この文字列があるとして：&quot;Test abc test test abc test test test abc test test abc&quot; 以下をすると：str = str.replace(&apos;abc&apos;, &apos;&apos;); 上の文字列で最初のabcだけを取り除いているみたいだけど、どうやったらすべてのabsを置き換えることができる？  By  Click Upvote | 質問日時： 2009年7月1">
 <meta name="keywords" content="webdev,javascript,replace">
 <meta property="og:type" content="article">
-<meta property="og:title" content="どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript] [Replace]">
-<meta property="og:url" content="https://so-matome.net/2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/index.html">
+<meta property="og:title" content="どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript]">
+<meta property="og:url" content="https://so-matome.net/2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/index.html">
 <meta property="og:site_name" content="Stack Overflow まとめ">
 <meta property="og:description" content="質問：この文字列があるとして：&quot;Test abc test test abc test test test abc test test abc&quot; 以下をすると：str = str.replace(&apos;abc&apos;, &apos;&apos;); 上の文字列で最初のabcだけを取り除いているみたいだけど、どうやったらすべてのabsを置き換えることができる？  By  Click Upvote | 質問日時： 2009年7月1">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-10-26T21:00:02.312Z">
+<meta property="og:updated_time" content="2017-10-30T22:00:01.710Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript] [Replace]">
+<meta name="twitter:title" content="どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript]">
 <meta name="twitter:description" content="質問：この文字列があるとして：&quot;Test abc test test abc test test test abc test test abc&quot; 以下をすると：str = str.replace(&apos;abc&apos;, &apos;&apos;); 上の文字列で最初のabcだけを取り除いているみたいだけど、どうやったらすべてのabsを置き換えることができる？  By  Click Upvote | 質問日時： 2009年7月1">
     
 
@@ -167,7 +167,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-            どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript] [Replace]
+            どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript]
         </h1>
     
 
@@ -177,7 +177,7 @@ ga('send', 'pageview');
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="">
-            <time datetime="2017-10-26T21:00:02.000Z" itemprop="datePublished">2017-10-26</time>
+            <time datetime="2017-10-30T22:00:01.000Z" itemprop="datePublished">2017-10-30</time>
         </a>
     </div>
 
@@ -196,7 +196,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="https://so-matome.net2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> 
+<div class="fb-like" data-href="https://so-matome.net2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> 
 <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
 
@@ -215,7 +215,6 @@ ga('send', 'pageview');
 <h3 id="正規表現ベースの実装"><a href="#正規表現ベースの実装" class="headerlink" title="正規表現ベースの実装"></a>正規表現ベースの実装</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">String</span>.prototype.replaceAll = <span class="function"><span class="keyword">function</span>(<span class="params">search, replacement</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> target = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">return</span> target.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(search, <span class="string">'g'</span>), replacement);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <h3 id="Splitおよびjoinを用いた実装"><a href="#Splitおよびjoinを用いた実装" class="headerlink" title="Splitおよびjoinを用いた実装"></a>Splitおよびjoinを用いた実装</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">String</span>.prototype.replaceAll = <span class="function"><span class="keyword">function</span>(<span class="params">search, replacement</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> target = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">return</span> target.split(search).join(replacement);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <hr>
-<p>Not knowing too much about how regular expressions work behind the scenes in terms of efficiency, I tended to lean toward the split and join implementation in the past without thinking about performance. When I did wonder which was more efficient, and by what margin, I used it as an excuse to find out.<br>On my Chrome Windows 8 machine, the regular expression based implementation is the fastest, with the split and join implementation being 53% slower. Meaning the regular expressions are twice as fast for the lorem ipsum input I used.<br>Check out this benchmark running these two implementations against each other.</p>
 <p>効率の面で正規表現がどのように裏で何をやってるか昔はあまり知らなかったから、僕はsplitとjoinを使った実装を（パフォーマンスを考慮せずに）よく使ってきた。今はどっちがどのぐらい効率がいいかを調べるたいと思った時だけ使うようにしてる。</p>
 <p>僕のChromeのWindows 8マシンでは、正規表現ベースの実装が一番速かった。<strong>splitとjoinの実装ではそれより53％遅くなった</strong>。<br>この2つを実行している<a href="http://jsben.ch/#/LFfWA" target="_blank" rel="external"><strong>ベンチマーク</strong></a>を見てみて。</p>
 <hr>
@@ -233,7 +232,6 @@ ga('send', 'pageview');
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">replaceAll</span>(<span class="params">str, find, replace</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> str.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(find, <span class="string">'g'</span>), replace);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>注意：</strong> 正規表現には特別な(メタ)文字が含まれてる。だから、それらの文字をエスケープすること無しに<code>find</code>関数の引数を盲目的に渡してしまうのは危険だ。これは<a href="https://developer.mozilla.org/en-US/" target="_blank" rel="external">Mozilla Developer Network</a>の<a href="https://stackoverflow.com/questions/1144783/how-to-replace-all-occurrences-of-a-string-in-javascript" target="_blank" rel="external">正規表現に関するJavaScriptガイド</a>でカバーされてる。 そこでは次のユーティリティ関数が例示されてる：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">escapeRegExp</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> str.replace(<span class="regexp">/([.*+?^=!:$&#123;&#125;()|\[\]\/\\])/g</span>, <span class="string">"\\$1"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>So in order to make the replaceAll() function above safer, it could be modified to the following if you also include escapeRegExp:</p>
 <p>だから、<code>replaceAll()</code>関数を上記より安全にするために<code>escapeRegExp</code>もインクルードすると、以下のようになる：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">replaceAll</span>(<span class="params">str, find, replace</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> str.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(escapeRegExp(find), <span class="string">'g'</span>), replace);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/21926/sean-bright" target="_blank" rel="external">Sean Bright</a> | 回答日時： 2009年7月17日 17:54 </div><br></p>
@@ -250,7 +248,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://so-matome.net2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/" data-id="cj963hbfb0018xbu1mqiqwx12" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://so-matome.net2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/" data-id="cj963hbfb0018xbu1mqiqwx12" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -318,7 +316,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://so-matome.net2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/">コメント</a>
+        <a href="https://so-matome.net2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/">コメント</a>
     
 
         </footer>
@@ -327,19 +325,19 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="../concatenate-multiple-files-into-a-single-file-object-without-creating-a-new-file/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="../hoge/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">新しい記事</strong>
             <div class="article-nav-title">
                 
-                    新しいファイルを作成せずに複数のファイルを1つのファイルオブジェクトに連結する [Python] [File]
+                    (no title)
                 
             </div>
         </a>
     
     
-        <a href="../../24/commic-2017-09-12-versioning-is-important/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="../../29/how-do-i-correctly-clone-a-javascript-object/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">古い記事</strong>
-            <div class="article-nav-title">バージョニングは重要だ [Webコミック]</div>
+            <div class="article-nav-title">JavaScriptオブジェクトを正しくクローンするにはどうしたらいい？ [Javascript]</div>
         </a>
     
 </nav>
@@ -389,6 +387,24 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
+                            <p class="item-title"><a href="../hoge/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2017-10-30T22:00:01.910Z" itemprop="datePublished">2017-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="" class="title">どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript]</a></p>
+                            <p class="item-date"><time datetime="2017-10-30T22:00:01.000Z" itemprop="datePublished">2017-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
                             <p class="item-title"><a href="../../29/how-do-i-correctly-clone-a-javascript-object/" class="title">JavaScriptオブジェクトを正しくクローンするにはどうしたらいい？ [Javascript]</a></p>
                             <p class="item-date"><time datetime="2017-10-29T22:00:01.000Z" itemprop="datePublished">2017-10-29</time></p>
                         </div>
@@ -412,24 +428,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="../javascript-infamous-loop-issue/" class="title">Javascriptの悪名高いループの問題？ [Javascript] [Closures]</a></p>
-                            <p class="item-date"><time datetime="2017-10-26T22:36:40.000Z" itemprop="datePublished">2017-10-26</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="../how-to-join-merge-data-frames-inner-outer-left-right/" class="title">データフレームを（inner, outer, left, rightで）結合（マージ）する方法は？ [R]</a></p>
-                            <p class="item-date"><time datetime="2017-10-26T22:36:39.000Z" itemprop="datePublished">2017-10-26</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -450,7 +448,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">アーカイブ</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/10/">10月 2017</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/09/">9月 2017</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/10/">10月 2017</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/09/">9月 2017</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 
@@ -499,7 +497,7 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'https://so-matome.net2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/';
+            this.page.url = 'https://so-matome.net2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/';
         
         this.page.identifier = 'how-to-replace-all-occurrences-of-a-string-in-javascript';
     };

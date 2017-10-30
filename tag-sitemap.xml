@@ -499,13 +499,6 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/tags/replace/</loc>
-        <lastmod>2017-10-26T21:00:02.312Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://so-matome.net/tags/video/</loc>
         <lastmod>2017-10-27T21:00:01.627Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -591,14 +584,21 @@
 
     <url>
         <loc>https://so-matome.net/tags/webdev/</loc>
-        <lastmod>2017-10-29T22:00:01.503Z</lastmod>
+        <lastmod>2017-10-30T22:00:01.710Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://so-matome.net/tags/javascript/</loc>
-        <lastmod>2017-10-29T22:00:01.503Z</lastmod>
+        <lastmod>2017-10-30T22:00:01.710Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/replace/</loc>
+        <lastmod>2017-10-30T22:00:01.710Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

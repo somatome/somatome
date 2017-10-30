@@ -155,6 +155,259 @@ ga('send', 'pageview');
         <div class="outer">
             
             <section id="main">
+    <article id="post-hoge" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        <div class="article-sharing">
+<div class="fb-like" data-href="https://so-matome.net2017/10/30/hoge/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> 
+<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+
+        
+            <p><hr>
+<p>date: 2017-10-30 22:00:01<br>tags:</p>
+<ul>
+<li>datasci</li>
+<li>python</li>
+<li>pandas</li>
+<li>dataframe<br>title: Python pandasで既存のDataFrameに新しい列を追加する [Python]<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2>名前付きの列と、連続数じゃないような列を持つ次のようなインデックス付きDataFrameがある：<figure class="highlight python"><table><tr><td class="code"><pre><div class="line">          a         b         c         d</div><div class="line"><span class="number">2</span>  <span class="number">0.671399</span>  <span class="number">0.101208</span> <span class="number">-0.181532</span>  <span class="number">0.241273</span></div><div class="line"><span class="number">3</span>  <span class="number">0.446172</span> <span class="number">-0.243316</span>  <span class="number">0.051767</span>  <span class="number">1.577318</span></div><div class="line"><span class="number">5</span>  <span class="number">0.614758</span>  <span class="number">0.075793</span> <span class="number">-0.451460</span> <span class="number">-0.012493</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>既存のデータフレームに新しい列「e」を追加したいんだけど、でもデータフレームは何も変更したくないんだ(つまり、新しい列には常にDataFrameと同じ長さ)。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="number">0</span>   <span class="number">-0.335485</span></div><div class="line"><span class="number">1</span>   <span class="number">-1.166658</span></div><div class="line"><span class="number">2</span>   <span class="number">-0.385571</span></div><div class="line">dtype: float64</div></pre></td></tr></table></figure>
+<p><code>join</code>、<code>append</code>、 <code>merge</code>のいろんなバージョンを試したけど、望んでいた結果は得られず、せいぜいエラーになるだけ。上記の例で「e」列を追加するにはどうしたらいいかな？</p>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1661173/tomasz74" target="_blank" rel="external">tomasz74</a> | 質問日時： 2012年9月23日 19:00 </div><br></p></p>
+            <p class="article-more-link">
+                <a href="2017/10/30/hoge/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://so-matome.net2017/10/30/hoge/" data-id="cj9eq9l9j000067u16ii33t43" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://so-matome.net2017/10/30/hoge/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/30/hoge/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+
+    <article id="post-how-to-replace-all-occurrences-of-a-string-in-javascript" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/">どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript]</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/">
+            <time datetime="2017-10-30T22:00:01.000Z" itemprop="datePublished">2017-10-30</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="tags/javascript/">javascript</a>, <a class="tag-link" href="tags/replace/">replace</a>, <a class="tag-link" href="tags/webdev/">webdev</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        <div class="article-sharing">
+<div class="fb-like" data-href="https://so-matome.net2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> 
+<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+
+        
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>この文字列があるとして：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="string">"Test abc test test abc test test test abc test test abc"</span></div></pre></td></tr></table></figure></p>
+<p>以下をすると：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">str = str.replace(<span class="string">'abc'</span>, <span class="string">''</span>);</div></pre></td></tr></table></figure></p>
+<p>上の文字列で最初の<code>abc</code>だけを取り除いているみたいだけど、どうやったら<strong>すべての</strong><code>abs</code>を置き換えることができる？</p>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/49153/click-upvote" target="_blank" rel="external">Click Upvote</a> | 質問日時： 2009年7月17日 17:53 </div><br></p></p>
+            <p class="article-more-link">
+                <a href="2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://so-matome.net2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/" data-id="cj963hbfb0018xbu1mqiqwx12" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://so-matome.net2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/">コメント</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+
     <article id="post-how-do-i-correctly-clone-a-javascript-object" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -997,143 +1250,6 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-how-to-replace-all-occurrences-of-a-string-in-javascript" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/">どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript] [Replace]</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/">
-            <time datetime="2017-10-26T21:00:02.000Z" itemprop="datePublished">2017-10-26</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="tags/javascript/">javascript</a>, <a class="tag-link" href="tags/replace/">replace</a>, <a class="tag-link" href="tags/webdev/">webdev</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        <div class="article-sharing">
-<div class="fb-like" data-href="https://so-matome.net2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> 
-<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div>
-
-        
-            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>この文字列があるとして：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="string">"Test abc test test abc test test test abc test test abc"</span></div></pre></td></tr></table></figure></p>
-<p>以下をすると：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">str = str.replace(<span class="string">'abc'</span>, <span class="string">''</span>);</div></pre></td></tr></table></figure></p>
-<p>上の文字列で最初の<code>abc</code>だけを取り除いているみたいだけど、どうやったら<strong>すべての</strong><code>abs</code>を置き換えることができる？</p>
-<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/49153/click-upvote" target="_blank" rel="external">Click Upvote</a> | 質問日時： 2009年7月17日 17:53 </div><br></p></p>
-            <p class="article-more-link">
-                <a href="2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://so-matome.net2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/" data-id="cj963hbfb0018xbu1mqiqwx12" class="article-share-link"><i class="fa fa-share"></i>共有</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://so-matome.net2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/26/how-to-replace-all-occurrences-of-a-string-in-javascript/">コメント</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-
     <article id="post-commic-2017-09-12-versioning-is-important" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -1269,7 +1385,7 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-commic-2017-05-02-telling-our-story" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-javascript-closure-inside-loops-simple-practical-example" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1277,7 +1393,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="2017/10/24/commic-2017-05-02-telling-our-story/">昔話 [Webコミック]</a>
+            <a class="article-title" href="2017/10/24/javascript-closure-inside-loops-simple-practical-example/">ループ内のJavaScriptクロージャ - 簡単な実用的な例 [Javascript]</a>
         </h1>
     
 
@@ -1286,7 +1402,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="2017/10/24/commic-2017-05-02-telling-our-story/">
+        <a href="2017/10/24/javascript-closure-inside-loops-simple-practical-example/">
             <time datetime="2017-10-24T04:06:51.000Z" itemprop="datePublished">2017-10-24</time>
         </a>
     </div>
@@ -1296,7 +1412,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="tags/comic/">comic</a>
+        <a class="tag-link" href="tags/closures/">closures</a>, <a class="tag-link" href="tags/javascript/">javascript</a>, <a class="tag-link" href="tags/loops/">loops</a>, <a class="tag-link" href="tags/webdev/">webdev</a>
     </div>
 
                     </div>
@@ -1306,155 +1422,28 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         <div class="article-sharing">
-<div class="fb-like" data-href="https://so-matome.net2017/10/24/commic-2017-05-02-telling-our-story/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> 
+<div class="fb-like" data-href="https://so-matome.net2017/10/24/javascript-closure-inside-loops-simple-practical-example/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> 
 <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
 
         
-            
-            <p><strong>１コマ目：</strong><br>「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」<br>「何が分からないんだい？」</p>
-<p><strong>２コマ目：</strong><br>「どうしてハードディスクはA:からじゃなくて、C:から始まるの？」<br>「ああ！」</p>
-<img src="/2017/10/24/commic-2017-05-02-telling-our-story/commic-2017-05-02-telling-our-story.jpg" alt="commic-2017-05-02-telling-our-story.jpg" title="">
-<p><strong>３コマ目：</strong><br>「お前がそんな事を聞くなんて思っても見なかったなー！」<br>「よし、それじゃ初めから話をしてやろう」</p>
-<p><strong>４コマ目：</strong><br>「むかぁ～し昔、あるところに、、、」</p>
+            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> funcs = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;      <span class="comment">// 関数を３つ作る</span></div><div class="line">  funcs[i] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;          <span class="comment">// それらをfuncsに入れる</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"My value: "</span> + i); <span class="comment">// 各関数はその値を記録する</span></div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) &#123;</div><div class="line">  funcs[j]();                      <span class="comment">// 走らせる</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>でもこれは以下を出力してしまう：</p>
+<blockquote>
+<p>My value: 3<br>My value: 3<br>My value: 3</p>
+</blockquote>
+<p>でも僕が欲しいのは</p>
+<blockquote>
+<p>My value: 0<br>My value: 1<br>My value: 2</p>
+</blockquote>
 <hr>
-<hr>
-<p>Source: <a href="http://www.commitstrip.com/en/2017/05/02/telling-our-story/" target="_blank" rel="external">Telling our story</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://so-matome.net2017/10/24/commic-2017-05-02-telling-our-story/" data-id="cj963hbeo000axbu1wkyyqn3z" class="article-share-link"><i class="fa fa-share"></i>共有</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://so-matome.net2017/10/24/commic-2017-05-02-telling-our-story/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/24/commic-2017-05-02-telling-our-story/">コメント</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-
-    <article id="post-what-is-the-difference-between-staticmethod-and-classmethod-in-python" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/">Pythonの@staticmethodと@classmethodの違いって何？ [Python]</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/">
-            <time datetime="2017-10-24T04:06:51.000Z" itemprop="datePublished">2017-10-24</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="tags/datasci/">datasci</a>, <a class="tag-link" href="tags/oop/">oop</a>, <a class="tag-link" href="tags/python/">python</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        <div class="article-sharing">
-<div class="fb-like" data-href="https://so-matome.net2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/" data-width="145" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> 
-<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="SOmatome_jp" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div>
-
-        
-            <p><h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><a href="http://docs.python.org/library/functions.html#staticmethod" target="_blank" rel="external"><code>@staticmethod</code></a>が付いてる関数と、<a href="http://docs.python.org/library/functions.html#classmethod" target="_blank" rel="external"><code>@classmethod</code></a>が付いてる関数の違いって何？</p>
-<p><div style="text-align: right"> By  <a href="/users/4766/daryl-spitzer">Daryl Spitzer</a> | 質問日時： Sep 25 ‘08 at 21:01 </div><br></p></p>
+<p>同じ問題は、関数の実行がイベントリスナーを使用することによって遅延してしまう時にも起こる：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> buttons = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"button"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; buttons.length; i++) &#123;          <span class="comment">// let's create 3 functions</span></div><div class="line">  buttons[i].addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">// as event listeners</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"My value: "</span> + i);                  <span class="comment">// each should log its value.</span></div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>0<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>1<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>この基本的な問題の解決策ってある？？</p>
+<p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/9021/nickf" target="_blank" rel="external">nickf</a> | 質問日時： 2009年4月15日 6:06 </div><br></p></p>
             <p class="article-more-link">
-                <a href="2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/#more">Read More</a>
+                <a href="2017/10/24/javascript-closure-inside-loops-simple-practical-example/#more">Read More</a>
             </p>
         
         </div>
@@ -1465,7 +1454,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://so-matome.net2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/" data-id="cj963hbfx0029xbu1unpv0nu0" class="article-share-link"><i class="fa fa-share"></i>共有</a>
+    <a data-url="https://so-matome.net2017/10/24/javascript-closure-inside-loops-simple-practical-example/" data-id="cj963hbfn001lxbu13xqilj0b" class="article-share-link"><i class="fa fa-share"></i>共有</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1533,7 +1522,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://so-matome.net2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/">コメント</a>
+        <a href="https://so-matome.net2017/10/24/javascript-closure-inside-loops-simple-practical-example/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://so-matome.net2017/10/24/javascript-closure-inside-loops-simple-practical-example/">コメント</a>
     
 
         </footer>
@@ -1577,6 +1566,24 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
+                            <p class="item-title"><a href="2017/10/30/hoge/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2017-10-30T22:00:01.910Z" itemprop="datePublished">2017-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="2017/10/30/how-to-replace-all-occurrences-of-a-string-in-javascript/" class="title">どのようにJavaScriptの文字列のすべての出現を置き換えるには？ [Javascript]</a></p>
+                            <p class="item-date"><time datetime="2017-10-30T22:00:01.000Z" itemprop="datePublished">2017-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
                             <p class="item-title"><a href="2017/10/29/how-do-i-correctly-clone-a-javascript-object/" class="title">JavaScriptオブジェクトを正しくクローンするにはどうしたらいい？ [Javascript]</a></p>
                             <p class="item-date"><time datetime="2017-10-29T22:00:01.000Z" itemprop="datePublished">2017-10-29</time></p>
                         </div>
@@ -1600,24 +1607,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="2017/10/26/javascript-infamous-loop-issue/" class="title">Javascriptの悪名高いループの問題？ [Javascript] [Closures]</a></p>
-                            <p class="item-date"><time datetime="2017-10-26T22:36:40.000Z" itemprop="datePublished">2017-10-26</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="2017/10/26/how-to-join-merge-data-frames-inner-outer-left-right/" class="title">データフレームを（inner, outer, left, rightで）結合（マージ）する方法は？ [R]</a></p>
-                            <p class="item-date"><time datetime="2017-10-26T22:36:39.000Z" itemprop="datePublished">2017-10-26</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1638,7 +1627,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">アーカイブ</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/10/">10月 2017</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/09/">9月 2017</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/10/">10月 2017</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/09/">9月 2017</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 
