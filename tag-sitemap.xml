@@ -492,27 +492,6 @@
     </url>
 
     <url>
-        <loc>https://so-matome.net/tags/video/</loc>
-        <lastmod>2017-10-27T21:00:01.627Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/english/</loc>
-        <lastmod>2017-10-27T21:00:01.627Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://so-matome.net/tags/TED/</loc>
-        <lastmod>2017-10-27T21:00:01.627Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://so-matome.net/tags/r/</loc>
         <lastmod>2017-10-28T02:50:56.533Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -606,6 +585,27 @@
     <url>
         <loc>https://so-matome.net/tags/url/</loc>
         <lastmod>2017-10-31T22:00:01.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/video/</loc>
+        <lastmod>2017-11-03T22:00:01.843Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/english/</loc>
+        <lastmod>2017-11-03T22:00:01.843Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://so-matome.net/tags/TED/</loc>
+        <lastmod>2017-11-03T22:00:01.843Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://so-matome.net/"/>
-  <updated>2017-10-31T22:00:01.875Z</updated>
+  <updated>2017-11-03T22:00:01.843Z</updated>
   <id>https://so-matome.net/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>プログラマーが見るべき20のTEDトーク(12)　ベスト・コンピュータ・インタフェースはたぶん...あなたの手 [Video]</title>
+    <link href="https://so-matome.net/2017/11/03/ted-talks-programming-everyone-must-watch-12/"/>
+    <id>https://so-matome.net/2017/11/03/ted-talks-programming-everyone-must-watch-12/</id>
+    <published>2017-11-03T22:00:01.000Z</published>
+    <updated>2017-11-03T22:00:01.843Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="James-Patten：ベスト・コンピュータ・インタフェースはたぶん…あなたの手"><a href="#James-Patten：ベスト・コンピュータ・インタフェースはたぶん…あなたの手" class="headerlink" title="James Patten：ベスト・コンピュータ・インタフェースはたぶん…あなたの手"></a>James Patten：ベスト・コンピュータ・インタフェースはたぶん…あなたの手</h2><p><a href="http://www.makeuseof.com/tag/ted-talks-programming/" target="_blank" rel="external">MakeUseOf</a>より、プログラマーが見ておくべきTEDトークが話題になっていたのでご紹介します。内容は、プログラミング方法を学ぶためではなく、プログラマーになる方法を学ぶことにフォーカスが置かれ、考え方を知ることを重視した内容になっています。<br>第12段は「James Patten：ベスト・コンピュータ・インタフェースはたぶん…あなたの手」。以下のように紹介されています：</p><blockquote><p>このTEDトークはちょうど6分で短いものですが、あなたにいろいろ考えさせる内容を含んでいます。 コンピュータの歴史の中で、我々は主にキーボードやマウスでコンピュータとやり取りを行ってきました。 最近では、タッチスクリーンと音声コントロールがあります。でも、将来は？Pattenは、制御はハンドヘルドになると示唆しています。</p></blockquote><iframe width="560" height="315" src="https://www.youtube.com/embed/5WI6ZqCUNk0?cc_load_policy=1&cc_lang_pref=ja" frameborder="0" allowfullscreen></iframe><p>動画は日本語字幕を表示してありますが、TEDトークの日本語訳には意訳している部分もあるため、英語字幕（以下）をフォローするのをお薦めします：</p><a id="more"></a><div id="" style="overflow-y: scroll; height:400px;"><br>A computer is an incredibly powerful means of creative expression, but for the most part, that expression is confined to the screens of our laptops and mobile phones.<br><br>And I&#39;d like to tell you a story about bringing this power of the computer to move things around and interact with us off of the screen and into the physical world in which we live.<br><br>A few years ago, I got a call from a luxury fashion store called Barneys New York, and the next thing I knew, I was designing storefront kinetic sculptures for their window displays.<br><br>This one&#39;s called &quot;The Chase.&quot;<br><br>There are two pairs of shoes, a man&#39;s pair and a woman&#39;s pair, and they play out this slow, tense chase around the window in which the man scoots up behind the woman and gets in her personal space, and then she moves away.<br><br>Each of the shoes has magnets in it, and there are magnets underneath the table that move the shoes around.<br><br>My friend Andy Cavatorta was building a robotic harp for Bjork&#39;s Biophilia tour and I wound up building the electronics and motion control software to make the harps move and play music.<br><br>The harp has four separate pendulums, and each pendulum has 11 strings, so the harp swings on its axis and also rotates in order to play different musical notes, and the harps are all networked together so that they can play the right notes at the right time in the music.<br><br>I built an interactive chemistry exhibit at the Museum of Science and Industry in Chicago, and this exhibit lets people use physical objects to grab chemical elements off of the periodic table and bring them together to cause chemical reactions to happen.<br><br>And the museum noticed that people were spending a lot of time with this exhibit, and a researcher from a science education center in Australia decided to study this exhibit and try to figure out what was going on.<br><br>And she found that the physical objects that people were using were helping people understand how to use the exhibit, and were helping people learn in a social way.<br><br>And when you think about it, this makes a lot of sense, that using specialized physical objects would help people use an interface more easily.<br><br>I mean, our hands and our minds are optimized to think about and interact with tangible objects.<br><br>Think about which you find easier to use, a physical keyboard or an onscreen keyboard like on a phone?<br><br>But the thing that struck me about all of these different projects is that they really had to be built from scratch, down to the level of the electronics and the printed circuit boards and all the mechanisms all the way up to the software.<br><br>I wanted to create something where we could move objects under computer control and create interactions around that idea without having to go through this process of building something from scratch every single time.<br><br>So my first attempt at this was at the MIT Media Lab with Professor Hiroshi Ishii, and we built this array of 512 different electromagnets, and together they were able to move objects around on top of their surface.<br><br>But the problem with this was that these magnets cost over 10,000 dollars.<br><br>Although each one was pretty small, altogether they weighed so much that the table that they were on started to sag.<br><br>So I wanted to build something where you could have this kind of interaction on any tabletop surface.<br><br>So to explore this idea, I built an army of small robots, and each of these robots has what are called omni wheels.<br><br>They&#39;re these special wheels that can move equally easily in all directions, and when you couple these robots with a video projector, you have these physical tools for interacting with digital information.<br><br>So here&#39;s an example of what I mean.<br><br>This is a video editing application where all of the controls for manipulating the video are physical.<br><br>So if we want to tweak the color, we just enter the color mode, and then we get three different dials for tweaking the color, or if we want to adjust the audio, then we get two different dials for that, these physical objects.<br><br>So here the left and right channel stay in sync, but if we want to, we can override that by grabbing both of them at the same time.<br><br>So the idea is that we get the speed and efficiency benefits of using these physical dials together with the flexibility and versatility of a system that&#39;s designed in software.<br><br>And this is a mapping application for disaster response.<br><br>So you have these physical objects that represent police, fire and rescue, and a dispatcher can grab them and place them on the map to tell those units where to go, and then the position of the units on the map gets synced up with the position of those units in the real world.<br><br>This is a video chat application.<br><br>It&#39;s amazing how much emotion you can convey with just a few simple movements of a physical object.<br><br>With this interface, we open up a huge array of possibilities in between traditional board games and arcade games, where the physical possibilities of interaction make so many different styles of play possible.<br><br>But one of the areas that I&#39;m most excited about using this platform for is applying it to problems that are difficult for computers or people to solve alone.<br><br>One example of those is protein folding.<br><br>So here we have an interface where we have physical handles onto a protein, and we can grab those handles and try to move the protein and try to fold it in different ways.<br><br>And if we move it in a way that doesn&#39;t really make sense with the underlying molecular simulation, we get this physical feedback where we can actually feel these physical handles pulling back against us.<br><br>So feeling what&#39;s going on inside a molecular simulation is a whole different level of interaction.<br><br>So we&#39;re just beginning to explore what&#39;s possible when we use software to control the movement of objects in our environment.<br><br>Maybe this is the computer of the future.<br><br>There&#39;s no touchscreen.<br><br>There&#39;s no technology visible at all.<br><br>But when we want to have a video chat or play a game or lay out the slides to our next TED Talk, the objects on the table come alive.<br><br>Thank you.<br><br>(Applause)<br></div> ]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;James-Patten：ベスト・コンピュータ・インタフェースはたぶん…あなたの手&quot;&gt;&lt;a href=&quot;#James-Patten：ベスト・コンピュータ・インタフェースはたぶん…あなたの手&quot; class=&quot;headerlink&quot; title=&quot;James Patten：ベスト・コンピュータ・インタフェースはたぶん…あなたの手&quot;&gt;&lt;/a&gt;James Patten：ベスト・コンピュータ・インタフェースはたぶん…あなたの手&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.makeuseof.com/tag/ted-talks-programming/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MakeUseOf&lt;/a&gt;より、プログラマーが見ておくべきTEDトークが話題になっていたのでご紹介します。内容は、プログラミング方法を学ぶためではなく、プログラマーになる方法を学ぶことにフォーカスが置かれ、考え方を知ることを重視した内容になっています。&lt;br&gt;第12段は「James Patten：ベスト・コンピュータ・インタフェースはたぶん…あなたの手」。以下のように紹介されています：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;このTEDトークはちょうど6分で短いものですが、あなたにいろいろ考えさせる内容を含んでいます。 コンピュータの歴史の中で、我々は主にキーボードやマウスでコンピュータとやり取りを行ってきました。 最近では、タッチスクリーンと音声コントロールがあります。でも、将来は？Pattenは、制御はハンドヘルドになると示唆しています。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/5WI6ZqCUNk0?cc_load_policy=1&amp;cc_lang_pref=ja&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;動画は日本語字幕を表示してありますが、TEDトークの日本語訳には意訳している部分もあるため、英語字幕（以下）をフォローするのをお薦めします：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="video" scheme="https://so-matome.net/tags/video/"/>
+    
+      <category term="english" scheme="https://so-matome.net/tags/english/"/>
+    
+      <category term="TED" scheme="https://so-matome.net/tags/TED/"/>
+    
+  </entry>
   
   <entry>
     <title>新しいファイルを作成せずに複数のファイルを1つのファイルオブジェクトに連結する [Python]</title>
@@ -127,6 +157,29 @@
   </entry>
   
   <entry>
+    <title>JavaScriptオブジェクトを正しくクローンするにはどうしたらいい？ [Javascript]</title>
+    <link href="https://so-matome.net/2017/10/29/how-do-i-correctly-clone-a-javascript-object/"/>
+    <id>https://so-matome.net/2017/10/29/how-do-i-correctly-clone-a-javascript-object/</id>
+    <published>2017-10-29T22:00:01.000Z</published>
+    <updated>2017-10-29T22:00:01.503Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>オブジェクト<code>x</code>があってそれをオブジェクト<code>y</code>としてコピーしたいんだけど（<code>y</code>への変更が<code>x</code>を変更しないように）。<br>built-inJavaScriptオブジェクトからコピーしたオブジェクトは不要なプロパティが余分に追加されてるのは知ってるんだけど。これは問題じゃないんだ。なぜって僕はリテラルとして構築されたオブジェクトの1つをコピーしているからです。</p><p>JavaScriptオブジェクトを正しくクローンするにはどうすればいいかな？</p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>jQueryを使用すると、<a href="http://api.jquery.com/jQuery.extend" target="_blank" rel="external">extend</a>で<strong>浅い(shallo)コピー</strong>ができる：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> copiedObject = jQuery.extend(&#123;&#125;, originalObject)</div></pre></td></tr></table></figure><p>copyObjectへのその後の変更はoriginalObjectに影響しない。逆もしかり。</p><p>それか<strong>ディープコピーを作成する</strong>には：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> copiedObject = jQuery.extend(<span class="literal">true</span>, &#123;&#125;, originalObject)</div></pre></td></tr></table></figure><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>オブジェクト内で関数を使用しない場合は、非常に簡単なワンライナーが使える：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> cloneOfA = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</div></pre></td></tr></table></figure><p>これは、オブジェクト、配列、文​​字列、ブーリアンと数字を含むどんな種類のオブジェクトに対しても動作する。</p><p>また、<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm" target="_blank" rel="external">ブラウザの構造化クローンアルゴリズムについてのこの記事</a>を参照。これはワーカーに、またはワーカーからメッセージを投稿するときに使われる。ディープクローニングの関数も含んでる。</p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>ECMAScript 6には、<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="external">Object.assign</a>メソッドが使える。これは、列挙可能なすべてのプロパティの値をあるオブジェクトから別のオブジェクトにコピーする。例えば：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> x = &#123;<span class="attr">myProp</span>: <span class="string">"value"</span>&#125;;</div><div class="line"><span class="keyword">var</span> y = <span class="built_in">Object</span>.assign(&#123;&#125;, x);</div></pre></td></tr></table></figure><p>ただし、ネストされたオブジェクトは引き続き参照としてコピーされることに注意。</p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/728360/how-do-i-correctly-clone-a-javascript-object" target="_blank" rel="external">How do I correctly clone a JavaScript object?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;オブジェクト&lt;code&gt;x&lt;/code&gt;があってそれをオブジェクト&lt;code&gt;y&lt;/code&gt;としてコピーしたいんだけど（&lt;code&gt;y&lt;/code&gt;への変更が&lt;code&gt;x&lt;/code&gt;を変更しないように）。&lt;br&gt;built-inJavaScriptオブジェクトからコピーしたオブジェクトは不要なプロパティが余分に追加されてるのは知ってるんだけど。これは問題じゃないんだ。なぜって僕はリテラルとして構築されたオブジェクトの1つをコピーしているからです。&lt;/p&gt;
+&lt;p&gt;JavaScriptオブジェクトを正しくクローンするにはどうすればいいかな？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
+    
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python pandasで既存のDataFrameに新しい列を追加する [Python]</title>
     <link href="https://so-matome.net/2017/10/29/adding-new-column-to-existing-dataframe-in-python-pandas/"/>
     <id>https://so-matome.net/2017/10/29/adding-new-column-to-existing-dataframe-in-python-pandas/</id>
@@ -154,29 +207,6 @@
       <category term="dataframe" scheme="https://so-matome.net/tags/dataframe/"/>
     
       <category term="pandas" scheme="https://so-matome.net/tags/pandas/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScriptオブジェクトを正しくクローンするにはどうしたらいい？ [Javascript]</title>
-    <link href="https://so-matome.net/2017/10/29/how-do-i-correctly-clone-a-javascript-object/"/>
-    <id>https://so-matome.net/2017/10/29/how-do-i-correctly-clone-a-javascript-object/</id>
-    <published>2017-10-29T22:00:01.000Z</published>
-    <updated>2017-10-29T22:00:01.503Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>オブジェクト<code>x</code>があってそれをオブジェクト<code>y</code>としてコピーしたいんだけど（<code>y</code>への変更が<code>x</code>を変更しないように）。<br>built-inJavaScriptオブジェクトからコピーしたオブジェクトは不要なプロパティが余分に追加されてるのは知ってるんだけど。これは問題じゃないんだ。なぜって僕はリテラルとして構築されたオブジェクトの1つをコピーしているからです。</p><p>JavaScriptオブジェクトを正しくクローンするにはどうすればいいかな？</p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>jQueryを使用すると、<a href="http://api.jquery.com/jQuery.extend" target="_blank" rel="external">extend</a>で<strong>浅い(shallo)コピー</strong>ができる：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> copiedObject = jQuery.extend(&#123;&#125;, originalObject)</div></pre></td></tr></table></figure><p>copyObjectへのその後の変更はoriginalObjectに影響しない。逆もしかり。</p><p>それか<strong>ディープコピーを作成する</strong>には：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> copiedObject = jQuery.extend(<span class="literal">true</span>, &#123;&#125;, originalObject)</div></pre></td></tr></table></figure><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>オブジェクト内で関数を使用しない場合は、非常に簡単なワンライナーが使える：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> cloneOfA = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</div></pre></td></tr></table></figure><p>これは、オブジェクト、配列、文​​字列、ブーリアンと数字を含むどんな種類のオブジェクトに対しても動作する。</p><p>また、<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm" target="_blank" rel="external">ブラウザの構造化クローンアルゴリズムについてのこの記事</a>を参照。これはワーカーに、またはワーカーからメッセージを投稿するときに使われる。ディープクローニングの関数も含んでる。</p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>ECMAScript 6には、<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="external">Object.assign</a>メソッドが使える。これは、列挙可能なすべてのプロパティの値をあるオブジェクトから別のオブジェクトにコピーする。例えば：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> x = &#123;<span class="attr">myProp</span>: <span class="string">"value"</span>&#125;;</div><div class="line"><span class="keyword">var</span> y = <span class="built_in">Object</span>.assign(&#123;&#125;, x);</div></pre></td></tr></table></figure><p>ただし、ネストされたオブジェクトは引き続き参照としてコピーされることに注意。</p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/728360/how-do-i-correctly-clone-a-javascript-object" target="_blank" rel="external">How do I correctly clone a JavaScript object?</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;オブジェクト&lt;code&gt;x&lt;/code&gt;があってそれをオブジェクト&lt;code&gt;y&lt;/code&gt;としてコピーしたいんだけど（&lt;code&gt;y&lt;/code&gt;への変更が&lt;code&gt;x&lt;/code&gt;を変更しないように）。&lt;br&gt;built-inJavaScriptオブジェクトからコピーしたオブジェクトは不要なプロパティが余分に追加されてるのは知ってるんだけど。これは問題じゃないんだ。なぜって僕はリテラルとして構築されたオブジェクトの1つをコピーしているからです。&lt;/p&gt;
-&lt;p&gt;JavaScriptオブジェクトを正しくクローンするにはどうすればいいかな？&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
-    
-      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
   </entry>
   
@@ -308,30 +338,6 @@
   </entry>
   
   <entry>
-    <title>昔話 [Webコミック]</title>
-    <link href="https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/"/>
-    <id>https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/</id>
-    <published>2017-10-24T04:06:51.000Z</published>
-    <updated>2017-10-24T04:06:51.711Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>１コマ目：</strong><br>「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」<br>「何が分からないんだい？」</p><p><strong>２コマ目：</strong><br>「どうしてハードディスクはA:からじゃなくて、C:から始まるの？」<br>「ああ！」</p><img src="/2017/10/24/commic-2017-05-02-telling-our-story/commic-2017-05-02-telling-our-story.jpg" alt="commic-2017-05-02-telling-our-story.jpg" title=""><p><strong>３コマ目：</strong><br>「お前がそんな事を聞くなんて思っても見なかったなー！」<br>「よし、それじゃ初めから話をしてやろう」</p><p><strong>４コマ目：</strong><br>「むかぁ～し昔、あるところに、、、」</p><hr><hr><p>Source: <a href="http://www.commitstrip.com/en/2017/05/02/telling-our-story/" target="_blank" rel="external">Telling our story</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;１コマ目：&lt;/strong&gt;&lt;br&gt;「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」&lt;br&gt;「何が分からないんだい？」&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;２コマ目：&lt;/strong&gt;&lt;br&gt;「どうしてハードディスクはA:からじゃなくて、C:から始
-      
-    
-    </summary>
-    
-    
-      <category term="comic" scheme="https://so-matome.net/tags/comic/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Pythonの@staticmethodと@classmethodの違いって何？ [Python]</title>
     <link href="https://so-matome.net/2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/"/>
     <id>https://so-matome.net/2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/</id>
@@ -353,6 +359,30 @@
       <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
       <category term="oop" scheme="https://so-matome.net/tags/oop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>昔話 [Webコミック]</title>
+    <link href="https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/"/>
+    <id>https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/</id>
+    <published>2017-10-24T04:06:51.000Z</published>
+    <updated>2017-10-24T04:06:51.711Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>１コマ目：</strong><br>「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」<br>「何が分からないんだい？」</p><p><strong>２コマ目：</strong><br>「どうしてハードディスクはA:からじゃなくて、C:から始まるの？」<br>「ああ！」</p><img src="/2017/10/24/commic-2017-05-02-telling-our-story/commic-2017-05-02-telling-our-story.jpg" alt="commic-2017-05-02-telling-our-story.jpg" title=""><p><strong>３コマ目：</strong><br>「お前がそんな事を聞くなんて思っても見なかったなー！」<br>「よし、それじゃ初めから話をしてやろう」</p><p><strong>４コマ目：</strong><br>「むかぁ～し昔、あるところに、、、」</p><hr><hr><p>Source: <a href="http://www.commitstrip.com/en/2017/05/02/telling-our-story/" target="_blank" rel="external">Telling our story</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;１コマ目：&lt;/strong&gt;&lt;br&gt;「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」&lt;br&gt;「何が分からないんだい？」&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;２コマ目：&lt;/strong&gt;&lt;br&gt;「どうしてハードディスクはA:からじゃなくて、C:から始
+      
+    
+    </summary>
+    
+    
+      <category term="comic" scheme="https://so-matome.net/tags/comic/"/>
     
   </entry>
   
@@ -591,6 +621,34 @@
   </entry>
   
   <entry>
+    <title>JavaScriptは参照渡しpass-by-value言語か値渡しpass-by-reference言語か [Javascript]</title>
+    <link href="https://so-matome.net/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/"/>
+    <id>https://so-matome.net/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/</id>
+    <published>2017-10-17T08:00:01.000Z</published>
+    <updated>2017-10-20T22:14:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>プリミティブ型(Number、Stringなど)は値によって渡されるけど、でもObjectは決まってない、なぜなら値渡し(オブジェクトを保持する変数が実際にはオブジェクトへの参照である場合)にも参照渡し(あるオブジェクトへの変数がそのオブジェクト自体を保持している時)の療法があるから。</p><p>あと、あんまり重要じゃないけど、引数を渡す慣習的なやり方の正しい方法ってある？あと、これに関するセマンティクスが何でべきか定義してるようなJavaScriptの仕様を抜粋したものとかって無いかな？？</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/3219/danail-nachev" target="_blank" rel="external">Danail Nachev</a> | 質問日時： 2009年2月5日 21:23 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>これはJavascriptで面白い問題だよね。こんな例を考えてみよう：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeStuff</span>(<span class="params">a, b, c</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">  a = a * <span class="number">10</span>;</div><div class="line">  b.item = <span class="string">"changed"</span>;</div><div class="line">  c = &#123;<span class="attr">item</span>: <span class="string">"changed"</span>&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"><span class="keyword">var</span> obj2 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"></div><div class="line">changeStuff(num, obj1, obj2);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num);</div><div class="line"><span class="built_in">console</span>.log(obj1.item);</div><div class="line"><span class="built_in">console</span>.log(obj2.item);</div></pre></td></tr></table></figure><p>これは次のような出力をする：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="number">10</span></div><div class="line">changed</div><div class="line">unchanged</div></pre></td></tr></table></figure><p>もし純粋な値渡しでだった場合、 <code>obj1.item</code>を変更することは関数の外では<code>obj1</code>への影響は全く無い。<br>もし参照渡しだった場合、話が変わってくる。 <code>num</code>は<code>100</code>、 <code>obj2.item</code>は<code>changed</code>になる。</p><p>そうじゃなくて、考える状況は渡されたアイテムが値渡しであって、でも値渡しされるアイテムそれ自身は参照になってる状況だ。</p><p>技術的には、これは<a href="http://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing" target="_blank" rel="external">call-by-sharing</a>って呼ばれてる。</p><p>実際には、(<code>num</code>と<code>obj2</code>のように)パラメータ自体を変更した場合、それはパラメータに渡されるアイテム自身には影響を与えない。でも、(<code>obj1</code>のように)パラメータの<strong>内部</strong>を変更すると、その影響は（<code>obj1</code>に）伝わっていく。</p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>基本常に値渡しだけど、オブジェクトの場合は変数の値は参照になってる。だから、オブジェクトを渡してそのメンバーを変更すると、その変更は関数の外でも引き継がれる。<br>これは、参照渡し<em>のように見える</em>。でも、実際にオブジェクト変数の値を変更すると変化が引き継がれないことがわかるので、それが本当に値渡しであることの証明になってる。</p><p>例：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeObject</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  x = &#123;<span class="attr">member</span>:<span class="string">"bar"</span>&#125;;</div><div class="line">  alert(<span class="string">"in changeObject: "</span> + x.member);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeMember</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  x.member = <span class="string">"bar"</span>;</div><div class="line">  alert(<span class="string">"in changeMember: "</span> + x.member);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> x = &#123;<span class="attr">member</span>:<span class="string">"foo"</span>&#125;;</div><div class="line"></div><div class="line">alert(<span class="string">"before changeObject: "</span> + x.member);</div><div class="line">changeObject(x);</div><div class="line">alert(<span class="string">"after changeObject: "</span> + x.member); <span class="comment">/*変更は引き継がない */</span></div><div class="line"></div><div class="line">alert(<span class="string">"before changeMember: "</span> + x.member);</div><div class="line">changeMember(x);</div><div class="line">alert(<span class="string">"after changeMember: "</span> + x.member); <span class="comment">/* 変更は引き継ぐ */</span></div></pre></td></tr></table></figure><p>出力：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">before changeObject: foo</div><div class="line"><span class="keyword">in</span> changeObject: bar</div><div class="line">after changeObject: foo</div><div class="line"></div><div class="line">before changeMember: foo</div><div class="line"><span class="keyword">in</span> changeMember: bar</div><div class="line">after changeMember: bar</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/254364/tim-goodman" target="_blank" rel="external">Tim Goodman</a> | 回答日時： 2011年3月15日 16:38 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language" target="_blank" rel="external">Is JavaScript a pass-by-reference or pass-by-value language?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;プリミティブ型(Number、Stringなど)は値によって渡されるけど、でもObjectは決まってない、なぜなら値渡し(オブジェクトを保持する変数が実際にはオブジェクトへの参照である場合)にも参照渡し(あるオブジェクトへの変数がそのオブジェクト自体を保持している時)の療法があるから。&lt;/p&gt;
+&lt;p&gt;あと、あんまり重要じゃないけど、引数を渡す慣習的なやり方の正しい方法ってある？あと、これに関するセマンティクスが何でべきか定義してるようなJavaScriptの仕様を抜粋したものとかって無いかな？？&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/3219/danail-nachev&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Danail Nachev&lt;/a&gt; | 質問日時： 2009年2月5日 21:23 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
+    
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
+    
+      <category term="pass-by-reference" scheme="https://so-matome.net/tags/pass-by-reference/"/>
+    
+      <category term="pass-by-value" scheme="https://so-matome.net/tags/pass-by-value/"/>
+    
+  </entry>
+  
+  <entry>
     <title>matplotlibのFigureの文字をパスじゃなく文字としてSVGに出力する方法 [Python]</title>
     <link href="https://so-matome.net/2017/10/17/output-matplotlib-figure-to-svg-with-text-as-text-not-curves/"/>
     <id>https://so-matome.net/2017/10/17/output-matplotlib-figure-to-svg-with-text-as-text-not-curves/</id>
@@ -620,30 +678,27 @@
   </entry>
   
   <entry>
-    <title>JavaScriptは参照渡しpass-by-value言語か値渡しpass-by-reference言語か [Javascript]</title>
-    <link href="https://so-matome.net/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/"/>
-    <id>https://so-matome.net/2017/10/17/is-javascript-a-pass-by-reference-or-pass-by-value-language/</id>
-    <published>2017-10-17T08:00:01.000Z</published>
-    <updated>2017-10-20T22:14:34.000Z</updated>
+    <title>Pandasでgrepのような機能 [Python]</title>
+    <link href="https://so-matome.net/2017/10/16/pandas-grep-like-function/"/>
+    <id>https://so-matome.net/2017/10/16/pandas-grep-like-function/</id>
+    <published>2017-10-16T08:00:01.000Z</published>
+    <updated>2017-10-16T08:00:01.820Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>プリミティブ型(Number、Stringなど)は値によって渡されるけど、でもObjectは決まってない、なぜなら値渡し(オブジェクトを保持する変数が実際にはオブジェクトへの参照である場合)にも参照渡し(あるオブジェクトへの変数がそのオブジェクト自体を保持している時)の療法があるから。</p><p>あと、あんまり重要じゃないけど、引数を渡す慣習的なやり方の正しい方法ってある？あと、これに関するセマンティクスが何でべきか定義してるようなJavaScriptの仕様を抜粋したものとかって無いかな？？</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/3219/danail-nachev" target="_blank" rel="external">Danail Nachev</a> | 質問日時： 2009年2月5日 21:23 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>これはJavascriptで面白い問題だよね。こんな例を考えてみよう：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeStuff</span>(<span class="params">a, b, c</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">  a = a * <span class="number">10</span>;</div><div class="line">  b.item = <span class="string">"changed"</span>;</div><div class="line">  c = &#123;<span class="attr">item</span>: <span class="string">"changed"</span>&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"><span class="keyword">var</span> obj2 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"></div><div class="line">changeStuff(num, obj1, obj2);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num);</div><div class="line"><span class="built_in">console</span>.log(obj1.item);</div><div class="line"><span class="built_in">console</span>.log(obj2.item);</div></pre></td></tr></table></figure><p>これは次のような出力をする：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="number">10</span></div><div class="line">changed</div><div class="line">unchanged</div></pre></td></tr></table></figure><p>もし純粋な値渡しでだった場合、 <code>obj1.item</code>を変更することは関数の外では<code>obj1</code>への影響は全く無い。<br>もし参照渡しだった場合、話が変わってくる。 <code>num</code>は<code>100</code>、 <code>obj2.item</code>は<code>changed</code>になる。</p><p>そうじゃなくて、考える状況は渡されたアイテムが値渡しであって、でも値渡しされるアイテムそれ自身は参照になってる状況だ。</p><p>技術的には、これは<a href="http://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing" target="_blank" rel="external">call-by-sharing</a>って呼ばれてる。</p><p>実際には、(<code>num</code>と<code>obj2</code>のように)パラメータ自体を変更した場合、それはパラメータに渡されるアイテム自身には影響を与えない。でも、(<code>obj1</code>のように)パラメータの<strong>内部</strong>を変更すると、その影響は（<code>obj1</code>に）伝わっていく。</p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>基本常に値渡しだけど、オブジェクトの場合は変数の値は参照になってる。だから、オブジェクトを渡してそのメンバーを変更すると、その変更は関数の外でも引き継がれる。<br>これは、参照渡し<em>のように見える</em>。でも、実際にオブジェクト変数の値を変更すると変化が引き継がれないことがわかるので、それが本当に値渡しであることの証明になってる。</p><p>例：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeObject</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  x = &#123;<span class="attr">member</span>:<span class="string">"bar"</span>&#125;;</div><div class="line">  alert(<span class="string">"in changeObject: "</span> + x.member);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeMember</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  x.member = <span class="string">"bar"</span>;</div><div class="line">  alert(<span class="string">"in changeMember: "</span> + x.member);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> x = &#123;<span class="attr">member</span>:<span class="string">"foo"</span>&#125;;</div><div class="line"></div><div class="line">alert(<span class="string">"before changeObject: "</span> + x.member);</div><div class="line">changeObject(x);</div><div class="line">alert(<span class="string">"after changeObject: "</span> + x.member); <span class="comment">/*変更は引き継がない */</span></div><div class="line"></div><div class="line">alert(<span class="string">"before changeMember: "</span> + x.member);</div><div class="line">changeMember(x);</div><div class="line">alert(<span class="string">"after changeMember: "</span> + x.member); <span class="comment">/* 変更は引き継ぐ */</span></div></pre></td></tr></table></figure><p>出力：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">before changeObject: foo</div><div class="line"><span class="keyword">in</span> changeObject: bar</div><div class="line">after changeObject: foo</div><div class="line"></div><div class="line">before changeMember: foo</div><div class="line"><span class="keyword">in</span> changeMember: bar</div><div class="line">after changeMember: bar</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/254364/tim-goodman" target="_blank" rel="external">Tim Goodman</a> | 回答日時： 2011年3月15日 16:38 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language" target="_blank" rel="external">Is JavaScript a pass-by-reference or pass-by-value language?</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>Pandasのbuilt-in関数で、ある文字列や値を含む行を削除するような、grepみたいな関数ってある？<br>よろしくお願いします。</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1289107/fred" target="_blank" rel="external">fred</a> | 質問日時： 2012年9月27日 16:10 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>df[‘column_label].strを見てみて。以下の例は、列Aに’a’という文字、列Bに20を持つようなすべての行を削除するよ。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">In [<span class="number">46</span>]: df</div><div class="line">Out[<span class="number">46</span>]:</div><div class="line">     A   B</div><div class="line"><span class="number">0</span>  foo  <span class="number">10</span></div><div class="line"><span class="number">1</span>  bar  <span class="number">20</span></div><div class="line"><span class="number">2</span>  baz  <span class="number">30</span></div><div class="line"></div><div class="line">In [<span class="number">47</span>]: cond = df[<span class="string">'A'</span>].str.contains(<span class="string">'a'</span>) &amp;amp; (df[<span class="string">'B'</span>] == <span class="number">20</span>)</div><div class="line"></div><div class="line">In [<span class="number">48</span>]: df.drop(df[cond].index.values)</div><div class="line">Out[<span class="number">48</span>]:</div><div class="line">     A   B</div><div class="line"><span class="number">0</span>  foo  <span class="number">10</span></div><div class="line"><span class="number">2</span>  baz  <span class="number">30</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1548051/wouter-overmeire" target="_blank" rel="external">Wouter Overmeire</a> | 回答日時： 2012年9月27日 18:03 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/12625650/pandas-grep-like-function" target="_blank" rel="external">Pandas: grep like function</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;プリミティブ型(Number、Stringなど)は値によって渡されるけど、でもObjectは決まってない、なぜなら値渡し(オブジェクトを保持する変数が実際にはオブジェクトへの参照である場合)にも参照渡し(あるオブジェクトへの変数がそのオブジェクト自体を保持している時)の療法があるから。&lt;/p&gt;
-&lt;p&gt;あと、あんまり重要じゃないけど、引数を渡す慣習的なやり方の正しい方法ってある？あと、これに関するセマンティクスが何でべきか定義してるようなJavaScriptの仕様を抜粋したものとかって無いかな？？&lt;/p&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/3219/danail-nachev&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Danail Nachev&lt;/a&gt; | 質問日時： 2009年2月5日 21:23 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;Pandasのbuilt-in関数で、ある文字列や値を含む行を削除するような、grepみたいな関数ってある？&lt;br&gt;よろしくお願いします。&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/1289107/fred&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fred&lt;/a&gt; | 質問日時： 2012年9月27日 16:10 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
     
-      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
+      <category term="pandas" scheme="https://so-matome.net/tags/pandas/"/>
     
-      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
+      <category term="grep" scheme="https://so-matome.net/tags/grep/"/>
     
-      <category term="pass-by-reference" scheme="https://so-matome.net/tags/pass-by-reference/"/>
-    
-      <category term="pass-by-value" scheme="https://so-matome.net/tags/pass-by-value/"/>
+      <category term="row" scheme="https://so-matome.net/tags/row/"/>
     
   </entry>
   
@@ -676,31 +731,6 @@
       <category term="post" scheme="https://so-matome.net/tags/post/"/>
     
       <category term="file-upload" scheme="https://so-matome.net/tags/file-upload/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pandasでgrepのような機能 [Python]</title>
-    <link href="https://so-matome.net/2017/10/16/pandas-grep-like-function/"/>
-    <id>https://so-matome.net/2017/10/16/pandas-grep-like-function/</id>
-    <published>2017-10-16T08:00:01.000Z</published>
-    <updated>2017-10-16T08:00:01.820Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>Pandasのbuilt-in関数で、ある文字列や値を含む行を削除するような、grepみたいな関数ってある？<br>よろしくお願いします。</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1289107/fred" target="_blank" rel="external">fred</a> | 質問日時： 2012年9月27日 16:10 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>df[‘column_label].strを見てみて。以下の例は、列Aに’a’という文字、列Bに20を持つようなすべての行を削除するよ。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">In [<span class="number">46</span>]: df</div><div class="line">Out[<span class="number">46</span>]:</div><div class="line">     A   B</div><div class="line"><span class="number">0</span>  foo  <span class="number">10</span></div><div class="line"><span class="number">1</span>  bar  <span class="number">20</span></div><div class="line"><span class="number">2</span>  baz  <span class="number">30</span></div><div class="line"></div><div class="line">In [<span class="number">47</span>]: cond = df[<span class="string">'A'</span>].str.contains(<span class="string">'a'</span>) &amp;amp; (df[<span class="string">'B'</span>] == <span class="number">20</span>)</div><div class="line"></div><div class="line">In [<span class="number">48</span>]: df.drop(df[cond].index.values)</div><div class="line">Out[<span class="number">48</span>]:</div><div class="line">     A   B</div><div class="line"><span class="number">0</span>  foo  <span class="number">10</span></div><div class="line"><span class="number">2</span>  baz  <span class="number">30</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1548051/wouter-overmeire" target="_blank" rel="external">Wouter Overmeire</a> | 回答日時： 2012年9月27日 18:03 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/12625650/pandas-grep-like-function" target="_blank" rel="external">Pandas: grep like function</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;Pandasのbuilt-in関数で、ある文字列や値を含む行を削除するような、grepみたいな関数ってある？&lt;br&gt;よろしくお願いします。&lt;/p&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/1289107/fred&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fred&lt;/a&gt; | 質問日時： 2012年9月27日 16:10 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="pandas" scheme="https://so-matome.net/tags/pandas/"/>
-    
-      <category term="grep" scheme="https://so-matome.net/tags/grep/"/>
-    
-      <category term="row" scheme="https://so-matome.net/tags/row/"/>
     
   </entry>
   
@@ -843,38 +873,6 @@
       <category term="function" scheme="https://so-matome.net/tags/function/"/>
     
       <category term="syntax" scheme="https://so-matome.net/tags/syntax/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>データフレームのリストを作成するにはどうすればいい？ [R]</title>
-    <link href="https://so-matome.net/2017/10/12/how-do-i-make-a-list-of-data-frames/"/>
-    <id>https://so-matome.net/2017/10/12/how-do-i-make-a-list-of-data-frames/</id>
-    <published>2017-10-12T08:00:01.000Z</published>
-    <updated>2017-10-16T19:34:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>データフレームのリストを作成するのってどうすればいい？</p><p>そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？</p><p>なんか簡単な例を見つけることができなくって、、、</p><figure class="highlight r"><table><tr><td class="code"><pre><div class="line">d1&lt;-data.frame(y1&lt;-c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),y2&lt;-c(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>))</div><div class="line">d2&lt;-data.frame(y1&lt;-c(<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>),y2&lt;-c(<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>))</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/2146894/ben" target="_blank" rel="external">Ben</a> | 質問日時： 2013年7月6日 2:16 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>これは君の質問とは直接関係ないけど、 関数のコールの中では<code>=</code>じゃなく<code>&lt;-</code>を使うべき。<br><code>&lt;-</code>を使用すると、どんな環境であろうと<code>y1</code>と<code>y2</code>という変数を作っちゃう。：</p><figure class="highlight r"><table><tr><td class="code"><pre><div class="line">d1&lt;-data.frame(y1&lt;-c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),y2&lt;-c(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>))</div><div class="line">y1</div><div class="line"><span class="comment"># [1] 1 2 3</span></div><div class="line">y2</div><div class="line"><span class="comment"># [1] 4 5 6</span></div></pre></td></tr></table></figure><p>これはデータフレーム内の列の名前として作ったのとは別の結果になってしまう：</p><figure class="highlight r"><table><tr><td class="code"><pre><div class="line">d1</div><div class="line"><span class="comment">#   y1....c.1..2..3. y2....c.4..5..6.</span></div><div class="line"><span class="comment"># 1                1                4</span></div><div class="line"><span class="comment"># 2                2                5</span></div><div class="line"><span class="comment"># 3                3                6</span></div></pre></td></tr></table></figure><p>一方、 <code>=</code>演算子は、あるベクトルを<code>data.frame</code>への引数として紐つけてくれる。</p><p>で、君の質問だけど、データフレームのリストを作成するのは簡単：</p><figure class="highlight r"><table><tr><td class="code"><pre><div class="line">d1 &lt;- data.frame(y1=c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),y2=c(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>))</div><div class="line">d2 &lt;- data.frame(y1=c(<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>),y2=c(<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>))</div><div class="line">my.list &lt;- list(d1, d2)</div></pre></td></tr></table></figure><p>他のリスト要素にアクセスするのと同じように、データフレームにアクセスできるよ。</p><figure class="highlight r"><table><tr><td class="code"><pre><div class="line">my.list[[<span class="number">1</span>]]</div><div class="line"><span class="comment">#   y1 y2</span></div><div class="line"><span class="comment"># 1  1  4</span></div><div class="line"><span class="comment"># 2  2  5</span></div><div class="line"><span class="comment"># 3  3  6</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/2441990/peyton" target="_blank" rel="external">Peyton</a> | 回答日時： 2013年7月6日 2:36 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/17499013/how-do-i-make-a-list-of-data-frames" target="_blank" rel="external">How do I make a list of data frames?</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;データフレームのリストを作成するのってどうすればいい？&lt;/p&gt;
-&lt;p&gt;そしてそのリストからそれぞれのデータフレームにアクセスするのってどうすればいい？&lt;/p&gt;
-&lt;p&gt;なんか簡単な例を見つけることができなくって、、、&lt;/p&gt;
-&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;d1&amp;lt;-data.frame(y1&amp;lt;-c(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;),y2&amp;lt;-c(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;d2&amp;lt;-data.frame(y1&amp;lt;-c(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;),y2&amp;lt;-c(&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;))&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/2146894/ben&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Ben&lt;/a&gt; | 質問日時： 2013年7月6日 2:16 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
-    
-      <category term="list" scheme="https://so-matome.net/tags/list/"/>
-    
-      <category term="r" scheme="https://so-matome.net/tags/r/"/>
-    
-      <category term="dataframe" scheme="https://so-matome.net/tags/dataframe/"/>
-    
-      <category term="r-faq" scheme="https://so-matome.net/tags/r-faq/"/>
     
   </entry>
   
