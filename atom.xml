@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://so-matome.net/"/>
-  <updated>2018-01-05T22:00:01.834Z</updated>
+  <updated>2018-01-12T22:00:01.892Z</updated>
   <id>https://so-matome.net/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>プログラマーが見るべき20のTEDトーク(20)　「感情を示す」ロボット [Video]</title>
+    <link href="https://so-matome.net/2018/01/12/ted-talks-programming-everyone-must-watch-20/"/>
+    <id>https://so-matome.net/2018/01/12/ted-talks-programming-everyone-must-watch-20/</id>
+    <published>2018-01-12T22:00:01.000Z</published>
+    <updated>2018-01-12T22:00:01.892Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="David-Hanson：「感情を示す」ロボット"><a href="#David-Hanson：「感情を示す」ロボット" class="headerlink" title="David Hanson：「感情を示す」ロボット"></a>David Hanson：「感情を示す」ロボット</h2><p><a href="http://www.makeuseof.com/tag/ted-talks-programming/" target="_blank" rel="external">MakeUseOf</a>より、プログラマーが見ておくべきTEDトークが話題になっていたのでご紹介します。内容は、プログラミング方法を学ぶためではなく、プログラマーになる方法を学ぶことにフォーカスが置かれ、考え方を知ることを重視した内容になっています。<br>最後の第20段は「David Hanson：「感情を示す」ロボット」。以下のように紹介されています：</p><blockquote><p>超知能AIは考えるのが怖いですが、人間の感情を理解し模倣できる知的AIはまだ実現できていません。この7分間のTEDトークは、すでに実現していることを示し、今後10〜20年間に期待できることを予想してみるものです。</p></blockquote><iframe width="560" height="315" src="https://www.youtube.com/embed/wjW-v0IPT_M?cc_load_policy=1&cc_lang_pref=ja" frameborder="0" allowfullscreen></iframe><p>動画は日本語字幕を表示してありますが、TEDトークの日本語訳には意訳している部分もあるため、英語字幕（以下）をフォローするのをお薦めします：</p><a id="more"></a><div id="" style="overflow-y: scroll; height:400px;"><br>I&#39;m Dr. David Hanson, and I build robots with character.<br><br>And by that, I mean that I develop robots that are characters, but also robots that will eventually come to empathize with you.<br><br>So we&#39;re starting with a variety of technologies that have converged into these conversational character robots that can see faces, make eye contact with you, make a full range of facial expressions, understand speech and begin to model how you&#39;re feeling and who you are, and build a relationship with you.<br><br>I developed a series of technologies that allowed the robots to make more realistic facial expressions than previously achieved, on lower power, which enabled the walking biped robots, the first androids.<br><br>So, it&#39;s a full range of facial expressions simulating all the major muscles in the human face, running on very small batteries, extremely lightweight.<br><br>The materials that allowed the battery-operated facial expressions is a material that we call Frubber, and it actually has three major innovations in the material that allow this to happen.<br><br>One is hierarchical pores, and the other is a macro-molecular nanoscale porosity in the material.<br><br>There he&#39;s starting to walk.<br><br>This is at the Korean Advanced Institute of Science and Technology.<br><br>I built the head. They built the body.<br><br>So the goal here is to achieve sentience in machines, and not just sentience, but empathy.<br><br>We&#39;re working with the Machine Perception Laboratory at the U.C. San Diego.<br><br>They have this really remarkable facial expression technology that recognizes facial expressions, what facial expressions you&#39;re making.<br><br>It also recognizes where you&#39;re looking, your head orientation.<br><br>We&#39;re emulating all the major facial expressions, and then controlling it with the software that we call the Character Engine.<br><br>And here is a little bit of the technology that&#39;s involved in that.<br><br>In fact, right now – plug it from here, and then plug it in here, and now let&#39;s see if it gets my facial expressions.<br><br>Okay. So I&#39;m smiling.<br><br>(Laughter) Now I&#39;m frowning.<br><br>And this is really heavily backlit.<br><br>Okay, here we go.<br><br>Oh, it&#39;s so sad.<br><br>Okay, so you smile, frowning.<br><br>So his perception of your emotional states is very important for machines to effectively become empathetic.<br><br>Machines are becoming devastatingly capable of things like killing. Right?<br><br>Those machines have no place for empathy.<br><br>And there is billions of dollars being spent on that.<br><br>Character robotics could plant the seed for robots that actually have empathy.<br><br>So, if they achieve human level intelligence or, quite possibly, greater than human levels of intelligence, this could be the seeds of hope for our future.<br><br>So, we&#39;ve made 20 robots in the last eight years, during the course of getting my Ph.D.<br><br>And then I started Hanson Robotics, which has been developing these things for mass manufacturing.<br><br>This is one of our robots that we showed at Wired NextFest a couple of years ago.<br><br>And it sees multiple people in a scene, remembers where individual people are, and looks from person to person, remembering people.<br><br>So, we&#39;re involving two things.<br><br>One, the perception of people, and two, the natural interface, the natural form of the interface, so that it&#39;s more intuitive for you to interact with the robot.<br><br>You start to believe that it&#39;s alive and aware.<br><br>So one of my favorite projects was bringing all this stuff together in an artistic display of an android portrait of science-fiction writer Philip K. Dick, who wrote great works like, &quot;Do Androids Dream of Electric Sheep?&quot;<br><br>which was the basis of the movie &quot;Bladerunner.&quot;<br><br>In these stories, robots often think that they&#39;re human, and they sort of come to life.<br><br>So we put his writings, letters, his interviews, correspondences, into a huge database of thousands of pages, and then used some natural language processing to allow you to actually have a conversation with him.<br><br>And it was kind of spooky, because he would say these things that just sounded like they really understood you.<br><br>And this is one of the most exciting projects that we&#39;re developing, which is a little character that&#39;s a spokesbot for friendly artificial intelligence, friendly machine intelligence.<br><br>And we&#39;re getting this mass-manufactured.<br><br>We specked it out to actually be doable with a very, very low-cost bill of materials, so that it can become a childhood companion for kids.<br><br>Interfacing with the Internet, it gets smarter over the years.<br><br>As artificial intelligence evolves, so does his intelligence.<br><br>Chris Anderson: Thank you so much. That&#39;s incredible.<br><br>(Applause)  </div> ]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;David-Hanson：「感情を示す」ロボット&quot;&gt;&lt;a href=&quot;#David-Hanson：「感情を示す」ロボット&quot; class=&quot;headerlink&quot; title=&quot;David Hanson：「感情を示す」ロボット&quot;&gt;&lt;/a&gt;David Hanson：「感情を示す」ロボット&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.makeuseof.com/tag/ted-talks-programming/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MakeUseOf&lt;/a&gt;より、プログラマーが見ておくべきTEDトークが話題になっていたのでご紹介します。内容は、プログラミング方法を学ぶためではなく、プログラマーになる方法を学ぶことにフォーカスが置かれ、考え方を知ることを重視した内容になっています。&lt;br&gt;最後の第20段は「David Hanson：「感情を示す」ロボット」。以下のように紹介されています：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;超知能AIは考えるのが怖いですが、人間の感情を理解し模倣できる知的AIはまだ実現できていません。この7分間のTEDトークは、すでに実現していることを示し、今後10〜20年間に期待できることを予想してみるものです。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/wjW-v0IPT_M?cc_load_policy=1&amp;cc_lang_pref=ja&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;動画は日本語字幕を表示してありますが、TEDトークの日本語訳には意訳している部分もあるため、英語字幕（以下）をフォローするのをお薦めします：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="video" scheme="https://so-matome.net/tags/video/"/>
+    
+      <category term="english" scheme="https://so-matome.net/tags/english/"/>
+    
+      <category term="TED" scheme="https://so-matome.net/tags/TED/"/>
+    
+  </entry>
   
   <entry>
     <title>プログラマーが見るべき20のTEDトーク(3)　学校は創造性を殺すのか？ [Video]</title>
@@ -610,6 +640,55 @@
   </entry>
   
   <entry>
+    <title>昔話 [Webコミック]</title>
+    <link href="https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/"/>
+    <id>https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/</id>
+    <published>2017-10-24T04:06:51.000Z</published>
+    <updated>2017-10-24T04:06:51.711Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>１コマ目：</strong><br>「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」<br>「何が分からないんだい？」</p><p><strong>２コマ目：</strong><br>「どうしてハードディスクはA:からじゃなくて、C:から始まるの？」<br>「ああ！」</p><img src="/2017/10/24/commic-2017-05-02-telling-our-story/commic-2017-05-02-telling-our-story.jpg" alt="commic-2017-05-02-telling-our-story.jpg" title=""><p><strong>３コマ目：</strong><br>「お前がそんな事を聞くなんて思っても見なかったなー！」<br>「よし、それじゃ初めから話をしてやろう」</p><p><strong>４コマ目：</strong><br>「むかぁ～し昔、あるところに、、、」</p><hr><hr><p>Source: <a href="http://www.commitstrip.com/en/2017/05/02/telling-our-story/" target="_blank" rel="external">Telling our story</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;１コマ目：&lt;/strong&gt;&lt;br&gt;「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」&lt;br&gt;「何が分からないんだい？」&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;２コマ目：&lt;/strong&gt;&lt;br&gt;「どうしてハードディスクはA:からじゃなくて、C:から始
+      
+    
+    </summary>
+    
+    
+      <category term="comic" scheme="https://so-matome.net/tags/comic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pythonの@staticmethodと@classmethodの違いって何？ [Python]</title>
+    <link href="https://so-matome.net/2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/"/>
+    <id>https://so-matome.net/2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/</id>
+    <published>2017-10-24T04:06:51.000Z</published>
+    <updated>2017-10-24T04:06:51.663Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><a href="http://docs.python.org/library/functions.html#staticmethod" target="_blank" rel="external"><code>@staticmethod</code></a>が付いてる関数と、<a href="http://docs.python.org/library/functions.html#classmethod" target="_blank" rel="external"><code>@classmethod</code></a>が付いてる関数の違いって何？</p><p><div style="text-align: right"> By  <a href="/users/4766/daryl-spitzer">Daryl Spitzer</a> | 質問日時： Sep 25 ‘08 at 21:01 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>たぶんコード例で見たほうがいいと思う：<code>foo</code>、<code>class_foo</code>と <code>static_foo</code>のコールのsignature(訳注：メソッド名、パラメータ、戻り値の型をあわせたもの)の違いに注意：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(self,x)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">"を実行する foo(%s,%s)"</span>%(self,x)</div><div class="line"></div><div class="line"><span class="meta">    @classmethod</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">class_foo</span><span class="params">(cls,x)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">"を実行する class_foo(%s,%s)"</span>%(cls,x)</div><div class="line"></div><div class="line"><span class="meta">    @staticmethod</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">static_foo</span><span class="params">(x)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">"を実行する static_foo(%s)"</span>%x</div><div class="line"></div><div class="line">a=A()</div></pre></td></tr></table></figure><p>以下は、オブジェクトインスタンスがメソッドを呼び出す一般的な方法。オブジェクトインスタンス<code>a</code>は最初の引数として暗黙的に渡される。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">a.foo(<span class="number">1</span>)</div><div class="line"><span class="comment">#  foo(&lt;__main__.A object at 0xb7dbef0c&gt;,1)を実行する</span></div></pre></td></tr></table></figure><hr><p><strong>classmethods</strong>では、オブジェクトインスタンスのクラスは、<code>self</code>じゃなく最初の引数として暗黙的に渡される。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">a.class_foo(<span class="number">1</span>)</div><div class="line"><span class="comment"># class_foo(&lt;class '__main__.A'&gt;,1)を実行する</span></div></pre></td></tr></table></figure><p>クラスを使って <code>class_foo</code>を呼び出すこともできるよ。実際、何かをクラスメソッドとが定義した場合、たぶんそれはクラスインスタンスからじゃなくクラスから呼び出されると仮定して定義しているはずなので。<code>A.foo(1)</code>はTypeErrorだけど、 <code>A.class_foo(1)</code>はうまくいくよ：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">A.class_foo(<span class="number">1</span>)</div><div class="line"><span class="comment"># class_foo(&lt;class '__main__.A'&gt;,1)を実行する</span></div></pre></td></tr></table></figure><p>クラスメソッドとしてよく使われるのは、<a href="https://stackoverflow.com/a/1950927/190597" target="_blank" rel="external">継承可能な代替コンストラクタ</a>を作ること。</p><hr><p><strong>staticmethods</strong>では、 <code>self</code>(オブジェクトインスタンス)も<code>cls</code>(クラス)も暗黙のうちに第1引数として渡されない。インスタンスやクラスから呼び出すことができる点を除いて、通常の関数のように動作するよ。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">a.static_foo(<span class="number">1</span>)</div><div class="line"><span class="comment"># static_foo(1)を実行する</span></div><div class="line"></div><div class="line">A.static_foo(<span class="string">'hi'</span>)</div><div class="line"><span class="comment"># static_foo(hi)を実行する</span></div></pre></td></tr></table></figure><p>staticmethodsはあるクラスとそのクラスへの論理接続を持つ関数をグループ化するために使用される。</p><hr><p><code>foo</code>は単なる関数だけど、<code>a.foo</code>を呼び出すと、関数自身は得ることができなくて、最初の引数としてバインドされたオブジェクトインスタンス <code>a</code>へ”部分的に適用された”関数が与えられる。<code>foo</code>は２つの引数があることを期待してるけど、<code>a.foo</code>は1つの引数しか期待していない。</p><p>ここで<code>a</code>は<code>foo</code>にバインドされてる。これは、以下のように「束縛」(bound)が意味してるものでもある：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(a.foo)</div><div class="line"><span class="comment"># &lt;bound method A.foo of &lt;__main__.A object at 0xb7d52f0c&gt;&gt;</span></div></pre></td></tr></table></figure><p><code>a.class_foo</code>では、<code>a</code>は <code>class_foo</code>に束縛されず、むしろクラス<code>A</code>は<code>class_foo</code>に束縛されてる。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(a.class_foo)</div><div class="line"><span class="comment"># &lt;bound method type.class_foo of &lt;class '__main__.A'&gt;&gt;</span></div></pre></td></tr></table></figure><p>staticメソッドでは、例えそれがメソッドであっても <code>a.static_foo</code>は何も引数がバインドされていない「古き良き」関数を返してくれる。<code>static_foo</code>は1つ引数があるのをを期待してて、<code>a.static_foo</code>も1つの引数があるのを期待してる。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(a.static_foo)</div><div class="line"><span class="comment"># &lt;function static_foo at 0xb7d479cc&gt;</span></div></pre></td></tr></table></figure><p>そしてもちろん、代わりにクラス<code>A</code>で<code>static_foo</code>を呼び出すと同じことが起こる。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(A.static_foo)</div><div class="line"><span class="comment"># &lt;function static_foo at 0xb7d479cc&gt;</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/190597/unutbu">unutbu</a> | 回答日時： Nov 3 ‘09 at 19:13 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/136097/what-is-the-difference-between-staticmethod-and-classmethod-in-python" target="_blank" rel="external">What is the difference between @staticmethod and @classmethod in Python?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://docs.python.org/library/functions.html#staticmethod&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;@staticmethod&lt;/code&gt;&lt;/a&gt;が付いてる関数と、&lt;a href=&quot;http://docs.python.org/library/functions.html#classmethod&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;@classmethod&lt;/code&gt;&lt;/a&gt;が付いてる関数の違いって何？&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/4766/daryl-spitzer&quot;&gt;Daryl Spitzer&lt;/a&gt; | 質問日時： Sep 25 ‘08 at 21:01 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
+    
+      <category term="python" scheme="https://so-matome.net/tags/python/"/>
+    
+      <category term="oop" scheme="https://so-matome.net/tags/oop/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ループ内のJavaScriptクロージャ - 簡単な実用的な例 [Javascript]</title>
     <link href="https://so-matome.net/2017/10/24/javascript-closure-inside-loops-simple-practical-example/"/>
     <id>https://so-matome.net/2017/10/24/javascript-closure-inside-loops-simple-practical-example/</id>
@@ -646,55 +725,6 @@
       <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
       <category term="closures" scheme="https://so-matome.net/tags/closures/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pythonの@staticmethodと@classmethodの違いって何？ [Python]</title>
-    <link href="https://so-matome.net/2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/"/>
-    <id>https://so-matome.net/2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/</id>
-    <published>2017-10-24T04:06:51.000Z</published>
-    <updated>2017-10-24T04:06:51.663Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p><a href="http://docs.python.org/library/functions.html#staticmethod" target="_blank" rel="external"><code>@staticmethod</code></a>が付いてる関数と、<a href="http://docs.python.org/library/functions.html#classmethod" target="_blank" rel="external"><code>@classmethod</code></a>が付いてる関数の違いって何？</p><p><div style="text-align: right"> By  <a href="/users/4766/daryl-spitzer">Daryl Spitzer</a> | 質問日時： Sep 25 ‘08 at 21:01 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>たぶんコード例で見たほうがいいと思う：<code>foo</code>、<code>class_foo</code>と <code>static_foo</code>のコールのsignature(訳注：メソッド名、パラメータ、戻り値の型をあわせたもの)の違いに注意：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(self,x)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">"を実行する foo(%s,%s)"</span>%(self,x)</div><div class="line"></div><div class="line"><span class="meta">    @classmethod</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">class_foo</span><span class="params">(cls,x)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">"を実行する class_foo(%s,%s)"</span>%(cls,x)</div><div class="line"></div><div class="line"><span class="meta">    @staticmethod</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">static_foo</span><span class="params">(x)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">"を実行する static_foo(%s)"</span>%x</div><div class="line"></div><div class="line">a=A()</div></pre></td></tr></table></figure><p>以下は、オブジェクトインスタンスがメソッドを呼び出す一般的な方法。オブジェクトインスタンス<code>a</code>は最初の引数として暗黙的に渡される。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">a.foo(<span class="number">1</span>)</div><div class="line"><span class="comment">#  foo(&lt;__main__.A object at 0xb7dbef0c&gt;,1)を実行する</span></div></pre></td></tr></table></figure><hr><p><strong>classmethods</strong>では、オブジェクトインスタンスのクラスは、<code>self</code>じゃなく最初の引数として暗黙的に渡される。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">a.class_foo(<span class="number">1</span>)</div><div class="line"><span class="comment"># class_foo(&lt;class '__main__.A'&gt;,1)を実行する</span></div></pre></td></tr></table></figure><p>クラスを使って <code>class_foo</code>を呼び出すこともできるよ。実際、何かをクラスメソッドとが定義した場合、たぶんそれはクラスインスタンスからじゃなくクラスから呼び出されると仮定して定義しているはずなので。<code>A.foo(1)</code>はTypeErrorだけど、 <code>A.class_foo(1)</code>はうまくいくよ：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">A.class_foo(<span class="number">1</span>)</div><div class="line"><span class="comment"># class_foo(&lt;class '__main__.A'&gt;,1)を実行する</span></div></pre></td></tr></table></figure><p>クラスメソッドとしてよく使われるのは、<a href="https://stackoverflow.com/a/1950927/190597" target="_blank" rel="external">継承可能な代替コンストラクタ</a>を作ること。</p><hr><p><strong>staticmethods</strong>では、 <code>self</code>(オブジェクトインスタンス)も<code>cls</code>(クラス)も暗黙のうちに第1引数として渡されない。インスタンスやクラスから呼び出すことができる点を除いて、通常の関数のように動作するよ。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">a.static_foo(<span class="number">1</span>)</div><div class="line"><span class="comment"># static_foo(1)を実行する</span></div><div class="line"></div><div class="line">A.static_foo(<span class="string">'hi'</span>)</div><div class="line"><span class="comment"># static_foo(hi)を実行する</span></div></pre></td></tr></table></figure><p>staticmethodsはあるクラスとそのクラスへの論理接続を持つ関数をグループ化するために使用される。</p><hr><p><code>foo</code>は単なる関数だけど、<code>a.foo</code>を呼び出すと、関数自身は得ることができなくて、最初の引数としてバインドされたオブジェクトインスタンス <code>a</code>へ”部分的に適用された”関数が与えられる。<code>foo</code>は２つの引数があることを期待してるけど、<code>a.foo</code>は1つの引数しか期待していない。</p><p>ここで<code>a</code>は<code>foo</code>にバインドされてる。これは、以下のように「束縛」(bound)が意味してるものでもある：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(a.foo)</div><div class="line"><span class="comment"># &lt;bound method A.foo of &lt;__main__.A object at 0xb7d52f0c&gt;&gt;</span></div></pre></td></tr></table></figure><p><code>a.class_foo</code>では、<code>a</code>は <code>class_foo</code>に束縛されず、むしろクラス<code>A</code>は<code>class_foo</code>に束縛されてる。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(a.class_foo)</div><div class="line"><span class="comment"># &lt;bound method type.class_foo of &lt;class '__main__.A'&gt;&gt;</span></div></pre></td></tr></table></figure><p>staticメソッドでは、例えそれがメソッドであっても <code>a.static_foo</code>は何も引数がバインドされていない「古き良き」関数を返してくれる。<code>static_foo</code>は1つ引数があるのをを期待してて、<code>a.static_foo</code>も1つの引数があるのを期待してる。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(a.static_foo)</div><div class="line"><span class="comment"># &lt;function static_foo at 0xb7d479cc&gt;</span></div></pre></td></tr></table></figure><p>そしてもちろん、代わりにクラス<code>A</code>で<code>static_foo</code>を呼び出すと同じことが起こる。</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">print(A.static_foo)</div><div class="line"><span class="comment"># &lt;function static_foo at 0xb7d479cc&gt;</span></div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="/users/190597/unutbu">unutbu</a> | 回答日時： Nov 3 ‘09 at 19:13 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/136097/what-is-the-difference-between-staticmethod-and-classmethod-in-python" target="_blank" rel="external">What is the difference between @staticmethod and @classmethod in Python?</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://docs.python.org/library/functions.html#staticmethod&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;@staticmethod&lt;/code&gt;&lt;/a&gt;が付いてる関数と、&lt;a href=&quot;http://docs.python.org/library/functions.html#classmethod&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;@classmethod&lt;/code&gt;&lt;/a&gt;が付いてる関数の違いって何？&lt;/p&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;/users/4766/daryl-spitzer&quot;&gt;Daryl Spitzer&lt;/a&gt; | 質問日時： Sep 25 ‘08 at 21:01 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
-    
-      <category term="python" scheme="https://so-matome.net/tags/python/"/>
-    
-      <category term="oop" scheme="https://so-matome.net/tags/oop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>昔話 [Webコミック]</title>
-    <link href="https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/"/>
-    <id>https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/</id>
-    <published>2017-10-24T04:06:51.000Z</published>
-    <updated>2017-10-24T04:06:51.711Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>１コマ目：</strong><br>「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」<br>「何が分からないんだい？」</p><p><strong>２コマ目：</strong><br>「どうしてハードディスクはA:からじゃなくて、C:から始まるの？」<br>「ああ！」</p><img src="/2017/10/24/commic-2017-05-02-telling-our-story/commic-2017-05-02-telling-our-story.jpg" alt="commic-2017-05-02-telling-our-story.jpg" title=""><p><strong>３コマ目：</strong><br>「お前がそんな事を聞くなんて思っても見なかったなー！」<br>「よし、それじゃ初めから話をしてやろう」</p><p><strong>４コマ目：</strong><br>「むかぁ～し昔、あるところに、、、」</p><hr><hr><p>Source: <a href="http://www.commitstrip.com/en/2017/05/02/telling-our-story/" target="_blank" rel="external">Telling our story</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;１コマ目：&lt;/strong&gt;&lt;br&gt;「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」&lt;br&gt;「何が分からないんだい？」&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;２コマ目：&lt;/strong&gt;&lt;br&gt;「どうしてハードディスクはA:からじゃなくて、C:から始
-      
-    
-    </summary>
-    
-    
-      <category term="comic" scheme="https://so-matome.net/tags/comic/"/>
     
   </entry>
   
@@ -858,37 +888,6 @@
     
     
       <category term="comic" scheme="https://so-matome.net/tags/comic/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ダイナミックに作成された要素のイベントバインド [Javascript]</title>
-    <link href="https://so-matome.net/2017/10/17/event-binding-on-dynamically-created-elements/"/>
-    <id>https://so-matome.net/2017/10/17/event-binding-on-dynamically-created-elements/</id>
-    <published>2017-10-17T08:00:02.000Z</published>
-    <updated>2017-10-21T09:48:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>ページ上のすべての選択ボックスに対して<code>.hover</code>イベントをバインドして、オンマウスかどうかによってその幅を少し変えるようなコードが有るんだけど、これはページの準備ができた時点ではうまく動作してる。</p><p>で、問題なのは、AjaxまたはDOMを介して追加した選択ボックスだとイベントがバインドされない、ってことなんだ。</p><p>幸いこのプラグイン(<a href="http://brandonaaron.net/docs/livequery/#getting-started" target="_blank" rel="external">jQuery Live Queryプラグイン</a>)を見つけたんだけど、僕のページにプラグインを追加する前に、誰かjQueryを使うか、別の方法かでこの問題を解決する方法を知ってる人がいないかなって聞きたいと思ったんだ。誰かいいアイデア無い？？</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/27580/eli" target="_blank" rel="external">Eli</a> | 質問日時： 2008年10月14日 23:25 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p><strong>jQuery 1.7以降</strong> <a href="https://api.jquery.com/on/#on-events-selector-data-handler" target="_blank" rel="external"><code>jQuery.fn.on</code></a>が使える</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(staticAncestors).on(eventName, dynamicChild, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);</div></pre></td></tr></table></figure><hr><p>**これよりも推奨されるべきアプローチは<a href="http://api.jquery.com/live" target="_blank" rel="external"><code>live()</code></a>かな：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(selector).live( eventName, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; );</div></pre></td></tr></table></figure><p>でも、 <code>live()</code>は <code>on()</code>のせいでに1.7では廃止され、1.9で完全に除去された。<br><code>live()</code>はこう書けるけど：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(selector).live( eventName, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; );</div></pre></td></tr></table></figure><p>でも以下の<a href="http://api.jquery.com/on/" target="_blank" rel="external"><code>on()</code></a>に置き換えることができる。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).on( eventName, selector, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; );</div></pre></td></tr></table></figure><hr><p>たとえば、あるページがクラス名<code>dosomething</code>を持つ要素を動的に作成していたとすると、、イベントはすでに存在する親にバインドされてる。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).on(<span class="string">'mouseover mouseout'</span>, <span class="string">'.dosomething'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//マウスオーバーやマウスアウト時に何をしたいか</span></div><div class="line">    <span class="comment">// '.dosomething'と一致する要素で発生する</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure><p>イベントがバインドされる時点で存在するすべての親でうまくいくよ。例えば</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(<span class="string">'.buttons'</span>).on(<span class="string">'click'</span>, <span class="string">'button'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">//ここで何かする</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure><p>は以下に適用される</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"buttons"</span>&gt;</div><div class="line">    &lt;!-- &lt;button&gt;は動的に生成され、ここに追加される --&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>これは、ライブラリやプラグインを使用しない<strong>純粋なJavaScript </strong>での方法だよ。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (hasClass(e.target, <span class="string">'bu'</span>)) &#123;</div><div class="line">          <span class="comment">// .buがクリックされた</span></div><div class="line">          <span class="comment">// 何かやる</span></div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (hasClass(e.target, <span class="string">'test'</span>)) &#123;</div><div class="line">        <span class="comment">// .testがクリックされた</span></div><div class="line">        <span class="comment">// 何か他のことやる</span></div><div class="line">    &#125;</div><div class="line">&#125;, <span class="literal">false</span>);</div></pre></td></tr></table></figure><p>ここで <code>hasClass</code>は</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hasClass</span>(<span class="params">elem, className</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> elem.className.split(<span class="string">' '</span>).indexOf(className) &gt; <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><strong> <a href="http://jsfiddle.net/ramswaroop/Nrxp5/28/" target="_blank" rel="external">ライブデモ</a></strong></p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1385441/ram-patra" target="_blank" rel="external">Ram Patra</a> | 回答日時： 2014年12月9日 7:59 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>オブジェクトを作成するときにイベントを追加することができるよ。君が同じイベントを複数のオブジェクトに異なるタイミングで追加している場合なら、名前付き関数を作成するのがいいかも：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> mouseOverHandler = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 何かやる</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> mouseOutHandler = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 何かやる</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//ドキュメントの読み込み時に、既存の要素に適用する</span></div><div class="line">    $(<span class="string">'select'</span>).hover(mouseOverHandler, mouseOutHandler);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">///この次の部分はAjax呼び出しのコールバックにある</span></div><div class="line">$(<span class="string">"&lt;select&gt;&lt;/select&gt;"</span>)</div><div class="line">    .append( <span class="comment">/* 君の&lt;option&gt;s */</span> )</div><div class="line">    .hover(mouseOverHandler, mouseOutHandler)</div><div class="line">    .appendTo( <span class="comment">/* 選択ボックスが必要な場合はどこでも*/</span> )</div><div class="line">;</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/9021/nickf" target="_blank" rel="external">nickf</a> | 回答日時： 2008年10月14日 23:31 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/203198/event-binding-on-dynamically-created-elements" target="_blank" rel="external">Event binding on dynamically created elements?</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;ページ上のすべての選択ボックスに対して&lt;code&gt;.hover&lt;/code&gt;イベントをバインドして、オンマウスかどうかによってその幅を少し変えるようなコードが有るんだけど、これはページの準備ができた時点ではうまく動作してる。&lt;/p&gt;
-&lt;p&gt;で、問題なのは、AjaxまたはDOMを介して追加した選択ボックスだとイベントがバインドされない、ってことなんだ。&lt;/p&gt;
-&lt;p&gt;幸いこのプラグイン(&lt;a href=&quot;http://brandonaaron.net/docs/livequery/#getting-started&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jQuery Live Queryプラグイン&lt;/a&gt;)を見つけたんだけど、僕のページにプラグインを追加する前に、誰かjQueryを使うか、別の方法かでこの問題を解決する方法を知ってる人がいないかなって聞きたいと思ったんだ。誰かいいアイデア無い？？&lt;/p&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/27580/eli&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Eli&lt;/a&gt; | 質問日時： 2008年10月14日 23:25 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
-    
-      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
-    
-      <category term="jquery" scheme="https://so-matome.net/tags/jquery/"/>
-    
-      <category term="events" scheme="https://so-matome.net/tags/events/"/>
-    
-      <category term="unobtrusive-javascript" scheme="https://so-matome.net/tags/unobtrusive-javascript/"/>
     
   </entry>
   
