@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://so-matome.net/"/>
-  <updated>2018-01-26T22:00:01.284Z</updated>
+  <updated>2018-02-02T22:00:01.695Z</updated>
   <id>https://so-matome.net/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>プログラマーが見るべき20のTEDトーク(17)　ハッカーを雇う！ [Video]</title>
+    <link href="https://so-matome.net/2018/02/02/ted-talks-programming-everyone-must-watch-17/"/>
+    <id>https://so-matome.net/2018/02/02/ted-talks-programming-everyone-must-watch-17/</id>
+    <published>2018-02-02T22:00:01.000Z</published>
+    <updated>2018-02-02T22:00:01.695Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Misha-Glenny：ハッカーを雇う！"><a href="#Misha-Glenny：ハッカーを雇う！" class="headerlink" title="Misha Glenny：ハッカーを雇う！"></a>Misha Glenny：ハッカーを雇う！</h2><p><a href="http://www.makeuseof.com/tag/ted-talks-programming/" target="_blank" rel="external">MakeUseOf</a>より、プログラマーが見ておくべきTEDトークが話題になっていたのでご紹介します。内容は、プログラミング方法を学ぶためではなく、プログラマーになる方法を学ぶことにフォーカスが置かれ、考え方を知ることを重視した内容になっています。<br>第17段は「Misha Glenny：ハッカーを雇う！」。以下のように紹介されています：</p><blockquote><p>この18分間のTED Talkでは、21世紀の最悪の問題の1つに興味深い解決策があります。ハッカーやサイバー犯罪者を倒すためにはどうすればいいのでしょうか？ タイトルから推測できるかもしれませんが、Glennyはただ一つの本当の答えを提案しています：彼らをこちら側に連れてくればいい。</p></blockquote><iframe width="560" height="315" src="https://www.youtube.com/embed/hecdjLbm5_g?cc_load_policy=1&cc_lang_pref=ja" frameborder="0" allowfullscreen></iframe><p>動画は日本語字幕を表示してありますが、TEDトークの日本語訳には意訳している部分もあるため、英語字幕（以下）をフォローするのをお薦めします：</p><a id="more"></a><div id="" style="overflow-y: scroll; height:400px;"><br>Now this is a very un-TED-like thing to do, but let’s kick off the afternoon with a message from a mystery sponsor.<br><br>Anonymous: Dear Fox News, it has come to our unfortunate attention that both the name and nature of Anonymous has been ravaged. We are everyone. We are no one. We are anonymous. We are legion. We do not forgive. We do not forget. We are but the base of chaos.<br><br>Misha Glenny: Anonymous, ladies and gentlemen – a sophisticated group of politically motivated hackers who have emerged in 2011. And they’re pretty scary. You never know when they’re going to attack next, who or what the consequences will be. But interestingly, they have a sense of humor. These guys hacked into Fox News’ Twitter account to announce President Obama’s assassination. Now you can imagine the panic that would have generated in the newsroom at Fox. “What do we do now? Put on a black armband, or crack open the champagne?” (Laughter) And of course, who could escape the irony of a member of Rupert Murdoch’s News Corp. being a victim of hacking for a change.<br><br>(Laughter)<br><br>(Applause)<br><br>Sometimes you turn on the news and you say, “Is there anyone left to hack?” Sony Playstation Network – done, the government of Turkey – tick, Britain’s Serious Organized Crime Agency – a breeze, the CIA – falling off a log. In fact, a friend of mine from the security industry told me the other day that there are two types of companies in the world: those that know they’ve been hacked, and those that don’t. I mean three companies providing cybersecurity services to the FBI have been hacked. Is nothing sacred anymore, for heaven’s sake?<br><br>Anyway, this mysterious group Anonymous – and they would say this themselves – they are providing a service by demonstrating how useless companies are at protecting our data. But there is also a very serious aspect to Anonymous – they are ideologically driven. They claim that they are battling a dastardly conspiracy. They say that governments are trying to take over the Internet and control it, and that they, Anonymous, are the authentic voice of resistance – be it against Middle Eastern dictatorships, against global media corporations, or against intelligence agencies, or whoever it is. And their politics are not entirely unattractive. Okay, they’re a little inchoate. There’s a strong whiff of half-baked anarchism about them. But one thing is true: we are at the beginning of a mighty struggle for control of the Internet. The Web links everything, and very soon it will mediate most human activity. Because the Internet has fashioned a new and complicated environment for an old-age dilemma that pits the demands of security with the desire for freedom.<br><br>Now this is a very complicated struggle. And unfortunately, for mortals like you and me, we probably can’t understand it very well. Nonetheless, in an unexpected attack of hubris a couple of years ago, I decided I would try and do that. And I sort of get it. These were the various things that I was looking at as I was trying to understand it. But in order to try and explain the whole thing, I would need another 18 minutes or so to do it, so you’re just going to have to take it on trust from me on this occasion, and let me assure you that all of these issues are involved in cybersecurity and control of the Internet one way or the other, but in a configuration that even Stephen Hawking would probably have difficulty trying to get his head around. So there you are. And as you see, in the middle, there is our old friend, the hacker. The hacker is absolutely central to many of the political, social and economic issues affecting the Net. And so I thought to myself, “Well, these are the guys who I want to talk to.” And what do you know, nobody else does talk to the hackers. They’re completely anonymous, as it were.<br><br>So despite the fact that we are beginning to pour billions, hundreds of billions of dollars, into cybersecurity – for the most extraordinary technical solutions – no one wants to talk to these guys, the hackers, who are doing everything. Instead, we prefer these really dazzling technological solutions, which cost a huge amount of money. And so nothing is going into the hackers. Well, I say nothing, but actually there is one teeny weeny little research unit in Turin, Italy called the Hackers Profiling Project. And they are doing some fantastic research into the characteristics, into the abilities and the socialization of hackers. But because they’re a U.N. operation, maybe that’s why governments and corporations are not that interested in them. Because it’s a U.N. operation, of course, it lacks funding. But I think they’re doing very important work. Because where we have a surplus of technology in the cybersecurity industry, we have a definite lack of – call me old-fashioned – human intelligence.<br><br>Now, so far I’ve mentioned the hackers Anonymous who are a politically motivated hacking group. Of course, the criminal justice system treats them as common old garden criminals. But interestingly, Anonymous does not make use of its hacked information for financial gain. But what about the real cybercriminals? Well real organized crime on the Internet goes back about 10 years when a group of gifted Ukrainian hackers developed a website, which led to the industrialization of cybercrime. Welcome to the now forgotten realm of CarderPlanet. This is how they were advertising themselves a decade ago on the Net. Now CarderPlanet was very interesting. Cybercriminals would go there to buy and sell stolen credit card details, to exchange information about new malware that was out there. And remember, this is a time when we’re seeing for the first time so-called off-the-shelf malware. This is ready for use, out-of-the-box stuff, which you can deploy even if you’re not a terribly sophisticated hacker.<br><br>And so CarderPlanet became a sort of supermarket for cybercriminals. And its creators were incredibly smart and entrepreneurial, because they were faced with one enormous challenge as cybercriminals. And that challenge is: How do you do business, how do you trust somebody on the Web who you want to do business with when you know that they’re a criminal? (Laughter) It’s axiomatic that they’re dodgy, and they’re going to want to try and rip you off. So the family, as the inner core of CarderPlanet was known, came up with this brilliant idea called the escrow system. They appointed an officer who would mediate between the vendor and the purchaser. The vendor, say, had stolen credit card details; the purchaser wanted to get a hold of them. The purchaser would send the administrative officer some dollars digitally, and the vendor would sell the stolen credit card details. And the officer would then verify if the stolen credit card worked. And if they did, he then passed on the money to the vendor and the stolen credit card details to the purchaser. And it was this which completely revolutionized cybercrime on the Web. And after that, it just went wild. We had a champagne decade for people who we know as Carders.<br><br>Now I spoke to one of these Carders who we’ll call RedBrigade – although that wasn’t even his proper nickname – but I promised I wouldn’t reveal who he was. And he explained to me how in 2003 and 2004 he would go on sprees in New York, taking out $10,000 from an ATM here, $30,000 from an ATM there, using cloned credit cards. He was making, on average a week, $150,000 – tax free of course. And he said that he had so much money stashed in his upper-East side apartment at one point that he just didn’t know what to do with it and actually fell into a depression. But that’s a slightly different story, which I won’t go into now. Now the interesting thing about RedBrigade is that he wasn’t an advanced hacker. He sort of understood the technology, and he realized that security was very important if you were going to be a Carder, but he didn’t spend his days and nights bent over a computer, eating pizza, drinking coke and that sort of thing. He was out there on the town having a fab time enjoying the high life.<br><br>And this is because hackers are only one element in a cybercriminal enterprise. And often they’re the most vulnerable element of all. And I want to explain this to you by introducing you to six characters who I met while I was doing this research. Dimitry Golubov, aka SCRIPT – born in Odessa, Ukraine in 1982. Now he developed his social and moral compass on the Black Sea port during the 1990s. This was a sink-or-swim environment where involvement in criminal or corrupt activities was entirely necessary if you wanted to survive. As an accomplished computer user, what Dimitry did was to transfer the gangster capitalism of his hometown onto the Worldwide Web. And he did a great job in it. You have to understand though that from his ninth birthday, the only environment he knew was gangsterism. He knew no other way of making a living and making money.<br><br>Then we have Renukanth Subramaniam, aka JiLsi – founder of DarkMarket, born in Colombo, Sri Lanka. As an eight year-old, he and his parents fled the Sri Lankan capital because Singhalese mobs were roaming the city, looking for Tamils like Renu to murder. At 11, he was interrogated by the Sri Lankan military, accused of being a terrorist, and his parents sent him on his own to Britain as a refugee seeking political asylum. At 13, with only little English and being bullied at school, he escaped into a world of computers where he showed great technical ability, but he was soon being seduced by people on the Internet. He was convicted of mortgage and credit card fraud, and he will be released from Wormwood Scrubs jail in London in 2012.<br><br>Matrix001, who was an administrator at DarkMarket. Born in Southern Germany to a stable and well-respected middle class family, his obsession with gaming as a teenager led him to hacking. And he was soon controlling huge servers around the world where he stored his games that he had cracked and pirated. His slide into criminality was incremental. And when he finally woke up to his situation and understood the implications, he was already in too deep.<br><br>Max Vision, aka ICEMAN – mastermind of CardersMarket. Born in Meridian, Idaho. Max Vision was one of the best penetration testers working out of Santa Clara, California in the late 90s for private companies and voluntarily for the FBI. Now in the late 1990s, he discovered a vulnerability on all U.S. government networks, and he went in and patched it up – because this included nuclear research facilities – sparing the American government a huge security embarrassment. But also, because he was an inveterate hacker, he left a tiny digital wormhole through which he alone could crawl. But this was spotted by an eagle-eye investigator, and he was convicted. At his open prison, he came under the influence of financial fraudsters, and those financial fraudsters persuaded him to work for them on his release. And this man with a planetary-sized brain is now serving a 13-year sentence in California.<br><br>Adewale Taiwo, aka FreddyBB – master bank account cracker from Abuja in Nigeria. He set up his prosaically entitled newsgroup, bankfrauds@yahoo.co.uk before arriving in Britain in 2005 to take a Masters in chemical engineering at Manchester University. He impressed in the private sector, developing chemical applications for the oil industry while simultaneously running a worldwide bank and credit card fraud operation that was worth millions until his arrest in 2008.<br><br>And then finally, Cagatay Evyapan, aka Cha0 – one of the most remarkable hackers ever, from Ankara in Turkey. He combined the tremendous skills of a geek with the suave social engineering skills of the master criminal. One of the smartest people I’ve ever met. He also had the most effective virtual private network security arrangement the police have ever encountered amongst global cybercriminals.<br><br>Now the important thing about all of these people is they share certain characteristics despite the fact that they come from very different environments. They are all people who learned their hacking skills in their early to mid-teens. They are all people who demonstrate advanced ability in maths and the sciences. Remember that, when they developed those hacking skills, their moral compass had not yet developed. And most of them, with the exception of SCRIPT and Cha0, they did not demonstrate any real social skills in the outside world – only on the Web.<br><br>And the other thing is the high incidence of hackers like these who have characteristics which are consistent with Asperger’s syndrome. Now I discussed this with Professor Simon Baron-Cohen who’s the professor of developmental psychopathology at Cambridge. And he has done path-breaking work on autism and confirmed, also for the authorities here, that Gary McKinnon – who is wanted by the United States for hacking into the Pentagon – suffers from Asperger’s and a secondary condition of depression. And Baron-Cohen explained that certain disabilities can manifest themselves in the hacking and computing world as tremendous skills, and that we should not be throwing in jail people who have such disabilities and skills because they have lost their way socially or been duped.<br><br>Now I think we’re missing a trick here, because I don’t think people like Max Vision should be in jail. And let me be blunt about this. In China, in Russia and in loads of other countries that are developing cyber-offensive capabilities, this is exactly what they are doing. They are recruiting hackers both before and after they become involved in criminal and industrial espionage activities – are mobilizing them on behalf of the state. We need to engage and find ways of offering guidance to these young people, because they are a remarkable breed. And if we rely, as we do at the moment, solely on the criminal justice system and the threat of punitive sentences, we will be nurturing a monster we cannot tame.<br><br>Thank you very much for listening.<br><br>(Applause)<br><br>Chris Anderson: So your idea worth spreading is hire hackers. How would someone get over that kind of fear that the hacker they hire might preserve that little teensy wormhole?<br><br>MG: I think to an extent, you have to understand that it’s axiomatic among hackers that they do that. They’re just relentless and obsessive about what they do. But all of the people who I’ve spoken to who have fallen foul of the law, they have all said, “Please, please give us a chance to work in the legitimate industry. We just never knew how to get there, what we were doing. We want to work with you.”<br><br>Chris Anderson: Okay, well that makes sense. Thanks a lot Misha.<br><br>(Applause)<br></div> ]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Misha-Glenny：ハッカーを雇う！&quot;&gt;&lt;a href=&quot;#Misha-Glenny：ハッカーを雇う！&quot; class=&quot;headerlink&quot; title=&quot;Misha Glenny：ハッカーを雇う！&quot;&gt;&lt;/a&gt;Misha Glenny：ハッカーを雇う！&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.makeuseof.com/tag/ted-talks-programming/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MakeUseOf&lt;/a&gt;より、プログラマーが見ておくべきTEDトークが話題になっていたのでご紹介します。内容は、プログラミング方法を学ぶためではなく、プログラマーになる方法を学ぶことにフォーカスが置かれ、考え方を知ることを重視した内容になっています。&lt;br&gt;第17段は「Misha Glenny：ハッカーを雇う！」。以下のように紹介されています：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;この18分間のTED Talkでは、21世紀の最悪の問題の1つに興味深い解決策があります。ハッカーやサイバー犯罪者を倒すためにはどうすればいいのでしょうか？ タイトルから推測できるかもしれませんが、Glennyはただ一つの本当の答えを提案しています：彼らをこちら側に連れてくればいい。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/hecdjLbm5_g?cc_load_policy=1&amp;cc_lang_pref=ja&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;動画は日本語字幕を表示してありますが、TEDトークの日本語訳には意訳している部分もあるため、英語字幕（以下）をフォローするのをお薦めします：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="video" scheme="https://so-matome.net/tags/video/"/>
+    
+      <category term="english" scheme="https://so-matome.net/tags/english/"/>
+    
+      <category term="TED" scheme="https://so-matome.net/tags/TED/"/>
+    
+  </entry>
   
   <entry>
     <title>プログラマーが見るべき20のTEDトーク(18)　コンピュータが我々よりも賢くなったらどうなるか？ [Video]</title>
@@ -520,29 +550,6 @@
   </entry>
   
   <entry>
-    <title>JavaScriptオブジェクトを正しくクローンするにはどうしたらいい？ [Javascript]</title>
-    <link href="https://so-matome.net/2017/10/29/how-do-i-correctly-clone-a-javascript-object/"/>
-    <id>https://so-matome.net/2017/10/29/how-do-i-correctly-clone-a-javascript-object/</id>
-    <published>2017-10-29T22:00:01.000Z</published>
-    <updated>2017-10-29T22:00:01.503Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>オブジェクト<code>x</code>があってそれをオブジェクト<code>y</code>としてコピーしたいんだけど（<code>y</code>への変更が<code>x</code>を変更しないように）。<br>built-inJavaScriptオブジェクトからコピーしたオブジェクトは不要なプロパティが余分に追加されてるのは知ってるんだけど。これは問題じゃないんだ。なぜって僕はリテラルとして構築されたオブジェクトの1つをコピーしているからです。</p><p>JavaScriptオブジェクトを正しくクローンするにはどうすればいいかな？</p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>jQueryを使用すると、<a href="http://api.jquery.com/jQuery.extend" target="_blank" rel="external">extend</a>で<strong>浅い(shallo)コピー</strong>ができる：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> copiedObject = jQuery.extend(&#123;&#125;, originalObject)</div></pre></td></tr></table></figure><p>copyObjectへのその後の変更はoriginalObjectに影響しない。逆もしかり。</p><p>それか<strong>ディープコピーを作成する</strong>には：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> copiedObject = jQuery.extend(<span class="literal">true</span>, &#123;&#125;, originalObject)</div></pre></td></tr></table></figure><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>オブジェクト内で関数を使用しない場合は、非常に簡単なワンライナーが使える：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> cloneOfA = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</div></pre></td></tr></table></figure><p>これは、オブジェクト、配列、文​​字列、ブーリアンと数字を含むどんな種類のオブジェクトに対しても動作する。</p><p>また、<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm" target="_blank" rel="external">ブラウザの構造化クローンアルゴリズムについてのこの記事</a>を参照。これはワーカーに、またはワーカーからメッセージを投稿するときに使われる。ディープクローニングの関数も含んでる。</p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>ECMAScript 6には、<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="external">Object.assign</a>メソッドが使える。これは、列挙可能なすべてのプロパティの値をあるオブジェクトから別のオブジェクトにコピーする。例えば：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> x = &#123;<span class="attr">myProp</span>: <span class="string">"value"</span>&#125;;</div><div class="line"><span class="keyword">var</span> y = <span class="built_in">Object</span>.assign(&#123;&#125;, x);</div></pre></td></tr></table></figure><p>ただし、ネストされたオブジェクトは引き続き参照としてコピーされることに注意。</p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/728360/how-do-i-correctly-clone-a-javascript-object" target="_blank" rel="external">How do I correctly clone a JavaScript object?</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;オブジェクト&lt;code&gt;x&lt;/code&gt;があってそれをオブジェクト&lt;code&gt;y&lt;/code&gt;としてコピーしたいんだけど（&lt;code&gt;y&lt;/code&gt;への変更が&lt;code&gt;x&lt;/code&gt;を変更しないように）。&lt;br&gt;built-inJavaScriptオブジェクトからコピーしたオブジェクトは不要なプロパティが余分に追加されてるのは知ってるんだけど。これは問題じゃないんだ。なぜって僕はリテラルとして構築されたオブジェクトの1つをコピーしているからです。&lt;/p&gt;
-&lt;p&gt;JavaScriptオブジェクトを正しくクローンするにはどうすればいいかな？&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
-    
-      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python pandasで既存のDataFrameに新しい列を追加する [Python]</title>
     <link href="https://so-matome.net/2017/10/29/adding-new-column-to-existing-dataframe-in-python-pandas/"/>
     <id>https://so-matome.net/2017/10/29/adding-new-column-to-existing-dataframe-in-python-pandas/</id>
@@ -570,6 +577,29 @@
       <category term="dataframe" scheme="https://so-matome.net/tags/dataframe/"/>
     
       <category term="pandas" scheme="https://so-matome.net/tags/pandas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScriptオブジェクトを正しくクローンするにはどうしたらいい？ [Javascript]</title>
+    <link href="https://so-matome.net/2017/10/29/how-do-i-correctly-clone-a-javascript-object/"/>
+    <id>https://so-matome.net/2017/10/29/how-do-i-correctly-clone-a-javascript-object/</id>
+    <published>2017-10-29T22:00:01.000Z</published>
+    <updated>2017-10-29T22:00:01.503Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>オブジェクト<code>x</code>があってそれをオブジェクト<code>y</code>としてコピーしたいんだけど（<code>y</code>への変更が<code>x</code>を変更しないように）。<br>built-inJavaScriptオブジェクトからコピーしたオブジェクトは不要なプロパティが余分に追加されてるのは知ってるんだけど。これは問題じゃないんだ。なぜって僕はリテラルとして構築されたオブジェクトの1つをコピーしているからです。</p><p>JavaScriptオブジェクトを正しくクローンするにはどうすればいいかな？</p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><p>jQueryを使用すると、<a href="http://api.jquery.com/jQuery.extend" target="_blank" rel="external">extend</a>で<strong>浅い(shallo)コピー</strong>ができる：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> copiedObject = jQuery.extend(&#123;&#125;, originalObject)</div></pre></td></tr></table></figure><p>copyObjectへのその後の変更はoriginalObjectに影響しない。逆もしかり。</p><p>それか<strong>ディープコピーを作成する</strong>には：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> copiedObject = jQuery.extend(<span class="literal">true</span>, &#123;&#125;, originalObject)</div></pre></td></tr></table></figure><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p>オブジェクト内で関数を使用しない場合は、非常に簡単なワンライナーが使える：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> cloneOfA = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</div></pre></td></tr></table></figure><p>これは、オブジェクト、配列、文​​字列、ブーリアンと数字を含むどんな種類のオブジェクトに対しても動作する。</p><p>また、<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm" target="_blank" rel="external">ブラウザの構造化クローンアルゴリズムについてのこの記事</a>を参照。これはワーカーに、またはワーカーからメッセージを投稿するときに使われる。ディープクローニングの関数も含んでる。</p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p>ECMAScript 6には、<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="external">Object.assign</a>メソッドが使える。これは、列挙可能なすべてのプロパティの値をあるオブジェクトから別のオブジェクトにコピーする。例えば：</p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> x = &#123;<span class="attr">myProp</span>: <span class="string">"value"</span>&#125;;</div><div class="line"><span class="keyword">var</span> y = <span class="built_in">Object</span>.assign(&#123;&#125;, x);</div></pre></td></tr></table></figure><p>ただし、ネストされたオブジェクトは引き続き参照としてコピーされることに注意。</p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/728360/how-do-i-correctly-clone-a-javascript-object" target="_blank" rel="external">How do I correctly clone a JavaScript object?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;オブジェクト&lt;code&gt;x&lt;/code&gt;があってそれをオブジェクト&lt;code&gt;y&lt;/code&gt;としてコピーしたいんだけど（&lt;code&gt;y&lt;/code&gt;への変更が&lt;code&gt;x&lt;/code&gt;を変更しないように）。&lt;br&gt;built-inJavaScriptオブジェクトからコピーしたオブジェクトは不要なプロパティが余分に追加されてるのは知ってるんだけど。これは問題じゃないんだ。なぜって僕はリテラルとして構築されたオブジェクトの1つをコピーしているからです。&lt;/p&gt;
+&lt;p&gt;JavaScriptオブジェクトを正しくクローンするにはどうすればいいかな？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="webdev" scheme="https://so-matome.net/tags/webdev/"/>
+    
+      <category term="javascript" scheme="https://so-matome.net/tags/javascript/"/>
     
   </entry>
   
@@ -701,30 +731,6 @@
   </entry>
   
   <entry>
-    <title>昔話 [Webコミック]</title>
-    <link href="https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/"/>
-    <id>https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/</id>
-    <published>2017-10-24T04:06:51.000Z</published>
-    <updated>2017-10-24T04:06:51.711Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>１コマ目：</strong><br>「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」<br>「何が分からないんだい？」</p><p><strong>２コマ目：</strong><br>「どうしてハードディスクはA:からじゃなくて、C:から始まるの？」<br>「ああ！」</p><img src="/2017/10/24/commic-2017-05-02-telling-our-story/commic-2017-05-02-telling-our-story.jpg" alt="commic-2017-05-02-telling-our-story.jpg" title=""><p><strong>３コマ目：</strong><br>「お前がそんな事を聞くなんて思っても見なかったなー！」<br>「よし、それじゃ初めから話をしてやろう」</p><p><strong>４コマ目：</strong><br>「むかぁ～し昔、あるところに、、、」</p><hr><hr><p>Source: <a href="http://www.commitstrip.com/en/2017/05/02/telling-our-story/" target="_blank" rel="external">Telling our story</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;１コマ目：&lt;/strong&gt;&lt;br&gt;「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」&lt;br&gt;「何が分からないんだい？」&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;２コマ目：&lt;/strong&gt;&lt;br&gt;「どうしてハードディスクはA:からじゃなくて、C:から始
-      
-    
-    </summary>
-    
-    
-      <category term="comic" scheme="https://so-matome.net/tags/comic/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Pythonの@staticmethodと@classmethodの違いって何？ [Python]</title>
     <link href="https://so-matome.net/2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/"/>
     <id>https://so-matome.net/2017/10/24/what-is-the-difference-between-staticmethod-and-classmethod-in-python/</id>
@@ -746,6 +752,30 @@
       <category term="python" scheme="https://so-matome.net/tags/python/"/>
     
       <category term="oop" scheme="https://so-matome.net/tags/oop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>昔話 [Webコミック]</title>
+    <link href="https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/"/>
+    <id>https://so-matome.net/2017/10/24/commic-2017-05-02-telling-our-story/</id>
+    <published>2017-10-24T04:06:51.000Z</published>
+    <updated>2017-10-24T04:06:51.711Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>１コマ目：</strong><br>「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」<br>「何が分からないんだい？」</p><p><strong>２コマ目：</strong><br>「どうしてハードディスクはA:からじゃなくて、C:から始まるの？」<br>「ああ！」</p><img src="/2017/10/24/commic-2017-05-02-telling-our-story/commic-2017-05-02-telling-our-story.jpg" alt="commic-2017-05-02-telling-our-story.jpg" title=""><p><strong>３コマ目：</strong><br>「お前がそんな事を聞くなんて思っても見なかったなー！」<br>「よし、それじゃ初めから話をしてやろう」</p><p><strong>４コマ目：</strong><br>「むかぁ～し昔、あるところに、、、」</p><hr><hr><p>Source: <a href="http://www.commitstrip.com/en/2017/05/02/telling-our-story/" target="_blank" rel="external">Telling our story</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;１コマ目：&lt;/strong&gt;&lt;br&gt;「ねえ、叔父さん、僕ちょっと分からないことがあるんだけど、、、」&lt;br&gt;「何が分からないんだい？」&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;２コマ目：&lt;/strong&gt;&lt;br&gt;「どうしてハードディスクはA:からじゃなくて、C:から始
+      
+    
+    </summary>
+    
+    
+      <category term="comic" scheme="https://so-matome.net/tags/comic/"/>
     
   </entry>
   
@@ -867,36 +897,6 @@
       <category term="arrays" scheme="https://so-matome.net/tags/arrays/"/>
     
       <category term="for-loop" scheme="https://so-matome.net/tags/for-loop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pandasのデータを標準化する方法 [Python]</title>
-    <link href="https://so-matome.net/2017/10/18/normalize-data-in-pandas/"/>
-    <id>https://so-matome.net/2017/10/18/normalize-data-in-pandas/</id>
-    <published>2017-10-18T08:00:02.000Z</published>
-    <updated>2017-10-21T09:47:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="質問："><a href="#質問：" class="headerlink" title="質問："></a>質問：</h2><p>Pandasのデータフレームがあるとする。このデータフレームの列ごとの平均を計算するのは簡単：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">df.apply(average)</div></pre></td></tr></table></figure><p>で、この列ごとの<code>max(col) - min (col)</code>を計算するのも簡単：<br><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">df.apply(max) - df.apply(min)</div></pre></td></tr></table></figure></p><p>で、この列ごとの差を平均で割りたいんだけどどうやったらいいの？</p><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/218900/jason" target="_blank" rel="external">jason</a> | 質問日時： 2012年9月21日 7:04 </div><br></p><a id="more"></a><hr><hr><h2 id="回答1"><a href="#回答1" class="headerlink" title="回答1:"></a>回答1:</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">In [92]: df</div><div class="line">Out[92]:</div><div class="line">           a         b          c         d</div><div class="line">A  -0.488816  0.863769   4.325608 -4.721202</div><div class="line">B -11.937097  2.993993 -12.916784 -1.086236</div><div class="line">C  -5.569493  4.672679  -2.168464 -9.315900</div><div class="line">D   8.892368  0.932785   4.535396  0.598124</div><div class="line"></div><div class="line">In [93]: df_norm = (df - df.mean()) / (df.max() - df.min())</div><div class="line"></div><div class="line">In [94]: df_norm</div><div class="line">Out[94]:</div><div class="line">          a         b         c         d</div><div class="line">A  0.085789 -0.394348  0.337016 -0.109935</div><div class="line">B -0.463830  0.164926 -0.650963  0.256714</div><div class="line">C -0.158129  0.605652 -0.035090 -0.573389</div><div class="line">D  0.536170 -0.376229  0.349037  0.426611</div><div class="line"></div><div class="line">In [95]: df_norm.mean()</div><div class="line">Out[95]:</div><div class="line">a   -2.081668e-17</div><div class="line">b    4.857226e-17</div><div class="line">c    1.734723e-17</div><div class="line">d   -1.040834e-17</div><div class="line"></div><div class="line">In [96]: df_norm.max() - df_norm.min()</div><div class="line">Out[96]:</div><div class="line">a    1</div><div class="line">b    1</div><div class="line">c    1</div><div class="line">d    1</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/1548051/wouter-overmeire" target="_blank" rel="external">Wouter Overmeire</a> | 回答日時： 2012年9月21日 7:14 </div><br></p><hr><hr><h2 id="回答2"><a href="#回答2" class="headerlink" title="回答2:"></a>回答2:</h2><p><code>sklearn</code>ライブラリ使ってもいいのであれば、<a href="https://web.archive.org/web/20160520170701/http://chrisalbon.com:80/python/pandas_normalize_column.html" target="_blank" rel="external">このブログの方法</a>がいいと思う：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</div><div class="line"></div><div class="line">data = &#123;<span class="string">'score'</span>: [<span class="number">234</span>,<span class="number">24</span>,<span class="number">14</span>,<span class="number">27</span>,<span class="number">-74</span>,<span class="number">46</span>,<span class="number">73</span>,<span class="number">-18</span>,<span class="number">59</span>,<span class="number">160</span>]&#125;</div><div class="line">df = pd.DataFrame(data)</div><div class="line">df</div><div class="line"></div><div class="line">min_max_scaler = preprocessing.MinMaxScaler()</div><div class="line">np_scaled = min_max_scaler.fit_transform(df)</div><div class="line">df_normalized = pd.DataFrame(np_scaled)</div><div class="line">df_normalized</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/309830/davidshen84" target="_blank" rel="external">davidshen84</a> | 回答日時： 2016年5月13日 0:48 </div><br></p><hr><hr><h2 id="回答3"><a href="#回答3" class="headerlink" title="回答3:"></a>回答3:</h2><p><code>apply</code>を使えばいいよ。よりキレイだと思う：</p><figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line">np.random.seed(<span class="number">1</span>)</div><div class="line"></div><div class="line">df = pd.DataFrame(np.random.randn(<span class="number">4</span>,<span class="number">4</span>)* <span class="number">4</span> + <span class="number">3</span>)</div><div class="line"></div><div class="line">          <span class="number">0</span>         <span class="number">1</span>         <span class="number">2</span>         <span class="number">3</span></div><div class="line"><span class="number">0</span>  <span class="number">9.497381</span>  <span class="number">0.552974</span>  <span class="number">0.887313</span> <span class="number">-1.291874</span></div><div class="line"><span class="number">1</span>  <span class="number">6.461631</span> <span class="number">-6.206155</span>  <span class="number">9.979247</span> <span class="number">-0.044828</span></div><div class="line"><span class="number">2</span>  <span class="number">4.276156</span>  <span class="number">2.002518</span>  <span class="number">8.848432</span> <span class="number">-5.240563</span></div><div class="line"><span class="number">3</span>  <span class="number">1.710331</span>  <span class="number">1.463783</span>  <span class="number">7.535078</span> <span class="number">-1.399565</span></div><div class="line"></div><div class="line">df.apply(<span class="keyword">lambda</span> x: (x - np.mean(x)) / (np.max(x) - np.min(x)))</div><div class="line"></div><div class="line">          <span class="number">0</span>         <span class="number">1</span>         <span class="number">2</span>         <span class="number">3</span></div><div class="line"><span class="number">0</span>  <span class="number">0.515087</span>  <span class="number">0.133967</span> <span class="number">-0.651699</span>  <span class="number">0.135175</span></div><div class="line"><span class="number">1</span>  <span class="number">0.125241</span> <span class="number">-0.689446</span>  <span class="number">0.348301</span>  <span class="number">0.375188</span></div><div class="line"><span class="number">2</span> <span class="number">-0.155414</span>  <span class="number">0.310554</span>  <span class="number">0.223925</span> <span class="number">-0.624812</span></div><div class="line"><span class="number">3</span> <span class="number">-0.484913</span>  <span class="number">0.244924</span>  <span class="number">0.079473</span>  <span class="number">0.114448</span></div></pre></td></tr></table></figure><p>それか、適切な列を選択すると、<code>groupby</code>で上手くいくと思う：</p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">df[&apos;grp&apos;] = [&apos;A&apos;, &apos;A&apos;, &apos;B&apos;, &apos;B&apos;]</div><div class="line"></div><div class="line">          0         1         2         3 grp</div><div class="line">0  9.497381  0.552974  0.887313 -1.291874   A</div><div class="line">1  6.461631 -6.206155  9.979247 -0.044828   A</div><div class="line">2  4.276156  2.002518  8.848432 -5.240563   B</div><div class="line">3  1.710331  1.463783  7.535078 -1.399565   B</div><div class="line"></div><div class="line">df.groupby([&apos;grp&apos;])[[0,1,2,3]].apply(lambda x: (x - np.mean(x)) / (np.max(x) - np.min(x)))</div><div class="line"></div><div class="line">     0    1    2    3</div><div class="line">0  0.5  0.5 -0.5 -0.5</div><div class="line">1 -0.5 -0.5  0.5  0.5</div><div class="line">2  0.5  0.5  0.5 -0.5</div><div class="line">3 -0.5 -0.5 -0.5  0.5</div></pre></td></tr></table></figure><p><div style="text-align: right"> By  <a href="https://stackoverflow.com/users/210945/naught101" target="_blank" rel="external">naught101</a> | 回答日時： 2015年10月21日 3:10 </div><br></p><hr><hr><p>Source: <a href="https://stackoverflow.com/questions/12525722/normalize-data-in-pandas" target="_blank" rel="external">Normalize data in pandas</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;質問：&quot;&gt;&lt;a href=&quot;#質問：&quot; class=&quot;headerlink&quot; title=&quot;質問：&quot;&gt;&lt;/a&gt;質問：&lt;/h2&gt;&lt;p&gt;Pandasのデータフレームがあるとする。このデータフレームの列ごとの平均を計算するのは簡単：&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;df.apply(average)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;で、この列ごとの&lt;code&gt;max(col) - min (col)&lt;/code&gt;を計算するのも簡単：&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;df.apply(max) - df.apply(min)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;で、この列ごとの差を平均で割りたいんだけどどうやったらいいの？&lt;/p&gt;
-&lt;p&gt;&lt;div style=&quot;text-align: right&quot;&gt; By  &lt;a href=&quot;https://stackoverflow.com/users/218900/jason&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jason&lt;/a&gt; | 質問日時： 2012年9月21日 7:04 &lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="datasci" scheme="https://so-matome.net/tags/datasci/"/>
-    
-      <category term="python" scheme="https://so-matome.net/tags/python/"/>
-    
-      <category term="pandas" scheme="https://so-matome.net/tags/pandas/"/>
-    
-      <category term="numpy" scheme="https://so-matome.net/tags/numpy/"/>
     
   </entry>
   
